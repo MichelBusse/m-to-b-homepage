@@ -4,7 +4,7 @@ const transporter = nodemailer.createTransport({
     port: 25
 })
 
-export default async function (req, res) {
+export default async function handler(req, res) {
     const mailData = {
         from: req.body.email,
         to: 'kontakt@m-to-b.com',

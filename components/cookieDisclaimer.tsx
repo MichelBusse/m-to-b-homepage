@@ -17,7 +17,7 @@ export default function CookieDisclaimer() {
 
   useEffect(() => {
     setVisible(cookies.essentialAccepted !== "true");
-  }, [])
+  }, [cookies.essentialAccepted])
 
   const onChange = (event) => {
     const targetName = event.target.name;

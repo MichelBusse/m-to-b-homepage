@@ -49,16 +49,17 @@
   overflow: hidden;
   height: 23em;
 }
-#services .service .serviceImage > img {
+#services .service .serviceImage .image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   transition: transform 1s ease-in-out;
+  object-fit: cover;
 }
 
-#services .service:hover .serviceImage > img {
+#services .service:hover .serviceImage .image {
   transform: scale(1.1);
 }
 
@@ -91,7 +92,6 @@
   position: absolute;
   top: 2em;
   left: 1.5em;
-  width: 60%;
 }
 #services .service .serviceText h2 {
   color: #01506b;

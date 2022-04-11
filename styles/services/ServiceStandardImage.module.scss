@@ -1,7 +1,7 @@
 .standardImage {
-  width: 90%;
-  max-width: 50em;
-  height: auto;
+  width: 45em;
+  height: 35em;
+  max-width: 100%;
   position: relative;
   opacity: 1;
   transition-property: opacity;
@@ -13,7 +13,7 @@
   opacity: 1;
 }
 .standardImage img {
-  width: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1300px) {

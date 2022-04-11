@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "../../styles/home/ProjectsSection.module.scss";
+import Image from "next/image";
 
 export default function ProjectsSection(props) {
   const [active, setActive] = useState("");
@@ -19,7 +20,7 @@ export default function ProjectsSection(props) {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [props.anchorRefs.projectsRef]);
 
   return (
     <>
@@ -38,10 +39,11 @@ export default function ProjectsSection(props) {
             style={{ transitionDelay: "0.2s" }}
           >
             <a href="https://special-s.de" target="_blank" rel="noreferrer">
-              <img
+              <Image
                 className={styles.projectBackgroundImage}
                 alt="Webdesign Special Solutions"
-                src="images/projects/project1.jpg"
+                src="/images/projects/project1.jpg"
+                layout="fill"
               />
               <div className={styles.blackCurtain}></div>
               <div className={styles.captionWrapper}>
@@ -64,10 +66,11 @@ export default function ProjectsSection(props) {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <Image
                 className={styles.projectBackgroundImage}
                 alt="Webdesign Bundeskonferenz für Lehrer:innenbildung"
-                src="images/projects/project2.jpg"
+                src="/images/projects/project2.jpg"
+                layout="fill"
               />
               <div className={styles.blackCurtain}></div>
               <div className={styles.captionWrapper}>
@@ -84,10 +87,11 @@ export default function ProjectsSection(props) {
             id={styles.project3}
             style={{ transitionDelay: "0.6s" }}
           >
-            <img
+            <Image
               className={styles.projectBackgroundImage}
               alt="Individualsoftware MB-Planner"
-              src="images/projects/project3.jpg"
+              src="/images/projects/project3.jpg"
+              layout="fill"
             />
             <div className={styles.blackCurtain}></div>
             <div className={styles.captionWrapper}>
@@ -104,10 +108,11 @@ export default function ProjectsSection(props) {
             id={styles.project4}
             style={{ transitionDelay: "0.8s" }}
           >
-            <img
+            <Image
               className={styles.projectBackgroundImage}
               alt="Webdesign K&amp;S GmbH"
-              src="images/projects/project4.jpg"
+              src="/images/projects/project4.jpg"
+              layout="fill"
             />
             <div className={styles.blackCurtain}></div>
             <div className={styles.captionWrapper}>
@@ -122,77 +127,103 @@ export default function ProjectsSection(props) {
       <section id={styles.customers}>
         <div className={styles.slideWrapper}>
           <div className={styles.customer}>
-            <img
-              src="images/customers/special-solutions.png"
+            <Image
+              src="/images/customers/special-solutions.png"
               alt="Special Solutions GmbH"
+              layout="fill"
             />
           </div>
           <div className={styles.customer}>
-            <img
-              src="images/customers/uni-leipzig.png"
+            <Image
+              src="/images/customers/uni-leipzig.png"
               alt="Universität Leipzig"
+              layout="fill"
             />
           </div>
           <div className={styles.customer}>
-            <img src="images/customers/zls-leipzig.png" alt="ZLS Leipzig" />
+            <Image
+              src="/images/customers/zls-leipzig.png"
+              alt="ZLS Leipzig"
+              layout="fill"
+            />
           </div>
           <div className={styles.customer}>
-            <img
-              src="images/customers/uniklinik-leipzig.png"
+            <Image
+              src="/images/customers/uniklinik-leipzig.png"
               alt="Universitätsklinikum Leipzig"
+              layout="fill"
             />
           </div>
           <div className={styles.customer}>
-            <img
-              src="images/customers/final-fighters.png"
+            <Image
+              src="/images/customers/final-fighters.png"
               alt="Final Fighters Gym Zwickau e.V."
+              layout="fill"
             />
           </div>
           <div className={styles.customer}>
-            <img src="images/customers/ks-gmbh.png" alt="K&amp;S GmbH" />
+            <Image
+              src="/images/customers/ks-gmbh.png"
+              alt="K&amp;S GmbH"
+              layout="fill"
+            />
           </div>
           <div className={styles.customer}>
-            <img
-              src="images/customers/hartmann.png"
+            <Image
+              src="/images/customers/hartmann.png"
               alt="Übersetzungsbüro Hartmann"
+              layout="fill"
             />
           </div>
 
           <div className={styles.copy}>
             <div className={styles.customer}>
-              <img
-                src="images/customers/special-solutions.png"
+              <Image
+                src="/images/customers/special-solutions.png"
                 alt="Special Solutions GmbH"
+                layout="fill"
               />
             </div>
             <div className={styles.customer}>
-              <img
-                src="images/customers/uni-leipzig.png"
+              <Image
+                src="/images/customers/uni-leipzig.png"
                 alt="Universität Leipzig"
+                layout="fill"
               />
             </div>
             <div className={styles.customer}>
-              <img src="images/customers/zls-leipzig.png" alt="ZLS Leipzig" />
+              <Image
+                src="/images/customers/zls-leipzig.png"
+                alt="ZLS Leipzig"
+                layout="fill"
+              />
             </div>
             <div className={styles.customer}>
-              <img
-                src="images/customers/uniklinik-leipzig.png"
+              <Image
+                src="/images/customers/uniklinik-leipzig.png"
                 alt="Universitätsklinikum Leipzig"
+                layout="fill"
               />
             </div>
             <div className={styles.customer}>
-              <img
-                src="images/customers/final-fighters.png"
+              <Image
+                src="/images/customers/final-fighters.png"
                 alt="Final Fighters Gym Zwickau e.V."
+                layout="fill"
               />
             </div>
             <div className={styles.customer}>
-              <img src="images/customers/ks-gmbh.png" alt="K&S GmbH" />
+              <Image
+                src="/images/customers/ks-gmbh.png"
+                alt="K&S GmbH"
+                layout="fill"
+              />
             </div>
             <div className={styles.customer}>
-              <img
-                src="images/customers/hartmann.png"
+              <Image
+                src="/images/customers/hartmann.png"
                 alt="Übersetzungsbüro Hartmann"
+                layout="fill"
               />
             </div>
           </div>

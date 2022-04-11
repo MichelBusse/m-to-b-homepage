@@ -19,7 +19,7 @@ const WebdesignPage: NextPage = () => {
       <ServiceSection
         headline="Homepage-Design"
         text={[
-          <p style={{ transitionDelay: "0.3s" }}>
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
             Wichtigstes Aushängeschild für jede Firma ist eine überzeugende
             Webpräsenz. Wir legen bei der Konzipierung und Erstellung von jeder
             Website Wert auf Nutzbarkeit und Überzeugungskraft. Eine gut
@@ -27,7 +27,7 @@ const WebdesignPage: NextPage = () => {
             wie ein modernes und außergewöhnliches Design, um sich sowohl von
             der Konkurrenz, als auch von einfachen Baukastensystemen abzuheben.
           </p>,
-          <p style={{ transitionDelay: "0.6s" }}>
+          <p style={{ transitionDelay: "0.6s" }} key={2}>
             Durch eine individuelle Beratung, aufwändigen Designideen,
             Animationen und Funktionen sind wir Ihr Partner für besondere
             Anforderungen!
@@ -45,7 +45,7 @@ const WebdesignPage: NextPage = () => {
         sectionStyle="blue"
         backgroundImage="/images/Webdesign/blueSection.jpg"
         text={[
-          <p>
+          <p key={1}>
             Durch Web-Applikationen können komplexe Anwendungen realisiert
             werden. Web-Apps bieten sich an für z.B. einen umfangreichen
             Produkt-Konfigurator, ein virtuelles Wartezimmer oder andere
@@ -67,7 +67,7 @@ const WebdesignPage: NextPage = () => {
       <ServiceSection
         headline="3D-Umgebungen"
         text={[
-          <p style={{ transitionDelay: "0.3s" }}>
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
             Als Besonderheit bieten wir neben der eher klassischen Webgestaltung
             auch aufwändige 3-dimensionale Websites. Diese sind nicht nur
             besondere Hingucker, sondern bieten auch Möglichkeiten für eine

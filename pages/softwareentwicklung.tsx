@@ -22,17 +22,17 @@ const DevelopmentPage: NextPage = () => {
       <ServiceSection
         headline="Firmensysteme"
         text={[
-          <p style={{ transitionDelay: "0.3s" }}>
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
             Individuell entwickelte Software lohnt sich überall, wo bestehende
             Programme die Anforderungen und Firmenprozesse nicht optimal
             abbilden können.
           </p>,
-          <p style={{ transitionDelay: "0.6s" }}>
+          <p style={{ transitionDelay: "0.6s" }} key={2}>
             Dafür erstellen wir maßgeschneiderte Lösungen, welche Ihren
             Arbeitsablauf optimal erleichtern und Ihnen so einen großen Vorteil
             verschaffen.
           </p>,
-          <p style={{ transitionDelay: "0.9s" }}>
+          <p style={{ transitionDelay: "0.9s" }} key={3}>
             Von Einsatzplanung, Mitarbeitermanagement, Projektmanagement bis
             Inventarsystemen und Rechnungserstellung können viele Firmenprozesse
             digitalisiert und optimiert werden.
@@ -45,7 +45,7 @@ const DevelopmentPage: NextPage = () => {
         sectionStyle="blue"
         backgroundImage="/images/Softwareentwicklung/background.jpg"
         text={[
-          <p style={{ transitionDelay: "0.3s" }}>
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
             Durch moderne Cross-Platform-Programmierung und Technologien wie
             z.B. React, Electron und Flutter, entwickeln wir Anwendungen für
             alle Geräte. Ob klassische Desktop-Programme, mobile Apps oder alles
@@ -54,7 +54,7 @@ const DevelopmentPage: NextPage = () => {
             ganz neue Möglichkeiten, da nur eine Code Base für alle Plattformen
             gemanagt werden muss.
           </p>,
-          <p style={{ transitionDelay: "0.6s" }}>
+          <p style={{ transitionDelay: "0.6s" }} key={2}>
             Wir legen bei der Entwicklung nicht nur Wert auf die Funktionen,
             sondern auch auf eine optimierte und clever gestaltete UI. Dadurch
             überzeugt unsere Software nicht nur durch gute Funktionen, sondern
@@ -71,17 +71,19 @@ const DevelopmentPage: NextPage = () => {
       <ServiceSection
         headline="VR und Mixed Reality"
         text={[
-          <p style={{ transitionDelay: "0.3s" }}>
-              Nicht nur Spiele können durch VR realisiert werden, sondern auch
-              verschiedenste andere Anwendungen: ob Präsentationsumgebungen oder
-              interaktive Funktionen, die Möglichkeiten sind in diesem Bereich
-              noch nicht annähernd ausgeschöpft.
-            </p>,
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
+            Nicht nur Spiele können durch VR realisiert werden, sondern auch
+            verschiedenste andere Anwendungen: ob Präsentationsumgebungen oder
+            interaktive Funktionen, die Möglichkeiten sind in diesem Bereich
+            noch nicht annähernd ausgeschöpft.
+          </p>,
         ]}
-        image={<ServiceStandardImage
-          image="/images/Softwareentwicklung/mixed-reality.jpg"
-          imageAlt="VR und Mixed Reality"
-        />}
+        image={
+          <ServiceStandardImage
+            image="/images/Softwareentwicklung/mixed-reality.jpg"
+            imageAlt="VR und Mixed Reality"
+          />
+        }
       />
       <CTASection />
     </>

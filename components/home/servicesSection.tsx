@@ -1,10 +1,11 @@
-import {useEffect, useState} from "react"
+import { useEffect, useState } from "react";
 import styles from "../../styles/home/ServicesSection.module.scss";
+import Image from "next/image";
 
 export default function ServicesSection(props) {
-  const [active, setActive] = useState("")
+  const [active, setActive] = useState("");
 
-  const centerPos = element => (element.offsetTop + (window.innerHeight * 0.5));
+  const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,7 +19,7 @@ export default function ServicesSection(props) {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [props.anchorRefs.servicesRef]);
 
   return (
     <>
@@ -27,19 +28,24 @@ export default function ServicesSection(props) {
         <div className={styles.leftBackground}></div>
         <div className={styles.flexRow}>
           <div
-            className={active ? styles.service + " " + styles.active : styles.service}
+            className={
+              active ? styles.service + " " + styles.active : styles.service
+            }
             style={{ backgroundImage: "url('/images/services/webdesign.jpg')" }}
           >
             <div className={styles.serviceImage}>
               <div className={styles.logoCircle}>
-                <img
+                <Image
                   src="/images/services/webdesignLogo.png"
                   alt="Webdesign Sachsen"
+                  layout="fill"
                 />
               </div>
-              <img
+              <Image
+                className={styles.image}
                 src="/images/services/webdesign.jpg"
                 alt="Website Erstellung"
+                layout="fill"
               />
             </div>
             <div className={styles.serviceText}>
@@ -77,21 +83,26 @@ export default function ServicesSection(props) {
             </div>
           </div>
           <div
-            className={active ? styles.service + " " + styles.active : styles.service}
+            className={
+              active ? styles.service + " " + styles.active : styles.service
+            }
             style={{
               backgroundImage: "url('/images/services/programmierung.jpg')",
             }}
           >
             <div className={styles.serviceImage}>
               <div className={styles.logoCircle}>
-                <img
+                <Image
                   src="/images/services/programmierungLogo.png"
                   alt="Softwareentwicklung"
+                  layout="fill"
                 />
               </div>
-              <img
+              <Image
+                className={styles.image}
                 src="/images/services/programmierung.jpg"
                 alt="Anwendungsentwicklung"
+                layout="fill"
               />
             </div>
             <div className={styles.serviceText}>

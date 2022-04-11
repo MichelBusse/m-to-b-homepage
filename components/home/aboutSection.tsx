@@ -28,7 +28,7 @@ export default function AboutSection(props) {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [typewriterList]);
+  }, [typewriterList, props.anchorRefs.aboutRef]);
 
   return (
     <>

@@ -5,7 +5,7 @@ import { BsTelephoneFill } from 'react-icons/bs'
 import { HiMail } from 'react-icons/hi'
 import Particles from "react-tsparticles";
 import { toast } from 'react-toastify';
-
+import Link from 'next/link'
 
 
 
@@ -130,7 +130,7 @@ export default function ContactSection(props) {
                             <div className={styles.inputWrapper}><input type="tel" name="tel" value={formState.tel} onChange={onChange} /><span className={formState.tel !== "" ? styles.written : ""}>Ihre Telefonnummer</span></div>
                             <div className={styles.inputWrapper}><textarea name="text" value={formState.text} onChange={onChange}></textarea><span className={formState.text !== "" ? styles.written : ""}>Ihre Nachricht</span></div>
                             <div className={styles.submitWrapper}>
-                                <p className={styles.checkboxWrapper}><input type="checkbox" name="privacy" className={styles.checkbox} checked={formState.privacy} onChange={onChange}/><span>Ich akzeptiere die <a href="/Datenschutz"> Datenschutzerklärung</a></span></p>
+                                <p className={styles.checkboxWrapper}><input type="checkbox" name="privacy" className={styles.checkbox} checked={formState.privacy} onChange={onChange}/><span>Ich akzeptiere die <Link href="/Datenschutz"><a>Datenschutzerklärung</a></Link></span></p>
                                 <input className={styles.submit} type="submit" name="sendMail" value="Absenden" onClick={handleSubmit} />
                             </div>
                         </form>

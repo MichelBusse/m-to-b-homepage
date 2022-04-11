@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 
@@ -9,14 +9,6 @@ export default function Navbar(props) {
   const [menuScrolled, setMenuScrolled] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-    if (!menuActive) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "auto";
-    }
-  };
 
 
   useEffect(() => {
@@ -28,7 +20,7 @@ export default function Navbar(props) {
       } else {
         setMenuScrolled(false);
       }
-      
+
       const scrollPosition = window.scrollY + window.innerHeight;
 
       if (props.anchorRefs) {
@@ -58,9 +50,15 @@ export default function Navbar(props) {
       }
     };
 
+    if (menuActive) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
     const onResize = () => {
       if (window.innerWidth > 1063 && menuActive) {
-        toggleMenu();
+        setMenuActive(!menuActive);
       }
     };
 
@@ -71,7 +69,7 @@ export default function Navbar(props) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, [menuActive]);
+  }, [menuActive, props.anchorRefs]);
 
   return (
     <>
@@ -84,29 +82,53 @@ export default function Navbar(props) {
         }
       >
         <div className={styles.logo}>
-          <a href="/#home">
-            <div className={styles.mbLogo}></div>
-          </a>
-          <a href="/#home">
-            <span>M-to-B</span>
-          </a>
+          <Link href="/#home">
+            <a>
+              <div className={styles.mbLogo}></div>
+            </a>
+          </Link>
+          <Link href="/#home">
+            <a>
+              <span>M-to-B</span>
+            </a>
+          </Link>
         </div>
         <div className={styles.ulWrapper}>
           <ul>
             <Link href="/#about">
               <a>
-                <li className={activeMenuItem === "about" ? styles.active : ""}>Über Uns</li>
+                <li className={activeMenuItem === "about" ? styles.active : ""}>
+                  Über Uns
+                </li>
               </a>
             </Link>
-            <a href="/#services">
-              <li className={activeMenuItem === "services" ? styles.active : ""}>Leistungen</li>
-            </a>
-            <a href="/#projects">
-              <li className={activeMenuItem === "projects" ? styles.active : ""}>Referenzen</li>
-            </a>
-            <a href="/#contact">
-              <li className={activeMenuItem === "contact" ? styles.active : ""}>Kontakt</li>
-            </a>
+            <Link href="/#services">
+              <a>
+                <li
+                  className={activeMenuItem === "services" ? styles.active : ""}
+                >
+                  Leistungen
+                </li>
+              </a>
+            </Link>
+            <Link href="/#projects">
+              <a>
+                <li
+                  className={activeMenuItem === "projects" ? styles.active : ""}
+                >
+                  Referenzen
+                </li>
+              </a>
+            </Link>
+            <Link href="/#contact">
+              <a>
+                <li
+                  className={activeMenuItem === "contact" ? styles.active : ""}
+                >
+                  Kontakt
+                </li>
+              </a>
+            </Link>
           </ul>
         </div>
         <div
@@ -115,7 +137,7 @@ export default function Navbar(props) {
               ? styles.hamburgerMenu + " " + styles.active
               : styles.hamburgerMenu
           }
-          onClick={toggleMenu}
+          onClick={() => setMenuActive(!menuActive)}
         >
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
@@ -131,54 +153,62 @@ export default function Navbar(props) {
         }
       >
         <ul>
-          <a href="#about">
-            <li
-              onClick={toggleMenu}
-              style={{ transitionDelay: "0.05s" }}
-              className={activeMenuItem === "about" ? styles.active : ""}
-            >
-              Über Uns
-            </li>
-          </a>
-          <a href="#services">
-            <li
-              onClick={toggleMenu}
-              style={{ transitionDelay: "0.1s" }}
-              className={activeMenuItem === "services" ? styles.active : ""}
-            >
-              Leistungen
-            </li>
-          </a>
+          <Link href="/#about">
+            <a>
+              <li
+                onClick={() => setMenuActive(false)}
+                style={{ transitionDelay: "0.05s" }}
+                className={activeMenuItem === "about" ? styles.active : ""}
+              >
+                Über Uns
+              </li>
+            </a>
+          </Link>
+          <Link href="/#services">
+            <a>
+              <li
+                onClick={() => setMenuActive(false)}
+                style={{ transitionDelay: "0.1s" }}
+                className={activeMenuItem === "services" ? styles.active : ""}
+              >
+                Leistungen
+              </li>
+            </a>
+          </Link>
           <ul className={styles.sub}>
-            <a href="/Webdesign">
-              <li style={{ transitionDelay: "0.15s" }}>
-                Webdesign
-              </li>
-            </a>
-            <a href="/Softwareentwicklung">
-              <li style={{ transitionDelay: "0.2s" }}>
-                Entwicklung
-              </li>
-            </a>
+            <Link href="/Webdesign">
+              <a>
+                <li style={{ transitionDelay: "0.15s" }}>Webdesign</li>
+              </a>
+            </Link>
+            <Link href="/Softwareentwicklung">
+              <a>
+                <li style={{ transitionDelay: "0.2s" }}>Entwicklung</li>
+              </a>
+            </Link>
           </ul>
-          <a href="#projects">
-            <li
-              onClick={toggleMenu}
-              style={{ transitionDelay: "0.25s" }}
-              className={activeMenuItem === "projects" ? styles.active : ""}
-            >
-              Referenzen
-            </li>
-          </a>
-          <a href="#contact">
-            <li
-              onClick={toggleMenu}
-              style={{ transitionDelay: "0.3s" }}
-              className={activeMenuItem === "contact" ? styles.active : ""}
-            >
-              Kontakt
-            </li>
-          </a>
+          <Link href="/#projects">
+            <a>
+              <li
+                onClick={() => setMenuActive(false)}
+                style={{ transitionDelay: "0.25s" }}
+                className={activeMenuItem === "projects" ? styles.active : ""}
+              >
+                Referenzen
+              </li>
+            </a>
+          </Link>
+          <Link href="/#contact">
+            <a>
+              <li
+                onClick={() => setMenuActive(false)}
+                style={{ transitionDelay: "0.3s" }}
+                className={activeMenuItem === "contact" ? styles.active : ""}
+              >
+                Kontakt
+              </li>
+            </a>
+          </Link>
         </ul>
       </div>
     </>
