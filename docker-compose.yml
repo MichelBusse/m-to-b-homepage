@@ -4,11 +4,6 @@ services:
     container_name: m-to-b-homepage
     image: m-to-b/m-to-b-homepage
     restart: unless-stopped
-    env_file: .env
-    environment:
-      STRAPI_BASEURL: ${STRAPI_BASEURL}
-      NEXT_PUBLIC_STRAPI_URL: ${NEXT_PUBLIC_STRAPI_URL}
-      NEXT_PUBLIC_GMAPS_API_KEY: ${NEXT_PUBLIC_GMAPS_API_KEY}
     networks:
       - swag-net
     ports:
