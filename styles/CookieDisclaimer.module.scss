@@ -1,0 +1,75 @@
+.cookieDisclaimer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: white;
+  max-width: 100%;
+  padding: 1.2em 1.7em;
+  z-index: 1500;
+  width: 30rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cookieDisclaimer .cookieDisclaimerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cookieDisclaimer .cookieDisclaimerHeadline {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cookieDisclaimer .cookieDisclaimerHeadline h2 {
+  font-size: 1.5em;
+  margin: 0.2em 0;
+  font-weight: bold;
+  color: #999999;
+}
+.cookieDisclaimer .cookieDisclaimerText p,
+.cookieDisclaimer .cookieDisclaimerForm p {
+  font-size: 1em;
+  color: #222;
+  margin: 0.5em 0;
+}
+.cookieDisclaimer .cookieDisclaimerForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1em;
+  color: #222;
+}
+.cookieDisclaimer .cookieDisclaimerForm input {
+  width: 1.5em;
+  height: 1.5em;
+}
+.cookieDisclaimerButton {
+  width: 100%;
+  margin: 0.2em 0;
+}
+.cookieDisclaimerButton button::before {
+  content: none;
+}
+.cookieDisclaimerButton button {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0.4em;
+  color: #fff;
+  background: #022636;
+  border: none;
+}
+.cookieDisclaimerButton.save button {
+  background: #b4b4b4;
+}
+
+@media screen and (max-width: 890px) {
+  .cookieDisclaimer {
+    width: 100%;
+    padding: 2em;
+  }
+}

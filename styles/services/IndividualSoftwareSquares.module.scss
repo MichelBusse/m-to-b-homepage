@@ -1,0 +1,86 @@
+.squares {
+  position: relative;
+  width: 40em;
+  height: 40em;
+}
+.square {
+  position: absolute;
+  animation-name: squares;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.square img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+}
+.square .curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 38, 54, 0.4);
+}
+.square:nth-last-of-type(1) {
+  top: 50%;
+  left: 50%;
+  background: #ccc;
+  width: 16em;
+  height: 16em;
+  transform-origin: top left;
+  animation-delay: 1s;
+}
+.square:nth-last-of-type(2) {
+  bottom: 50%;
+  left: 50%;
+  background: #bbb;
+  width: 14em;
+  height: 14em;
+  transform-origin: bottom left;
+  animation-delay: 2s;
+}
+.square:nth-last-of-type(3) {
+  top: 50%;
+  right: 50%;
+  background: #eee;
+  width: 13em;
+  height: 13em;
+  transform-origin: top right;
+  animation-delay: 3s;
+}
+.square:nth-last-of-type(4) {
+  bottom: 50%;
+  right: 50%;
+  background: #aaa;
+  width: 15em;
+  height: 15em;
+  transform-origin: bottom right;
+}
+
+@keyframes squares {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .squares {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .squares {
+    font-size: 80%;
+  }
+}

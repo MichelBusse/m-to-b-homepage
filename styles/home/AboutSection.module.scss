@@ -1,0 +1,147 @@
+.about {
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    color: #efefef;
+    text-align: center;
+    background: rgb(2, 38, 54);
+    padding: 5em 0 5em 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.about .cell {
+    flex: 0 0 45%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 4em;
+    text-align: left;
+    max-width: 80em;
+}
+
+.about .arrowWrapper {
+    position: absolute;
+    left: calc(50%);
+    transform: translate(-50%);
+    bottom: 4.5em;
+    cursor: pointer;
+}
+
+.about .arrow {
+    border: solid #efefef;
+    border-width: 0 0.4em 0.4em 0;
+    height: 0.8em;
+    display: inline-block;
+    width: 0.8em;
+    padding: 0.8em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.about .arrowWrapper .animation {
+    animation-name: arrowAnim;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.about .arrowWrapper:last-of-type .animation {
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowAnim {
+    0% {
+        transform: translateY(1em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about h2 {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.about h2 .icon {
+    margin: 0;
+    margin-right: 0.4em;
+    color: #f13b74;
+}
+
+.about h2 div{
+    display: inline-block !important;
+}
+
+.about a {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1em;
+}
+
+.about p {
+    font-size: 1.3em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.about.active p {
+    opacity: 1;
+}
+
+.about p strong {
+    font-family: "Roboto Mono";
+    font-weight: bold;
+}
+
+.about button {
+    margin-top: 1em;
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    border-color: #efefef;
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.about button.active {
+    opacity: 1;
+}
+@media screen and (max-width : 1440px) {
+    .about .cell{
+      padding: 0 2em;
+    }
+}
+@media screen and (max-width : 1080px) {
+    .about{
+      display: block;
+      padding-bottom: 10em;
+    }
+    .about .cell{
+      width: 100%;
+      padding: 0 2.5em;
+    }
+}
+@media screen and (max-width : 730px) {
+    .about {
+        padding: 6em 2em 10em 2em;
+    }
+
+    .about .cell {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width : 570px) {
+    .about {
+        font-size: 90%;
+    }
+}

@@ -1,0 +1,107 @@
+.serviceSection {
+  min-height: 50em;
+  position: relative;
+  background-position: 0 0;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  color: #000000;
+  flex-wrap: wrap;
+}
+
+.serviceSection.blueSection{
+  padding: 8vw 0;
+  clip-path: polygon(0 0, 100% 8vw, 100% calc(100% - 8vw), 0 100%);
+  color: white;
+  background-position: 0 0;
+  background-size: cover;
+}
+.serviceSection.greySection{
+  background: #EEEEEE;
+  padding: 8vw 0 0 0;
+  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+}
+
+
+.serviceSection .blueCurtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 38, 54, 0.8);
+  z-index: 1;
+}
+
+.serviceSection .flexCell {
+  position: relative;
+  z-index: 10;
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.serviceSection .flexCell.scaleable{
+  flex: 1 1 50%;
+}
+.serviceSection .text {
+  max-width: 54em;
+  padding-left: 4em;
+}
+
+.serviceSection .text h2{
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  color: #01506b;
+  font-size: 2.2em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+.serviceSection.blueSection h2{
+  color: white;
+}
+.serviceSection .text p{
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.serviceSection.active .text p{
+  opacity: 1;
+}
+
+@media screen and (max-width: 1700px){
+  .serviceSection .text{
+    width: 48em;
+  }
+}
+@media screen and (max-width: 1300px){
+  .serviceSection{
+    flex-direction: column-reverse;
+    padding: 6em 0;
+  }
+  .serviceSection.blueSection, .serviceSection.greySection{
+    padding: calc(8vw + 6em) 0;
+  }
+  .serviceSection .text{
+    padding: 0 4em;
+    text-align: center;
+  }
+  .serviceSection .flexCell{
+    flex: 0 0 100%;
+    padding: 1em 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width : 522px) {
+  .serviceSection{
+    font-size: 90%;
+  }
+  .serviceSection .text{
+    text-align: left;
+    padding: 0 2em;
+  }
+}

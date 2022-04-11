@@ -1,0 +1,211 @@
+.homeBackgroundWrapper {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.homeParts {
+  z-index: 100;
+}
+
+.backgroundVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.backgroundVideo::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.backgroundVideo::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.backgroundVideo::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.backgroundColor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg,
+      rgba(2, 38, 54, 0.15) 0%,
+      rgba(2, 38, 54, 0.25) 100%);
+  transition: background 0.5s ease-in-out;
+}
+
+.squareContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.squareContainer .square {
+  position: absolute;
+  background: rgba(2, 38, 54);
+  width: 10em;
+  height: 10em;
+  transition: transform 0.5s cubic-bezier(0.53, 1.02, 0.65, 1.33);
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.squareContainer .square.active {
+  transform: scale(1) rotateZ(0.01deg);
+}
+
+
+#homeFixed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 120em;
+  z-index: 100;
+}
+
+#homeFixed header {
+  position: absolute;
+  left: 10em;
+  top: 46%;
+  transform: translateY(-50%);
+}
+
+#homeFixed h1 {
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  font-weight: 700;
+  font-size: 6em;
+  margin: 0.3em 0;
+  transform: translateY(102%) skewX(-10deg);
+  transition: all 0.5s cubic-bezier(0.32, 0.41, 0.4, 0.78);
+  padding-right: 0.2em;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+#homeFixed h2 {
+  margin: 0;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4em;
+  transform: translateY(-102%) skewX(-10deg);
+  transition: all 0.5s 0.2s cubic-bezier(0.32, 0.41, 0.4, 0.78);
+  white-space: nowrap;
+  opacity: 0;
+}
+#homeFixed h2 div{
+  display: inline-block;
+}
+
+#homeFixed h1.visible,
+#homeFixed h2.visible {
+  transform: translateY(0) skewX(-10deg);
+  opacity: 1;
+}
+
+#homeFixed button {
+  opacity: 0;
+  margin-top: 2em;
+  font-size: 1.75em;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 0.3em;
+  transform: skewX(-10deg);
+  color: #ffffff;
+}
+
+#homeFixed button.visible {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.socialItems {
+  position: absolute;
+  right: 4em;
+  bottom: 2em;
+  z-index: 1000;
+}
+
+.socialItems ul {
+  list-style: none;
+  padding: 0;
+}
+
+.socialItems ul li {
+  display: inline;
+  font-size: 2em;
+}
+
+.home{
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-height: 1000px) {
+  #homeFixed header {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #homeFixed header {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width : 1080px) {
+  #homeFixed header {
+    top: 50%;
+    left: 5em;
+    transform: translateY(-50%);
+    max-width: 90%;
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width : 730px) {
+  #homeFixed header {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width : 570px) {
+  #homeFixed header {
+    font-size: 70%;
+    left: 4em;
+  }
+  #homeFixed header #subHeadline {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width : 415px) {
+  #homeFixed header {
+    font-size: 65%;
+  }
+}
