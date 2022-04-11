@@ -1,0 +1,24 @@
+.standardImage {
+  width: 90%;
+  max-width: 50em;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  transform-origin: center;
+}
+.standardImage.active {
+  opacity: 1;
+}
+.standardImage img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .standardImage {
+    max-width: 40em;
+    margin: 2em 1em;
+  }
+}

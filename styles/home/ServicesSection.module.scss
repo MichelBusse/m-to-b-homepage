@@ -1,0 +1,232 @@
+.leftBackground {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  width: 50%;
+  background: rgba(235, 235, 235, 1);
+}
+#services {
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  padding-bottom: 10em;
+}
+#services .flexRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#services .service {
+  flex: 1 1 40%;
+  margin: 2.5em 2em;
+  position: relative;
+  z-index: 100;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  transition-duration: 1.5s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  transform: scale(1.05);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#services .service.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#services .service .serviceImage {
+  position: relative;
+  overflow: hidden;
+  height: 23em;
+}
+#services .service .serviceImage > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s ease-in-out;
+}
+
+#services .service:hover .serviceImage > img {
+  transform: scale(1.1);
+}
+
+#services .service .serviceText {
+  flex: 1 1 auto;
+  position: relative;
+  color: #000;
+  padding: 3em;
+  padding-left: 4em;
+  padding-right: 4em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.9);
+}
+#services .service .logoCircle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  height: 12em;
+  width: 12em;
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: 100%;
+  z-index: 10;
+}
+#services .service .logoCircle img {
+  position: absolute;
+  top: 2em;
+  left: 1.5em;
+  width: 60%;
+}
+#services .service .serviceText h2 {
+  color: #01506b;
+  font-size: 2.4em;
+  margin: 0;
+  margin-bottom: 0.7em;
+}
+#services .service .serviceText h3 {
+  font-size: 1.4em;
+  margin: 0.3em 0;
+}
+#services .service .serviceText ul {
+  margin: 0;
+  padding-left: 2em;
+  list-style: circle;
+}
+#services .service .serviceText ul li {
+  font-size: 1.2em;
+  margin: 0 0.1em;
+}
+#services .serviceText .buttonWrapper {
+  margin-top: auto;
+}
+#services .serviceText button {
+  z-index: 100;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 1.8em;
+  font-size: 1.2em;
+  border: solid 0.2em #01506b;
+  transition: all 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+#services .serviceText button:before {
+  background: #01506b;
+  border: solid 0.2em #01506b;
+  opacity: 1;
+}
+#services .serviceText button:hover:before {
+  background: #01506b;
+  border: solid 0.2em #01506b;
+}
+
+#transition{
+    height: 10em;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    background: transparent;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+  #transition .transitionBackground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("/images/background2.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+  }
+
+@media screen and (min-width: 1800px) {
+  #services .service {
+    flex: 0 0 45%;
+    flex-direction: row;
+    width: auto;
+  }
+  #services .service .serviceImage {
+    flex: 1 1 40%;
+    height: auto;
+  }
+  #services .service .serviceText {
+    flex: 1 1 60%;
+    padding: 5em 4em;
+  }
+  #services .service .serviceImage > img {
+    visibility: hidden;
+  }
+}
+
+@media (pointer: none), (pointer: coarse) {
+  #services .service .serviceText {
+    backdrop-filter: none;
+  }
+}
+
+@media screen and (max-width: 1285px) and (min-width: 891px) {
+  #services .flexRow {
+    flex-direction: column;
+  }
+  #services .service {
+    flex: 0 0 45%;
+    flex-direction: row;
+    width: auto;
+  }
+  #services .service .serviceImage {
+    flex: 1 1 40%;
+    height: auto;
+  }
+  #services .service .serviceText {
+    flex: 1 1 60%;
+    padding: 5em 4em;
+  }
+  #services .service .serviceImage > img {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  #services .service {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #services {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  #services .service {
+    margin: 1em;
+  }
+  #services .service .serviceText {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  #services .service .serviceText h2 {
+    font-size: 2em;
+  }
+}
