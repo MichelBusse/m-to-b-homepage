@@ -78,9 +78,9 @@ export default function ServicesSection(props) {
               </ul>
               <div className={styles.buttonWrapper}>
                 <Link href="/Webdesign">
-                <a>
-                  <button>Zum Webdesign</button>
-                </a>
+                  <a>
+                    <button>Zum Webdesign</button>
+                  </a>
                 </Link>
               </div>
             </div>
@@ -138,9 +138,9 @@ export default function ServicesSection(props) {
               </ul>
               <div className={styles.buttonWrapper}>
                 <Link href="/Softwareentwicklung">
-                <a>
-                  <button>Zur Softwareentwicklung</button>
-                </a>ƒ
+                  <a>
+                    <button>Zur Softwareentwicklung</button>
+                  </a>
                 </Link>
               </div>
             </div>
