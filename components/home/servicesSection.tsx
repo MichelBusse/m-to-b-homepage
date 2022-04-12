@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/home/ServicesSection.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesSection(props) {
   const [active, setActive] = useState("");
@@ -76,9 +77,11 @@ export default function ServicesSection(props) {
                 <li>Drohnenvideoaufnahmen</li>
               </ul>
               <div className={styles.buttonWrapper}>
-                <a href="/Webdesign">
+                <Link href="/Webdesign">
+                <a>
                   <button>Zum Webdesign</button>
                 </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -134,9 +137,11 @@ export default function ServicesSection(props) {
                 <li>Entdecken Sie die besten Lösungen und Technologien</li>
               </ul>
               <div className={styles.buttonWrapper}>
-                <a href="/Softwareentwicklung">
+                <Link href="/Softwareentwicklung">
+                <a>
                   <button>Zur Softwareentwicklung</button>
-                </a>
+                </a>ƒ
+                </Link>
               </div>
             </div>
           </div>
