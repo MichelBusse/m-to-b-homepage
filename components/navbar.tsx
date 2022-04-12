@@ -9,8 +9,6 @@ export default function Navbar(props) {
   const [menuScrolled, setMenuScrolled] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
-
-
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
@@ -178,12 +176,22 @@ export default function Navbar(props) {
           <ul className={styles.sub}>
             <Link href="/Webdesign">
               <a>
-                <li style={{ transitionDelay: "0.15s" }}>Webdesign</li>
+                <li
+                  onClick={() => setMenuActive(false)}
+                  style={{ transitionDelay: "0.15s" }}
+                >
+                  Webdesign
+                </li>
               </a>
             </Link>
             <Link href="/Softwareentwicklung">
               <a>
-                <li style={{ transitionDelay: "0.2s" }}>Entwicklung</li>
+                <li
+                  onClick={() => setMenuActive(false)}
+                  style={{ transitionDelay: "0.2s" }}
+                >
+                  Entwicklung
+                </li>
               </a>
             </Link>
           </ul>
