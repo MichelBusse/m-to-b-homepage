@@ -103,97 +103,55 @@
   background: rgb(2, 38, 54);
   padding: 8em 0;
   position: relative;
-  height: 6em;
-  overflow: hidden;
-}
-.slideWrapper {
-  position: absolute;
-  top: 8em;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: customerslide 25s linear infinite;
-}
-.slideWrapper .copy {
-  display: inline-block;
-}
-
-@keyframes customerslide {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: calc(4890px / -2);
-  }
+  overflow: scroll;
 }
 .customer {
-  display: inline-block;
-}
-.customer img {
-  width: auto;
-  height: 6em;
-  margin: 0 3em;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 20px;
 }
 
-#customers .mover-1 {
-  animation: moveSlideshow 12s linear infinite;
-}
-@keyframes moveCustomers {
-  100% {
-    transform: translateX(-66.6666%);
-  }
-}
-
-@media screen and (max-width : 1460px) {
-  #projects .project .caption{
+@media screen and (max-width: 1460px) {
+  #projects .project .caption {
     font-size: 80%;
   }
 }
 
-@media screen and (max-width : 1150px) {
-  #projects .project{
+@media screen and (max-width: 1150px) {
+  #projects .project {
     flex: 1 1 calc(50% - 1em);
   }
 }
 
-@media screen and (max-width : 890px) {
-  #projects .project{
+@media screen and (max-width: 890px) {
+  #projects .project {
     height: 25em;
   }
-  #projects .project .caption{
+  #projects .project .caption {
     font-size: 90%;
   }
 }
 
-@media screen and (max-width : 570px) {
-  #projects .project{
+@media screen and (max-width: 570px) {
+  #projects .project {
     flex: 1 1 calc(50% - 0.5em);
     margin: 0.25em;
     height: 20em;
   }
-  #projects .project .caption{
+  #projects .project .caption {
     min-height: 8em;
   }
-  #projects .project .caption h3{
+  #projects .project .caption h3 {
     font-size: 1.4em;
   }
 
-  #customers{
+  #customers {
     padding: 4em 0;
-    height: 4em;
-  }
-
-  .slideWrapper{
-    top: 4em;
-  }
-
-  .customer img{
-    height: 4em;
-    margin: 0 1.5em;
   }
 }
 
-@media screen and (max-width : 468px) {
-  #projects .project{
+@media screen and (max-width: 468px) {
+  #projects .project {
     flex: 1 1 calc(100% - 0.5em);
   }
 }

@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "../../styles/home/ProjectsSection.module.scss";
 import Image from "next/image";
+import InfiniteHorizontalScroll from "../InfiniteHorizontalScroll";
 
 export default function ProjectsSection(props) {
   const [active, setActive] = useState("");
@@ -125,109 +126,64 @@ export default function ProjectsSection(props) {
         </div>
       </section>
       <section id={styles.customers}>
-        <div className={styles.slideWrapper}>
+        <InfiniteHorizontalScroll>
           <div className={styles.customer}>
             <Image
               src="/images/customers/special-solutions.png"
               alt="Special Solutions GmbH"
-              layout="fill"
+              width={123}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/uni-leipzig.png"
               alt="Universität Leipzig"
-              layout="fill"
+              width={286}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/zls-leipzig.png"
               alt="ZLS Leipzig"
-              layout="fill"
+              width={400}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/uniklinik-leipzig.png"
               alt="Universitätsklinikum Leipzig"
-              layout="fill"
+              width={442}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/final-fighters.png"
               alt="Final Fighters Gym Zwickau e.V."
-              layout="fill"
+              width={206}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/ks-gmbh.png"
               alt="K&amp;S GmbH"
-              layout="fill"
+              width={114}
+              height={100}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/hartmann.png"
               alt="Übersetzungsbüro Hartmann"
-              layout="fill"
+              width={517}
+              height={100}
             />
           </div>
-
-          <div className={styles.copy}>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/special-solutions.png"
-                alt="Special Solutions GmbH"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/uni-leipzig.png"
-                alt="Universität Leipzig"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/zls-leipzig.png"
-                alt="ZLS Leipzig"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/uniklinik-leipzig.png"
-                alt="Universitätsklinikum Leipzig"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/final-fighters.png"
-                alt="Final Fighters Gym Zwickau e.V."
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/ks-gmbh.png"
-                alt="K&S GmbH"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.customer}>
-              <Image
-                src="/images/customers/hartmann.png"
-                alt="Übersetzungsbüro Hartmann"
-                layout="fill"
-              />
-            </div>
-          </div>
-        </div>
+        </InfiniteHorizontalScroll>
       </section>
     </>
   );

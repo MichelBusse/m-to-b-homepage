@@ -1,0 +1,16 @@
+.slideWrapper {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(-100%);
+    width: 2368px;
+    animation: customerslide 25s linear infinite;
+  }
+  
+  @keyframes customerslide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
