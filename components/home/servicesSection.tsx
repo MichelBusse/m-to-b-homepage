@@ -39,7 +39,8 @@ export default function ServicesSection(props) {
                 <Image
                   src="/images/services/webdesignLogo.png"
                   alt="Webdesign Sachsen"
-                  layout="fill"
+                  width={200}
+                  height={152}
                 />
               </div>
               <Image
@@ -98,7 +99,8 @@ export default function ServicesSection(props) {
                 <Image
                   src="/images/services/programmierungLogo.png"
                   alt="Softwareentwicklung"
-                  layout="fill"
+                  width={200}
+                  height={150}
                 />
               </div>
               <Image

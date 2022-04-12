@@ -7,7 +7,7 @@ export default function CTASection() {
     <>
       <section
         className={
-          styles.ctaSection + " " + serviceSectionStyles.serviceSection
+          styles.ctaSection
         }
         style={{
           backgroundImage: "url('/images/ctaSection.jpg')",

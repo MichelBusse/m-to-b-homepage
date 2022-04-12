@@ -6,9 +6,14 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Footer from "../components/footer"
 import { CookiesProvider } from "react-cookie"
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import { Router } from "next/router"
+import { useSmoothScroll } from "../hooks/SmoothScroll"
+
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
+  useSmoothScroll()
 
   const anchorRefs = {
     aboutRef : useRef(),
@@ -16,6 +21,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     projectsRef : useRef(),
     contactRef : useRef(),
   }
+
+  useEffect(() => {
+    Router.events.on('routeChangeComplete', () => {
+      window.scroll({
+        top: 0,
+        left: 0
+      });
+    });
+  })
 
   return (
     <>
