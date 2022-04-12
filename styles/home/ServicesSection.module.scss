@@ -187,11 +187,12 @@
 @media screen and (max-width: 1285px) and (min-width: 891px) {
   #services .flexRow {
     flex-direction: column;
+    align-items: flex-start;
   }
   #services .service {
-    flex: 0 0 45%;
+    flex: 0 0 100%;
     flex-direction: row;
-    width: auto;
+    width: calc(100% - 4em);
   }
   #services .service .serviceImage {
     flex: 1 1 40%;
@@ -199,6 +200,7 @@
   }
   #services .service .serviceText {
     flex: 1 1 60%;
+    justify-content: flex-start;
     padding: 5em 4em;
   }
   #services .service .serviceImage > img {

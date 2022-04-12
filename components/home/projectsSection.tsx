@@ -44,9 +44,9 @@ export default function ProjectsSection(props) {
                 className={styles.projectBackgroundImage}
                 alt="Webdesign Special Solutions"
                 src="/images/projects/project1.jpg"
-                layout="fill"
+                width={600}
+                height={746}
               />
-              <div className={styles.blackCurtain}></div>
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
                   <h3>Special Solutions</h3>
@@ -71,9 +71,9 @@ export default function ProjectsSection(props) {
                 className={styles.projectBackgroundImage}
                 alt="Webdesign Bundeskonferenz für Lehrer:innenbildung"
                 src="/images/projects/project2.jpg"
-                layout="fill"
+                width={600}
+                height={746}
               />
-              <div className={styles.blackCurtain}></div>
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
                   <h3>Bundeskonferenz für Lehrer:innenbildung</h3>
@@ -92,9 +92,9 @@ export default function ProjectsSection(props) {
               className={styles.projectBackgroundImage}
               alt="Individualsoftware MB-Planner"
               src="/images/projects/project3.jpg"
-              layout="fill"
+              width={600}
+              height={746}
             />
-            <div className={styles.blackCurtain}></div>
             <div className={styles.captionWrapper}>
               <div className={styles.caption}>
                 <h3>Mitarbeiterplanung</h3>
@@ -113,9 +113,9 @@ export default function ProjectsSection(props) {
               className={styles.projectBackgroundImage}
               alt="Webdesign K&amp;S GmbH"
               src="/images/projects/project4.jpg"
-              layout="fill"
+              width={600}
+              height={746}
             />
-            <div className={styles.blackCurtain}></div>
             <div className={styles.captionWrapper}>
               <div className={styles.caption}>
                 <h3>K&amp;S GmbH</h3>

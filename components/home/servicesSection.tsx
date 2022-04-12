@@ -41,6 +41,7 @@ export default function ServicesSection(props) {
                   alt="Webdesign Sachsen"
                   width={200}
                   height={152}
+                  priority
                 />
               </div>
               <Image
@@ -48,6 +49,7 @@ export default function ServicesSection(props) {
                 src="/images/services/webdesign.jpg"
                 alt="Website Erstellung"
                 layout="fill"
+                priority
               />
             </div>
             <div className={styles.serviceText}>
@@ -101,6 +103,7 @@ export default function ServicesSection(props) {
                   alt="Softwareentwicklung"
                   width={200}
                   height={150}
+                  priority
                 />
               </div>
               <Image
@@ -108,6 +111,7 @@ export default function ServicesSection(props) {
                 src="/images/services/programmierung.jpg"
                 alt="Anwendungsentwicklung"
                 layout="fill"
+                priority
               />
             </div>
             <div className={styles.serviceText}>
