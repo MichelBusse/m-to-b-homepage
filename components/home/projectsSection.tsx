@@ -126,61 +126,61 @@ export default function ProjectsSection(props) {
         </div>
       </section>
       <section id={styles.customers}>
-        <InfiniteHorizontalScroll width={2088} spaceBetween={80}>
+        <InfiniteHorizontalScroll width={1670} spaceBetween={80}>
           <div className={styles.customer}>
             <Image
               src="/images/customers/special-solutions.png"
               alt="Special Solutions GmbH"
-              width={123}
-              height={100}
+              width={98}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/uni-leipzig.png"
               alt="Universität Leipzig"
-              width={286}
-              height={100}
+              width={229}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/zls-leipzig.png"
               alt="ZLS Leipzig"
-              width={400}
-              height={100}
+              width={320}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/uniklinik-leipzig.png"
               alt="Universitätsklinikum Leipzig"
-              width={442}
-              height={100}
+              width={353}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/final-fighters.png"
               alt="Final Fighters Gym Zwickau e.V."
-              width={206}
-              height={100}
+              width={165}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/ks-gmbh.png"
               alt="K&amp;S GmbH"
-              width={114}
-              height={100}
+              width={91}
+              height={80}
             />
           </div>
           <div className={styles.customer}>
             <Image
               src="/images/customers/hartmann.png"
               alt="Übersetzungsbüro Hartmann"
-              width={517}
-              height={100}
+              width={414}
+              height={80}
             />
           </div>
         </InfiniteHorizontalScroll>
