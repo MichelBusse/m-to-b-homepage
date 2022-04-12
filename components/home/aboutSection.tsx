@@ -66,9 +66,6 @@ export default function AboutSection(props) {
           <p style={{ transitionDelay: "0.9s" }}>
             Unser Ziel - Sie zu beeindrucken!
           </p>
-          <a href="#contact">
-            <button>kontakt@m-to-b.com</button>
-          </a>
         </div>
         <div className={styles.cell}>
           <h2>
