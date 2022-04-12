@@ -126,7 +126,7 @@ export default function ProjectsSection(props) {
         </div>
       </section>
       <section id={styles.customers}>
-        <InfiniteHorizontalScroll>
+        <InfiniteHorizontalScroll width={2088} spaceBetween={80}>
           <div className={styles.customer}>
             <Image
               src="/images/customers/special-solutions.png"
