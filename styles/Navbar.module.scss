@@ -78,6 +78,7 @@
   font-size: 1.3em;
   transition: color 0.4s ease-in-out;
   color: #ffffff;
+  font-weight: bolder;
 }
 .navbar ul li:hover,
 .navbar ul li.active {
@@ -95,23 +96,24 @@
 .navbar ul li::before {
   content: "";
   position: absolute;
-  bottom: 0.6em;
-  left: 1em;
-  width: calc(100% - 2em);
-  height: 0.1em;
+  top: 0;
+  left: 50%;
+  width: 1em;
+  height: 0.6em;
   border-radius: 0.05em;
   background: #ffffff;
-  transform: scaleX(0);
   transition: all 0.3s ease-in-out;
-  transform-origin: center;
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
   z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 .navbar.scrolled ul li::before {
   background: #01506b;
 }
 .navbar ul li:hover::before,
 .navbar ul li.active::before {
-  transform: scaleX(1);
+  transform: translateX(-50%) scaleY(1);
 }
 .hamburgerMenu {
   display: none !important;

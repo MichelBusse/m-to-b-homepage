@@ -7,12 +7,13 @@ import "react-toastify/dist/ReactToastify.css"
 import Footer from "../components/footer"
 import { CookiesProvider } from "react-cookie"
 import { useEffect, useRef } from 'react'
-import { Router } from "next/router"
+import { Router, useRouter } from "next/router"
 import { useSmoothScroll } from "../hooks/SmoothScroll"
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  
+  const router = useRouter()
+
   useSmoothScroll()
 
   const anchorRefs = {
@@ -78,7 +79,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von App-Entwicklung und beeindruckendem Webdesign, bis zu Virtual Reality"
           />
         </Head>
-        <Navbar anchorRefs={anchorRefs}/>
+        <Navbar anchorRefs={anchorRefs} initialScrolled={router.asPath.startsWith("/Softwareentwicklung")}/>
         <ToastContainer />
         <Component anchorRefs={anchorRefs} {...pageProps} />
         <Footer />

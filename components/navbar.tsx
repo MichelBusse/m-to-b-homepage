@@ -1,22 +1,32 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles/Navbar.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar(props) {
   const navbarRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const [menuActive, setMenuActive] = useState(false);
-  const [menuScrolled, setMenuScrolled] = useState(false);
+  const [menuScrolled, setMenuScrolled] = useState(
+    props.initialScrolled ? true : false
+  );
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
+    if ((router.asPath.startsWith("/Softwareentwicklung"))) {
+      setActiveMenuItem("services");
+    }
+
     const onScroll = () => {
-      if (window.scrollY > 0) {
-        setMenuScrolled(true);
-      } else {
-        setMenuScrolled(false);
+      if (!props.initialScrolled) {
+        if (window.scrollY > 0) {
+          setMenuScrolled(true);
+        } else {
+          setMenuScrolled(false);
+        }
       }
 
       const scrollPosition = window.scrollY + window.innerHeight;
@@ -43,7 +53,9 @@ export default function Navbar(props) {
         ) {
           setActiveMenuItem("about");
         } else {
-          setActiveMenuItem("");
+          if (!router.asPath.startsWith("/Softwareentwicklung")) {
+            setActiveMenuItem("");
+          }
         }
       }
     };

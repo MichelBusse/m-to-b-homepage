@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import CTASection from "../components/services/CTASection";
-import Header from "../components/services/header";
+import SoftwareHeader from "../components/services/SoftwareHeader";
 import ServiceSection from "../components/services/ServiceSection";
 import IndividualSoftwareSquares from "../components/services/IndividualSoftwareSquares";
 import ServiceStandardImage from "../components/services/ServiceStandardImage";
+import Software3D from "../components/three/Software3D";
 
 const stringsDE: Record<string, string> = {
   headline: "Softwareentwicklung",
@@ -12,13 +13,13 @@ const stringsDE: Record<string, string> = {
 const DevelopmentPage: NextPage = () => {
   return (
     <>
-      <Header
-        backgroundImage="/images/Softwareentwicklung/background.jpg"
+      <SoftwareHeader
         headline="Softwareentwicklung"
         slogan="Verbessern Sie die Effizienz in Ihrem Unternehmen, lösen Sie
               Probleme und verschaffen Sie sich einen Vorteil durch speziell
               angepasste Softwarelösungen."
       />
+      <div className="scrollAnchor" id="software"></div>
       <ServiceSection
         headline="Firmensysteme"
         text={[

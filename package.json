@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.0.10",
     "next": "12.1.4",
     "nodemailer": "^6.7.3",
     "react": "18.0.0",
@@ -21,6 +22,8 @@
     "react-tsparticles": "^1.43.1",
     "sass": "^1.49.11",
     "scroll-behavior-polyfill": "^2.0.13",
+    "three": "^0.139.2",
+    "three-plain-animator": "^1.1.2",
     "tsparticles": "^1.29.2",
     "typewriter-effect": "^2.18.2"
   },

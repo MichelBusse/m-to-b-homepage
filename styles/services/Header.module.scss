@@ -1,9 +1,7 @@
-
 .header {
   width: 100%;
   height: 45em;
-  max-height: 100%;
-  padding: 0.1px;
+  max-height: calc(100% - 4em);
   box-sizing: border-box;
   background-position: 0 0;
   background-size: cover;
@@ -11,6 +9,12 @@
   justify-content: flex-start;
   align-items: stretch;
   position: relative;
+  margin-top: 4em;
+  background: linear-gradient(
+    45deg,
+    rgb(2, 38, 54) 30%,
+    rgb(30, 106, 139) 100%
+  );
 }
 .header .backgroundColor {
   position: absolute;
@@ -18,7 +22,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgb(2, 0, 36);
+  background: hsl(243, 100%, 7%);
   background: linear-gradient(
     0deg,
     rgba(2, 38, 54, 0.1) 0%,
@@ -28,67 +32,99 @@
 }
 .header .headerTextWrapper {
   position: relative;
-  flex: 0 0 60%;
+  flex: 0 0 50%;
+  width: 50%;
   max-width: 100%;
-  padding-right: 10vw;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  background: rgba(2, 38, 54, 0.8);
-  clip-path: polygon(0 0, 0% 100%, calc(100% - 10vw) 100%, 100% 0);
+  background: #022636;
+  overflow: visible;
+  z-index: 20;
+}
+.header .headerDiagonal {
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  position: absolute;
+  background: #022636;
+  width: 20vh;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  z-index: 10;
 }
 .header .headerText {
-  color: #fff;
-  width: 54em;
-  padding: 0 0 0 4em;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12vh) 100%, 0 100%);
+  color: #000;
+  width: 60em;
+  max-width: calc(100% + 6vh);
+  box-sizing: border-box;
+  height: 60%;
+  min-height: 25em;
+  padding: 4em calc(6vh + 5em) 4em 3em; 
+  background: white;
 }
+.header .headerTextShadow {
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12vh) 100%, 0 100%);
+  color: #000;
+  width: 60em;
+  max-width: calc(100% + 6vh);
+  box-sizing: border-box;
+  height: 60%;
+  min-height: 25em;
+  padding: 4em calc(6vh + 5em) 4em 3em; 
+  background: #f13b74;
+  transform: translate(0.8em, 0.8em);
+}
+.header button{
+  clip-path: polygon(0 0, 100% 0, calc(100% - 1vh) 100%, 0 100%);
+  margin-top: 0.8em;
+}
+.header button::before{
+  background: #f13b74;
+
+}
+
 .headline {
   font-family: "Roboto Mono";
   font-weight: bold;
-  font-size: 4em;
+  font-size: 3em;
   font-style: italic;
   margin-top: 0;
+  color: #022636;
+
 }
-@media screen and (max-width: 1700px){
-  .header .headerText{
-    width: 48em;
-  }
-}
-@media screen and (max-width: 1300px){
-  .header .headerText{
-    padding: 0 4em;
-  }
-}
-@media screen and (max-width: 1200px){
-  .header .headerTextWrapper{
+@media screen and (max-width: 1200px) {
+  .header .headerTextWrapper {
     flex: 0 0 80%;
   }
-  .header .headerText{
+  .header .headerText {
     width: auto;
   }
 }
-@media screen and (max-width : 1080px) {
-  .header .headerTextWrapper{
+@media screen and (max-width: 1080px) {
+  .header .headerTextWrapper {
     flex: 0 0 80%;
   }
 }
-@media screen and (max-width : 900px) {
-  .header .headerTextWrapper{
+@media screen and (max-width: 900px) {
+  .header .headerTextWrapper {
     clip-path: none;
     flex: 0 0 100%;
     padding-right: 0;
   }
-  .header .headerText{
+  .header .headerText {
     width: auto;
     text-align: center;
   }
 }
-@media screen and (max-width : 522px) {
-  .header{
+@media screen and (max-width: 522px) {
+  .header {
     font-size: 85%;
   }
-  .header .headerText{
+  .header .headerText {
     padding: 0 2em;
   }
 }
