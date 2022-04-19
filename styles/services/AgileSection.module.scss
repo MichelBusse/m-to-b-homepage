@@ -1,0 +1,52 @@
+.agileSection {
+  text-align: center;
+  position: relative;
+  color: #04506C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7.5em 1em;
+}
+.agileSection h2 {
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  color: rgb(1, 80, 107);
+  font-size: 2.2em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+.agileSection h3 {
+    font-size: 2em;
+    color: rgb(1, 80, 107);
+    margin-bottom: 0.5em;
+}
+.agileSection p {
+    font-size: 1.2em;
+    color: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.agileSection .icon {
+    color: rgb(1, 80, 107);
+    font-size: 2em;
+}
+#flowChart{
+    width: 50em;
+    max-width: 100%;
+}
+.arrowWrapper {
+    cursor: pointer;
+}
+.arrow{
+    fill: #04506C;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.arrowWrapper:hover .arrow, .arrowWrapper.active .arrow{
+    fill: #f13b74;
+}
+.arrowText{
+    fill: #ffffff;
+}

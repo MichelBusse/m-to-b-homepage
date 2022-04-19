@@ -6,6 +6,7 @@ import ServicesSection from "../components/home/servicesSection";
 import ProjectsSection from "../components/home/projectsSection";
 import ContactSection from "../components/home/contactSection";
 import CookieDisclaimer from '../components/cookieDisclaimer';
+import CustomersSection from '../components/home/customersSection';
 
 
 export default function HomePage (props) {
@@ -16,6 +17,7 @@ export default function HomePage (props) {
       <AboutSection anchorRefs={props.anchorRefs}/>
       <ServicesSection anchorRefs={props.anchorRefs}/>
       <ProjectsSection anchorRefs={props.anchorRefs}/>
+      <CustomersSection />
       <ContactSection anchorRefs={props.anchorRefs}/>
     </>
   );

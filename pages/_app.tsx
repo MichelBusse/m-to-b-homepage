@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von App-Entwicklung und beeindruckendem Webdesign, bis zu Virtual Reality"
           />
         </Head>
-        <Navbar anchorRefs={anchorRefs} initialScrolled={router.asPath.startsWith("/Softwareentwicklung")}/>
+        <Navbar anchorRefs={anchorRefs} initialScrolled={router.asPath.startsWith("/Softwareentwicklung") || router.asPath.startsWith("/Webdesign")}/>
         <ToastContainer />
         <Component anchorRefs={anchorRefs} {...pageProps} />
         <Footer />

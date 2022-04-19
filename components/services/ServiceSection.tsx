@@ -1,6 +1,7 @@
 import serviceSectionStyles from "../../styles/services/ServiceSection.module.scss";
 import Typewriter, { TypewriterClass } from "typewriter-effect";
-import { useState, useEffect, useRef, cloneElement } from "react";
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function WebdesignSection(props) {
   const [active, setActive] = useState(false);
@@ -27,40 +28,16 @@ export default function WebdesignSection(props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [typewriterList]);
 
-  let sectionStyle = "";
-
-  switch (props.sectionStyle) {
-    case "blue":
-      sectionStyle = serviceSectionStyles.blueSection;
-      break;
-    case "grey":
-      sectionStyle = serviceSectionStyles.greySection;
-      break;
-  }
-
-  let style = {};
-  if (props.backgroundImage !== "") {
-    style = { backgroundImage: "url('" + props.backgroundImage + "')" };
-  }
-
   return (
     <>
       <section
         ref={serviceSectionRef}
         className={
-          sectionStyle +
-          " " +
           serviceSectionStyles.serviceSection +
           " " +
           (active ? serviceSectionStyles.active : "")
         }
-        style={style}
       >
-        {props.sectionStyle === "blue" ? (
-          <div className={serviceSectionStyles.blueCurtain}></div>
-        ) : (
-          <></>
-        )}
         <div className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
             <h2>
@@ -83,7 +60,14 @@ export default function WebdesignSection(props) {
           </div>
         </div>
         <div className={serviceSectionStyles.flexCell}>
-          {cloneElement(props.image, { active: active })}
+          <div className={serviceSectionStyles.image}>
+            <Image
+              src={props.image}
+              width={500}
+              height={500}
+              alt={props.imageAlt}
+            />
+          </div>
         </div>
       </section>
     </>

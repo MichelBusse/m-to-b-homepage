@@ -1,0 +1,95 @@
+
+.header {
+  width: 100%;
+  height: 35em;
+  margin-top: 5em;
+  max-height: 100%;
+  padding: 0.1px;
+  box-sizing: border-box;
+  background-position: 0 0;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+}
+.header .backgroundColor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 38, 54, 0.1) 0%,
+    rgba(2, 38, 54, 0.5) 100%
+  );
+  transition: background 0.5s ease-in-out;
+}
+.header .headerTextWrapper {
+  position: relative;
+  flex: 0 0 60%;
+  max-width: 100%;
+  padding-right: 10vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(2, 38, 54, 0.8);
+  clip-path: polygon(0 0, 0% 100%, calc(100% - 10vw) 100%, 100% 0);
+}
+.header .headerText {
+  color: #fff;
+  width: 54em;
+  padding: 0 0 0 4em;
+}
+.headline {
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  font-size: 4em;
+  font-style: italic;
+  margin-top: 0;
+}
+@media screen and (max-width: 1700px){
+  .header .headerText{
+    width: 48em;
+  }
+}
+@media screen and (max-width: 1300px){
+  .header .headerText{
+    padding: 0 4em;
+  }
+}
+@media screen and (max-width: 1200px){
+  .header .headerTextWrapper{
+    flex: 0 0 80%;
+  }
+  .header .headerText{
+    width: auto;
+  }
+}
+@media screen and (max-width : 1080px) {
+  .header .headerTextWrapper{
+    flex: 0 0 80%;
+  }
+}
+@media screen and (max-width : 900px) {
+  .header .headerTextWrapper{
+    clip-path: none;
+    flex: 0 0 100%;
+    padding-right: 0;
+  }
+  .header .headerText{
+    width: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width : 522px) {
+  .header{
+    font-size: 85%;
+  }
+  .header .headerText{
+    padding: 0 2em;
+  }
+}

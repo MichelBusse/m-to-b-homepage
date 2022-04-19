@@ -9,7 +9,8 @@
   justify-content: flex-start;
   align-items: stretch;
   position: relative;
-  margin-top: 4em;
+  overflow: hidden;
+  margin-top: 5em;
   background: linear-gradient(
     45deg,
     rgb(2, 38, 54) 30%,
@@ -55,36 +56,42 @@
 }
 .header .headerText {
   position: absolute;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 12vh) 100%, 0 100%);
   color: #000;
   width: 60em;
   max-width: calc(100% + 6vh);
   box-sizing: border-box;
-  height: 60%;
   min-height: 25em;
-  padding: 4em calc(6vh + 5em) 4em 3em; 
-  background: white;
+  padding: 4em 12vh 4em 3em;
+  z-index: 1;
 }
-.header .headerTextShadow {
+.header .headerText:after {
+  content: "";
+  z-index: -1;
   position: absolute;
   clip-path: polygon(0 0, 100% 0, calc(100% - 12vh) 100%, 0 100%);
-  color: #000;
-  width: 60em;
-  max-width: calc(100% + 6vh);
-  box-sizing: border-box;
-  height: 60%;
-  min-height: 25em;
-  padding: 4em calc(6vh + 5em) 4em 3em; 
-  background: rgb(241, 59, 116);
-  transform: translate(1.2em, -0.8em);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(255, 255, 255);
 }
-.header button{
+.header .headerText:before {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12vh) 100%, 0 100%);
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 59, 116);
+  top: 1em;
+  left: 1em;
+}
+.header button {
   clip-path: polygon(0 0, 100% 0, calc(100% - 1vh) 100%, 0 100%);
   margin-top: 0.8em;
 }
-.header button::before{
+.header button::before {
   background: #f13b74;
-
 }
 
 .headline {
@@ -94,37 +101,49 @@
   font-style: italic;
   margin-top: 0;
   color: #022636;
+}
 
-}
-@media screen and (max-width: 1200px) {
-  .header .headerTextWrapper {
-    flex: 0 0 80%;
-  }
-  .header .headerText {
-    width: auto;
+@media screen and (max-width: 1050px) {
+  .headline{
+    font-size: 2.5em;
   }
 }
-@media screen and (max-width: 1080px) {
-  .header .headerTextWrapper {
-    flex: 0 0 80%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .header .headerTextWrapper {
-    clip-path: none;
-    flex: 0 0 100%;
-    padding-right: 0;
-  }
-  .header .headerText {
-    width: auto;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 522px) {
+@media screen and (max-width: 800px) {
   .header {
-    font-size: 85%;
+    flex-direction: column;
+    height: 50em;
+    max-height: auto;
+  }
+  .header .headerTextWrapper {
+    flex: 0 0 50%;
+    width: 100%;
+    height: 50%;
   }
   .header .headerText {
-    padding: 0 2em;
+    position: relative;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    min-height: auto;
+    height: auto;
+    font-size: 90%;
+    margin-right: 1em;
+  }
+  .header .headerDiagonal {
+    width: 100%;
+    left: 0%;
+    top: 50%;
+    height: 4em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header {
+    height: 60em;
+  }
+  .header .headerText{
+    padding-right: 6vh;
+  }
+  .header .headerText:after,
+  .header .headerText:before {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 6vh) 100%, 0 100%);
   }
 }

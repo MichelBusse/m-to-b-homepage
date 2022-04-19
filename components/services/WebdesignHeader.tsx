@@ -1,6 +1,6 @@
-import styles from "../../styles/services/Header.module.scss";
+import styles from "../../styles/services/WebdesignHeader.module.scss";
 
-export default function Header(props) {
+export default function WebdesignHeader(props) {
   return (
     <>
       <header

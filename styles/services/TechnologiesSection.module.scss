@@ -7,6 +7,7 @@
   background: url("/images/Softwareentwicklung/background.jpg");
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 .technologiesSection .blueCurtain {
   position: absolute;
@@ -97,4 +98,23 @@
 }
 .technologiesSection .logo:hover .logoCaption:before {
   transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+@media screen and (max-width: 470px){
+  .technologiesSection .logo:before,
+  .technologiesSection .logoCaption:before {
+    width: 8em;
+    height: 8em;
+  }
+  .technologiesSection .logo {
+    margin: 1em;
+    padding: 3em;
+  }
+  .technologiesSection .logo img{
+    width: 3em;
+    height: 3em;
+  }
+  .technologiesSection .row {
+    height: 6em;
+  }
 }

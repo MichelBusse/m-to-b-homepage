@@ -1,6 +1,5 @@
-import styles from "../../styles/services/Header.module.scss";
+import styles from "../../styles/services/SoftwareHeader.module.scss";
 import Software3D from "../three/Software3D";
-import Link from "next/link";
 import { useRef } from "react";
 
 export default function SoftwareHeader(props) {
@@ -17,8 +16,10 @@ export default function SoftwareHeader(props) {
         <div className={styles.headerTextWrapper}>
           <div className={styles.headerTextShadow}></div>
           <div className={styles.headerText}>
-            <h1 className={styles.headline}>{props.headline}</h1>
-            <p>{props.slogan}</p>
+            <h1 className={styles.headline}>Software&shy;entwicklung</h1>
+            <p>Sehen Sie Ihre Ideen entstehen, lösen Sie
+              Probleme und verschaffen Sie sich einen Vorteil durch individuell
+              entwickelte Software, ob App oder Systemlösungen!</p>
             <button onClick={scroll}>Mehr erfahren</button>
           </div>
         </div>

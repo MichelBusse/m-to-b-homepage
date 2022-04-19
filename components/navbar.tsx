@@ -16,7 +16,7 @@ export default function Navbar(props) {
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
-    if ((router.asPath.startsWith("/Softwareentwicklung"))) {
+    if ((router.asPath.startsWith("/Softwareentwicklung") || router.asPath.startsWith("/Webdesign"))) {
       setActiveMenuItem("services");
     }
 
@@ -53,7 +53,7 @@ export default function Navbar(props) {
         ) {
           setActiveMenuItem("about");
         } else {
-          if (!router.asPath.startsWith("/Softwareentwicklung")) {
+          if (!router.asPath.startsWith("/Softwareentwicklung") && !router.asPath.startsWith("/Webdesign")) {
             setActiveMenuItem("");
           }
         }

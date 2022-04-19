@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import CTASection from "../components/services/CTASection";
-import Header from "../components/services/header";
-import ServiceSection from "../components/services/ServiceSection";
+import WebdesignHeader from "../components/services/WebdesignHeader";
 import CircleImage from "../components/services/CircleImage";
+import WebdesignSection from "../components/services/WebdesignSection";
+import CustomersSection from "../components/home/customersSection";
+import ContactSection from "../components/home/contactSection";
 
 const stringsDE: Record<string, string> = {
   headline: "Webdesign",
@@ -11,12 +13,12 @@ const stringsDE: Record<string, string> = {
 const WebdesignPage: NextPage = () => {
   return (
     <>
-      <Header
+      <WebdesignHeader
         backgroundImage="/images/Webdesign/background.jpg"
         headline="Webdesign"
         slogan="Modern, Einzigartig, Effektiv"
       />
-      <ServiceSection
+      <WebdesignSection
         headline="Homepage-Design"
         text={[
           <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -40,7 +42,7 @@ const WebdesignPage: NextPage = () => {
           />
         }
       />
-      <ServiceSection
+      <WebdesignSection
         headline="Web-Apps und Progressive Web-Apps"
         sectionStyle="blue"
         backgroundImage="/images/Webdesign/blueSection.jpg"
@@ -64,7 +66,7 @@ const WebdesignPage: NextPage = () => {
           />
         }
       />
-      <ServiceSection
+      <WebdesignSection
         headline="3D-Umgebungen"
         text={[
           <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -94,7 +96,8 @@ const WebdesignPage: NextPage = () => {
           />
         }
       />
-      <CTASection />
+      <CustomersSection />
+      <ContactSection />
     </>
   );
 };

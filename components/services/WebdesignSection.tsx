@@ -1,10 +1,8 @@
-import serviceSectionStyles from "../../styles/services/ServiceSection.module.scss";
+import serviceSectionStyles from "../../styles/services/WebdesignSection.module.scss";
 import Typewriter, { TypewriterClass } from "typewriter-effect";
-import { useState, useEffect, useRef } from "react";
-import ServiceStandardImage from "./ServiceStandardImage";
-import Image from "next/image";
+import { useState, useEffect, useRef, cloneElement } from "react";
 
-export default function AppSection(props) {
+export default function WebdesignSection(props) {
   const [active, setActive] = useState(false);
   const [typewriterList, addTypewriter] = useState<TypewriterClass[]>([]);
   const [typewriterPlaceholder, setTypewriterPlaceholder] = useState(
@@ -29,26 +27,40 @@ export default function AppSection(props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [typewriterList]);
 
+  let sectionStyle = "";
+
+  switch (props.sectionStyle) {
+    case "blue":
+      sectionStyle = serviceSectionStyles.blueSection;
+      break;
+    case "grey":
+      sectionStyle = serviceSectionStyles.greySection;
+      break;
+  }
+
+  let style = {};
+  if (props.backgroundImage !== "") {
+    style = { backgroundImage: "url('" + props.backgroundImage + "')" };
+  }
+
   return (
     <>
       <section
         ref={serviceSectionRef}
         className={
-          serviceSectionStyles.serviceSection +
+          sectionStyle +
+          " " +
+          serviceSectionStyles.webdesignSection +
           " " +
           (active ? serviceSectionStyles.active : "")
         }
+        style={style}
       >
-        <div className={serviceSectionStyles.flexCell}>
-          <div className={serviceSectionStyles.image}>
-            <Image
-              src="/images/Softwareentwicklung/smartphone.png"
-              width={500}
-              height={500}
-              alt="App-Enticklung"
-            />
-          </div>
-        </div>
+        {props.sectionStyle === "blue" ? (
+          <div className={serviceSectionStyles.blueCurtain}></div>
+        ) : (
+          <></>
+        )}
         <div className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
             <h2>
@@ -56,7 +68,7 @@ export default function AppSection(props) {
               <Typewriter
                 onInit={(typewriter) => {
                   setTypewriterPlaceholder("");
-                  typewriter.typeString("Mobile App-Entwicklung");
+                  typewriter.typeString(props.headline);
                   addTypewriter((state) => [...state, typewriter]);
                   if (
                     centerPos(serviceSectionRef.current) <
@@ -67,15 +79,11 @@ export default function AppSection(props) {
                 }}
               />
             </h2>
-            <p style={{ transitionDelay: "0.3s" }} key={1}>
-              Von der Idee bis zum Upload in den App Store führen wir Ihre App
-              durch den Entwicklungsprozess und zum Erfolg. Mit Erfahrung in der
-              Cross-Platform und nativen Entwicklung für Android und IOS können
-              wir Ihre Anforderungen effizient und modern implementieren. Dabei
-              legen wir auf verlässliche Funktionen genauso viel Wert wie auf
-              ein überzeugendes und nutzbares UI-Design.
-            </p>
+            {props.text}
           </div>
+        </div>
+        <div className={serviceSectionStyles.flexCell}>
+          {cloneElement(props.image, { active: active })}
         </div>
       </section>
     </>

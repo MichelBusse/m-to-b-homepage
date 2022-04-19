@@ -1,0 +1,16 @@
+#customers {
+  background: rgb(2, 38, 54);
+  padding: 8em 0;
+  position: relative;
+  overflow: scroll;
+}
+.customer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 570px) {
+  #customers {
+    padding: 4em 0;
+  }
+}

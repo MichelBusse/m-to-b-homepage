@@ -10,30 +10,10 @@
   flex-wrap: wrap;
   max-width: 120em;
   margin: 0 auto;
+  padding: 0 4em;
 }
-
-.serviceSection.blueSection{
-  padding: 8vw 0;
-  clip-path: polygon(0 0, 100% 8vw, 100% calc(100% - 8vw), 0 100%);
-  color: white;
-  background-position: 0 0;
-  background-size: cover;
-}
-.serviceSection.greySection{
-  background: #EEEEEE;
-  padding: 8vw 0 0 0;
-  clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
-}
-
-
-.blueCurtain {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(2, 38, 54, 0.8);
-  z-index: 1;
+.serviceSection:nth-of-type(2n) {
+  flex-direction: row-reverse;
 }
 
 .flexCell {
@@ -44,15 +24,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   margin: 0;
-  padding: 2em 0
+  padding: 2em 2em;
 }
 .flexCell.scaleable{
   flex: 1 1 50%;
 }
 .serviceSection .text {
   max-width: 54em;
-  padding-left: 4em;
 }
 .serviceSection .image {
   padding: 2em;
@@ -85,14 +65,12 @@
 @media screen and (max-width: 1300px){
   .serviceSection{
     flex-direction: column-reverse;
-    padding: 6em 0;
+  }
+  .serviceSection:nth-of-type(2n) {
+    flex-direction: column-reverse;
   }
   .serviceSection.blueSection, .serviceSection.greySection{
     padding: calc(8vw + 6em) 0;
-  }
-  .serviceSection .text{
-    padding: 0 4em;
-    text-align: center;
   }
   .serviceSection .flexCell{
     flex: 0 0 100%;
@@ -104,8 +82,17 @@
   .serviceSection{
     font-size: 90%;
   }
+  .serviceSection .image{
+    padding: 0;
+  }
   .serviceSection .text{
     text-align: left;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width : 420px) {
+  .serviceSection{
     padding: 0 2em;
   }
 }
