@@ -6,6 +6,7 @@ import IndividualSoftwareSquares from "../components/services/IndividualSoftware
 import ServiceStandardImage from "../components/services/ServiceStandardImage";
 import TechnologiesSection from "../components/services/TechnologiesSection";
 import ContactSection from "../components/home/contactSection";
+import AppSection from "../components/services/AppSection";
 
 const stringsDE: Record<string, string> = {
   headline: "Softwareentwicklung",
@@ -42,31 +43,8 @@ const DevelopmentPage: NextPage = () => {
         ]}
         image={<IndividualSoftwareSquares />}
       />
+      <AppSection />
       <TechnologiesSection />
-      <ServiceSection
-        headline="Mobile App-Entwicklung"
-        text={[
-          <p style={{ transitionDelay: "0.3s" }} key={1}>
-            Durch moderne Cross-Platform-Programmierung und Technologien wie
-            z.B. React, Electron und Flutter, entwickeln wir Anwendungen für
-            alle Geräte. Ob klassische Desktop-Programme, mobile Apps oder alles
-            kombiniert, wir schaffen eine einheitliche Oberfläche für alle
-            Nutzer. Dabei erreichen wir eine optimale Zeiteffizienz und außerdem
-            ganz neue Möglichkeiten, da nur eine Code Base für alle Plattformen
-            gemanagt werden muss. Wir legen bei der Entwicklung nicht nur Wert
-            auf die Funktionen, sondern auch auf eine optimierte und clever
-            gestaltete UI. Dadurch überzeugt unsere Software nicht nur durch
-            gute Funktionen, sondern auch durch eine nutzerfreundliche und
-            schnelle Handhabung.
-          </p>,
-        ]}
-        image={
-          <ServiceStandardImage
-            image="/images/Softwareentwicklung/cross-platform.jpg"
-            imageAlt="VR und Mixed Reality"
-          />
-        }
-      />
       <ContactSection />
     </>
   );

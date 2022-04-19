@@ -1,14 +1,15 @@
 .serviceSection {
-  min-height: 50em;
   position: relative;
   background-position: 0 0;
   background-size: 100% auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: stretch;
   color: #000000;
   flex-wrap: wrap;
+  max-width: 120em;
+  margin: 0 auto;
 }
 
 .serviceSection.blueSection{
@@ -43,8 +44,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 2em 0
 }
 .flexCell.scaleable{
   flex: 1 1 50%;
@@ -52,6 +53,9 @@
 .serviceSection .text {
   max-width: 54em;
   padding-left: 4em;
+}
+.serviceSection .image {
+  padding: 2em;
 }
 
 .serviceSection .text h2{
