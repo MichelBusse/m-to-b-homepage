@@ -6,8 +6,7 @@ export default function SoftwareHeader(props) {
   const headerRef = useRef<HTMLDivElement>(null);
 
   const scroll = () => {
-    headerRef.current &&
-      window.scrollTo(0, headerRef.current.offsetHeight);
+    headerRef.current && window.scrollTo(0, headerRef.current.offsetHeight);
   };
 
   return (
@@ -17,14 +16,18 @@ export default function SoftwareHeader(props) {
           <div className={styles.headerTextShadow}></div>
           <div className={styles.headerText}>
             <h1 className={styles.headline}>Software&shy;entwicklung</h1>
-            <p>Sehen Sie Ihre Ideen entstehen, lösen Sie
-              Probleme und verschaffen Sie sich einen Vorteil durch individuell
-              entwickelte Software, ob App oder Systemlösungen!</p>
+            <p>
+              Sehen Sie Ihre Ideen entstehen, lösen Sie Probleme und verschaffen
+              Sie sich einen Vorteil durch individuell entwickelte Software, ob
+              App oder Systemlösungen!
+            </p>
             <button onClick={scroll}>Mehr erfahren</button>
           </div>
         </div>
         <div className={styles.headerDiagonal}></div>
-        <Software3D />
+        <div className={styles.canvasContainer}>
+          <Software3D />
+        </div>
       </header>
     </>
   );

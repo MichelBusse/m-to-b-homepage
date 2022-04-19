@@ -96,12 +96,14 @@ export default function Navbar(props) {
         <div className={styles.logo}>
           <Link href="/#home">
             <a>
-              <div className={styles.mbLogo}></div>
+              <div className={styles.mbLogo}
+                  onClick={() => setMenuActive(false)}></div>
             </a>
           </Link>
           <Link href="/#home">
             <a>
-              <span>M-to-B</span>
+              <span
+                  onClick={() => setMenuActive(false)}>M-to-B</span>
             </a>
           </Link>
         </div>

@@ -35,7 +35,7 @@ const DevelopmentPage: NextPage = () => {
           imageAlt="Individualsoftware"
         />
         <ServiceSection
-          headline="Mobile App-Entwicklung"
+          headline="App Entwicklung"
           text={[
             <p style={{ transitionDelay: "0.3s" }} key={1}>
               Von der Idee bis zum Upload in den App Store führen wir Ihre App
