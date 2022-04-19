@@ -61,7 +61,7 @@ export default function ContactSection(props) {
 
     return <>
         <div className="scrollAnchor" id="contact"></div>
-        <section className={styles.contactSection} ref={props.anchorRefs.contactRef}>
+        <section className={styles.contactSection} ref={props.anchorRefs ? props.anchorRefs.contactRef : null}>
             <div className={styles.contactTransitionWrapper}></div>
             <div className={styles.contactTransition}></div>
             <Particles className={styles.particles}

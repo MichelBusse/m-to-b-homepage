@@ -6,14 +6,20 @@ export default function IndividualSoftwareSquares() {
     <>
       <div className={styles.squares}>
         <div className={styles.square}>
+          <div className={styles.caption}>
+            <span>Industrie</span>
+          </div>
           <Image
             src="/images/Softwareentwicklung/logistik.jpg"
-            alt="Logistik"
+            alt="Industrie"
             layout="fill"
           />
           <div className="curtain"></div>
         </div>
         <div className={styles.square}>
+          <div className={styles.caption}>
+            <span>Management</span>
+          </div>
           <Image
             src="/images/Softwareentwicklung/firmenprozesse.jpg"
             alt="Firmenprozesse"
@@ -22,6 +28,9 @@ export default function IndividualSoftwareSquares() {
           <div className="curtain"></div>
         </div>
         <div className={styles.square}>
+          <div className={styles.caption}>
+            <span>Startups</span>
+          </div>
           <Image
             src="/images/Softwareentwicklung/einsatzplanung.jpg"
             alt="Einsatzplanung"
@@ -30,6 +39,9 @@ export default function IndividualSoftwareSquares() {
           <div className="curtain"></div>
         </div>
         <div className={styles.square}>
+          <div className={styles.caption}>
+            <span>Medizin</span>
+          </div>
           <Image
             src="/images/Softwareentwicklung/op.jpg"
             alt="OP"

@@ -4,7 +4,8 @@ import SoftwareHeader from "../components/services/SoftwareHeader";
 import ServiceSection from "../components/services/ServiceSection";
 import IndividualSoftwareSquares from "../components/services/IndividualSoftwareSquares";
 import ServiceStandardImage from "../components/services/ServiceStandardImage";
-import Software3D from "../components/three/Software3D";
+import TechnologiesSection from "../components/services/TechnologiesSection";
+import ContactSection from "../components/home/contactSection";
 
 const stringsDE: Record<string, string> = {
   headline: "Softwareentwicklung",
@@ -15,36 +16,35 @@ const DevelopmentPage: NextPage = () => {
     <>
       <SoftwareHeader
         headline="Softwareentwicklung"
-        slogan="Verbessern Sie die Effizienz in Ihrem Unternehmen, lösen Sie
-              Probleme und verschaffen Sie sich einen Vorteil durch speziell
-              angepasste Softwarelösungen."
+        slogan="Sehen Sie Ihre Ideen entstehen, lösen Sie
+              Probleme und verschaffen Sie sich einen Vorteil durch individuell
+              entwickelte Software, ob App oder Systemlösungen!"
       />
       <div className="scrollAnchor" id="software"></div>
       <ServiceSection
-        headline="Firmensysteme"
+        headline="Individualsoftware"
         text={[
           <p style={{ transitionDelay: "0.3s" }} key={1}>
             Individuell entwickelte Software lohnt sich überall, wo bestehende
             Programme die Anforderungen und Firmenprozesse nicht optimal
-            abbilden können.
+            abbilden können, oder wo völlig neue Ideen umgesetzt werden sollen.
           </p>,
           <p style={{ transitionDelay: "0.6s" }} key={2}>
-            Dafür erstellen wir maßgeschneiderte Lösungen, welche Ihren
-            Arbeitsablauf optimal erleichtern und Ihnen so einen großen Vorteil
-            verschaffen.
+            Gemeinsam mit Ihnen erstellen wir maßgeschneiderte Lösungen, welche
+            alle Ziele treffen und Ihre Vorstellungen modern und effizienz
+            umsetzen.
           </p>,
           <p style={{ transitionDelay: "0.9s" }} key={3}>
-            Von Einsatzplanung, Mitarbeitermanagement, Projektmanagement bis
-            Inventarsystemen und Rechnungserstellung können viele Firmenprozesse
-            digitalisiert und optimiert werden.
+            Von Mitarbeitermanagement, Projektmanagement, Inventarsystemen und
+            Rechnungserstellung können nahezu alle Firmenprozesse digitalisiert
+            werden.
           </p>,
         ]}
         image={<IndividualSoftwareSquares />}
       />
+      <TechnologiesSection />
       <ServiceSection
-        headline="Web, App und Desktop"
-        sectionStyle="blue"
-        backgroundImage="/images/Softwareentwicklung/background.jpg"
+        headline="Mobile App-Entwicklung"
         text={[
           <p style={{ transitionDelay: "0.3s" }} key={1}>
             Durch moderne Cross-Platform-Programmierung und Technologien wie
@@ -53,40 +53,21 @@ const DevelopmentPage: NextPage = () => {
             kombiniert, wir schaffen eine einheitliche Oberfläche für alle
             Nutzer. Dabei erreichen wir eine optimale Zeiteffizienz und außerdem
             ganz neue Möglichkeiten, da nur eine Code Base für alle Plattformen
-            gemanagt werden muss.
-          </p>,
-          <p style={{ transitionDelay: "0.6s" }} key={2}>
-            Wir legen bei der Entwicklung nicht nur Wert auf die Funktionen,
-            sondern auch auf eine optimierte und clever gestaltete UI. Dadurch
-            überzeugt unsere Software nicht nur durch gute Funktionen, sondern
-            auch durch eine nutzerfreundliche und schnelle Handhabung.
+            gemanagt werden muss. Wir legen bei der Entwicklung nicht nur Wert
+            auf die Funktionen, sondern auch auf eine optimierte und clever
+            gestaltete UI. Dadurch überzeugt unsere Software nicht nur durch
+            gute Funktionen, sondern auch durch eine nutzerfreundliche und
+            schnelle Handhabung.
           </p>,
         ]}
         image={
           <ServiceStandardImage
             image="/images/Softwareentwicklung/cross-platform.jpg"
-            imageAlt="Web, App und Desktop"
-          />
-        }
-      />
-      <ServiceSection
-        headline="VR und Mixed Reality"
-        text={[
-          <p style={{ transitionDelay: "0.3s" }} key={1}>
-            Nicht nur Spiele können durch VR realisiert werden, sondern auch
-            verschiedenste andere Anwendungen: ob Präsentationsumgebungen oder
-            interaktive Funktionen, die Möglichkeiten sind in diesem Bereich
-            noch nicht annähernd ausgeschöpft.
-          </p>,
-        ]}
-        image={
-          <ServiceStandardImage
-            image="/images/Softwareentwicklung/mixed-reality.jpg"
             imageAlt="VR und Mixed Reality"
           />
         }
       />
-      <CTASection />
+      <ContactSection />
     </>
   );
 };

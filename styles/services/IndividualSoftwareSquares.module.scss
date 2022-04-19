@@ -9,6 +9,42 @@
   animation-duration: 2s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  cursor:pointer;
+}
+.square .caption{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(2, 38, 54, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.square .caption:before{
+  content:"";
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(241, 59, 116, 0.6);
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+  transform: scale(0);
+  color: #fff;
+  z-index: 2;
+}
+.square:hover .caption:before{
+  transform: scale(1);
+}
+.square .caption span{
+  position: relative;
+  z-index: 2;
+  font-size: 1.1em;
 }
 .square img {
   object-fit: cover;

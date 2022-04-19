@@ -16,7 +16,7 @@ export default function BackgroundParticles() {
 
 
   const particlesGeometry = new BufferGeometry();
-  const count = 500;
+  const count = 800;
   const positions = new Float32Array(count * 3);
 
   for (let i = 0; i < count; i++) {

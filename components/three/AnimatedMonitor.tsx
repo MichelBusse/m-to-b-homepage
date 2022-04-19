@@ -13,7 +13,7 @@ export default function AnimatedMonitor() {
   
   const spriteTexture = useLoader(TextureLoader, texturePath)
 
-  const animator =  new PlainAnimator(spriteTexture, 5, 16, 20, 10);
+  const animator =  new PlainAnimator(spriteTexture, 5, 6, 26, 10);
 
   const texture = animator.init();
 

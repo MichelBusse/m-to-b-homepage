@@ -4,10 +4,6 @@ import { useFrame } from "@react-three/fiber";
 import Model from "./Model";
 
 export default function AnimatedRocket() {
-  // Eine Referenz für die Gruppe, damit diese animiert werden kann
-  // null! ist ein kleiner TypeScript-Hack,
-  // damit wir nicht immer auf null überprüfen müssen, da es garantiert ist,
-  // dass die Referenz in useFrame nie null ist
   const group = useRef<Group>(null!);
   const rotation = useRef<Group>(null!);
   const ship = useRef<Group>(null!);

@@ -60,6 +60,8 @@ export default function Navbar(props) {
       }
     };
 
+    onScroll();
+    
     if (menuActive) {
       document.body.style.overflowY = "hidden";
     } else {
