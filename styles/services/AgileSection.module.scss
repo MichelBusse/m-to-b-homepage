@@ -24,13 +24,11 @@
 .agileSection p {
     font-size: 1.2em;
     color: #000;
-    display:flex;
-    justify-content: center;
-    align-items: center;
 }
 .agileSection .icon {
-    color: rgb(1, 80, 107);
+    color: #f13b74;
     font-size: 2em;
+    vertical-align: middle;
 }
 #flowChart{
     width: 50em;

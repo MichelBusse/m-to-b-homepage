@@ -7,7 +7,7 @@ export default function AgileSection() {
 
     const texts = [
         <><p><MdPlayArrow className={styles.icon}/>Ausarbeitung der Anforderungen und Technologien</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Planung für die Implementierung</p></>,
+        <><p><MdPlayArrow className={styles.icon}/>Planung der Softwarestruktur und Erstellung des UI/UX-Design</p></>,
         <><p><MdPlayArrow className={styles.icon}/>Umsetzung der Anforderungen</p></>,
         <><p><MdPlayArrow className={styles.icon}/>Überprüfung und Bestätigung der Ergebnisse</p></>,
         <><p><MdPlayArrow className={styles.icon}/>Rücksprache im Team bzw. mit dem Kunden</p></>,

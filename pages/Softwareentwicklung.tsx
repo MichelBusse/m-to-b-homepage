@@ -31,7 +31,7 @@ const DevelopmentPage: NextPage = () => {
               digitalisiert werden.
             </p>,
           ]}
-          image="/images/Softwareentwicklung/smartphone.png"
+          image="/images/Softwareentwicklung/pc.png"
           imageAlt="Individualsoftware"
         />
         <ServiceSection
