@@ -5,10 +5,17 @@ import TechnologiesSection from "../components/services/TechnologiesSection";
 import ContactSection from "../components/home/contactSection";
 import CustomersSection from "../components/home/customersSection";
 import AgileSection from "../components/services/AgileSection";
+import Head from "next/head";
 
 const DevelopmentPage: NextPage = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Wir entwickeln Software mit Kreativität und Erfahrung. Profitieren Sie von modernen Technologien, kompetenter Zusammenarbeit und neuen Lösungen!"
+        />
+      </Head>
       <SoftwareHeader />
       <div style={{ margin: "4em 0" }}>
         <ServiceSection

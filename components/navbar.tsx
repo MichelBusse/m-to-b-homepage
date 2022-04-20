@@ -16,8 +16,10 @@ export default function Navbar(props) {
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
-    if ((router.asPath.startsWith("/Softwareentwicklung") || router.asPath.startsWith("/Webdesign"))) {
-      setActiveMenuItem("services");
+    if (router.asPath.startsWith("/Softwareentwicklung")){
+      setActiveMenuItem("software");
+    }else if(router.asPath.startsWith("/Webdesign")){
+      setActiveMenuItem("webdesign");
     }
 
     const onScroll = () => {
@@ -81,7 +83,7 @@ export default function Navbar(props) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, [menuActive, props.anchorRefs]);
+  }, [menuActive, props.anchorRefs, props.initialScrolled, router.asPath]);
 
   return (
     <>
@@ -119,7 +121,7 @@ export default function Navbar(props) {
             <Link href="/#services">
               <a>
                 <li
-                  className={activeMenuItem === "services" ? styles.active : ""}
+                  className={activeMenuItem === "services" || activeMenuItem === "webdesign" || activeMenuItem === "software" ? styles.active : ""}
                 >
                   Leistungen
                 </li>
@@ -195,6 +197,7 @@ export default function Navbar(props) {
                 <li
                   onClick={() => setMenuActive(false)}
                   style={{ transitionDelay: "0.15s" }}
+                  className={activeMenuItem === "webdesign" ? styles.active : ""}
                 >
                   Webdesign
                 </li>
@@ -205,6 +208,7 @@ export default function Navbar(props) {
                 <li
                   onClick={() => setMenuActive(false)}
                   style={{ transitionDelay: "0.2s" }}
+                  className={activeMenuItem === "software" ? styles.active : ""}
                 >
                   Entwicklung
                 </li>

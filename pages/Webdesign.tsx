@@ -1,22 +1,24 @@
 import type { NextPage } from "next";
-import CTASection from "../components/services/CTASection";
 import WebdesignHeader from "../components/services/WebdesignHeader";
 import CircleImage from "../components/services/CircleImage";
 import WebdesignSection from "../components/services/WebdesignSection";
 import CustomersSection from "../components/home/customersSection";
 import ContactSection from "../components/home/contactSection";
-
-const stringsDE: Record<string, string> = {
-  headline: "Webdesign",
-};
+import Head from "next/head";
 
 const WebdesignPage: NextPage = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Beeindrucken Sie Ihre Nutzer mit einer Website, die überzeugt! Durch neueste Web-Technologien bieten wir innovative Möglichkeiten für Ihre Homepage."
+        />
+      </Head>
       <WebdesignHeader
         backgroundImage="/images/Webdesign/background.jpg"
         headline="Webdesign"
-        slogan="Modern, Einzigartig, Effektiv"
+        slogan="Beeindrucken Sie Ihre Nutzer mit einer Website, die überzeugt! Durch neueste Web-Technologien bieten wir innovative Möglichkeiten für Ihre Homepage."
       />
       <WebdesignSection
         headline="Homepage-Design"

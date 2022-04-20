@@ -1,18 +1,67 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../styles/services/AgileSection.module.scss";
-import { MdPlayArrow } from 'react-icons/md';
+import { MdPlayArrow } from "react-icons/md";
 
 export default function AgileSection() {
   const [selected, setSelected] = useState(0);
+  const [time, setTime] = useState(Date.now());
+  const [interacted, setInteracted] = useState(false);
 
-    const texts = [
-        <><p><MdPlayArrow className={styles.icon}/>Ausarbeitung der Anforderungen und Technologien</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Planung der Softwarestruktur und Erstellung des UI/UX-Design</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Umsetzung der Anforderungen</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Überprüfung und Bestätigung der Ergebnisse</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Rücksprache im Team bzw. mit dem Kunden</p></>,
-        <><p><MdPlayArrow className={styles.icon}/>Support, Behebung von Bugs, Erweiterungen</p></>
-    ]
+  const texts = [
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Ausarbeitung der Anforderungen und Technologien
+      </p>
+    </>,
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Planung der Softwarestruktur und Erstellung des UI/UX-Design
+      </p>
+    </>,
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Umsetzung der Anforderungen
+      </p>
+    </>,
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Überprüfung und Bestätigung der Ergebnisse
+      </p>
+    </>,
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Rücksprache im Team bzw. mit dem Kunden
+      </p>
+    </>,
+    <>
+      <p>
+        <MdPlayArrow className={styles.icon} />
+        Support, Behebung von Bugs, Erweiterungen
+      </p>
+    </>,
+  ];
+
+  const changeSelected = (sel) => {
+    setSelected(sel);
+    setInteracted(true);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!interacted) {
+        setTime(Date.now())
+        setSelected((s) => (s + 1)%6);
+      }
+    }, 3000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [interacted, time]);
 
   return (
     <>
@@ -24,7 +73,12 @@ export default function AgileSection() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 841.9 550.3"
         >
-          <g className={styles.arrowWrapper + " " + (selected === 3 ? styles.active : "")} onClick={() => setSelected(3)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 3 ? styles.active : "")
+            }
+            onClick={() => changeSelected(3)}
+          >
             <g id="arrow4">
               <path
                 className={styles.arrow}
@@ -81,7 +135,12 @@ export default function AgileSection() {
               />
             </g>
           </g>
-          <g className={styles.arrowWrapper + " " + (selected === 1 ? styles.active : "")} onClick={() => setSelected(1)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 1 ? styles.active : "")
+            }
+            onClick={() => changeSelected(1)}
+          >
             <g id="arrow2">
               <path
                 className={styles.arrow}
@@ -167,7 +226,12 @@ export default function AgileSection() {
               />
             </g>
           </g>
-          <g className={styles.arrowWrapper + " " + (selected === 2 ? styles.active : "")} onClick={() => setSelected(2)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 2 ? styles.active : "")
+            }
+            onClick={() => changeSelected(2)}
+          >
             <g id="arrow3">
               <path
                 className={styles.arrow}
@@ -272,7 +336,12 @@ export default function AgileSection() {
               />
             </g>
           </g>
-          <g className={styles.arrowWrapper + " " + (selected === 4 ? styles.active : "")} onClick={() => setSelected(4)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 4 ? styles.active : "")
+            }
+            onClick={() => changeSelected(4)}
+          >
             <g id="arrow5">
               <path
                 className={styles.arrow}
@@ -335,7 +404,12 @@ export default function AgileSection() {
               />
             </g>
           </g>
-          <g className={styles.arrowWrapper + " " + (selected === 0 ? styles.active : "")} onClick={() => setSelected(0)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 0 ? styles.active : "")
+            }
+            onClick={() => changeSelected(0)}
+          >
             <path
               id="arrow1"
               className={styles.arrow}
@@ -389,7 +463,12 @@ export default function AgileSection() {
               />
             </g>
           </g>
-          <g className={styles.arrowWrapper + " " + (selected === 5 ? styles.active : "")} onClick={() => setSelected(5)}>
+          <g
+            className={
+              styles.arrowWrapper + " " + (selected === 5 ? styles.active : "")
+            }
+            onClick={() => changeSelected(5)}
+          >
             <path
               id="arrow6"
               className={styles.arrow}

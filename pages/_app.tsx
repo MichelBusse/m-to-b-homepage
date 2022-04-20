@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="author" content="M-to-B Softwareentwicklung" />
           <meta
             name="description"
-            content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von App-Entwicklung und beeindruckendem Webdesign, bis zu Virtual Reality"
+            content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
           />
         </Head>
         <Navbar anchorRefs={anchorRefs} initialScrolled={router.asPath.startsWith("/Softwareentwicklung") || router.asPath.startsWith("/Webdesign")}/>

@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+
+User-agent: Googlebot
+Disallow: /Impessum
+Disallow: /Datenschutz
+
+
+Sitemap: https://m-to-b.com/sitemap.xml
