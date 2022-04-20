@@ -105,6 +105,10 @@ button:hover::before{
 button:focus{
   outline: 0;
 }
+.Toastify button:before, .Toastify button:after{
+  content: normal;
+  display: none;
+}
 .topMessage{
   position:fixed;
   bottom: 0;
