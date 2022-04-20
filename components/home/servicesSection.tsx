@@ -62,6 +62,11 @@ export default function ServicesSection(props) {
                 <li>Blockchain und Web3</li>
                 <li>Shopsysteme mit Shopify und Hydrogen</li>
               </ul>
+              <h3>Optimierung</h3>
+              <ul>
+                <li>Suchmaschinenoptimierung (SEO)</li>
+                <li>UX-Optimierung für perfekte Nutzbarkeit</li>
+              </ul>
               <h3>Möglichkeiten</h3>
               <ul>
                 <li>Logo-Design und Corporate-Design</li>
@@ -118,6 +123,10 @@ export default function ServicesSection(props) {
               <ul>
                 <li>Cross-Platform für Android und IOS</li>
                 <li>Modernes UI- und UX-Design</li>
+              </ul>
+              <h3>IT-Beratung</h3>
+              <ul>
+                <li>Entdecken Sie die besten Lösungen und Technologien</li>
               </ul>
               <div className={styles.buttonWrapper}>
                 <Link href="/Softwareentwicklung">

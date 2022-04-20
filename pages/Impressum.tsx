@@ -82,17 +82,10 @@ export default function Impressum() {
               verwendet:
             </p>
             <ul>
-              <li>pixabay</li>
               <li>Adobe Stock | joyfotoliakid</li>
               <li>Adobe Stock | Jirapong</li>
               <li>Adobe Stock | joyfotoliakid</li>
               <li>Adobe Stock | H_Ko</li>
-              <a href="https://www.pexels.com/photo/serious-ethnic-field-engineer-examining-hardware-and-working-on-laptop-442152/">
-                <li>Pexels | Field Engineer</li>
-              </a>
-              <a href="https://www.pexels.com/photo/woman-in-black-shirt-and-black-shorts-carrying-black-leather-shoulder-bag-4754146/">
-                <li>Pexels | Cottonbro</li>
-              </a>
             </ul>
           </div>
         </section>

@@ -4,7 +4,7 @@ export default function Impressum() {
   return <><div className={styles.privacy}>
   <section>
       <div className={styles.text}>
-        <h1>Datenschutzerklärung</h1>
+        <h1>Datenschutz&shy;erklärung</h1>
         <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
         <p>Michel Busse</p>
         <h4>Ihre Betroffenenrechte</h4>
