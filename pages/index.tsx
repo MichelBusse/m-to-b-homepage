@@ -12,7 +12,6 @@ import CustomersSection from '../components/home/customersSection';
 export default function HomePage (props) {
   return (
     <>
-      <CookieDisclaimer />
       <Header />
       <AboutSection anchorRefs={props.anchorRefs}/>
       <ServicesSection anchorRefs={props.anchorRefs}/>
