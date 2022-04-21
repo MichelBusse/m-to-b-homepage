@@ -12,4 +12,4 @@ deploy-server:
     - chmod og= $ID_RSA
     - apt-get update -y
     - apt-get -y install openssh-client
-    - ssh -p 2122 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/schale/development/m-to-b-homepage"; bash" < deploy.sh
+    - ssh -p 2122 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/schale/development/m-to-b-homepage; bash" < deploy.sh
