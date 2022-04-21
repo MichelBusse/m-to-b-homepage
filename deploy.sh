@@ -1,3 +1,3 @@
 git pull
 bash build.sh
-dcupd
+docker-compose up -d
