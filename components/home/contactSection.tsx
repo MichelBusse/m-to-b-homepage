@@ -124,7 +124,7 @@ export default function ContactSection(props) {
                 <div className={styles.contactFormular} id="formular">
                     <div className={styles.transWrapper}>
                         <form>
-                            <h2>Angebot erhalten</h2>
+                            <h2>Anfrage senden</h2>
                             <div className={styles.inputWrapper}><input type="text" name="name" value={formState.name} onChange={onChange} /><span className={formState.name !== "" ? styles.written : ""}>Ihr Name</span></div>
                             <div className={styles.inputWrapper}><input type="email" name="email" value={formState.email} onChange={onChange} /><span className={formState.email !== "" ? styles.written : ""}>Ihre E-Mail</span></div>
                             <div className={styles.inputWrapper}><input type="tel" name="tel" value={formState.tel} onChange={onChange} /><span className={formState.tel !== "" ? styles.written : ""}>Ihre Telefonnummer</span></div>
