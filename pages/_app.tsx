@@ -1,36 +1,36 @@
-import "../styles/globals.scss"
-import type { AppProps } from "next/app"
-import Head from "next/head"
-import Navbar from "../components/navbar"
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import Footer from "../components/footer"
-import { CookiesProvider } from "react-cookie"
-import { useEffect, useRef } from 'react'
-import { Router, useRouter } from "next/router"
-import { useSmoothScroll } from "../hooks/SmoothScroll"
-
+import "../styles/globals.scss";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import Navbar from "../components/navbar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Footer from "../components/footer";
+import { CookiesProvider } from "react-cookie";
+import { useEffect, useRef } from "react";
+import { Router, useRouter } from "next/router";
+import { useSmoothScroll } from "../hooks/SmoothScroll";
+import CookieDisclaimer from "../components/cookieDisclaimer";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  const router = useRouter();
 
-  useSmoothScroll()
+  useSmoothScroll();
 
   const anchorRefs = {
-    aboutRef : useRef(),
-    servicesRef : useRef(),
-    projectsRef : useRef(),
-    contactRef : useRef(),
-  }
+    aboutRef: useRef(),
+    servicesRef: useRef(),
+    projectsRef: useRef(),
+    contactRef: useRef(),
+  };
 
   useEffect(() => {
-    Router.events.on('routeChangeComplete', () => {
+    Router.events.on("routeChangeComplete", () => {
       window.scroll({
         top: 0,
-        left: 0
+        left: 0,
       });
     });
-  })
+  });
 
   return (
     <>
@@ -79,7 +79,14 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
           />
         </Head>
-        <Navbar anchorRefs={anchorRefs} initialScrolled={router.asPath.startsWith("/Softwareentwicklung") || router.asPath.startsWith("/Webdesign")}/>
+        <CookieDisclaimer />
+        <Navbar
+          anchorRefs={anchorRefs}
+          initialScrolled={
+            router.asPath.startsWith("/Softwareentwicklung") ||
+            router.asPath.startsWith("/Webdesign")
+          }
+        />
         <ToastContainer />
         <Component anchorRefs={anchorRefs} {...pageProps} />
         <Footer />

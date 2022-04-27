@@ -48,7 +48,7 @@ export default function CookieDisclaimer() {
     expiryDate.setMonth(expiryDate.getMonth() + 1);
 
     setCookie("essentialAccepted", true, { expires: expiryDate });
-    if (formState.cookieStatistics) {
+    if (formState.cookieStatistics || all) {
       setCookie("statisticsAccepted", true, { expires: expiryDate });
       startTagManager(window, document, "script", "dataLayer", "GTM-MSM3HLM");
     } else {
