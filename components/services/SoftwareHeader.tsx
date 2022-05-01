@@ -1,9 +1,11 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 import styles from "../../styles/services/SoftwareHeader.module.scss";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 
-const Software3D = dynamic(() => import('../three/Software3D'))
+const Software3D = dynamic(() => import("../three/Software3D"), {
+  suspense: true,
+});
 
 export default function SoftwareHeader(props) {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -29,7 +31,9 @@ export default function SoftwareHeader(props) {
         </div>
         <div className={styles.headerDiagonal}></div>
         <div className={styles.canvasContainer}>
-          <Software3D />
+          <Suspense fallback={"loading"}>
+            <Software3D />
+          </Suspense>
         </div>
       </header>
     </>
