@@ -1,5 +1,9 @@
 import styles from "../styles/Impressum.module.scss";
 
+export const config = {
+  unstable_runtimeJS : false
+}
+
 export default function Impressum() {
   return (
     <>

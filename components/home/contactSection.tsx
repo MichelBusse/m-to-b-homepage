@@ -1,12 +1,14 @@
 import { useState } from "react"
+import dynamic from 'next/dynamic'
+
 import styles from "../../styles/home/ContactSection.module.scss"
 import { IoLocationSharp } from 'react-icons/io5'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { HiMail } from 'react-icons/hi'
-import Particles from "react-tsparticles";
 import { toast } from 'react-toastify';
 import Link from 'next/link'
 
+const Particles = dynamic(() => import('react-tsparticles'))
 
 
 export default function ContactSection(props) {

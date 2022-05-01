@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+
 import SoftwareHeader from "../components/services/SoftwareHeader";
 import ServiceSection from "../components/services/ServiceSection";
 import TechnologiesSection from "../components/services/TechnologiesSection";

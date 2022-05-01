@@ -1,6 +1,9 @@
+import dynamic from 'next/dynamic'
+
 import styles from "../../styles/services/SoftwareHeader.module.scss";
-import Software3D from "../three/Software3D";
 import { useRef } from "react";
+
+const Software3D = dynamic(() => import('../three/Software3D'))
 
 export default function SoftwareHeader(props) {
   const headerRef = useRef<HTMLDivElement>(null);

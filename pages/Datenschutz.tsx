@@ -1,5 +1,9 @@
 import styles from "../styles/Datenschutz.module.scss";
 
+export const config = {
+  unstable_runtimeJS : false
+}
+
 export default function Impressum() {
   return <><div className={styles.privacy}>
   <section>
