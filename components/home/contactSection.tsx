@@ -1,5 +1,4 @@
-import { Suspense, useState } from "react";
-import dynamic from "next/dynamic";
+import { useState } from "react";
 
 import styles from "../../styles/home/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
@@ -7,10 +6,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 import { toast } from "react-toastify";
 import Link from "next/link";
-
-const Particles = dynamic(() => import("react-tsparticles"), {
-  suspense: true,
-});
+import Particles from "react-tsparticles";
 
 export default function ContactSection(props) {
   const [formState, setFormState] = useState({
@@ -78,7 +74,6 @@ export default function ContactSection(props) {
       >
         <div className={styles.contactTransitionWrapper}></div>
         <div className={styles.contactTransition}></div>
-        <Suspense fallback={'loading'}>
           <Particles
             className={styles.particles}
             options={{
@@ -128,7 +123,6 @@ export default function ContactSection(props) {
               },
             }}
           />
-        </Suspense>
         <div className={styles.flexWrapper}>
           <div className={styles.contactText}>
             <div className={styles.textWrapper}>

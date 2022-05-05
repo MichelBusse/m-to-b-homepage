@@ -30,7 +30,7 @@ export default function WebdesignSection(props) {
 
   return (
     <>
-      <section
+      <article
         ref={serviceSectionRef}
         className={
           serviceSectionStyles.serviceSection +
@@ -69,7 +69,7 @@ export default function WebdesignSection(props) {
             />
           </div>
         </div>
-      </section>
+      </article>
     </>
   );
 }

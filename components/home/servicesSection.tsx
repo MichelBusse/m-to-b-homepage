@@ -28,7 +28,7 @@ export default function ServicesSection(props) {
       <section id={styles.services} ref={props.anchorRefs.servicesRef}>
         <div className={styles.leftBackground}></div>
         <div className={styles.flexRow}>
-          <div
+          <article
             className={
               active ? styles.service + " " + styles.active : styles.service
             }
@@ -80,8 +80,8 @@ export default function ServicesSection(props) {
                 </Link>
               </div>
             </div>
-          </div>
-          <div
+          </article>
+          <article
             className={
               active ? styles.service + " " + styles.active : styles.service
             }
@@ -136,7 +136,7 @@ export default function ServicesSection(props) {
                 </Link>
               </div>
             </div>
-          </div>
+          </article>
         </div>
         <div id={styles.transition}>
           <div className={styles.leftBackground}></div>

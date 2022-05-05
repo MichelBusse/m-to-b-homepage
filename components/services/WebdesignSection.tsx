@@ -61,7 +61,7 @@ export default function WebdesignSection(props) {
         ) : (
           <></>
         )}
-        <div className={serviceSectionStyles.flexCell}>
+        <article className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
             <h2>
               {typewriterPlaceholder}
@@ -81,7 +81,7 @@ export default function WebdesignSection(props) {
             </h2>
             {props.text}
           </div>
-        </div>
+        </article>
         <div className={serviceSectionStyles.flexCell}>
           {cloneElement(props.image, { active: active })}
         </div>

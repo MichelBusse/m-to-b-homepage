@@ -37,7 +37,7 @@ export default function AboutSection(props) {
         ref={props.anchorRefs.aboutRef}
         className={active + " " + styles.about}
       >
-        <div className={styles.cell}>
+        <article className={styles.cell}>
           <h2>
             <BiTargetLock className={styles.icon} />
             {typewriterPlaceholder[0]}
@@ -66,8 +66,8 @@ export default function AboutSection(props) {
           <p style={{ transitionDelay: "0.9s" }}>
             Unser Ziel - Sie zu beeindrucken!
           </p>
-        </div>
-        <div className={styles.cell}>
+        </article>
+        <article className={styles.cell}>
           <h2>
             <ImCheckmark className={styles.icon} />
             {typewriterPlaceholder[1]}
@@ -95,7 +95,7 @@ export default function AboutSection(props) {
             Apps und Desktop-Anwendungen, sowie VR und Mixed Reality und
             umfassende Webentwicklung im Front- und Backend.
           </p>
-        </div>
+        </article>
         <div className={styles.arrowWrapper}>
           <div className={styles.animation}>
             <a href="#services">
