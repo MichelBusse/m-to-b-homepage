@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import type { NextPage } from "next";
 import Header from "../components/home/header";
 import AboutSection from "../components/home/aboutSection";
 import ServicesSection from "../components/home/servicesSection";

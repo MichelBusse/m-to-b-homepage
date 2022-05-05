@@ -56,8 +56,8 @@ export default function AboutSection(props) {
             />
           </h2>
           <p style={{ transitionDelay: "0.3s" }}>
-            Als junges und kreatives Team möchten wir Ihnen zur Seite stehen, um
-            Ihr Projekt Wirklichkeit werden zu lassen.
+            Als junges und kreatives Team stehen wir Ihnen zur Seite und lassen
+            Ihr Projekt Wirklichkeit werden!
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
             Von einer modernen und außergewöhnlichen Website bis hin zu
