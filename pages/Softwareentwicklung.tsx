@@ -52,7 +52,7 @@ const DevelopmentPage: NextPage = () => {
               <p style={{ transitionDelay: "0.3s" }} key={1}>
                 Von der Idee bis zum Upload in den App Store führen wir Ihre App
                 durch den Entwicklungsprozess und zum Erfolg. Mit Erfahrung in
-                der <strong>Cross-Platform</strong> und nativen
+                der <strong>Cross-Platform</strong> und nativen{" "}
                 <strong>App-Entwicklung</strong> für Android und IOS können wir
                 Ihre Anforderungen effizient und modern implementieren. Dabei
                 legen wir genauso viel Wert auf verlässliche Funktionen wie auf
