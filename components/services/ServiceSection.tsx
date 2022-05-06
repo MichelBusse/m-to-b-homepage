@@ -3,7 +3,7 @@ import Typewriter, { TypewriterClass } from "typewriter-effect";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-export default function WebdesignSection(props) {
+export default function ServiceSection(props) {
   const [active, setActive] = useState(false);
   const [typewriterList, addTypewriter] = useState<TypewriterClass[]>([]);
   const [typewriterPlaceholder, setTypewriterPlaceholder] = useState(

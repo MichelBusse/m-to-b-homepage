@@ -6,6 +6,7 @@ import TechnologiesSection from "../components/services/TechnologiesSection";
 import ContactSection from "../components/home/contactSection";
 import CustomersSection from "../components/home/customersSection";
 import AgileSection from "../components/services/AgileSection";
+import CrossPlatformSection from "../components/services/CrossPlatformSection";
 import Head from "next/head";
 
 const DevelopmentPage: NextPage = () => {
@@ -61,6 +62,29 @@ const DevelopmentPage: NextPage = () => {
           />
         </section>
         <TechnologiesSection />
+        <section
+          style={{
+            padding: "4em 0",
+          }}
+        >
+          <ServiceSection
+            headline="IT Beratung"
+            text={[
+              <p>
+                Wir beraten Sie ausführlich zu allen Möglichkeiten für Ihr
+                Projekt. Wir vergleichen für Sie verschiedene
+                Lösungsmöglichkeiten und finden gemeinsam mit Ihnen die passende
+                Technologie und Softwarearchitektur für Ihre Anwendung. Als
+                modernes IT-Unternehmen ist es unser Ziel, die beste Strategie
+                für Sie zu entwickeln und Zeit, Budget und Funktionalität
+                optimal abzustimmen.
+              </p>,
+            ]}
+            image="/images/Softwareentwicklung/consulting.svg"
+            imageAlt="IT Beratung - IT Consulting"
+          />
+        </section>
+        <CrossPlatformSection />
         <AgileSection />
         <CustomersSection />
         <ContactSection />
