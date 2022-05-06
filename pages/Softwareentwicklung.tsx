@@ -70,7 +70,7 @@ const DevelopmentPage: NextPage = () => {
           <ServiceSection
             headline="IT Beratung"
             text={[
-              <p>
+              <p style={{ transitionDelay: "0.3s" }} key={1}>
                 Wir beraten Sie ausführlich zu allen Möglichkeiten für Ihr
                 Projekt. Wir vergleichen für Sie verschiedene
                 Lösungsmöglichkeiten und finden gemeinsam mit Ihnen die passende
