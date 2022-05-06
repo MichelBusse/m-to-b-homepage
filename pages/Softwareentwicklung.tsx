@@ -13,6 +13,7 @@ const DevelopmentPage: NextPage = () => {
   return (
     <>
       <Head>
+        <title>Individuelle Softwareentwicklung aus Leipzig - M-to-B</title>
         <meta
           name="description"
           content="Wir entwickeln Software mit Kreativität und Erfahrung. Profitieren Sie von modernen Technologien, kompetenter Zusammenarbeit und neuen Lösungen!"

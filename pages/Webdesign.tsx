@@ -10,6 +10,7 @@ const WebdesignPage: NextPage = () => {
   return (
     <>
       <Head>
+        <title>Webdesign / Webentwicklung aus Leipzig - M-to-B</title>
         <meta
           name="description"
           content="Beeindrucken Sie Ihre Nutzer mit einer Website, die überzeugt! Durch neueste Web-Technologien bieten wir innovative Möglichkeiten für Ihre Homepage."
