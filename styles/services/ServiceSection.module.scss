@@ -36,6 +36,14 @@
 }
 .serviceSection .image {
   padding: 2em;
+  transition: all 1s ease-in-out;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.serviceSection.active .image {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .serviceSection .text h2{

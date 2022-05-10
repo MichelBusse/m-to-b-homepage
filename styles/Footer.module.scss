@@ -1,22 +1,51 @@
 .footer {
-    position: relative;
-    z-index: 5;
-    height: 5em;
-    background: #000;
-    color: #fff;
-    box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .footer ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.2em 0
 }
 
 .footer ul li {
-    line-height: 4em;
-    display: inline;
-    font-size: 1.2em;
-    margin: 0 2em;
+  font-size: 1.2em;
+  margin: 1em 2em;
+}
+.footer ul li svg{
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+.ProvenExpert_widgetbar_container > div {
+    position: relative !important;
+    padding: 0.2em 1em 0.6em 1em;
+    box-sizing: border-box;
+}
+.ProvenExpert_widgetbar_container > div > div:first-child {
+    display: none;
+}
+.ProvenExpert_widgetbar_container > div > div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto !important;
+}
+.ProvenExpert_widgetbar_container img {
+    margin-left: auto !important;
+}
+@media (max-width: 750px) {
+  .ProvenExpert_widgetbar_container {
+    display: none !important;
+  }
 }

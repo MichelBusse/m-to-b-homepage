@@ -23,6 +23,7 @@ const DevelopmentPage: NextPage = () => {
       <main>
         <section style={{ margin: "4em 0" }}>
           <ServiceSection
+            key={1}
             headline="Individualsoftware"
             text={[
               <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -45,8 +46,10 @@ const DevelopmentPage: NextPage = () => {
             ]}
             image="/images/Softwareentwicklung/pc.png"
             imageAlt="Individualsoftware"
+            active={true}
           />
           <ServiceSection
+            key={2}
             headline="App Entwicklung"
             text={[
               <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -70,6 +73,7 @@ const DevelopmentPage: NextPage = () => {
           }}
         >
           <ServiceSection
+            key={3}
             headline="IT-Consulting"
             text={[
               <p style={{ transitionDelay: "0.3s" }} key={1}>

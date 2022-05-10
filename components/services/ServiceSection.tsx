@@ -4,19 +4,22 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function ServiceSection(props) {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(props.active);
   const [typewriterList, addTypewriter] = useState<TypewriterClass[]>([]);
   const [typewriterPlaceholder, setTypewriterPlaceholder] = useState(
     props.headline
   );
   const serviceSectionRef = useRef<HTMLElement>(null);
-
-  const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
+  const centerPos = (element) => element.getBoundingClientRect().top + window.scrollY + window.innerHeight * 0.5;
+  
+  if(props.active){
+    typewriterList.forEach((typewriter) => typewriter.start());
+  }
 
   useEffect(() => {
+    
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-
       if (centerPos(serviceSectionRef.current) < scrollPosition) {
         setActive(true);
         typewriterList.forEach((typewriter) => typewriter.start());
