@@ -1,18 +1,17 @@
 import styles from "../styles/Footer.module.scss";
 import Link from "next/link";
 import Script from "next/script";
-import { BsInstagram } from 'react-icons/bs';
-import { SiGooglemybusiness } from 'react-icons/si';
-
+import { BsInstagram } from "react-icons/bs";
+import { SiGooglemybusiness } from "react-icons/si";
 
 export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        {/*<div
+        <div
           id="ProvenExpert_widgetbar_container"
           className={styles.ProvenExpert_widgetbar_container}
-  ></div>*/}
+        ></div>
         <ul>
           <li>
             <Link href="/Impressum">
@@ -30,7 +29,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <BsInstagram/>
+              <BsInstagram />
             </a>
           </li>
           <li>
@@ -39,16 +38,16 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <SiGooglemybusiness/>
+              <SiGooglemybusiness />
             </a>
           </li>
         </ul>
       </footer>
-      {/*<Script
+      <Script
         type="text/javascript"
         src="//www.provenexpert.com/widget/bar_m-to-b-softwareentwicklung.js?style=black&amp;feedback=1"
         strategy="lazyOnload"
-/>*/}
+      />
     </>
   );
 }
