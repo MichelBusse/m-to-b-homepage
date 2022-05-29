@@ -29,6 +29,8 @@ export default function Navbar(props) {
         } else {
           setMenuScrolled(false);
         }
+      }else{
+        setMenuScrolled(true);
       }
 
       const scrollPosition = window.scrollY + window.innerHeight;

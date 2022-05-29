@@ -50,6 +50,14 @@ export default function CustomersSection(props) {
           </div>
           <div className={styles.customer}>
             <Image
+              src="/images/customers/upmc.png"
+              alt="UPMC Pittsburgh"
+              width={381}
+              height={80}
+            />
+          </div>
+          <div className={styles.customer}>
+            <Image
               src="/images/customers/ks-gmbh.png"
               alt="K&amp;S GmbH"
               width={91}
