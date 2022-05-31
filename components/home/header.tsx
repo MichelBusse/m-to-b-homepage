@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import styles from "../../styles/home/Header.module.scss"
 import TextScrambler from 'react-scramble-text'
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
 
   const [headerVisible, setHeaderVisible] = useState(false)
   const [squareCount, setSquareCount] = useState(0)
@@ -23,7 +25,19 @@ export default function Header() {
 
   })
 
-  const phrases = ["Software", "Zukunft"];
+  let texts = {
+    headline: "aus Leipzig",
+    services: "Unsere Leistungen"
+  }
+  let phrases = ["Software", "Zukunft"];
+
+  if(router.locale == "en"){
+    phrases = ["Software", "Future"]
+    texts = {
+      headline: "from Leipzig",
+      services: "Our Services"
+    }
+  }
 
   return (
     <>
@@ -146,9 +160,9 @@ export default function Header() {
               speed={50}
               pauseTime={3000}
               chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-              symbolColor="rgb(255, 255, 255)" /> aus Leipzig</h2>
+              symbolColor="rgb(255, 255, 255)" /> {texts.headline}</h2>
           <a href="#services">
-            <button className={headerVisible ? styles.visible : ""}>Unsere Leistungen</button>
+            <button className={headerVisible ? styles.visible : ""}>{texts.services}</button>
           </a>
         </header>
       </div>

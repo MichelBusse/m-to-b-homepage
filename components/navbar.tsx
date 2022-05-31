@@ -87,6 +87,27 @@ export default function Navbar(props) {
     };
   }, [menuActive, props.anchorRefs, props.initialScrolled, router.asPath]);
 
+
+  let texts = {
+    about: "Über uns",
+    services: "Leistungen",
+    projects: "Referenzen",
+    contact: "Kontakt",
+    webdesign: "Webdesign",
+    development: "Softwareenticklung"
+  }
+
+  if(router.locale == "en"){
+    texts = {
+      about: "About",
+      services: "Services",
+      projects: "Projects",
+      contact: "Contact",
+      webdesign: "Webdesign",
+      development: "Development"
+    }
+  }
+
   return (
     <>
       <nav
@@ -116,7 +137,7 @@ export default function Navbar(props) {
             <Link href="/#about">
               <a>
                 <li className={activeMenuItem === "about" ? styles.active : ""}>
-                  Über Uns
+                  {texts.about}
                 </li>
               </a>
             </Link>
@@ -125,7 +146,7 @@ export default function Navbar(props) {
                 <li
                   className={activeMenuItem === "services" || activeMenuItem === "webdesign" || activeMenuItem === "software" ? styles.active : ""}
                 >
-                  Leistungen
+                  {texts.services}
                 </li>
               </a>
             </Link>
@@ -134,7 +155,7 @@ export default function Navbar(props) {
                 <li
                   className={activeMenuItem === "projects" ? styles.active : ""}
                 >
-                  Referenzen
+                  {texts.projects}
                 </li>
               </a>
             </Link>
@@ -143,7 +164,7 @@ export default function Navbar(props) {
                 <li
                   className={activeMenuItem === "contact" ? styles.active : ""}
                 >
-                  Kontakt
+                 {texts.contact}
                 </li>
               </a>
             </Link>
@@ -178,7 +199,7 @@ export default function Navbar(props) {
                 style={{ transitionDelay: "0.05s" }}
                 className={activeMenuItem === "about" ? styles.active : ""}
               >
-                Über Uns
+                {texts.about}
               </li>
             </a>
           </Link>
@@ -189,7 +210,7 @@ export default function Navbar(props) {
                 style={{ transitionDelay: "0.1s" }}
                 className={activeMenuItem === "services" ? styles.active : ""}
               >
-                Leistungen
+                {texts.services}
               </li>
             </a>
           </Link>
@@ -201,7 +222,7 @@ export default function Navbar(props) {
                   style={{ transitionDelay: "0.15s" }}
                   className={activeMenuItem === "webdesign" ? styles.active : ""}
                 >
-                  Webdesign
+                  {texts.webdesign}
                 </li>
               </a>
             </Link>
@@ -212,7 +233,7 @@ export default function Navbar(props) {
                   style={{ transitionDelay: "0.2s" }}
                   className={activeMenuItem === "software" ? styles.active : ""}
                 >
-                  Entwicklung
+                  {texts.development}
                 </li>
               </a>
             </Link>
@@ -224,7 +245,7 @@ export default function Navbar(props) {
                 style={{ transitionDelay: "0.25s" }}
                 className={activeMenuItem === "projects" ? styles.active : ""}
               >
-                Referenzen
+                {texts.projects}
               </li>
             </a>
           </Link>
@@ -235,7 +256,7 @@ export default function Navbar(props) {
                 style={{ transitionDelay: "0.3s" }}
                 className={activeMenuItem === "contact" ? styles.active : ""}
               >
-                Kontakt
+                {texts.contact}
               </li>
             </a>
           </Link>

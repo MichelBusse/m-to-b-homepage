@@ -7,8 +7,47 @@ import { HiMail } from "react-icons/hi";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Particles from "react-tsparticles";
+import { useRouter } from "next/router";
 
 export default function ContactSection(props) {
+  const router = useRouter();
+
+  let texts = {
+    headline: "Kontakt",
+    contactText:
+      "Interessiert? Lassen Sie sich kostenlos zu allen Möglichkeiten für Ihr Projekt beraten und ein unverbindliches Angebot erstellen!",
+    request: "Anfrage senden",
+    privacyText: "Ich akzeptiere die ",
+    privacy: "Datenschutzerklärung",
+    send: "Absenden",
+    formName: "Ihr Name",
+    formMail: "Ihre E-Mail",
+    formPhone: "Ihre Telefonnummer",
+    formMessage: "Ihre Nachricht",
+    checkInputs: "Bitte überprüfe die Eingaben",
+    mailSuccess: "E-Mail erfolgreich versendet!",
+    mailError: "Fehler beim Versenden"
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      headline: "Contact",
+      contactText:
+        "Interested? Get free advice on all possibilities for your project and receive a non-binding offer!",
+      request: "Get in touch",
+      privacyText: "I accept the ",
+      privacy: "privacy policy",
+      send: "Send Request",
+      formName: "Your name",
+      formMail: "Your mail",
+      formPhone: "Your phone",
+      formMessage: "Your message",
+      checkInputs: "Please check your inputs",
+      mailSuccess: "Mail send successfully!",
+      mailError: "Error while sending your mail"
+    };
+  }
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -37,7 +76,7 @@ export default function ContactSection(props) {
       formState.text.trim() === "" ||
       !formState.privacy
     ) {
-      toast.error("Bitte überprüfe die Eingaben");
+      toast.error(texts.checkInputs);
       return;
     }
 
@@ -51,7 +90,7 @@ export default function ContactSection(props) {
     }).then((res) => {
       console.log(res);
       if (res.status === 200) {
-        toast.success("E-Mail erfolgreich versendet!");
+        toast.success(texts.mailSuccess);
         setFormState({
           name: "",
           email: "",
@@ -60,7 +99,7 @@ export default function ContactSection(props) {
           privacy: false,
         });
       } else {
-        toast.error("Fehler beim Versenden!");
+        toast.error(texts.mailError);
       }
     });
   };
@@ -74,64 +113,60 @@ export default function ContactSection(props) {
       >
         <div className={styles.contactTransitionWrapper}></div>
         <div className={styles.contactTransition}></div>
-          <Particles
-            className={styles.particles}
-            options={{
-              fpsLimit: 120,
-              style: { position: "absolute", width: "100%", height: "100%" },
-              particles: {
-                number: {
-                  value: 50,
-                },
-                color: {
-                  value: "#dddddd",
-                },
-                links: {
-                  enable: true,
-                  distance: 300,
-                  color: "#dddddd",
-                  opacity: 1,
-                  width: 2,
-                },
-                collisions: {
-                  enable: true,
-                },
-                move: {
-                  enable: true,
-                  speed: 1,
-                  direction: "none",
-                  random: false,
-                  straight: false,
-                  out_mode: "out",
-                  bounce: false,
-                  attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200,
-                  },
-                },
-                opacity: {
-                  value: 1,
-                },
-                shape: {
-                  type: "circle",
-                },
-                size: {
-                  value: 6,
-                  random: true,
+        <Particles
+          className={styles.particles}
+          options={{
+            fpsLimit: 120,
+            style: { position: "absolute", width: "100%", height: "100%" },
+            particles: {
+              number: {
+                value: 50,
+              },
+              color: {
+                value: "#dddddd",
+              },
+              links: {
+                enable: true,
+                distance: 300,
+                color: "#dddddd",
+                opacity: 1,
+                width: 2,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                enable: true,
+                speed: 1,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                  enable: false,
+                  rotateX: 600,
+                  rotateY: 1200,
                 },
               },
-            }}
-          />
+              opacity: {
+                value: 1,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: 6,
+                random: true,
+              },
+            },
+          }}
+        />
         <div className={styles.flexWrapper}>
           <div className={styles.contactText}>
             <div className={styles.textWrapper}>
-              <h2>Kontakt</h2>
-              <p>
-                Interessiert? Lassen Sie sich kostenlos zu allen Möglichkeiten
-                für Ihr Projekt beraten und ein unverbindliches Angebot
-                erstellen!
-              </p>
+              <h2>{texts.headline}</h2>
+              <p>{texts.contactText}</p>
               <p>
                 <HiMail className={styles.icon} />
                 <a href="mailto: kontakt@m-to-b.com">kontakt@m-to-b.com</a>
@@ -149,7 +184,7 @@ export default function ContactSection(props) {
           <div className={styles.contactFormular} id="formular">
             <div className={styles.transWrapper}>
               <form>
-                <h2>Anfrage senden</h2>
+                <h2>{texts.request}</h2>
                 <div className={styles.inputWrapper}>
                   <input
                     type="text"
@@ -158,7 +193,7 @@ export default function ContactSection(props) {
                     onChange={onChange}
                   />
                   <span className={formState.name !== "" ? styles.written : ""}>
-                    Ihr Name
+                    {texts.formName}
                   </span>
                 </div>
                 <div className={styles.inputWrapper}>
@@ -171,7 +206,7 @@ export default function ContactSection(props) {
                   <span
                     className={formState.email !== "" ? styles.written : ""}
                   >
-                    Ihre E-Mail
+                    {texts.formMail}
                   </span>
                 </div>
                 <div className={styles.inputWrapper}>
@@ -182,7 +217,7 @@ export default function ContactSection(props) {
                     onChange={onChange}
                   />
                   <span className={formState.tel !== "" ? styles.written : ""}>
-                    Ihre Telefonnummer
+                    {texts.formPhone}
                   </span>
                 </div>
                 <div className={styles.inputWrapper}>
@@ -192,7 +227,7 @@ export default function ContactSection(props) {
                     onChange={onChange}
                   ></textarea>
                   <span className={formState.text !== "" ? styles.written : ""}>
-                    Ihre Nachricht
+                    {texts.formMessage}
                   </span>
                 </div>
                 <div className={styles.submitWrapper}>
@@ -205,9 +240,9 @@ export default function ContactSection(props) {
                       onChange={onChange}
                     />
                     <span>
-                      Ich akzeptiere die{" "}
+                      {texts.privacyText}{" "}
                       <Link href="/Datenschutz">
-                        <a>Datenschutzerklärung</a>
+                        <a>{texts.privacy}</a>
                       </Link>
                     </span>
                   </p>
@@ -215,7 +250,7 @@ export default function ContactSection(props) {
                     className={styles.submit}
                     type="submit"
                     name="sendMail"
-                    value="Absenden"
+                    value={texts.send}
                     onClick={handleSubmit}
                   />
                 </div>

@@ -3,8 +3,22 @@ import Link from "next/link";
 import Script from "next/script";
 import { BsInstagram } from "react-icons/bs";
 import { SiGooglemybusiness } from "react-icons/si";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+
+  let texts = {
+    imprint: "Impressum",
+    privacy: "Datenschutz",
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      imprint: "Imprint",
+      privacy: "Privacy Policy",
+    };
+  }
   return (
     <>
       <footer className={styles.footer}>
@@ -15,12 +29,12 @@ export default function Footer() {
         <ul>
           <li>
             <Link href="/Impressum">
-              <a>Impressum</a>
+              <a>{texts.imprint}</a>
             </Link>
           </li>
           <li>
             <Link href="/Datenschutz">
-              <a>Datenschutz</a>
+              <a>{texts.privacy}</a>
             </Link>
           </li>
           <li>

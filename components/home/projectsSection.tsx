@@ -1,8 +1,32 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles/home/ProjectsSection.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function ProjectsSection(props) {
+  const router = useRouter();
+
+  let texts = {
+    headline: "Referenzen",
+    subHeadline: "Eine Auswahl unserer Projekte:",
+    project2Name: "Bundeskonferenz für Lehrer:innenbildung",
+    project3Name: "Mitarbeitermanagement",
+    project3Category: "Individualsoftware",
+    project4Category: "Immbobilien"
+  }
+
+
+  if (router.locale == "en") {
+    texts = {
+      headline: "Projects",
+      subHeadline: "A selection of our projects:",
+      project2Name: "Conference of education for teachers",
+      project3Name: "Employee management",
+      project3Category: "Individual software",
+      project4Category: "Real estate"
+    }
+  }
+
   const [active, setActive] = useState("");
 
   const centerPos = (element) =>
@@ -27,8 +51,8 @@ export default function ProjectsSection(props) {
       <div className="scrollAnchor" id="projects"></div>
       <section id={styles.projects} ref={props.anchorRefs.projectsRef}>
         <div className={styles.text}>
-          <h2>Referenzen</h2>
-          <p>Eine Auswahl unserer Projekte:</p>
+          <h2>{texts.headline}</h2>
+          <p>{texts.subHeadline}</p>
         </div>
         <div className={styles.flexWrapper}>
           <div
@@ -75,7 +99,7 @@ export default function ProjectsSection(props) {
               />
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
-                  <h3>Bundeskonferenz für Lehrer:innenbildung</h3>
+                  <h3>{texts.project2Name}</h3>
                 </div>
               </div>
             </a>
@@ -96,8 +120,8 @@ export default function ProjectsSection(props) {
             />
             <div className={styles.captionWrapper}>
               <div className={styles.caption}>
-                <h3>Mitarbeiterplanung</h3>
-                <p>Individualsoftware</p>
+                <h3>{texts.project3Name}</h3>
+                <p>{texts.project3Category}</p>
               </div>
             </div>
           </div>
@@ -118,7 +142,7 @@ export default function ProjectsSection(props) {
             <div className={styles.captionWrapper}>
               <div className={styles.caption}>
                 <h3>K&amp;S GmbH</h3>
-                <p>Immobilien</p>
+                <p>{texts.project4Category}</p>
               </div>
             </div>
           </div>
