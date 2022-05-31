@@ -12,58 +12,68 @@ export default function AboutSection(props) {
   let texts = {
     headline1: "Unser Ziel",
     headline2: "Unser Service",
-    text1: [
-      <p style={{ transitionDelay: "0.3s" }}>
-        Als junges und kreatives Team stehen wir Ihnen zur Seite und lassen Ihr
-        Projekt Wirklichkeit werden!
-      </p>,
-      <p style={{ transitionDelay: "0.6s" }}>
-        Von einer modernen und außergewöhnlichen Website bis hin zu innovativen
-        Softwaresystemen realisieren wir Ihre Vorstellungen.
-      </p>,
-      <p style={{ transitionDelay: "0.9s" }}>
-        Unser Ziel - Sie zu beeindrucken!
-      </p>,
-    ],
-    text2: [
-      <p style={{ transitionDelay: "0.3s" }}>
-        Mit uns an Ihrer Seite haben sie Zugang zu den neuesten Technologien und
-        Trends, wie individuellen Drohnenaufnahmen, 3D-Umgebungen und
-        Animationen.
-      </p>,
-      <p style={{ transitionDelay: "0.6s" }}>
-        Zu unseren Leistungen zählen unter anderem die Entwicklung Mobiler Apps
-        und Desktop-Anwendungen, sowie VR und Mixed Reality und umfassende
-        Webentwicklung im Front- und Backend.
-      </p>,
-    ],
+    text1: (
+      <>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Als junges und kreatives Team stehen wir Ihnen zur Seite und lassen
+          Ihr Projekt Wirklichkeit werden!
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Von einer modernen und außergewöhnlichen Website bis hin zu
+          innovativen Softwaresystemen realisieren wir Ihre Vorstellungen.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }}>
+          Unser Ziel - Sie zu beeindrucken!
+        </p>
+      </>
+    ),
+
+    text2: (
+      <>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Mit uns an Ihrer Seite haben sie Zugang zu den neuesten Technologien
+          und Trends, wie individuellen Drohnenaufnahmen, 3D-Umgebungen und
+          Animationen.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Zu unseren Leistungen zählen unter anderem die Entwicklung Mobiler
+          Apps und Desktop-Anwendungen, sowie VR und Mixed Reality und
+          umfassende Webentwicklung im Front- und Backend.
+        </p>
+      </>
+    ),
   };
 
   if (router.locale == "en") {
     texts = {
       headline1: "Our Goal",
       headline2: "Our Service",
-      text1: [
-        <p style={{ transitionDelay: "0.3s" }}>
-          As a young start-up in software development, we want to realize your
-          projects and support you in the process!
-        </p>,
-        <p style={{ transitionDelay: "0.6s" }}>
-          It is our goal, to improve the software and workflow of many different
-          sectors - like medical engineering, education or entertainment.
-        </p>
-      ],
-      text2: [
-        <p style={{ transitionDelay: "0.3s" }}>
-          We offer a variety of modern technologies and possibilities, whether
-          you want 3D renderings, individual animations or complex software
-          architectures.
-        </p>,
-        <p style={{ transitionDelay: "0.6s" }}>
-          Our capabilities include many parts of software development,
-          especially mobile apps, full stack applications and web development.
-        </p>,
-      ],
+      text1: (
+        <>
+          <p style={{ transitionDelay: "0.3s" }}>
+            As a young start-up in software development, we want to realize your
+            projects and support you in the process!
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            It is our goal, to improve the software and workflow of many
+            different sectors - like medical engineering, education or
+            entertainment.
+          </p>
+        </>
+      ),
+      text2: (
+        <>
+          <p style={{ transitionDelay: "0.3s" }}>
+            We offer a variety of modern technologies and possibilities, whether
+            you want 3D renderings, individual animations or complex software
+            architectures.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            Our capabilities include many parts of software development,
+            especially mobile apps, full stack applications and web development.
+          </p>
+        </>
+      ),
     };
   }
 
