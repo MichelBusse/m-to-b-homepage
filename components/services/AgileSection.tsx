@@ -7,7 +7,7 @@ export default function AgileSection() {
   const router = useRouter();
 
   let texts = {
-    headline: "Agile Softwareentwicklung",
+    headline: <>Agile Software&shy;entwicklung</>,
     descriptions: [
       <>
         <p>
@@ -50,7 +50,7 @@ export default function AgileSection() {
 
   if (router.locale == "en") {
     texts = {
-      headline: "Agile software development",
+      headline: <>Agile software development</>,
       descriptions: [
         <>
           <p>
@@ -116,7 +116,7 @@ export default function AgileSection() {
   return (
     <>
       <section className={styles.agileSection}>
-        <h2>Agile Software&shy;entwicklung</h2>
+        <h2>{texts.headline}</h2>
         <svg
           version="1.1"
           id={styles.flowChart}
