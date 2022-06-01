@@ -73,7 +73,7 @@ export default function AgileSection() {
         <>
           <p>
             <MdPlayArrow className={styles.icon} />
-            Review and confirmation of all functionalities
+            Review and validation of all functionalities
           </p>
         </>,
         <>
