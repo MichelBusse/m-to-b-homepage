@@ -14,6 +14,18 @@ import CookieDisclaimer from "../components/cookieDisclaimer";
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
+  let texts = {
+    title: <>M-to-B Softwareentwicklung - Zukunft aus Leipzig</>,
+    description: "Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      title: <>M-to-B Software Development - Future from Leipzig</>,
+      description: "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality"
+    };
+  }
+
   useSmoothScroll();
 
   const anchorRefs = {
@@ -36,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <CookiesProvider>
         <Head>
-          <title>M-to-B Softwareentwicklung - Zukunft aus Leipzig</title>
+          <title>{texts.title}</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -76,7 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="author" content="M-to-B Softwareentwicklung" />
           <meta
             name="description"
-            content="Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
+            content={texts.description}
           />
         </Head>
         <CookieDisclaimer />

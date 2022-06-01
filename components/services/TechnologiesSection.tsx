@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "../../styles/services/TechnologiesSection.module.scss";
 
@@ -66,6 +67,20 @@ const logos = [
 ];
 
 export default function TechnologiesSection(props) {
+  const router = useRouter();
+
+  let texts = {
+    headline: "Technologien",
+    text: "...oder individuell nach Ihren Anforderungen"
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      headline: "Technologies",
+      text: "...or individually according to your requirements"
+    };
+  }
+
   const [mobileMode, setMobileMode] = useState(false);
 
   useEffect(() => {
@@ -91,7 +106,7 @@ export default function TechnologiesSection(props) {
       <section className={styles.technologiesSection}>
         <div className={styles.blueCurtain}></div>
         <div className={styles.text}>
-          <h2>Technologien</h2>
+          <h2>{texts.headline}</h2>
         </div>
         <div className={styles.logoWrapper}>
           {mobileMode ? (
@@ -112,7 +127,7 @@ export default function TechnologiesSection(props) {
             </>
           )}
           <div className={styles.text}>
-            <p>...oder individuell nach Ihren Anforderungen</p>
+            <p>{texts.text}</p>
           </div>
         </div>
       </section>

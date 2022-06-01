@@ -86,7 +86,7 @@ export default function ServicesSection(props) {
       ),
       developmentText: (
         <>
-          <h3>Individual Software</h3>
+          <h3>Individual software</h3>
           <ul>
             <li>Software exactly according to your requirements</li>
             <li>

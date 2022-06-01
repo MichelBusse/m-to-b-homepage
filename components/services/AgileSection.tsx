@@ -1,50 +1,100 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/services/AgileSection.module.scss";
 import { MdPlayArrow } from "react-icons/md";
+import { useRouter } from "next/router";
 
 export default function AgileSection() {
+  const router = useRouter();
+
+  let texts = {
+    headline: "Agile Softwareentwicklung",
+    descriptions: [
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Ausarbeitung der Anforderungen und Technologien
+        </p>
+      </>,
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Planung der Softwarestruktur und Erstellung des UI/UX-Design
+        </p>
+      </>,
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Umsetzung der Anforderungen
+        </p>
+      </>,
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Überprüfung und Bestätigung der Ergebnisse
+        </p>
+      </>,
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Rücksprache im Team bzw. mit dem Kunden
+        </p>
+      </>,
+      <>
+        <p>
+          <MdPlayArrow className={styles.icon} />
+          Support, Behebung von Bugs, Erweiterungen
+        </p>
+      </>,
+    ],
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      headline: "Agile software development",
+      descriptions: [
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Requirements engineering and decision of technologies
+          </p>
+        </>,
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Planning and organization of the software structure and UI/UX design
+          </p>
+        </>,
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Implementation of all requirements
+          </p>
+        </>,
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Review and confirmation of all functionalities
+          </p>
+        </>,
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Retrospective with the team and customer
+          </p>
+        </>,
+        <>
+          <p>
+            <MdPlayArrow className={styles.icon} />
+            Support, bug fixing, extensions
+          </p>
+        </>,
+      ],
+    };
+  }
+
   const [selected, setSelected] = useState(0);
   const [time, setTime] = useState(Date.now());
   const [interacted, setInteracted] = useState(false);
-
-  const texts = [
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Ausarbeitung der Anforderungen und Technologien
-      </p>
-    </>,
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Planung der Softwarestruktur und Erstellung des UI/UX-Design
-      </p>
-    </>,
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Umsetzung der Anforderungen
-      </p>
-    </>,
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Überprüfung und Bestätigung der Ergebnisse
-      </p>
-    </>,
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Rücksprache im Team bzw. mit dem Kunden
-      </p>
-    </>,
-    <>
-      <p>
-        <MdPlayArrow className={styles.icon} />
-        Support, Behebung von Bugs, Erweiterungen
-      </p>
-    </>,
-  ];
 
   const changeSelected = (sel) => {
     setSelected(sel);
@@ -54,8 +104,8 @@ export default function AgileSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (!interacted) {
-        setTime(Date.now())
-        setSelected((s) => (s + 1)%6);
+        setTime(Date.now());
+        setSelected((s) => (s + 1) % 6);
       }
     }, 3000);
     return () => {
@@ -520,7 +570,7 @@ export default function AgileSection() {
             </g>
           </g>
         </svg>
-        {texts[selected]}
+        {texts.descriptions[selected]}
       </section>
     </>
   );
