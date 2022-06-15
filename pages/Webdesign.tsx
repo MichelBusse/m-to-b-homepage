@@ -132,7 +132,7 @@ const WebdesignPage: NextPage = () => {
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
             Explore the possibilities of 3D development on the web and take the
-            advantages for your project.
+            advantages for your project!
           </p>
         </>
       ),
