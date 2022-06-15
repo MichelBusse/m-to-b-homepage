@@ -78,7 +78,7 @@ const WebdesignPage: NextPage = () => {
     texts = {
       title: <>Modern Webdesign and Web Development - M-to-B</>,
       description:
-        "Impress and your users generate customers. With modern web technologies and experience in web development, we offer various opportunities for your web project!",
+        "Impress your users and generate customers! With modern web technologies and experience in web development, we offer various opportunities for your web project!",
       alternate: (
         <link
           rel="alternate"
