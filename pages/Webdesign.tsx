@@ -111,8 +111,8 @@ const WebdesignPage: NextPage = () => {
             applications.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
-            Those areas are truly individual and versatile, whether in intern
-            employee areas or on the customers side.
+            Those areas are truly individual and versatile, whether they are in
+            intern employee areas or on the customers side.
           </p>
           <p style={{ transitionDelay: "0.9s" }}>
             We would be happy to advise you on possible uses and are excited to
