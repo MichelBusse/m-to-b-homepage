@@ -1,7 +1,7 @@
 import styles from "../styles/Footer.module.scss";
 import Link from "next/link";
 import Script from "next/script";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { SiGooglemybusiness } from "react-icons/si";
 import { useRouter } from "next/router";
 
@@ -53,6 +53,15 @@ export default function Footer() {
               rel="noreferrer"
             >
               <SiGooglemybusiness />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/m-to-b-softwareentwicklung/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsLinkedin />
             </a>
           </li>
         </ul>
