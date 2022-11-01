@@ -1,44 +1,31 @@
+
 import { useState, useEffect } from "react";
 
 import styles from "../../styles/home/AboutSection.module.scss";
 import { BiTargetLock } from "react-icons/bi";
-import { ImCheckmark } from "react-icons/im";
 import Typewriter, { TypewriterClass } from "typewriter-effect";
 import { useRouter } from "next/router";
+import Software3D from "../three/Software3D";
+
 
 export default function AboutSection(props) {
   const router = useRouter();
 
   let texts = {
     headline1: "Unser Ziel",
-    headline2: "Unser Service",
     text1: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Als junges und kreatives Team stehen wir Ihnen zur Seite und lassen
-          Ihr Projekt Wirklichkeit werden!
+          Als junges und kreatives Team stehen wir dir zur Seite und lassen dein
+          Projekt Wirklichkeit werden!
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
           Von einer modernen und außergewöhnlichen Website bis hin zu
-          innovativen Softwaresystemen realisieren wir Ihre Vorstellungen.
+          innovativen Softwaresystemen wollen wir deine Vorstellungen
+          realisieren.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
-          Unser Ziel - Sie zu beeindrucken!
-        </p>
-      </>
-    ),
-
-    text2: (
-      <>
-        <p style={{ transitionDelay: "0.3s" }}>
-          Mit uns an Ihrer Seite haben sie Zugang zu den neuesten Technologien
-          und Trends, wie individuellen Drohnenaufnahmen, 3D-Umgebungen und
-          Animationen.
-        </p>
-        <p style={{ transitionDelay: "0.6s" }}>
-          Zu unseren Leistungen zählen unter anderem die Entwicklung Mobiler
-          Apps und Desktop-Anwendungen, sowie VR und Mixed Reality und
-          umfassende Webentwicklung im Front- und Backend.
+          Unser Ziel - Dich zu beeindrucken!
         </p>
       </>
     ),
@@ -47,7 +34,6 @@ export default function AboutSection(props) {
   if (router.locale == "en") {
     texts = {
       headline1: "Our Goal",
-      headline2: "Our Service",
       text1: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -61,19 +47,6 @@ export default function AboutSection(props) {
           </p>
         </>
       ),
-      text2: (
-        <>
-          <p style={{ transitionDelay: "0.3s" }}>
-            We offer a variety of modern technologies and possibilities, whether
-            you want 3D renderings, individual animations or complex software
-            architectures.
-          </p>
-          <p style={{ transitionDelay: "0.6s" }}>
-            Our capabilities include many parts of software development,
-            especially mobile apps, full stack applications and web development.
-          </p>
-        </>
-      ),
     };
   }
 
@@ -81,7 +54,6 @@ export default function AboutSection(props) {
   const [typewriterList, addTypewriter] = useState<TypewriterClass[]>([]);
   const [typewriterPlaceholder, setTypewriterPlaceholder] = useState<String[]>([
     texts.headline1,
-    texts.headline2,
   ]);
 
   const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
@@ -109,44 +81,29 @@ export default function AboutSection(props) {
         className={active + " " + styles.about}
       >
         <article className={styles.cell}>
-          <h2>
-            <BiTargetLock className={styles.icon} />
-            {typewriterPlaceholder[0]}
-            <Typewriter
-              onInit={(typewriter) => {
-                setTypewriterPlaceholder(["", ""]);
-                typewriter.typeString(texts.headline1);
-                addTypewriter((state) => [...state, typewriter]);
-                if (
-                  centerPos(props.anchorRefs.aboutRef.current) <
-                  window.scrollY + window.innerHeight
-                ) {
-                  typewriter.start();
-                }
-              }}
-            />
-          </h2>
+          <div className={styles.textSection}>
+            <h2>
+              <BiTargetLock className={styles.icon} />
+              {typewriterPlaceholder[0]}
+              <Typewriter
+                onInit={(typewriter) => {
+                  setTypewriterPlaceholder(["", ""]);
+                  typewriter.typeString(texts.headline1);
+                  addTypewriter((state) => [...state, typewriter]);
+                  if (
+                    centerPos(props.anchorRefs.aboutRef.current) <
+                    window.scrollY + window.innerHeight
+                  ) {
+                    typewriter.start();
+                  }
+                }}
+              />
+            </h2>
           {texts.text1}
+          </div>
         </article>
         <article className={styles.cell}>
-          <h2>
-            <ImCheckmark className={styles.icon} />
-            {typewriterPlaceholder[1]}
-            <Typewriter
-              onInit={(typewriter) => {
-                setTypewriterPlaceholder(["", ""]);
-                typewriter.typeString(texts.headline2);
-                addTypewriter((state) => [...state, typewriter]);
-                if (
-                  centerPos(props.anchorRefs.aboutRef.current) <
-                  window.scrollY + window.innerHeight
-                ) {
-                  typewriter.start();
-                }
-              }}
-            />
-          </h2>
-          {texts.text2}
+            <Software3D />
         </article>
         <div className={styles.arrowWrapper}>
           <div className={styles.animation}>

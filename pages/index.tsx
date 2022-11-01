@@ -6,6 +6,9 @@ import ContactSection from "../components/home/contactSection";
 import CustomersSection from "../components/home/customersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import CustomShapeDivider from "../components/CustomShapeDivider";
+import CrossPlatformSection from "../components/services/CrossPlatformSection";
+import AgileSection from "../components/services/AgileSection";
 
 export default function HomePage(props) {
   const router = useRouter();
@@ -40,7 +43,11 @@ export default function HomePage(props) {
       <Header />
       <main>
         <AboutSection anchorRefs={props.anchorRefs} />
+        <CustomShapeDivider flip={true} />
         <ServicesSection anchorRefs={props.anchorRefs} />
+        <CrossPlatformSection />
+        <AgileSection />
+        <CustomShapeDivider flip={false} />
         <ProjectsSection anchorRefs={props.anchorRefs} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />

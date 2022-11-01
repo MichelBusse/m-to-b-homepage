@@ -17,7 +17,7 @@ export default function MouseMoveAnimation(props) {
     const mousemove = (e) => {
       setPosition({
         x: e.clientX / window.innerWidth - 0.5,
-        y: e.clientY / window.innerHeight - 0.5,
+        y: 0,
       });
     };
     window.addEventListener("mousemove", mousemove);
@@ -29,8 +29,6 @@ export default function MouseMoveAnimation(props) {
   useFrame((state, delta) => {
     props.groupRef.current.rotation.order = "YXZ";
 
-    state.camera.position.y +=
-      (-(position.y * 2) + 2 - state.camera.position.y) * 0.05;
     state.camera.position.x +=
       ((position.x * 2) + 2 - state.camera.position.x) * 0.05;
     props.groupRef.current.rotation.z = 0;

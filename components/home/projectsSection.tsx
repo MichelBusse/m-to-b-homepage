@@ -10,21 +10,20 @@ export default function ProjectsSection(props) {
     headline: "Referenzen",
     subHeadline: "Eine Auswahl unserer Projekte:",
     project2Name: "Bundeskonferenz für Lehrer:innenbildung",
-    project3Name: "Mitarbeitermanagement",
-    project3Category: "Individualsoftware",
-    project4Category: "Immbobilien"
-  }
-
+    project3Name: "Mixed Reality im OP",
+    project3Category: "UPMC Pittsburgh",
+    project4Category: "Immbobilien",
+  };
 
   if (router.locale == "en") {
     texts = {
       headline: "Projects",
       subHeadline: "A selection of our projects:",
       project2Name: "Conference of education for teachers",
-      project3Name: "Employee management",
-      project3Category: "Individual software",
-      project4Category: "Real estate"
-    }
+      project3Name: "Mixed Reality in Surgery",
+      project3Category: "UPMC Pittsburgh",
+      project4Category: "Real estate",
+    };
   }
 
   const [active, setActive] = useState("");
@@ -111,19 +110,25 @@ export default function ProjectsSection(props) {
             id={styles.project3}
             style={{ transitionDelay: "0.6s" }}
           >
-            <Image
-              className={styles.projectBackgroundImage}
-              alt="Individualsoftware MB-Planner"
-              src="/images/projects/project3.jpg"
-              width={600}
-              height={746}
-            />
-            <div className={styles.captionWrapper}>
-              <div className={styles.caption}>
-                <h3>{texts.project3Name}</h3>
-                <p>{texts.project3Category}</p>
+            <a
+              href="https://www.linkedin.com/posts/m-to-b-softwareentwicklung_mixedreality-softwareengineering-medizintechnik-activity-6936760153329315840-kL4a/?utm_source=share&utm_medium=member_desktop"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                className={styles.projectBackgroundImage}
+                alt="Mixed Reality im OP"
+                src="/images/projects/project3.jpg"
+                width={600}
+                height={746}
+              />
+              <div className={styles.captionWrapper}>
+                <div className={styles.caption}>
+                  <h3>{texts.project3Name}</h3>
+                  <p>{texts.project3Category}</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
           <div
             className={

@@ -1,0 +1,29 @@
+.customShapeDivider {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #ffffff;
+}
+
+.customShapeDivider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+  transition: all 0.5s ease-in-out;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.shapeFillMain {
+  fill: rgb(2, 38, 54);
+}
+
+.shapeFillSecond {
+  fill: #01506b;
+}
