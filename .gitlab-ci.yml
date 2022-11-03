@@ -13,3 +13,4 @@ deploy-server:
     - apt-get update -y
     - apt-get -y install openssh-client
     - ssh -p 2122 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/schale/development/m-to-b-homepage; bash" < deploy.sh
+    - ssh -p 2122 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP '/home/schale/development/m-to-b-homepage && docker compose up -d --build'
