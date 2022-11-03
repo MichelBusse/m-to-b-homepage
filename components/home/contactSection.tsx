@@ -8,15 +8,16 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
+import QnA from "./QnA";
 
 export default function ContactSection(props) {
   const router = useRouter();
 
   let texts = {
-    headline: "Kontakt",
+    headline1: "Kontakt",
     contactText:
-      "Interessiert? Lassen Sie sich kostenlos zu allen Möglichkeiten für Ihr Projekt beraten und ein unverbindliches Angebot erstellen!",
-    request: "Anfrage senden",
+      "Du bist interessiert oder hast noch Fragen? Nutze unsere kostenlose Beratung und sende uns einfach eine Nachricht!",
+    request: "Nachricht senden",
     privacyText: "Ich akzeptiere die ",
     privacy: "Datenschutzerklärung",
     send: "Absenden",
@@ -31,7 +32,7 @@ export default function ContactSection(props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: "Contact",
+      headline1: "Contact",
       contactText:
         "Interested? Get free advice on all possibilities for your project and receive a non-binding offer!",
       request: "Get in touch",
@@ -165,7 +166,7 @@ export default function ContactSection(props) {
         <div className={styles.flexWrapper}>
           <div className={styles.contactText}>
             <div className={styles.textWrapper}>
-              <h2>{texts.headline}</h2>
+              <h2>{texts.headline1}</h2>
               <p>{texts.contactText}</p>
               <p>
                 <HiMail className={styles.icon} />
@@ -179,6 +180,7 @@ export default function ContactSection(props) {
                 <IoLocationSharp className={styles.icon} />
                 <strong>Leipzig</strong>
               </p>
+              <QnA/>
             </div>
           </div>
           <div className={styles.contactFormular} id="formular">

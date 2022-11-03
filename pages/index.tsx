@@ -15,22 +15,14 @@ export default function HomePage(props) {
 
   let texts = {
     alternate: (
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://m-to-b.com/en"
-      />
+      <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en" />
     ),
   };
 
   if (router.locale == "en") {
     texts = {
       alternate: (
-        <link
-          rel="alternate"
-          hrefLang="de"
-          href="https://m-to-b.com/"
-        />
+        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/" />
       ),
     };
   }

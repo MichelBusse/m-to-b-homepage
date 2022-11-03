@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 import styles from "../../styles/home/AboutSection.module.scss";
@@ -6,7 +5,6 @@ import { BiTargetLock } from "react-icons/bi";
 import Typewriter, { TypewriterClass } from "typewriter-effect";
 import { useRouter } from "next/router";
 import Software3D from "../three/Software3D";
-
 
 export default function AboutSection(props) {
   const router = useRouter();
@@ -16,16 +14,18 @@ export default function AboutSection(props) {
     text1: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Als junges und kreatives Team stehen wir dir zur Seite und lassen dein
-          Projekt Wirklichkeit werden!
+          Wir sind ein 2020 gegründetes StartUp und möchten unseren Kunden
+          helfen, erfolgreiche und beeindruckende Apps zu entwickeln.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Von einer modernen und außergewöhnlichen Website bis hin zu
-          innovativen Softwaresystemen wollen wir deine Vorstellungen
-          realisieren.
+          Dafür besteht unser Team aus jungen Programmierern und Designern, die
+          mit Begeisterung und keiner Angst vor neuen Technologien oder Ideen
+          entwickeln.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
-          Unser Ziel - Dich zu beeindrucken!
+          Unser Ziel ist es, deine Vorstellungen Wirklichkeit werden zu lassen!
+          Dabei stehen wir für moderne App-Entwicklung, einen transparenten
+          Projektablauf und enge indiviudelle Kommunikation.
         </p>
       </>
     ),
@@ -99,11 +99,11 @@ export default function AboutSection(props) {
                 }}
               />
             </h2>
-          {texts.text1}
+            {texts.text1}
           </div>
         </article>
         <article className={styles.cell}>
-            <Software3D />
+          <Software3D />
         </article>
         <div className={styles.arrowWrapper}>
           <div className={styles.animation}>

@@ -9,20 +9,28 @@ export default function ProjectsSection(props) {
   let texts = {
     headline: "Referenzen",
     subHeadline: "Eine Auswahl unserer Projekte:",
-    project2Name: "Bundeskonferenz für Lehrer:innenbildung",
+    project1Name: "Managementsoftware",
+    project1Company: "Special-Solutions GmbH",
+    project2Name: "Konferenzsoftware",
+    project2Company: "ZLS Leipzig",
     project3Name: "Mixed Reality im OP",
-    project3Category: "UPMC Pittsburgh",
-    project4Category: "Immbobilien",
+    project3Company: "UPMC Pittsburgh",
+    project4Name: 'Immobilien-Website',
+    project4Company: "K&S GmbH",
   };
 
   if (router.locale == "en") {
     texts = {
       headline: "Projects",
       subHeadline: "A selection of our projects:",
-      project2Name: "Conference of education for teachers",
+      project1Name: "Managementsoftware",
+      project1Company: "Special-Solutions GmbH",  
+      project2Name: "Conference-Software",
+      project2Company: "ZLS Leipzig",
       project3Name: "Mixed Reality in Surgery",
-      project3Category: "UPMC Pittsburgh",
-      project4Category: "Real estate",
+      project3Company: "UPMC Pittsburgh",
+      project4Name: 'Real Estade Website',
+      project4Company: "K&S GmbH",
     };
   }
 
@@ -71,8 +79,8 @@ export default function ProjectsSection(props) {
               />
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
-                  <h3>Special Solutions</h3>
-                  <p>IT-Services</p>
+                  <h3>{texts.project1Name}</h3>
+                  <p>{texts.project1Company}</p>
                 </div>
               </div>
             </a>
@@ -99,6 +107,7 @@ export default function ProjectsSection(props) {
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
                   <h3>{texts.project2Name}</h3>
+                  <p>{texts.project2Company}</p>
                 </div>
               </div>
             </a>
@@ -125,7 +134,7 @@ export default function ProjectsSection(props) {
               <div className={styles.captionWrapper}>
                 <div className={styles.caption}>
                   <h3>{texts.project3Name}</h3>
-                  <p>{texts.project3Category}</p>
+                  <p>{texts.project3Company}</p>
                 </div>
               </div>
             </a>
@@ -146,8 +155,8 @@ export default function ProjectsSection(props) {
             />
             <div className={styles.captionWrapper}>
               <div className={styles.caption}>
-                <h3>K&amp;S GmbH</h3>
-                <p>{texts.project4Category}</p>
+                <h3>{texts.project4Name}</h3>
+                <p>{texts.project4Company}</p>
               </div>
             </div>
           </div>

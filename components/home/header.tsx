@@ -29,10 +29,10 @@ export default function Header() {
     headline: "aus Leipzig",
     services: "Unsere Leistungen"
   }
-  let phrases = ["Software", "Zukunft"];
+  let phrases = ["Software", "Apps", "Zukunft"];
 
   if(router.locale == "en"){
-    phrases = ["Software", "Future"]
+    phrases = ["Software", "Apps", "Future"]
     texts = {
       headline: "from Leipzig",
       services: "Our Services"
@@ -158,7 +158,7 @@ export default function Header() {
             <TextScrambler 
               phrases={phrases}
               speed={50}
-              pauseTime={3000}
+              pauseTime={2000}
               chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
               symbolColor="rgb(255, 255, 255)" /> {texts.headline}</h2>
           <a href="#services">

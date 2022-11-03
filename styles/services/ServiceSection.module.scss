@@ -3,7 +3,7 @@
   background-position: 0 0;
   background-size: 100% auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: stretch;
   color: #000000;
@@ -13,7 +13,7 @@
   padding: 0 4em;
 }
 .serviceSection:nth-of-type(2n) {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .flexCell {

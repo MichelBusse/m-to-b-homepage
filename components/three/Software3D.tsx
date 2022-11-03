@@ -3,17 +3,15 @@ import { Group } from "three";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import AnimatedRocket from "./AnimatedRocket";
-import AnimatedShield from "./AnimatedShield";
 import AnimatedMonitor from "./AnimatedMonitor";
 import AnimatedPencil from "./AnimatedPencil";
-import BackgroundParticles from "./BackgroundParticles";
 import MouseMoveAnimation from "./MouseMoveAnimation";
 
 export default function Software3D() {
   const rotationGroup = useRef<Group>(null!);
 
   return (
-    <Canvas camera={{ fov: 45, position: [6, 1.5, 6] }}>
+    <Canvas camera={{ fov: 45, position: [4.5, 1.5, 4.5] }}>
       <group ref={rotationGroup}>
         <ambientLight intensity={0.25} />
         <directionalLight position={[-2, 3, 3]} intensity={0.5} />
