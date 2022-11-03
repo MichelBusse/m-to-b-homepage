@@ -18,9 +18,8 @@ export default function AboutSection(props) {
           helfen, erfolgreiche und beeindruckende Apps zu entwickeln.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Dafür besteht unser Team aus jungen Programmierern und Designern, die
-          mit Begeisterung und keiner Angst vor neuen Technologien oder Ideen
-          entwickeln.
+          Dafür besteht unser Team aus jungen Programmierer:innen und Designer:innen, die
+          mit Begeisterung und ohne Angst vor neuen Technologien entwickeln.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
           Unser Ziel ist es, deine Vorstellungen Wirklichkeit werden zu lassen!
