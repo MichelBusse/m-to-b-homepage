@@ -155,7 +155,7 @@
   display: flex;
   z-index: 1000;
   position: fixed;
-  top: 0;
+  top: 5em;
   left: 0;
   width: 100%;
   height: calc(100% - 5em);
@@ -168,7 +168,6 @@
   transform-origin: top;
   transform: translateX(100%);
   opacity: 0;
-  top: 5em;
   box-sizing: border-box;
   padding-left: 3em;
   overflow: hidden;

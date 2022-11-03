@@ -9,7 +9,7 @@ export default function QnA(props) {
   let texts = {
     question1: "Wie viel kostet die Entwicklung einer App?",
     answer1:
-      "Eine pauschale Kostenbeschreibung vorab zu nennen ist in der App-Entwicklung praktisch unmöglich. Dafür sind die einzelnen Apps zu individuell und unvorhersehbar. In der Regel setzen wir uns mit dir zusammen und besprechen deine Vorstellungen, die gewünschten Funktionen, die Ziele und dein Budget. Unsere Aufgabe ist es dann, das Budget mit den Anforderungen zusammenzubringen. Dazu beraten wir dich zu den verschiedenen Möglichkeiten für das Projekt und geben unsere Empfehlungen. Danach entscheidest du, ob du deine App mit uns realisieren möchtest.",
+      "Eine pauschale Kostenbeschreibung vorab zu nennen ist in der App-Entwicklung praktisch unmöglich. In der Regel setzen wir uns mit dir zusammen und besprechen deine Vorstellungen, die gewünschten Funktionen, die Ziele und dein Budget. Dazu beraten wir dich zu den verschiedenen Möglichkeiten für das Projekt und geben unsere Empfehlungen. Danach entscheidest du, ob du deine App mit uns realisieren möchtest.",
     question2: "Wie lange dauert die Entwicklung einer App?",
     answer2:
       "Für die zeitliche Einordnung und einen überblick über den aktuellen Entwicklungsstand setzen wir auf häufige Kundenkommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App gerade ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Arbeitsablauf.",

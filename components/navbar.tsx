@@ -16,9 +16,9 @@ export default function Navbar(props) {
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
-    if (router.asPath.startsWith("/Softwareentwicklung")){
+    if (router.asPath.startsWith("/Softwareentwicklung")) {
       setActiveMenuItem("software");
-    }else if(router.asPath.startsWith("/Webdesign")){
+    } else if (router.asPath.startsWith("/Webdesign")) {
       setActiveMenuItem("webdesign");
     }
 
@@ -29,7 +29,7 @@ export default function Navbar(props) {
         } else {
           setMenuScrolled(false);
         }
-      }else{
+      } else {
         setMenuScrolled(true);
       }
 
@@ -57,15 +57,13 @@ export default function Navbar(props) {
         ) {
           setActiveMenuItem("about");
         } else {
-          if (!router.asPath.startsWith("/Softwareentwicklung") && !router.asPath.startsWith("/Webdesign")) {
-            setActiveMenuItem("");
-          }
+          setActiveMenuItem("");
         }
       }
     };
 
     onScroll();
-    
+
     if (menuActive) {
       document.body.style.overflowY = "hidden";
     } else {
@@ -87,25 +85,20 @@ export default function Navbar(props) {
     };
   }, [menuActive, props.anchorRefs, props.initialScrolled, router.asPath]);
 
-
   let texts = {
     about: "Über uns",
     services: "Leistungen",
     projects: "Referenzen",
     contact: "Kontakt",
-    webdesign: "Webdesign",
-    development: "Softwareenticklung"
-  }
+  };
 
-  if(router.locale == "en"){
+  if (router.locale == "en") {
     texts = {
       about: "About",
       services: "Services",
       projects: "Projects",
       contact: "Contact",
-      webdesign: "Webdesign",
-      development: "Development"
-    }
+    };
   }
 
   return (
@@ -121,14 +114,15 @@ export default function Navbar(props) {
         <div className={styles.logo}>
           <Link href="/#home">
             <a>
-              <div className={styles.mbLogo}
-                  onClick={() => setMenuActive(false)}></div>
+              <div
+                className={styles.mbLogo}
+                onClick={() => setMenuActive(false)}
+              ></div>
             </a>
           </Link>
           <Link href="/#home">
             <a>
-              <span
-                  onClick={() => setMenuActive(false)}>M-to-B</span>
+              <span onClick={() => setMenuActive(false)}>M-to-B</span>
             </a>
           </Link>
         </div>
@@ -144,7 +138,13 @@ export default function Navbar(props) {
             <Link href="/#services">
               <a>
                 <li
-                  className={activeMenuItem === "services" || activeMenuItem === "webdesign" || activeMenuItem === "software" ? styles.active : ""}
+                  className={
+                    activeMenuItem === "services" ||
+                    activeMenuItem === "webdesign" ||
+                    activeMenuItem === "software"
+                      ? styles.active
+                      : ""
+                  }
                 >
                   {texts.services}
                 </li>
@@ -164,7 +164,7 @@ export default function Navbar(props) {
                 <li
                   className={activeMenuItem === "contact" ? styles.active : ""}
                 >
-                 {texts.contact}
+                  {texts.contact}
                 </li>
               </a>
             </Link>
@@ -214,30 +214,6 @@ export default function Navbar(props) {
               </li>
             </a>
           </Link>
-          <ul className={styles.sub}>
-            <Link href="/Webdesign">
-              <a>
-                <li
-                  onClick={() => setMenuActive(false)}
-                  style={{ transitionDelay: "0.15s" }}
-                  className={activeMenuItem === "webdesign" ? styles.active : ""}
-                >
-                  {texts.webdesign}
-                </li>
-              </a>
-            </Link>
-            <Link href="/Softwareentwicklung">
-              <a>
-                <li
-                  onClick={() => setMenuActive(false)}
-                  style={{ transitionDelay: "0.2s" }}
-                  className={activeMenuItem === "software" ? styles.active : ""}
-                >
-                  {texts.development}
-                </li>
-              </a>
-            </Link>
-          </ul>
           <Link href="/#projects">
             <a>
               <li
