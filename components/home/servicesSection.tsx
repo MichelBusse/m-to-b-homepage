@@ -17,14 +17,22 @@ export default function ServicesSection(props) {
     ),
     headlineSection1: "App-Entwicklung",
     textSection1: (
-      <p style={{ transitionDelay: "0.3s" }} key={1}>
-        Von der Idee bis zum Upload in den App Store führen wir deine App durch
-        den Entwicklungsprozess. Mit Erfahrung in der Cross-Platform und nativen{" "}
-        <strong>App-Entwicklung</strong> können wir deine Anforderungen
-        effizient und modern implementieren. Dabei legen wir genauso viel Wert
-        auf verlässliche Funktionen wie auf ein überzeugendes und nutzbares
-        UI-Design.
-      </p>
+      <>
+        <p style={{ transitionDelay: "0.3s" }} key={1}>
+          Von der Idee bis zum Upload in den App Store führen wir deine App
+          durch den Entwicklungsprozess. Mit Erfahrung in der Cross-Platform und
+          nativen <strong>App-Entwicklung</strong> können wir deine
+          Anforderungen effizient und modern implementieren. Dabei legen wir
+          genauso viel Wert auf verlässliche Funktionen wie auf ein
+          überzeugendes und nutzbares UI-Design.
+        </p>
+        <p>
+          Wir setzen auf einen transparenten Projektablauf mit persönlichen
+          Ansprechpartnern und enger Beteiligung. So stellen wir sicher, dass
+          deine Anforderungen auch getroffen werden und alle Ressourcen
+          effizient genutzt werden.
+        </p>
+      </>
     ),
     headlineSection2: "Individualsoftware",
     textSection2: (

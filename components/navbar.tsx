@@ -16,11 +16,6 @@ export default function Navbar(props) {
   useEffect(() => {
     const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
 
-    if (router.asPath.startsWith("/Softwareentwicklung")) {
-      setActiveMenuItem("software");
-    } else if (router.asPath.startsWith("/Webdesign")) {
-      setActiveMenuItem("webdesign");
-    }
 
     const onScroll = () => {
       if (!props.initialScrolled) {
