@@ -27,7 +27,7 @@ export default function Header() {
 
   let texts = {
     headline: "aus Leipzig",
-    services: "Unsere Leistungen"
+    services: "Kostenloses Beratungsgespräch vereinbaren!"
   }
   let phrases = ["Software", "Apps", "Zukunft"];
 
@@ -35,7 +35,7 @@ export default function Header() {
     phrases = ["Software", "Apps", "Future"]
     texts = {
       headline: "from Leipzig",
-      services: "Our Services"
+      services: "Schedule a free consultation!"
     }
   }
 
@@ -161,7 +161,7 @@ export default function Header() {
               pauseTime={2000}
               chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
               symbolColor="rgb(255, 255, 255)" /> {texts.headline}</h2>
-          <a href="#services">
+          <a href="#formular">
             <button className={headerVisible ? styles.visible : ""}>{texts.services}</button>
           </a>
         </header>
