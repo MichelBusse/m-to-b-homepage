@@ -26,7 +26,7 @@ export default function ServicesSection(props) {
           genauso viel Wert auf verlässliche Funktionen wie auf ein
           überzeugendes und nutzbares UI-Design.
         </p>
-        <p>
+        <p style={{ transitionDelay: "0.6s" }} key={2}>
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
           Ansprechpartnern und enger Beteiligung. So stellen wir sicher, dass
           deine Anforderungen auch getroffen werden und alle Ressourcen

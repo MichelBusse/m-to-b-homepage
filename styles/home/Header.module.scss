@@ -130,12 +130,15 @@
 #homeFixed button {
   opacity: 0;
   margin-top: 2em;
+  margin-right: 2em;
   font-size: 1.75em;
   border-style: solid;
   border-color: #ffffff;
   border-width: 0.2em;
   transform: skewX(-10deg);
   color: #ffffff;
+  text-align: left;
+
 }
 
 #homeFixed button.visible {
