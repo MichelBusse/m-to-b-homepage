@@ -29,7 +29,7 @@ export default function MouseMoveAnimation(props) {
   useFrame((state, delta) => {
     props.groupRef.current.rotation.order = "YXZ";
 
-    props.groupRef.current.rotation.y = (position.x + 1) *0.5;
+    props.groupRef.current.rotation.y = props.groupRef.current.rotation.y + (position.x * 0.5 + 0.7 - props.groupRef.current.rotation.y) * delta * 4;
   });
 
   return <>{props.children}</>;

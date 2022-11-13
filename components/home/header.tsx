@@ -49,6 +49,7 @@ export default function Header() {
           muted
           loop
           autoPlay
+          playsInline
           poster="/videos/thumbnail.jpeg"
         ></video>
         <div className={styles.backgroundColor + " " + styles.homeParts}></div>

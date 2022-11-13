@@ -6,6 +6,7 @@
   left: 0;
   bottom: 0;
   overflow: hidden;
+  height: 100%;
 }
 
 .homeParts {
@@ -82,6 +83,7 @@
   justify-content: center;
   max-width: 120em;
   z-index: 100;
+  overflow: hidden;
 }
 
 #homeFixed header {
@@ -169,18 +171,6 @@
   z-index: 10;
 }
 
-@media screen and (max-height: 1000px) {
-  #homeFixed header {
-    font-size: 85%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  #homeFixed header {
-    font-size: 80%;
-  }
-}
-
 @media screen and (max-width : 1080px) {
   #homeFixed header {
     top: 50%;
@@ -191,24 +181,35 @@
   }
 }
 
-@media screen and (max-width : 730px) {
+@media screen and (max-width : 750px) {
   #homeFixed header {
-    font-size: 70%;
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width : 650px) {
+  #homeFixed header h2{
+    font-size: 3em;
   }
 }
 
 @media screen and (max-width : 570px) {
   #homeFixed header {
-    font-size: 70%;
-    left: 4em;
-  }
-  #homeFixed header #subHeadline {
-    font-size: 3em;
+    width: 100%;
+    left: 0;
+    padding: 0 4em;
+    font-size: 68%;
   }
 }
 
-@media screen and (max-width : 415px) {
+@media screen and (max-width : 480px) {
   #homeFixed header {
-    font-size: 65%;
+    width: 100%;
+    left: 0;
+    padding: 0 2em;
+    font-size: 68%;
+  }
+  #homeFixed header h2{
+    font-size: 2.8em;
   }
 }
