@@ -25,16 +25,19 @@
 .backgroundVideo::-webkit-media-controls-panel {
   display: none !important;
   appearance: none;
+  -webkit-appearance: none;
 }
 
 .backgroundVideo::-webkit-media-controls-play-button {
   display: none !important;
   appearance: none;
+  -webkit-appearance: none;
 }
 
 .backgroundVideo::-webkit-media-controls-start-playback-button {
   display: none !important;
   appearance: none;
+  -webkit-appearance: none;
 }
 
 .backgroundColor {
