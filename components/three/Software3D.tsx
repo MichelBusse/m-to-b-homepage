@@ -11,7 +11,7 @@ export default function Software3D() {
   const rotationGroup = useRef<Group>(null!);
 
   return (
-    <Canvas camera={{ fov: 45, position: [4.5, 1.5, 4.5] }}>
+    <Canvas camera={{ fov: 45, position: [5.5, 1.5, 4.5] }}>
       <group ref={rotationGroup}>
         <ambientLight intensity={0.25} />
         <directionalLight position={[-2, 3, 3]} intensity={0.5} />
