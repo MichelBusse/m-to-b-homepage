@@ -140,7 +140,7 @@ export default function ServicesSection(props: Props) {
         key={1}
         headline={texts.headlineSection1}
         text={texts.textSection1}
-        image="/images/Softwareentwicklung/smartphone.png"
+        image="/images/smartphone.png"
         imageAlt={texts.headlineSection1}
         typewriterKey={"1"}
       />
@@ -150,7 +150,7 @@ export default function ServicesSection(props: Props) {
         key={2}
         headline={texts.headlineSection2}
         text={texts.textSection2}
-        image="/images/Softwareentwicklung/pc.png"
+        image="/images/pc.png"
         imageAlt={texts.headlineSection2}
         typewriterKey={"2"}
       />

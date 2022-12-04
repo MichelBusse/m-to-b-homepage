@@ -1,10 +1,4 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/Poppins-Light.ttf") format('truetype');
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("/fonts/Roboto-Black.ttf") format('truetype');
   font-display: swap;
@@ -71,11 +65,11 @@ body{
   overflow-y: auto;
 }
 h1,h2,h3{
-  font-family: "Roboto Mono";
-  font-weight: bold;
+  font-family: "Roboto";
+  font-weight: 700;
 }
 h4,h5{
-  font-family: "Roboto Mono";
+  font-family: "Roboto";
 }
 p {
   font-size: 1.2em;
