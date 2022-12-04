@@ -11,7 +11,7 @@ export default function CrossPlatformSection() {
 
   let texts = {
     headline: "Cross-Platform Anwendungen",
-    subHeadline: "Erreichen Sie alle Nutzer"
+    subHeadline: "Erreiche alle Nutzer"
   };
 
   if (router.locale == "en") {
@@ -23,7 +23,6 @@ export default function CrossPlatformSection() {
   return (
     <>
       <section className={styles.crossPlatformSection}>
-        <div className={styles.blueCurtain}></div>
         <div className={styles.text}>
           <h2>{texts.headline}</h2>
           <p>{texts.subHeadline}</p>

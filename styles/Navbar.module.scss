@@ -9,18 +9,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 8em;
   font-style: normal;
   font-weight: normal;
-  padding: 2em;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   backface-visibility: hidden;
-}
-.navbar.scrolled {
   height: 5em;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
   padding: 2em;
 }
@@ -37,7 +33,7 @@
 .navbar .logo .mbLogo {
   width: 2.8em;
   height: 2.8em;
-  background-image: url("/images/Logo/MB-Logo-Weiß.png");
+  background-image: url("/images/Logo/MB-Logo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -50,14 +46,8 @@
   font-size: 1.8em;
   font-weight: bold;
   font-style: italic;
-  color: #ffffff;
-  transition: color 0.3s ease-in-out;
-}
-.navbar.scrolled .logo .mbLogo {
-  background-image: url("/images/Logo/MB-Logo.png");
-}
-.navbar.scrolled .logo span {
   color: #333;
+  transition: color 0.3s ease-in-out;
 }
 .navbar ul {
   flex: 0 1 auto;
@@ -77,21 +67,14 @@
   transform: translateZ(0) scale(1, 1);
   font-size: 1.3em;
   transition: color 0.4s ease-in-out;
-  color: #ffffff;
+  color: #333;
   font-weight: bolder;
 }
 .navbar ul li:hover,
 .navbar ul li.active {
-  color: #fff;
+  color: #01506b;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-}
-.navbar.scrolled ul li{
-  color: #000000;
-}
-.navbar.scrolled ul li:hover,
-.navbar.scrolled ul li.active {
-  color: #01506b;
 }
 .navbar ul li::before {
   content: "";
@@ -101,15 +84,12 @@
   width: 1em;
   height: 0.6em;
   border-radius: 0.05em;
-  background: #ffffff;
+  background: #01506b;
   transition: all 0.3s ease-in-out;
   transform-origin: top;
   transform: translateX(-50%) scaleY(0);
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
-.navbar.scrolled ul li::before {
-  background: #01506b;
 }
 .navbar ul li:hover::before,
 .navbar ul li.active::before {
@@ -127,16 +107,11 @@
 .bar3 {
   width: 2.25em;
   height: 0.25em;
-  background-color: #fff;
+  background-color: #333333;
   margin: 0.4em 0;
   transition: 0.4s;
   font-smooth: antialiased !important;
   backface-visibility: hidden;
-}
-.navbar.scrolled .bar1,
-.navbar.scrolled .bar2,
-.navbar.scrolled .bar3 {
-  background-color: #333333;
 }
 .hamburgerMenu.active .bar1 {
   transform: rotate(-45deg) translate(-0.45em, 0.45em);
@@ -181,9 +156,11 @@
   border-left: solid 1px #333;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   list-style: none;
+  padding-top: 4em;
   padding-left: 1em;
+  height: 100%;
 }
 .mobileMenu ul.sub {
   height: auto;

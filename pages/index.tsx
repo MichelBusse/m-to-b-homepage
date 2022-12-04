@@ -9,8 +9,14 @@ import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import CrossPlatformSection from "../components/services/CrossPlatformSection";
 import AgileSection from "../components/services/AgileSection";
+import { AnchorRefs } from "./_app";
+import ValuesSection from "../components/home/valuesSection";
 
-export default function HomePage(props) {
+type Props = {
+  anchorRefs : AnchorRefs,
+}
+
+export default function HomePage(props : Props) {
   const router = useRouter();
 
   let texts = {
@@ -34,7 +40,7 @@ export default function HomePage(props) {
       </Head>
       <Header />
       <main>
-        <AboutSection anchorRefs={props.anchorRefs} />
+        <ValuesSection />
         <CustomShapeDivider flip={true} />
         <ServicesSection anchorRefs={props.anchorRefs} />
         <CrossPlatformSection />

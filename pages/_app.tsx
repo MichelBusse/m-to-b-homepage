@@ -6,10 +6,18 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/footer";
 import { CookiesProvider } from "react-cookie";
-import { useEffect, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 import { Router, useRouter } from "next/router";
 import { useSmoothScroll } from "../hooks/SmoothScroll";
 import CookieDisclaimer from "../components/cookieDisclaimer";
+
+export type AnchorRefs = {
+  appsRef: MutableRefObject<null>,
+  softwareRef: MutableRefObject<null>,
+  vrRef: MutableRefObject<null>,
+  projectsRef: MutableRefObject<null>,
+  contactRef: MutableRefObject<null>,
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -28,11 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useSmoothScroll();
 
-  const anchorRefs = {
-    aboutRef: useRef(),
-    servicesRef: useRef(),
-    projectsRef: useRef(),
-    contactRef: useRef(),
+  const anchorRefs : AnchorRefs = {
+    appsRef: useRef(null),
+    softwareRef: useRef(null),
+    vrRef: useRef(null),
+    projectsRef: useRef(null),
+    contactRef: useRef(null),
   };
 
   useEffect(() => {
@@ -94,10 +103,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <CookieDisclaimer />
         <Navbar
           anchorRefs={anchorRefs}
-          initialScrolled={
-            router.asPath.startsWith("/Softwareentwicklung") ||
-            router.asPath.startsWith("/Webdesign")
-          }
         />
         <ToastContainer />
         <Component anchorRefs={anchorRefs} {...pageProps} />

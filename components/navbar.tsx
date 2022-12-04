@@ -2,32 +2,24 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { AnchorRefs } from "../pages/_app";
 
-export default function Navbar(props) {
+type Props = {
+  anchorRefs: AnchorRefs;
+};
+
+export default function Navbar(props: Props) {
   const navbarRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const [menuActive, setMenuActive] = useState(false);
-  const [menuScrolled, setMenuScrolled] = useState(
-    props.initialScrolled ? true : false
-  );
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
   useEffect(() => {
-    const centerPos = (element) => element.offsetTop + window.innerHeight * 0.5;
-
+    const centerPos = (element: HTMLElement) =>
+      element.offsetTop + window.innerHeight * 0.5;
 
     const onScroll = () => {
-      if (!props.initialScrolled) {
-        if (window.scrollY > 0) {
-          setMenuScrolled(true);
-        } else {
-          setMenuScrolled(false);
-        }
-      } else {
-        setMenuScrolled(true);
-      }
-
       const scrollPosition = window.scrollY + window.innerHeight;
 
       if (props.anchorRefs) {
@@ -42,15 +34,15 @@ export default function Navbar(props) {
         ) {
           setActiveMenuItem("projects");
         } else if (
-          props.anchorRefs.servicesRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.servicesRef.current)
+          props.anchorRefs.softwareRef.current &&
+          scrollPosition > centerPos(props.anchorRefs.softwareRef.current)
         ) {
-          setActiveMenuItem("services");
+          setActiveMenuItem("software");
         } else if (
-          props.anchorRefs.aboutRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.aboutRef.current)
+          props.anchorRefs.appsRef.current &&
+          scrollPosition > centerPos(props.anchorRefs.appsRef.current)
         ) {
-          setActiveMenuItem("about");
+          setActiveMenuItem("apps");
         } else {
           setActiveMenuItem("");
         }
@@ -78,19 +70,21 @@ export default function Navbar(props) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, [menuActive, props.anchorRefs, props.initialScrolled, router.asPath]);
+  }, [menuActive, props.anchorRefs, router.asPath]);
 
   let texts = {
-    about: "Über uns",
-    services: "Leistungen",
+    apps: "Apps",
+    software: "Software",
+    vr: "Virtual Reality",
     projects: "Referenzen",
     contact: "Kontakt",
   };
 
   if (router.locale == "en") {
     texts = {
-      about: "About",
-      services: "Services",
+      apps: "Apps",
+      software: "Software",
+      vr: "Virtual Reality",
       projects: "Projects",
       contact: "Contact",
     };
@@ -101,9 +95,7 @@ export default function Navbar(props) {
       <nav
         ref={navbarRef}
         className={
-          menuActive || menuScrolled
-            ? styles.navbar + " " + styles.scrolled
-            : styles.navbar
+          menuActive ? styles.navbar + " " + styles.scrolled : styles.navbar
         }
       >
         <div className={styles.logo}>
@@ -123,28 +115,29 @@ export default function Navbar(props) {
         </div>
         <div className={styles.ulWrapper}>
           <ul>
-            <Link href="/#about">
+            <Link href="/#apps">
               <a>
-                <li className={activeMenuItem === "about" ? styles.active : ""}>
-                  {texts.about}
+                <li className={activeMenuItem === "apps" ? styles.active : ""}>
+                  {texts.apps}
                 </li>
               </a>
             </Link>
-            <Link href="/#services">
+            <Link href="/#software">
               <a>
                 <li
-                  className={
-                    activeMenuItem === "services" ||
-                    activeMenuItem === "webdesign" ||
-                    activeMenuItem === "software"
-                      ? styles.active
-                      : ""
-                  }
+                  className={activeMenuItem === "software" ? styles.active : ""}
                 >
-                  {texts.services}
+                  {texts.software}
                 </li>
               </a>
             </Link>
+            {/*<Link href="/#vr">
+              <a>
+                <li className={activeMenuItem === "vr" ? styles.active : ""}>
+                  {texts.vr}
+                </li>
+              </a>
+            </Link>*/}
             <Link href="/#projects">
               <a>
                 <li
@@ -187,28 +180,39 @@ export default function Navbar(props) {
         }
       >
         <ul>
-          <Link href="/#about">
+          <Link href="/#apps">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
                 style={{ transitionDelay: "0.05s" }}
-                className={activeMenuItem === "about" ? styles.active : ""}
+                className={activeMenuItem === "apps" ? styles.active : ""}
               >
-                {texts.about}
+                {texts.apps}
               </li>
             </a>
           </Link>
-          <Link href="/#services">
+          <Link href="/#software">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
                 style={{ transitionDelay: "0.1s" }}
-                className={activeMenuItem === "services" ? styles.active : ""}
+                className={activeMenuItem === "software" ? styles.active : ""}
               >
-                {texts.services}
+                {texts.software}
               </li>
             </a>
           </Link>
+          {/*<Link href="/#vr">
+            <a>
+              <li
+                onClick={() => setMenuActive(false)}
+                style={{ transitionDelay: "0.1s" }}
+                className={activeMenuItem === "vr" ? styles.active : ""}
+              >
+                {texts.vr}
+              </li>
+            </a>
+      </Link>*/}
           <Link href="/#projects">
             <a>
               <li

@@ -7,5 +7,5 @@ import { useLoader } from "@react-three/fiber";
 export default function Model(props) {
   const logo = useLoader(GLTFLoader, props.path);
   
-  return <primitive object={logo.scene} position={props.position} rotation={props.rotation}/>;
+  return <primitive object={logo.scene} position={props.position} rotation={props.rotation} scale={props.scale}/>;
 };

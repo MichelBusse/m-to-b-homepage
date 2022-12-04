@@ -1,7 +1,12 @@
 import { useRouter } from "next/router";
+import { AnchorRefs } from "../../pages/_app";
 import ServiceSection from "../services/ServiceSection";
 
-export default function ServicesSection(props) {
+type Props = {
+  anchorRefs: AnchorRefs;
+};
+
+export default function ServicesSection(props: Props) {
   const router = useRouter();
 
   let texts = {
@@ -129,23 +134,26 @@ export default function ServicesSection(props) {
 
   return (
     <>
-      <div className="scrollAnchor" id="services"></div>
-      <section style={{ margin: "4em 0" }} ref={props.anchorRefs.servicesRef}>
-        <ServiceSection
-          key={1}
-          headline={texts.headlineSection1}
-          text={texts.textSection1}
-          image="/images/Softwareentwicklung/smartphone.png"
-          imageAlt={texts.headlineSection1}
-        />
-        <ServiceSection
-          key={2}
-          headline={texts.headlineSection2}
-          text={texts.textSection2}
-          image="/images/Softwareentwicklung/pc.png"
-          imageAlt={texts.headlineSection2}
-        />
-      </section>
+      <div className="scrollAnchor" id="apps"></div>
+      <ServiceSection
+        sectionRef={props.anchorRefs.appsRef}
+        key={1}
+        headline={texts.headlineSection1}
+        text={texts.textSection1}
+        image="/images/Softwareentwicklung/smartphone.png"
+        imageAlt={texts.headlineSection1}
+        typewriterKey={"1"}
+      />
+      <div className="scrollAnchor" id="software"></div>
+      <ServiceSection
+        sectionRef={props.anchorRefs.softwareRef}
+        key={2}
+        headline={texts.headlineSection2}
+        text={texts.textSection2}
+        image="/images/Softwareentwicklung/pc.png"
+        imageAlt={texts.headlineSection2}
+        typewriterKey={"2"}
+      />
     </>
   );
 }

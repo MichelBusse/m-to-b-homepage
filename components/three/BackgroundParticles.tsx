@@ -1,68 +1,78 @@
-import React, { useRef } from "react";
-import { Group, BufferGeometry, BufferAttribute } from "three";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import { useFrame } from "@react-three/fiber";
+import React, { useMemo, useRef } from "react";
+import * as THREE from "three";
+import vertexShader from "./vertexShader";
+import fragmentShader from "./fragmentShader";
 
-export default function BackgroundParticles() {
-  // Eine Referenz für die Gruppe, damit diese animiert werden kann
-  // null! ist ein kleiner TypeScript-Hack,
-  // damit wir nicht immer auf null überprüfen müssen, da es garantiert ist,
-  // dass die Referenz in useFrame nie null ist
-  const group = useRef<Group>(null!);
+type Props = {
+  count: number;
+};
 
-  const texturePath =  '/images/textures/heightmap.png'
-  
-  const heightmap = useLoader(TextureLoader, texturePath)
+export default function BackgroundParticles(props: Props) {
+  const { count } = props;
+  const radius = 2;
+  const points = useRef<any>();
 
+  const particlesPosition = useMemo(() => {
+    const positions = new Float32Array(count * 3);
 
-  const particlesGeometry = new BufferGeometry();
-  const count = 800;
-  const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      const distance = Math.sqrt(Math.random() - 0.5) * radius;
+      const theta = THREE.MathUtils.randFloatSpread(360);
+      const phi = THREE.MathUtils.randFloatSpread(360);
 
-  for (let i = 0; i < count; i++) {
-    const i3 = i * 3;
+      let x = distance * Math.sin(theta) * Math.cos(phi);
+      let y = distance * Math.sin(theta) * Math.sin(phi);
+      let z = distance * Math.cos(theta);
 
-    const randX = Math.random() - 0.5
-    const randY = Math.random() * 0.5
-    const randZ = Math.random() - 0.5
+      positions.set([x, y, z], i * 3);
+    }
 
-    const length = Math.sqrt(randX * randX + randY * randY + randZ * randZ)
+    return positions;
+  }, [count]);
 
-    positions[i3] = randX / length * 12;
-    positions[i3 + 1] = randY / length * 12;
-    positions[i3 + 2] = randZ / length * 12;
-  }
+  const uniforms = useMemo(
+    () => ({
+      uTime: {
+        value: 0.0,
+      },
+      uRadius: {
+        value: radius,
+      },
+    }),
+    []
+  );
 
-  particlesGeometry.setAttribute("position", new BufferAttribute(positions, 3));
+  useFrame((state) => {
+    const { clock } = state;
+
+    if (points.current !== undefined)
+      points.current.material.uniforms.uTime.value = clock.elapsedTime;
+  });
 
   return (
     <>
-      <group ref={group} position={[0, 0, 0]} rotation={[0, 0, 0]}>
-        <mesh rotation={[Math.PI * 0.5, 0, 0]} position={[0, -1.65, 0]}>
-          <planeGeometry args={[20, 20, 100, 100]} />
-          <meshStandardMaterial wireframe={true} displacementMap={heightmap} displacementScale={1}/>
-        </mesh>
-        <points geometry={particlesGeometry} position={[0, -1.65, 0]}>
-          <pointsMaterial
-            attach="material"
-            size={0.1}
-            color={0xffffff}
-            sizeAttenuation={true}
+      <points
+        ref={points}
+        position={[0, 0, 0]}
+        rotation={[0, Math.PI * 0.3, Math.PI * 0.2]}
+      >
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={particlesPosition.length / 3}
+            array={particlesPosition}
+            itemSize={3}
           />
-        </points>
-      </group>
+        </bufferGeometry>
+        <shaderMaterial
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+          fragmentShader={fragmentShader}
+          vertexShader={vertexShader}
+          uniforms={uniforms}
+        />
+      </points>
     </>
   );
 }
-
-/*
-
-<points geometry={particlesGeometry} rotation={[0, 0, Math.PI * -0.5]}>
-          <pointsMaterial
-            attach="material"
-            size={0.05}
-            color={0x020024}
-            sizeAttenuation={true}
-          />
-        </points>
-        */
