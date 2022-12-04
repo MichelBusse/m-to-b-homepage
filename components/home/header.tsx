@@ -26,16 +26,51 @@ export default function Header() {
   });
 
   let texts = {
-    headline: "aus Leipzig",
-    services: "Kostenloses Beratungsgespräch vereinbaren!",
+    headline: (
+      <>
+        Deine Agentur für App- <br />
+        und Software-Entwicklung
+      </>
+    ),
+    text: (
+      <>
+        <p>
+          Mit Erfahrung und Begeisterung realisieren wir deine Ideen!
+          <br />
+          Als App-Agentur helfen wir unseren Kunden, erfolgreiche und
+          beeindruckende Apps zu entwickeln.
+        </p>
+        <p>
+          Nutze unsere kostenlose Beratung und lass uns gemeinsam dein Projekt
+          verwirklichen.
+        </p>
+      </>
+    ),
+    button: "Kostenloses Beratungsgespräch vereinbaren!",
   };
   let phrases = ["Software", "Apps", "Zukunft"];
 
   if (router.locale == "en") {
-    phrases = ["Software", "Apps", "Future"];
     texts = {
-      headline: "from Leipzig",
-      services: "Schedule a free consultation!",
+      headline: (
+        <>
+          Your Agency for App <br />
+          and Software Development
+        </>
+      ),
+      text: (
+        <>
+          <p>
+            We realize your vision with experience and excitement!
+            <br />
+            As an app agency, we help our customers to develop successful and impressive apps.
+          </p>
+          <p>
+            Take advantage of our advisory and let us relize your app together.
+          </p>
+        </>
+      ),
+      button: "Schedule a free consultation!",
     };
   }
 
@@ -53,7 +88,8 @@ export default function Header() {
                     : styles.square
                 }
                 style={{
-                  right: ((Math.floor(index / 4) % 6) - (index % 4)) * 11 + "em",
+                  right:
+                    ((Math.floor(index / 4) % 6) - (index % 4)) * 11 + "em",
                   bottom: (index % 4) * 11 + "em",
                   opacity: 0.3 - 0.015 * index,
                   transitionDelay: 50 * index + "ms",
@@ -65,22 +101,13 @@ export default function Header() {
         <div className={styles.cell}>
           <header id={styles.header}>
             <h1 className={headerVisible ? styles.visible : ""}>
-              Deine Agentur für App-{" "}
-              <br/>und Software-Entwicklung <span className={styles.typewriterCursor}>|</span>
+              {texts.headline}{" "}
+              <span className={styles.typewriterCursor}>|</span>
             </h1>
-            <p>
-              Mit Erfahrung und Begeisterung realisieren wir deine Ideen!
-              <br />
-              Als App-Agentur helfen wir unseren Kunden, erfolgreiche und
-              beeindruckende Apps zu entwickeln.
-            </p>
-            <p>
-              Nutze unsere kostenlose Beratung und lass uns gemeinsam dein
-              Projekt verwirklichen.
-            </p>
+            {texts.text}
             <a href="#formular">
               <button className={headerVisible ? styles.visible : ""}>
-                {texts.services}
+                {texts.button}
               </button>
             </a>
           </header>
