@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/home/ProjectsSection.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { AnchorRefs } from "../../pages/_app";
 
-export default function ProjectsSection(props) {
+type Props = {
+  anchorRefs: AnchorRefs
+}
+
+export default function ProjectsSection(props: Props) {
   const router = useRouter();
 
   let texts = {
@@ -36,14 +41,14 @@ export default function ProjectsSection(props) {
 
   const [active, setActive] = useState("");
 
-  const centerPos = (element) =>
+  const centerPos = (element : HTMLElement) =>
     element.offsetTop + element.offsetHeight * 0.35;
 
   useEffect(() => {
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
 
-      if (centerPos(props.anchorRefs.projectsRef.current) < scrollPosition) {
+      if (props.anchorRefs.projectsRef.current && centerPos(props.anchorRefs.projectsRef.current) < scrollPosition) {
         setActive(styles.active);
       }
     };

@@ -33,7 +33,7 @@ const ServiceSection = ((props : Props) => {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [props.sectionRef]);
 
   return (
       <article

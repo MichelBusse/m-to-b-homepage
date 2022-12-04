@@ -8,7 +8,7 @@ type Props = {
 const TypeWriter = (props : PropsWithChildren<Props>) => {
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
-  let typed: Typed | undefined;
+  const typed = useRef<Typed | undefined>();
 
   useEffect(() => {
     const options = {
@@ -16,12 +16,12 @@ const TypeWriter = (props : PropsWithChildren<Props>) => {
       typeSpeed: 70,
     };
 
-    if (el.current) typed = new Typed(el.current, options);
+    if (el.current) typed.current = new Typed(el.current, options);
 
     return () => {
-      if (typed != undefined) typed.destroy();
+      if (typed.current != undefined) typed.current.destroy();
     };
-  }, []);
+  }, [props.typewriterKey]);
 
   return (
     <>

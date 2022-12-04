@@ -3,7 +3,11 @@ import { Stack } from "@mui/system";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function QnA(props) {
+type Props = {
+
+}
+
+export default function QnA(props : Props) {
   const router = useRouter();
 
   let texts = {

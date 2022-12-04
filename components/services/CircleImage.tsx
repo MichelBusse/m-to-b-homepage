@@ -1,7 +1,13 @@
 import styles from "../../styles/services/CircleImage.module.scss";
 import Image from "next/image"
 
-export default function CircleImage(props) {
+type Props = {
+  active: boolean,
+  image: string,
+  imageAlt: string,
+}
+
+export default function CircleImage(props : Props) {
   return (
     <div className={styles.circle + " " + (props.active ? styles.active : "")}>
       <Image

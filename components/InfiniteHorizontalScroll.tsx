@@ -1,19 +1,34 @@
 import styles from "../styles/InfiniteHorizontalScroll.module.scss";
-import { cloneElement } from "react";
+import React, { cloneElement, FC, PropsWithChildren, ReactElement } from "react";
 
-export default function InfiniteHorizontalScroll(props) {
+type Props = {
+  totalWidth: number;
+  spaceBetween: number;
+};
+
+const InfiniteHorizontalScroll: FC<PropsWithChildren<Props>> = (props) => {
   const width =
-    props.totalWidth + props.spaceBetween * (props.children.length);
+    props.totalWidth +
+    props.spaceBetween * React.Children.count(props.children);
 
-  const getStyledChildren = (offset) => {
-    const styledChildren = props.children.map((child, index) => {
-      return cloneElement(child, {
-        key: offset * props.children.length + index,
-        style: {
-          marginRight: props.spaceBetween,
-        },
-      });
-    });
+  const getStyledChildren = (offset: number) => {
+    if (!props.children) return;
+    const styledChildren = React.Children.map(
+      props.children,
+      (child, index) => {
+        if (!React.isValidElement(child)) {
+          return;
+        }
+        const item = child as ReactElement;
+
+        return cloneElement(item, {
+          key: offset * React.Children.count(props.children) + index,
+          style: {
+            marginRight: props.spaceBetween,
+          },
+        });
+      }
+    );
     return styledChildren;
   };
 
@@ -25,4 +40,6 @@ export default function InfiniteHorizontalScroll(props) {
       </div>
     </>
   );
-}
+};
+
+export default InfiniteHorizontalScroll;

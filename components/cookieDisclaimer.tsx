@@ -1,5 +1,5 @@
 import styles from "../styles/CookieDisclaimer.module.scss";
-import { useEffect, useState } from "react";
+import { ChangeEventHandler, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
 export default function CookieDisclaimer() {
@@ -19,7 +19,7 @@ export default function CookieDisclaimer() {
     setVisible(cookies.essentialAccepted !== "true");
   }, [cookies.essentialAccepted])
 
-  const onChange = (event) => {
+  const onChange : ChangeEventHandler<HTMLInputElement> = (event) => {
     const targetName = event.target.name;
     const targetChecked = event.target.checked;
 
@@ -28,7 +28,7 @@ export default function CookieDisclaimer() {
     });
   };
 
-  const startTagManager = (w, d, s, l, i) => {
+  const startTagManager = (w: any, d: any, s: any, l: any, i: any) => {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
     var f = d.getElementsByTagName(s)[0],
@@ -39,7 +39,7 @@ export default function CookieDisclaimer() {
     f.parentNode.insertBefore(j, f);
   };
   
-  const cookieDisclaimerClick = (all) => {
+  const cookieDisclaimerClick = (all: boolean) => {
     if (all) {
       setFormState({ cookieEssential: true, cookieStatistics: true });
     }

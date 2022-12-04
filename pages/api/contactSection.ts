@@ -1,10 +1,13 @@
-let nodemailer = require('nodemailer')
+import { NextApiRequest, NextApiResponse } from "next"
+
+import nodemailer from "nodemailer";
+
 const transporter = nodemailer.createTransport({
     host: 'smtp',
     port: 25
 })
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const mailData = {
         from: req.body.email,
         to: 'kontakt@m-to-b.com',

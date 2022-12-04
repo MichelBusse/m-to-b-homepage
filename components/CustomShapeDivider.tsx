@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/CustomShapeDivider.module.scss";
 
-export default function CustomShapeDivider(props) {
+type Props = {
+  flip: boolean,
+}
+
+export default function CustomShapeDivider(props: Props) {
   const className = props.flip
     ? styles.customShapeDivider + " "
     : styles.customShapeDivider + " " + styles.flip;

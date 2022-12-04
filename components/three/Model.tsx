@@ -4,7 +4,14 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 import { useLoader } from "@react-three/fiber";
 
-export default function Model(props) {
+type Props = {
+  path: string,
+  position?:  number[],
+  rotation?: number[],
+  scale?: number[],
+}
+
+export default function Model(props: Props) {
   const logo = useLoader(GLTFLoader, props.path);
   
   return <primitive object={logo.scene} position={props.position} rotation={props.rotation} scale={props.scale}/>;

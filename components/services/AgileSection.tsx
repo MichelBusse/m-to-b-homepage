@@ -96,7 +96,7 @@ export default function AgileSection() {
   const [time, setTime] = useState(Date.now());
   const [interacted, setInteracted] = useState(false);
 
-  const changeSelected = (sel) => {
+  const changeSelected = (sel : number) => {
     setSelected(sel);
     setInteracted(true);
   };

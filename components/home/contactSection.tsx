@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, ChangeEventHandler, MouseEventHandler, useState } from "react";
 
 import styles from "../../styles/home/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
@@ -9,8 +9,13 @@ import Link from "next/link";
 import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
 import QnA from "./QnA";
+import { AnchorRefs } from "../../pages/_app";
 
-export default function ContactSection(props) {
+type Props = {
+  anchorRefs: AnchorRefs
+}
+
+export default function ContactSection(props: Props) {
   const router = useRouter();
 
   let texts = {
@@ -57,7 +62,7 @@ export default function ContactSection(props) {
     privacy: false,
   });
 
-  const onChange = (event) => {
+  const onChange : ChangeEventHandler<any> = (event) => {
     const elementName = event.target.name;
     const elementValue =
       event.target.type == "checkbox"
@@ -68,7 +73,7 @@ export default function ContactSection(props) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit : MouseEventHandler<HTMLInputElement> = (e) => {
     e.preventDefault();
 
     if (

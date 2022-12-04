@@ -1,5 +1,4 @@
 import Header from "../components/home/header";
-import AboutSection from "../components/home/aboutSection";
 import ServicesSection from "../components/home/servicesSection";
 import ProjectsSection from "../components/home/projectsSection";
 import ContactSection from "../components/home/contactSection";
