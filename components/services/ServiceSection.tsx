@@ -4,6 +4,7 @@ import Image from "next/image";
 import TypeWriter from "../TypeWriter";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 import Typed from "typed.js";
+import { usePrevious } from "../../hooks/UsePrevious";
 
 type Props = {
   headline : string,
@@ -17,12 +18,18 @@ type Props = {
 const ServiceSection = ((props : Props) => {
   const [active, setActive] = useState(false);
   const typed = useRef<Typed | undefined>();
+  const [refresh, setRefresh] = useState(0)
 
   const centerPos = (element : HTMLElement) =>
     element.getBoundingClientRect().top +
     window.scrollY +
     window.innerHeight * 0.5;
+  
+  const prevHeadline = usePrevious(props.headline);
 
+  useEffect(() => {
+    setRefresh(refresh + 1)  
+  }, [props.headline])
 
   useEffect(() => {
     const onScroll = () => {
@@ -33,10 +40,13 @@ const ServiceSection = ((props : Props) => {
       }
     };
 
+    onScroll()
+
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [props.sectionRef]);
+
 
   return (
       <article
@@ -60,7 +70,7 @@ const ServiceSection = ((props : Props) => {
         <div className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
             <h2>
-              <TypeWriter typewriterKey={props.typewriterKey} typed={typed}>
+              <TypeWriter typewriterKey={props.typewriterKey} typed={typed} refresh={refresh}>
                 <span>{props.headline}</span>
               </TypeWriter>
             </h2>

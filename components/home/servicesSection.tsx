@@ -29,7 +29,7 @@ export default function ServicesSection(props: Props) {
         </p>
       </>
     ),
-    headlineSection2: "Software Entwicklung",
+    headlineSection2: "Individualsoftware",
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -55,13 +55,13 @@ export default function ServicesSection(props: Props) {
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Nicht mitlaufen, sondern voran gehen - ganz nach diesem Motto
-          entwickeln wir uns mit großem Interesse an neuen Einsatzmöglichkeiten
+          entwickeln wir mit großem Interesse an neuen Einsatzmöglichkeiten
           für Virtual und Augmented Reality.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
           entwickelt sich stetig weiter. Profitiere von unseren Experten und
-          finde neue Möglichkeiten für deine Gebiete.
+          finde neue Möglichkeiten für deine Gebiete!
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Wir haben bereits verschiedenste VR und AR Software entwickelt, bis
@@ -74,7 +74,7 @@ export default function ServicesSection(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headlineSection1: "Mobile app development",
+      headlineSection1: "Mobile App Development",
       textSection1: (
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           We take up your ideas and escort them all the way through the
@@ -85,7 +85,7 @@ export default function ServicesSection(props: Props) {
           functionalities as well as great design and usability.
         </p>
       ),
-      headlineSection2: "Individual software",
+      headlineSection2: "Individual Software Development",
       textSection2: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>

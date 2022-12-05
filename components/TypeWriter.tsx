@@ -4,6 +4,7 @@ import Typed from "typed.js";
 type Props = {
     typewriterKey : string
     typed : MutableRefObject<Typed | undefined>
+    refresh: number
 }
 
 const TypeWriter = (props : PropsWithChildren<Props>) => {
@@ -22,7 +23,8 @@ const TypeWriter = (props : PropsWithChildren<Props>) => {
     return () => {
       if (props.typed.current != undefined) props.typed.current.destroy()
     };
-  }, [props.typewriterKey])
+  }, [props.typewriterKey, props.refresh])
+
 
   return (
     <>

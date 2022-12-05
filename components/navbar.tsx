@@ -3,6 +3,7 @@ import styles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AnchorRefs } from "../pages/_app";
+import Image from "next/image";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -83,6 +84,9 @@ export default function Navbar(props: Props) {
     vr: "Virtual Reality",
     projects: "Referenzen",
     contact: "Kontakt",
+    languageLink: "en",
+    languageAlt: "Switch Language to English",
+    languageImage: "/images/flags/english.svg",
   };
 
   if (router.locale == "en") {
@@ -92,6 +96,9 @@ export default function Navbar(props: Props) {
       vr: "Virtual Reality",
       projects: "Projects",
       contact: "Contact",
+      languageLink: "de",
+      languageAlt: "Switch Language to German",
+      languageImage: "/images/flags/german.svg",
     };
   }
 
@@ -162,6 +169,18 @@ export default function Navbar(props: Props) {
               </a>
             </Link>
           </ul>
+        </div>
+        <div className={styles.languageSwitchWrapper}>
+          <Link href={""} locale={texts.languageLink}>
+            <a>
+              <Image
+                src={texts.languageImage}
+                alt={texts.languageAlt}
+                layout="fill"
+                objectFit="cover"
+              />
+            </a>
+          </Link>
         </div>
         <div
           className={
@@ -241,6 +260,18 @@ export default function Navbar(props: Props) {
             </a>
           </Link>
         </ul>
+        <div className={styles.languageSwitchWrapper}>
+          <Link href={""} locale={texts.languageLink}>
+            <a>
+              <Image
+                src={texts.languageImage}
+                alt={texts.languageAlt}
+                layout="fill"
+                objectFit="cover"
+              />
+            </a>
+          </Link>
+        </div>
       </div>
     </>
   );
