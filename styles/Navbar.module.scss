@@ -49,13 +49,13 @@
   color: #333;
   transition: color 0.3s ease-in-out;
 }
-.languageSwitchWrapper{
+.languageSwitchWrapper {
   width: 2em;
   height: 2em;
   border-radius: 50%;
   position: relative;
 }
-.languageSwitchWrapper img{
+.languageSwitchWrapper img {
   border-radius: 50%;
 }
 .navbar ul {
@@ -78,7 +78,7 @@
   color: #333;
   font-weight: bolder;
 }
-.navbar ul a:last-of-type li{
+.navbar ul a:last-of-type li {
   background-color: #01506b;
   border: 0.1em solid transparent;
   color: #fff;
@@ -96,7 +96,7 @@
 .navbar ul a:last-of-type li.active {
   color: #01506b;
   background-color: transparent;
-  border: 0.1em solid  #01506b;
+  border: 0.1em solid #01506b;
 }
 .navbar ul li::before {
   content: "";
@@ -172,7 +172,7 @@
   padding-left: 3em;
   overflow: hidden;
 }
-.mobileMenu .languageSwitchWrapper{
+.mobileMenu .languageSwitchWrapper {
   position: absolute;
   width: 2.5em;
   height: 2.5em;
@@ -255,7 +255,7 @@
   .navbar .ulWrapper {
     display: none;
   }
-  .navbar .languageSwitchWrapper{
+  .navbar .languageSwitchWrapper {
     display: none;
   }
   .navbar .hamburgerMenu {
