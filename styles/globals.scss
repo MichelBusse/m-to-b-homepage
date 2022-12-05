@@ -91,16 +91,19 @@ button{
   background: none;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5em;
-  padding: 0.5em 2em;
+  font-size: 1.2em;
+  padding: 0.75em 1.2em;
   cursor: pointer;
   color: #ffffff;
   border: none;
   overflow: hidden;
+  border-radius: 0.75em;
+  text-align: left;
+  z-index: 100;
 }
 button::after{
   content: "";
-  background: #022636;
+  background-color: rgb(1, 80, 107);
   position: absolute;
   width: 100%;
   height: 100%;

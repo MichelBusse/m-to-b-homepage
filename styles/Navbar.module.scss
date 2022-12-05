@@ -70,11 +70,25 @@
   color: #333;
   font-weight: bolder;
 }
+.navbar ul a:last-of-type li{
+  background-color: #01506b;
+  border: 0.1em solid transparent;
+  color: #fff;
+  border-radius: 10em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  transition-property: color, background-color, border;
+}
 .navbar ul li:hover,
 .navbar ul li.active {
   color: #01506b;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
+}
+.navbar ul a:last-of-type li.active {
+  color: #01506b;
+  background-color: transparent;
+  border: 0.1em solid  #01506b;
 }
 .navbar ul li::before {
   content: "";
@@ -90,6 +104,9 @@
   transform: translateX(-50%) scaleY(0);
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.navbar ul a:last-of-type li::before {
+  content: none;
 }
 .navbar ul li:hover::before,
 .navbar ul li.active::before {

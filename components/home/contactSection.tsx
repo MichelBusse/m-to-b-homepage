@@ -1,4 +1,9 @@
-import { ChangeEvent, ChangeEventHandler, MouseEventHandler, useState } from "react";
+import {
+  ChangeEvent,
+  ChangeEventHandler,
+  MouseEventHandler,
+  useState,
+} from "react";
 
 import styles from "../../styles/home/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
@@ -12,8 +17,8 @@ import QnA from "./QnA";
 import { AnchorRefs } from "../../pages/_app";
 
 type Props = {
-  anchorRefs: AnchorRefs
-}
+  anchorRefs: AnchorRefs;
+};
 
 export default function ContactSection(props: Props) {
   const router = useRouter();
@@ -32,7 +37,7 @@ export default function ContactSection(props: Props) {
     formMessage: "Ihre Nachricht",
     checkInputs: "Bitte überprüfe die Eingaben",
     mailSuccess: "E-Mail erfolgreich versendet!",
-    mailError: "Fehler beim Versenden"
+    mailError: "Fehler beim Versenden",
   };
 
   if (router.locale == "en") {
@@ -50,7 +55,7 @@ export default function ContactSection(props: Props) {
       formMessage: "Your message",
       checkInputs: "Please check your inputs",
       mailSuccess: "Mail send successfully!",
-      mailError: "Error while sending your mail"
+      mailError: "Error while sending your mail",
     };
   }
 
@@ -62,7 +67,7 @@ export default function ContactSection(props: Props) {
     privacy: false,
   });
 
-  const onChange : ChangeEventHandler<any> = (event) => {
+  const onChange: ChangeEventHandler<any> = (event) => {
     const elementName = event.target.name;
     const elementValue =
       event.target.type == "checkbox"
@@ -73,7 +78,7 @@ export default function ContactSection(props: Props) {
     });
   };
 
-  const handleSubmit : MouseEventHandler<HTMLInputElement> = (e) => {
+  const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
 
     if (
@@ -185,7 +190,7 @@ export default function ContactSection(props: Props) {
                 <IoLocationSharp className={styles.icon} />
                 <strong>Leipzig</strong>
               </p>
-              <QnA/>
+              <QnA />
             </div>
           </div>
           <div className={styles.contactFormular} id="formular">
@@ -253,13 +258,15 @@ export default function ContactSection(props: Props) {
                       </Link>
                     </span>
                   </p>
-                  <input
-                    className={styles.submit}
+                  <button
                     type="submit"
+                    form="formular"
                     name="sendMail"
                     value={texts.send}
                     onClick={handleSubmit}
-                  />
+                  >
+                    {texts.send}
+                  </button>
                 </div>
               </form>
             </div>

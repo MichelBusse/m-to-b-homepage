@@ -10,17 +10,7 @@ export default function ServicesSection(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: <>Individuelle Softwareentwicklung aus Leipzig - M-to-B</>,
-    description:
-      "Wir entwickeln Software mit Kreativität und Begeisterung. Profitieren Sie von modernen Technologien, kompetenter Zusammenarbeit und neuen Lösungen!",
-    alternate: (
-      <link
-        rel="alternate"
-        hrefLang="en"
-        href="https://m-to-b.com/Softwareentwicklung/en"
-      />
-    ),
-    headlineSection1: "App-Entwicklung",
+    headlineSection1: "App Entwicklung",
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -39,24 +29,24 @@ export default function ServicesSection(props: Props) {
         </p>
       </>
     ),
-    headlineSection2: "Individualsoftware",
+    headlineSection2: "Software Entwicklung",
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          <strong>Individuelle Software</strong> lohnt sich überall, wo
-          existierende Anwendungen die Anforderungen im Unternehmen nicht
-          optimal abbilden können, oder wo völlig neue Ideen umgesetzt werden
-          sollen.
+          Mit <strong>individueller Software</strong> digitalisieren und
+          optimieren wir die Arbeitsprozesse in deinem Unternehmen und helfen
+          dabei, Stress und Zeit zu sparen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Gemeinsam mit dir erstellen wir dafür{" "}
           <strong>maßgeschneiderte Softwarelösungen</strong>, die dann deine
-          Anforderungen umsetzung bzw. den Firmenprozess optimal abbilden.
+          Anforderungen umsetzung und den Firmenprozess optimal abbilden.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Von Mitarbeitermanagement, Projektmanagement, Inventarsystemen oder
-          Kundenkommunikation können fast alle Firmenprozesse digitalisiert
-          werden.
+          Kundenkommunikation - wir haben bereits Projekte in den
+          verschiedensten Bereichen umgesetzt und freuen uns darauf, auch dich
+          dabei unterstützen zu können.
         </p>
       </>
     ),
@@ -76,16 +66,6 @@ export default function ServicesSection(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: <>Individual software development from Leipzig - M-to-B</>,
-      description:
-        "We develop all kinds of software with creativity and passion. Take an advantage from new technologies, great teamwork and modern solutions",
-      alternate: (
-        <link
-          rel="alternate"
-          hrefLang="de"
-          href="https://m-to-b.com/Softwareentwicklung/"
-        />
-      ),
       headlineSection1: "Mobile app development",
       textSection1: (
         <p style={{ transitionDelay: "0.3s" }} key={1}>

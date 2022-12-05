@@ -1,14 +1,14 @@
-import { PropsWithChildren, useEffect, useRef } from "react";
+import { MutableRefObject, PropsWithChildren, useEffect, useRef } from "react";
 import Typed from "typed.js";
 
 type Props = {
     typewriterKey : string
+    typed : MutableRefObject<Typed | undefined>
 }
 
 const TypeWriter = (props : PropsWithChildren<Props>) => {
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
-  const typed = useRef<Typed | undefined>();
 
   useEffect(() => {
     const options = {
@@ -16,12 +16,13 @@ const TypeWriter = (props : PropsWithChildren<Props>) => {
       typeSpeed: 70,
     };
 
-    if (el.current) typed.current = new Typed(el.current, options);
+    if (el.current) props.typed.current = new Typed(el.current, options)
+    props.typed.current?.stop()
 
     return () => {
-      if (typed.current != undefined) typed.current.destroy();
+      if (props.typed.current != undefined) props.typed.current.destroy()
     };
-  }, [props.typewriterKey]);
+  }, [props.typewriterKey])
 
   return (
     <>

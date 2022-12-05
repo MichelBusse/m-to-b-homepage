@@ -1,8 +1,9 @@
 import serviceSectionStyles from "../../styles/services/ServiceSection.module.scss";
-import React, { useState, useEffect, MutableRefObject } from "react";
+import React, { useState, useEffect, MutableRefObject, useRef } from "react";
 import Image from "next/image";
 import TypeWriter from "../TypeWriter";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+import Typed from "typed.js";
 
 type Props = {
   headline : string,
@@ -15,6 +16,8 @@ type Props = {
 
 const ServiceSection = ((props : Props) => {
   const [active, setActive] = useState(false);
+  const typed = useRef<Typed | undefined>();
+
   const centerPos = (element : HTMLElement) =>
     element.getBoundingClientRect().top +
     window.scrollY +
@@ -25,8 +28,8 @@ const ServiceSection = ((props : Props) => {
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       if (props.sectionRef && props.sectionRef.current && centerPos(props.sectionRef.current) < scrollPosition) {
-        setActive(true);
-
+        setActive(true)
+        typed.current?.start()
       }
     };
 
@@ -57,7 +60,7 @@ const ServiceSection = ((props : Props) => {
         <div className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
             <h2>
-              <TypeWriter typewriterKey={props.typewriterKey}>
+              <TypeWriter typewriterKey={props.typewriterKey} typed={typed}>
                 <span>{props.headline}</span>
               </TypeWriter>
             </h2>

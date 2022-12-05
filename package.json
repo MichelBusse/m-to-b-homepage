@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "find:unused": "next-unused"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -35,6 +36,13 @@
     "@types/three": "^0.146.0",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
+    "next-unused": "^0.0.6",
     "typescript": "4.6.3"
+  },
+  "next-unused": {
+    "alias": {},
+    "include": ["components", "hooks", "styles"],
+    "exclude": [],
+    "entrypoints": []
   }
 }

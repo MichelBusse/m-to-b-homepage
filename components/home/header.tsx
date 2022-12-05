@@ -127,6 +127,7 @@ export default function Header() {
             </div>
           </div>
         </div>
+        <div className={styles.bottomTriangleTransition}></div>
       </section>
     </>
   );
