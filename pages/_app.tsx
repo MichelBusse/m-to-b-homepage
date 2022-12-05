@@ -23,13 +23,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   let texts = {
-    title: "Deine App-Agentur - M-to-B Software - App Entwickler aus Leipzig",
+    title: "Deine App-Agentur - M-to-B Software - Entwickler aus Leipzig",
     description: "Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Your App Agency - M-to-B Software - App Developers from Leipzig",
+      title: "Your App Agency - M-to-B Software - Developers from Leipzig",
       description: "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality"
     };
   }

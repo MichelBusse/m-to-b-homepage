@@ -12,30 +12,17 @@ import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/home/valuesSection";
 
 type Props = {
-  anchorRefs : AnchorRefs,
-}
+  anchorRefs: AnchorRefs;
+};
 
-export default function HomePage(props : Props) {
+export default function HomePage(props: Props) {
   const router = useRouter();
-
-  let texts = {
-    alternate: (
-      <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en" />
-    ),
-  };
-
-  if (router.locale == "en") {
-    texts = {
-      alternate: (
-        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/" />
-      ),
-    };
-  }
 
   return (
     <>
       <Head>
-        {texts.alternate}
+        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/" />
+        <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en" />
       </Head>
       <Header />
       <main>
