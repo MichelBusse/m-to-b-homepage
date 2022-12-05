@@ -64,7 +64,6 @@
 }
 
 .serviceSection .text h2 {
-  font-family: "Roboto Mono";
   font-weight: bold;
   color: rgb(1, 80, 107);
   font-size: 2.2em;
@@ -89,6 +88,7 @@
 @media screen and (max-width: 1700px) {
   .serviceSection .text {
     width: 48em;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 1300px) {

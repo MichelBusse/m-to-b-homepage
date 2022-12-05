@@ -264,6 +264,7 @@ export default function Navbar(props: Props) {
           <Link href={""} locale={texts.languageLink}>
             <a>
               <Image
+                onClick={() => setMenuActive(false)}
                 src={texts.languageImage}
                 alt={texts.languageAlt}
                 layout="fill"

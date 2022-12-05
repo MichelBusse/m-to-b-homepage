@@ -74,7 +74,7 @@ export default function ServicesSection(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headlineSection1: "Mobile App Development",
+      headlineSection1: "App Development",
       textSection1: (
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           We take up your ideas and escort them all the way through the
@@ -85,7 +85,7 @@ export default function ServicesSection(props: Props) {
           functionalities as well as great design and usability.
         </p>
       ),
-      headlineSection2: "Individual Software Development",
+      headlineSection2: "Individual Software",
       textSection2: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>

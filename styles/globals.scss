@@ -73,10 +73,6 @@ h4,h5{
 }
 p {
   font-size: 1.2em;
-
-  @media screen and (max-width: 500px) {
-    font-size: 1.1em;
-  }
 }
 strong{
   font-weight: 300;
