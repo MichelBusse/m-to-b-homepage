@@ -50,17 +50,25 @@ export default function ServicesSection(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "IT-Consulting",
+    headlineSection3: "Virtual Reality",
     textSection3: (
-      <p style={{ transitionDelay: "0.3s" }} key={1}>
-        Wir bieten ausführliche <strong>IT-Beratung</strong> zu allen
-        Möglichkeiten für dein Projekt. Dabei vergleichen wir verschiedene
-        Lösungsmöglichkeiten und finden gemeinsam die passende Technologie und
-        Softwarearchitektur für dein Einsatzgebiet. Als
-        <strong>App-Entwicklungs-StartUp</strong> ist es unser Ziel, die beste
-        Strategie für dich zu entwickeln und Zeit, Budget und Funktionalität
-        optimal abzustimmen.
-      </p>
+      <>
+        <p style={{ transitionDelay: "0.3s" }} key={1}>
+          Nicht mitlaufen, sondern voran gehen - ganz nach diesem Motto
+          entwickeln wir uns mit großem Interesse an neuen Einsatzmöglichkeiten
+          für Virtual und Augmented Reality.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }} key={2}>
+          Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
+          entwickelt sich stetig weiter. Profitiere von unseren Experten und
+          finde neue Möglichkeiten für deine Gebiete.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }} key={3}>
+          Wir haben bereits verschiedenste VR und AR Software entwickelt, bis
+          hin zur Augmented Reality Navigation in der Chirurgie oder zur Lehre
+          an der Universität.
+        </p>
+      </>
     ),
   };
 
@@ -97,17 +105,24 @@ export default function ServicesSection(props: Props) {
           </p>
         </>
       ),
-      headlineSection3: "IT-Consulting",
+      headlineSection3: "Virtual Reality",
       textSection3: (
-        <p style={{ transitionDelay: "0.3s" }} key={1}>
-          All of your problems and ideas can be further explored and discussed
-          within a consulting We offer comprehensive advisory and guidancy to
-          all of your ideas, projects and problems. Therefore we search for
-          answers to all of your questions and compare possible solutions.
-          Together, we work out the optimal strategy for your project and
-          application. As a <strong>software agency</strong>, it is our goal to
-          combine time, budget and functionality.
-        </p>
+        <>
+          <p style={{ transitionDelay: "0.3s" }} key={1}>
+            Innovate with disruptive technologies - according to this motto, we
+            create and develop new applications of Virtual and Augmented Reality
+            in various sectors.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }} key={2}>
+            There are endless future possibilities of VR and the technology gets
+            better and better. Benefit from our experts and discovern new
+            software opportunities for your individual field of use.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }} key={3}>
+            We already developed numerous AR applications, like augmented
+            reality navigation in surgery and apps for research at university.
+          </p>
+        </>
       ),
     };
   }
@@ -130,9 +145,19 @@ export default function ServicesSection(props: Props) {
         key={2}
         headline={texts.headlineSection2}
         text={texts.textSection2}
-        image="/images/pc.png"
+        image="/images/laptop.png"
         imageAlt={texts.headlineSection2}
         typewriterKey={"2"}
+      />
+      <div className="scrollAnchor" id="vr"></div>
+      <ServiceSection
+        sectionRef={props.anchorRefs.vrRef}
+        key={3}
+        headline={texts.headlineSection3}
+        text={texts.textSection3}
+        image="/images/vr.png"
+        imageAlt={texts.headlineSection3}
+        typewriterKey={"3"}
       />
     </>
   );

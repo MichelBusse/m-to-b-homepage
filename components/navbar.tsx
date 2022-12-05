@@ -34,6 +34,11 @@ export default function Navbar(props: Props) {
         ) {
           setActiveMenuItem("projects");
         } else if (
+          props.anchorRefs.vrRef.current &&
+          scrollPosition > centerPos(props.anchorRefs.vrRef.current)
+        ) {
+          setActiveMenuItem("vr");
+        } else if (
           props.anchorRefs.softwareRef.current &&
           scrollPosition > centerPos(props.anchorRefs.softwareRef.current)
         ) {
@@ -131,13 +136,13 @@ export default function Navbar(props: Props) {
                 </li>
               </a>
             </Link>
-            {/*<Link href="/#vr">
+            <Link href="/#vr">
               <a>
                 <li className={activeMenuItem === "vr" ? styles.active : ""}>
                   {texts.vr}
                 </li>
               </a>
-            </Link>*/}
+            </Link>
             <Link href="/#projects">
               <a>
                 <li
@@ -202,7 +207,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          {/*<Link href="/#vr">
+          <Link href="/#vr">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
@@ -212,7 +217,7 @@ export default function Navbar(props: Props) {
                 {texts.vr}
               </li>
             </a>
-      </Link>*/}
+          </Link>
           <Link href="/#projects">
             <a>
               <li
