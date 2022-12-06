@@ -4,6 +4,7 @@ import Script from "next/script";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { SiGooglemybusiness } from "react-icons/si";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Footer() {
   const router = useRouter();
@@ -62,6 +63,20 @@ export default function Footer() {
               rel="noreferrer"
             >
               <BsLinkedin />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://app-entwickler-verzeichnis.de/programmierer/Kirchberg/4384-"
+              title="App-Programmierung"
+              style={{ border: "none" }}
+            >
+              <Image
+                src="https://app-entwickler-verzeichnis.de/images/corporate/aev-mitglied-button3.png"
+                alt="app-programmierung"
+                width="70"
+                height="70"
+              />
             </a>
           </li>
         </ul>

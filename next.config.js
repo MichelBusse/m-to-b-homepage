@@ -5,6 +5,9 @@ const nextConfig = {
     locales: ["de", "en"],
     defaultLocale: "de",
   },
-}
+  images: {
+    domains: ['app-entwickler-verzeichnis.de'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
