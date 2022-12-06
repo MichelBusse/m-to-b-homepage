@@ -20,16 +20,17 @@
   backdrop-filter: blur(20px);
   padding: 2em;
 }
-.navbar .logo {
+.navbar .logoLinkWrapper {
   margin: 0 1em;
   z-index: 600;
+  margin-right: auto;
+}
+.navbar .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: auto;
-}
-.navbar .logo:hover {
   cursor: pointer;
+  
 }
 .navbar .logo .mbLogo {
   width: 2.8em;
@@ -54,6 +55,7 @@
   height: 2em;
   border-radius: 50%;
   position: relative;
+  margin-left: 0.8em;
 }
 .languageSwitchWrapper img {
   border-radius: 50%;
@@ -78,14 +80,16 @@
   color: #333;
   font-weight: bolder;
 }
-.navbar ul a:last-of-type li {
+.navbar ul li:last-of-type{
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar ul li:last-of-type a {
   background-color: #01506b;
   border: 0.1em solid transparent;
   color: #fff;
   border-radius: 10em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  cursor: pointer;
+  padding: 0.5em 1em;
   transition: color 0.3s ease-in-out;
   transition-property: color, background-color, border;
 }
@@ -93,7 +97,7 @@
 .navbar ul li.active {
   color: #01506b;
 }
-.navbar ul a:last-of-type li.active {
+.navbar ul li:last-of-type.active a {
   color: #01506b;
   background-color: transparent;
   border: 0.1em solid #01506b;
@@ -113,7 +117,7 @@
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
-.navbar ul a:last-of-type li::before {
+.navbar ul li:last-of-type:before {
   content: none;
 }
 .navbar ul li:hover::before,
@@ -248,7 +252,7 @@
   color: #01506b;
 }
 @media screen and (max-width: 1080px) {
-  .navbar .logo {
+  .navbar .logoLinkWrapper {
     margin: 0 0.5em;
     margin-right: auto;
   }
@@ -266,7 +270,7 @@
   .navbar .hamburgerMenu {
     margin: 0;
   }
-  .navbar .logo {
+  .navbar .logoLinkWrapper {
     margin: 0;
     margin-right: auto;
   }

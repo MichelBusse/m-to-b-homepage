@@ -17,7 +17,7 @@ export default function BackgroundParticles(props: Props) {
     const positions = new Float32Array(count * 3);
 
     for (let i = 0; i < count; i++) {
-      const distance = Math.sqrt(Math.random() - 0.5) * radius;
+      const distance = Math.sqrt(Math.random() * 0.5) * radius;
       const theta = THREE.MathUtils.randFloatSpread(360);
       const phi = THREE.MathUtils.randFloatSpread(360);
 

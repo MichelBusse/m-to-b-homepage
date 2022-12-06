@@ -118,7 +118,7 @@ export default function Header() {
               <Image
                 src="/images/backgroundFigure.png"
                 alt="App-Entwickler Virtual Reality"
-                width={420}
+                width={435}
                 height={580}
               />
             </div>

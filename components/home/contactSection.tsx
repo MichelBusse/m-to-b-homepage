@@ -200,63 +200,78 @@ export default function ContactSection(props: Props) {
                 <div className={styles.inputWrapper}>
                   <input
                     type="text"
+                    id="name"
                     name="name"
                     value={formState.name}
                     onChange={onChange}
                   />
-                  <span className={formState.name !== "" ? styles.written : ""}>
+                  <label
+                    htmlFor="name"
+                    className={formState.name !== "" ? styles.written : ""}
+                  >
                     {texts.formName}
-                  </span>
+                  </label>
                 </div>
                 <div className={styles.inputWrapper}>
                   <input
                     type="email"
+                    id="email"
                     name="email"
                     value={formState.email}
                     onChange={onChange}
                   />
-                  <span
+                  <label
+                    htmlFor="email"
                     className={formState.email !== "" ? styles.written : ""}
                   >
                     {texts.formMail}
-                  </span>
+                  </label>
                 </div>
                 <div className={styles.inputWrapper}>
                   <input
                     type="tel"
+                    id="tel"
                     name="tel"
                     value={formState.tel}
                     onChange={onChange}
                   />
-                  <span className={formState.tel !== "" ? styles.written : ""}>
+                  <label
+                    htmlFor="tel"
+                    className={formState.tel !== "" ? styles.written : ""}
+                  >
                     {texts.formPhone}
-                  </span>
+                  </label>
                 </div>
                 <div className={styles.inputWrapper}>
                   <textarea
                     name="text"
+                    id="text"
                     value={formState.text}
                     onChange={onChange}
                   ></textarea>
-                  <span className={formState.text !== "" ? styles.written : ""}>
+                  <label
+                    htmlFor="text"
+                    className={formState.text !== "" ? styles.written : ""}
+                  >
                     {texts.formMessage}
-                  </span>
+                  </label>
                 </div>
                 <div className={styles.submitWrapper}>
                   <p className={styles.checkboxWrapper}>
                     <input
                       type="checkbox"
+                      id="privacy"
                       name="privacy"
                       className={styles.checkbox}
                       checked={formState.privacy}
                       onChange={onChange}
                     />
-                    <span>
+                    <label htmlFor="privacy">
                       {texts.privacyText}{" "}
                       <Link href="/Datenschutz">
                         <a>{texts.privacy}</a>
                       </Link>
-                    </span>
+                    </label>
                   </p>
                   <button
                     type="submit"

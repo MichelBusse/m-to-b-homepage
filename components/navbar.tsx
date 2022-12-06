@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AnchorRefs } from "../pages/_app";
 import Image from "next/image";
+import { style } from "@mui/system";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -110,78 +111,66 @@ export default function Navbar(props: Props) {
           menuActive ? styles.navbar + " " + styles.scrolled : styles.navbar
         }
       >
-        <div className={styles.logo}>
+        <div className={styles.logoLinkWrapper}>
           <Link href="/#home">
             <a>
-              <div
-                className={styles.mbLogo}
-                onClick={() => setMenuActive(false)}
-              ></div>
-            </a>
-          </Link>
-          <Link href="/#home">
-            <a>
-              <span onClick={() => setMenuActive(false)}>M-to-B</span>
+              <div className={styles.logo}>
+                <div
+                  className={styles.mbLogo}
+                  onClick={() => setMenuActive(false)}
+                ></div>
+                <span onClick={() => setMenuActive(false)}>M-to-B</span>
+              </div>
             </a>
           </Link>
         </div>
         <div className={styles.ulWrapper}>
           <ul>
-            <Link href="/#apps">
-              <a>
-                <li className={activeMenuItem === "apps" ? styles.active : ""}>
-                  {texts.apps}
-                </li>
-              </a>
-            </Link>
-            <Link href="/#software">
-              <a>
-                <li
-                  className={activeMenuItem === "software" ? styles.active : ""}
-                >
-                  {texts.software}
-                </li>
-              </a>
-            </Link>
-            <Link href="/#vr">
-              <a>
-                <li className={activeMenuItem === "vr" ? styles.active : ""}>
-                  {texts.vr}
-                </li>
-              </a>
-            </Link>
-            <Link href="/#projects">
-              <a>
-                <li
-                  className={activeMenuItem === "projects" ? styles.active : ""}
-                >
-                  {texts.projects}
-                </li>
-              </a>
-            </Link>
-            <Link href="/#contact">
-              <a>
-                <li
-                  className={activeMenuItem === "contact" ? styles.active : ""}
-                >
-                  {texts.contact}
-                </li>
-              </a>
-            </Link>
+            <li className={activeMenuItem === "apps" ? styles.active : ""}>
+              <Link href="/#apps">
+                <a>{texts.apps}</a>
+              </Link>
+            </li>
+            <li className={activeMenuItem === "software" ? styles.active : ""}>
+              <Link href="/#software">
+                <a>{texts.software}</a>
+              </Link>
+            </li>
+            <li className={activeMenuItem === "vr" ? styles.active : ""}>
+              <Link href="/#vr">
+                <a>{texts.vr}</a>
+              </Link>
+            </li>
+            <li className={activeMenuItem === "projects" ? styles.active : ""}>
+              <Link href="/#projects">
+                <a>{texts.projects}</a>
+              </Link>
+            </li>
+            <li className={activeMenuItem === "contact" ? styles.active : ""}>
+              <Link href="/#contact">
+                <a>{texts.contact}</a>
+              </Link>
+            </li>
           </ul>
         </div>
-        <div className={styles.languageSwitchWrapper}>
-          <Link href={""} locale={texts.languageLink}>
-            <a>
+        <Link
+          href={{
+            pathname: router.pathname,
+            query: router.query,
+          }}
+          locale={texts.languageLink}
+        >
+          <a>
+            <div className={styles.languageSwitchWrapper}>
               <Image
                 src={texts.languageImage}
                 alt={texts.languageAlt}
                 layout="fill"
                 objectFit="cover"
               />
-            </a>
-          </Link>
-        </div>
+            </div>
+          </a>
+        </Link>
         <div
           className={
             menuActive
@@ -260,9 +249,15 @@ export default function Navbar(props: Props) {
             </a>
           </Link>
         </ul>
-        <div className={styles.languageSwitchWrapper}>
-          <Link href={""} locale={texts.languageLink}>
-            <a>
+        <Link
+          href={{
+            pathname: router.pathname,
+            query: router.query,
+          }}
+          locale={texts.languageLink}
+        >
+          <a>
+            <div className={styles.languageSwitchWrapper}>
               <Image
                 onClick={() => setMenuActive(false)}
                 src={texts.languageImage}
@@ -270,9 +265,9 @@ export default function Navbar(props: Props) {
                 layout="fill"
                 objectFit="cover"
               />
-            </a>
-          </Link>
-        </div>
+            </div>
+          </a>
+        </Link>
       </div>
     </>
   );

@@ -173,7 +173,7 @@
   position: relative;
 }
 
-.contactSection .inputWrapper span {
+.contactSection .inputWrapper label {
   position: relative;
   z-index: -20;
   font-size: 1.4em;
@@ -189,9 +189,9 @@
   resize: none;
 }
 
-.contactSection .contactFormular input:focus ~ span,
-.contactSection .contactFormular textarea:focus ~ span,
-.contactSection .contactFormular span.written {
+.contactSection .contactFormular input:focus ~ label,
+.contactSection .contactFormular textarea:focus ~ label,
+.contactSection .contactFormular label.written {
   top: -0.5em;
   left: 0;
   font-size: 1em;
