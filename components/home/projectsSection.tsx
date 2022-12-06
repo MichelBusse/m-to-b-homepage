@@ -125,7 +125,7 @@ export default function ProjectsSection(props: Props) {
             style={{ transitionDelay: "0.6s" }}
           >
             <a
-              href="https://www.linkedin.com/posts/m-to-b-softwareentwicklung_mixedreality-softwareengineering-medizintechnik-activity-6936760153329315840-kL4a/?utm_source=share&utm_medium=member_desktop"
+              href="https://www.linkedin.com/feed/update/urn:li:activity:6936760153329315840"
               target="_blank"
               rel="noreferrer"
             >
