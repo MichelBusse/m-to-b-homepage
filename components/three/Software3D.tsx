@@ -14,7 +14,7 @@ export default function Software3D() {
       <Suspense fallback={null}>
         <MouseMoveAnimation groupRef={rotationGroup}>
           <group ref={rotationGroup}>
-            <BackgroundParticles count={2000} />
+            <BackgroundParticles count={1400} />
           </group>
         </MouseMoveAnimation>
       </Suspense>
