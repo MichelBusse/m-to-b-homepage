@@ -40,12 +40,12 @@ export default function ServicesSection(props: Props) {
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Gemeinsam mit dir erstellen wir dafür{" "}
           <strong>maßgeschneiderte Softwarelösungen</strong>, die dann deine
-          Anforderungen umsetzung und den Firmenprozess optimal abbilden.
+          Anforderungen umsetzen und den Firmenprozess optimal abbilden.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Von Mitarbeitermanagement, Projektmanagement, Inventarsystemen oder
           Kundenkommunikation - wir haben bereits Projekte in den
-          verschiedensten Bereichen umgesetzt und freuen uns darauf, auch dich
+          verschiedensten Bereichen entwickelt und freuen uns darauf, auch dich
           dabei unterstützen zu können.
         </p>
       </>

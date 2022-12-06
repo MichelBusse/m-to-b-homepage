@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   let texts = {
     title: "Deine App-Agentur - M-to-B Software - Entwickler aus Leipzig",
-    description: "Mit neusten Technologien und Erfahrung entwickeln wir moderne Softwarelösungen - von Apps und beeindruckendem Webdesign, bis zu Virtual Reality"
+    description: "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality"
   };
 
   if (router.locale == "en") {

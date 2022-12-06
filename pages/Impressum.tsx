@@ -14,7 +14,7 @@ export default function Impressum() {
 
             <h3>Angaben gem&auml;&szlig; &sect; 5 TMG</h3>
             <p>
-              M-to-B Softwareentwicklung Inh. Michel Busse
+              M-to-B Software Inh. Michel Busse
               <br />
               Kirchberger Str. 62
               <br />

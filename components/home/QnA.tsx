@@ -16,7 +16,7 @@ export default function QnA(props : Props) {
       "Eine pauschale Kostenbeschreibung vorab zu nennen ist in der App-Entwicklung praktisch unmöglich. In der Regel setzen wir uns mit dir zusammen und besprechen deine Vorstellungen, die gewünschten Funktionen, die Ziele und dein Budget. Dazu beraten wir dich zu den verschiedenen Möglichkeiten für das Projekt und geben unsere Empfehlungen. Danach entscheidest du, ob du deine App mit uns realisieren möchtest.",
     question2: "Wie lange dauert die Entwicklung einer App?",
     answer2:
-      "Für die zeitliche Einordnung und einen überblick über den aktuellen Entwicklungsstand setzen wir auf häufige Kundenkommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App gerade ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Arbeitsablauf.",
+      "Für die zeitliche Einordnung und einen Überblick über den aktuellen Entwicklungsstand setzen wir auf häufige Kundenkommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App gerade ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Arbeitsablauf.",
     question3: "Was passiert nach der Fertigstellung?",
     answer3:
       "Sobald deine App alle Features fertig enthält, du mit dem Ergebnis zufrieden bist und das Projekt abgenommen hast, kann es je nach Vereinbarung unterschiedlich weitergehen. Entweder übergeben wir die App komplett an dich, oder begleiten sie beim weiteren Prozess, wie z.B. dem Upload in den App-Store, der Live-Schaltung oder der Wartung.",
