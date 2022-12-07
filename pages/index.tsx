@@ -9,7 +9,6 @@ import CustomShapeDivider from "../components/CustomShapeDivider";
 import AgileSection from "../components/services/AgileSection";
 import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/home/valuesSection";
-import PriceCalculator from "../components/services/PriceCalculator";
 import CrossPlatformSection from "../components/services/CrossPlatformSection";
 
 type Props = {
