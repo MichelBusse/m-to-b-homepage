@@ -79,18 +79,6 @@ export default function Impressum() {
               entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
               werden wir derartige Inhalte umgehend entfernen.
             </p>
-
-            <h4>Fotos/Grafiken</h4>
-            <p>
-              Für das Design wurden Fotos der folgenden Fotografen / Websites
-              verwendet:
-            </p>
-            <ul>
-              <li>Adobe Stock | joyfotoliakid</li>
-              <li>Adobe Stock | Jirapong</li>
-              <li>Adobe Stock | joyfotoliakid</li>
-              <li>Adobe Stock | H_Ko</li>
-            </ul>
           </div>
         </section>
       </div>

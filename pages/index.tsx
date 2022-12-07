@@ -6,10 +6,11 @@ import CustomersSection from "../components/home/customersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
-import CrossPlatformSection from "../components/services/CrossPlatformSection";
 import AgileSection from "../components/services/AgileSection";
 import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/home/valuesSection";
+import PriceCalculator from "../components/services/PriceCalculator";
+import CrossPlatformSection from "../components/services/CrossPlatformSection";
 
 type Props = {
   anchorRefs: AnchorRefs;

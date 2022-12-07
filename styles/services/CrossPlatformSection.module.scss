@@ -20,7 +20,7 @@
 
 .crossPlatformSection .text h2 {
   margin-top: 0;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .crossPlatformSection .text p {
@@ -39,13 +39,20 @@
   color: #ffffff;
   font-size: 3.5em;
 }
-.crossPlatformSection .iconWrapper svg {
-  transition: all 0.3s ease-in-out;
+
+.crossPlatformSection .icon {
+  fill: #ffffff;
+  width: 1em;
+  height: 1em;
+  transition: all 0.15s ease-in-out;
   margin: 0 1em;
   cursor: pointer;
+  stroke: #ffffff;
 }
-.crossPlatformSection .iconWrapper svg:hover {
-  color: rgb(241, 59, 116);
+
+.crossPlatformSection .icon:hover {
+  fill: rgb(241, 59, 116);
+  stroke: rgb(241, 59, 116);
 }
 
 @media screen and (max-width: 1000px) {

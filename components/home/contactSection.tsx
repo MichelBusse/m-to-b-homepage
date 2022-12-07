@@ -279,6 +279,7 @@ export default function ContactSection(props: Props) {
                     name="sendMail"
                     value={texts.send}
                     onClick={handleSubmit}
+                    className={"bounce"}
                   >
                     {texts.send}
                   </button>

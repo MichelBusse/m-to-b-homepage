@@ -16,13 +16,13 @@
   margin-bottom: 1em;
 }
 .agileSection h3 {
-    font-size: 2em;
     color: rgb(1, 80, 107);
     margin-bottom: 0.5em;
 }
 .agileSection p {
     font-size: 1.2em;
     color: #000;
+    text-align: left;
 }
 .agileSection .icon {
     color: #f13b74;
@@ -46,4 +46,12 @@
 }
 .arrowText{
     fill: #ffffff;
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
 }

@@ -81,7 +81,7 @@ a{
   text-decoration: none;
   color: inherit;
 }
-button{
+button.bounce{
   box-sizing: border-box;
   position: relative;
   background: none;
@@ -97,7 +97,7 @@ button{
   text-align: left;
   z-index: 100;
 }
-button::after{
+button.bounce::after{
   content: "";
   background-color: rgb(1, 80, 107);
   position: absolute;
@@ -107,7 +107,7 @@ button::after{
   left: 0;
   z-index: -2;
 }
-button::before{
+button.bounce::before{
   content: "";
   cursor: pointer;
   background: #f13b74;
@@ -122,11 +122,11 @@ button::before{
   transition: all 0.5s cubic-bezier(.47,1.64,.41,.8)
   ;
 }
-button:hover::before{
+button.bounce:hover::before{
   transform: scaleX(1);
   cursor: pointer;
 }
-button:focus{
+button.bounce:focus{
   outline: 0;
 }
 .Toastify button:before, .Toastify button:after{

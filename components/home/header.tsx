@@ -106,7 +106,7 @@ export default function Header() {
             </h1>
             {texts.text}
             <a href="#formular">
-              <button className={headerVisible ? styles.visible : ""}>
+              <button className={`bounce ${headerVisible ? styles.visible : ""}`}>
                 {texts.button}
               </button>
             </a>
