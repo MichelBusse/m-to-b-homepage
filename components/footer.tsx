@@ -58,7 +58,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/company/m-to-b-softwareentwicklung/"
+              href="https://www.linkedin.com/company/m-to-b-software/"
               target="_blank"
               rel="noreferrer"
             >
