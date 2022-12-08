@@ -34,7 +34,7 @@ export default function ProjectsSection(props: Props) {
       project2Company: "ZLS Leipzig",
       project3Name: "Mixed Reality in Surgery",
       project3Company: "UPMC Pittsburgh",
-      project4Name: 'Real Estade Website',
+      project4Name: 'Real Estate Website',
       project4Company: "K&S GmbH",
     };
   }
