@@ -46,7 +46,7 @@ export default function Header() {
         </p>
       </>
     ),
-    button: "Kostenloses Beratungsgespräch vereinbaren!",
+    button: "Beratungsgespräch vereinbaren!",
   };
   let phrases = ["Software", "Apps", "Zukunft"];
 
@@ -107,7 +107,7 @@ export default function Header() {
             {texts.text}
             <a href="#formular">
               <button className={`bounce ${headerVisible ? styles.visible : ""}`}>
-                {texts.button}
+                <div>{texts.button}</div>
               </button>
             </a>
           </header>

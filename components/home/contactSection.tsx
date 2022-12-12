@@ -281,7 +281,7 @@ export default function ContactSection(props: Props) {
                     onClick={handleSubmit}
                     className={"bounce"}
                   >
-                    {texts.send}
+                    <div>{texts.send}</div>
                   </button>
                 </div>
               </form>

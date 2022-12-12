@@ -71,11 +71,12 @@ h1,h2,h3{
 h4,h5{
   font-family: "Roboto";
 }
-p {
-  font-size: 1.2em;
+p{
+  font-size: 1.25em;
+  font-weight: 300;
 }
 strong{
-  font-weight: 300;
+  font-weight: inherit;
 }
 a{
   text-decoration: none;
@@ -87,15 +88,19 @@ button.bounce{
   background: none;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.25em;
   padding: 0.75em 1.2em;
   cursor: pointer;
   color: #ffffff;
   border: none;
   overflow: hidden;
-  border-radius: 0.75em;
   text-align: left;
   z-index: 100;
+  overflow: hidden;
+  transform: skewX(-10deg);
+}
+button.bounce div{
+  transform: skewX(10deg);
 }
 button.bounce::after{
   content: "";
@@ -117,13 +122,12 @@ button.bounce::before{
   top: 0;
   left: 0;
   z-index: -1;
-  transform: scaleX(0);
+  transform: translateX(-100%) ;
   transform-origin: left;
-  transition: all 0.5s cubic-bezier(.47,1.64,.41,.8)
-  ;
+  transition: all 0.5s cubic-bezier(.47,1.64,.41,.8);
 }
 button.bounce:hover::before{
-  transform: scaleX(1);
+  transform: translateX(0);
   cursor: pointer;
 }
 button.bounce:focus{
