@@ -4,7 +4,13 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Software3D from "../three/Software3D";
 
-export default function Header() {
+type Props = {
+  headline: JSX.Element, 
+  text: JSX.Element,
+  button: string
+}
+
+export default function Header(props: Props) {
   const router = useRouter();
 
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -24,55 +30,6 @@ export default function Header() {
       }, 500);
     }
   });
-
-  let texts = {
-    headline: (
-      <>
-        Deine Agentur für App- <br />
-        und Software-Entwicklung
-      </>
-    ),
-    text: (
-      <>
-        <p>
-          Mit Erfahrung und Begeisterung realisieren wir deine Ideen!
-          <br />
-          Als App-Agentur helfen wir unseren Kunden, erfolgreiche und
-          beeindruckende Apps zu entwickeln.
-        </p>
-        <p>
-          Nutze unsere kostenlose Beratung und lass uns gemeinsam dein Projekt
-          verwirklichen.
-        </p>
-      </>
-    ),
-    button: "Beratungsgespräch vereinbaren!",
-  };
-  let phrases = ["Software", "Apps", "Zukunft"];
-
-  if (router.locale == "en") {
-    texts = {
-      headline: (
-        <>
-          Your Agency for App <br />
-          and Software Development
-        </>
-      ),
-      text: (
-        <>
-          <p>
-            We realize your vision with experience and excitement!
-            <br />
-            As an app agency, we help our customers to develop successful and impressive apps.
-          </p>
-          <p>
-            Take advantage of our advisory and let us relize your app together.
-          </p>
-        </>
-      ),
-      button: "Schedule a free consultation!",
-    };
-  }
 
   return (
     <>
@@ -101,13 +58,13 @@ export default function Header() {
         <div className={styles.cell}>
           <header id={styles.header}>
             <h1 className={headerVisible ? styles.visible : ""}>
-              {texts.headline}{" "}
+              {props.headline}{" "}
               <span className={styles.typewriterCursor}>|</span>
             </h1>
-            {texts.text}
+            {props.text}
             <a href="#formular">
               <button className={`bounce ${headerVisible ? styles.visible : ""}`}>
-                <div>{texts.button}</div>
+                <div>{props.button}</div>
               </button>
             </a>
           </header>

@@ -11,7 +11,7 @@ type Props = {
   image: string,
   imageAlt: string,
   text: ReactJSXElement,
-  sectionRef: MutableRefObject<null>,
+  sectionRef?: MutableRefObject<null>,
   typewriterKey: string,
 }
 
