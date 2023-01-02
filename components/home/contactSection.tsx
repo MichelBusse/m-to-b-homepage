@@ -1,9 +1,4 @@
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  MouseEventHandler,
-  useState,
-} from "react";
+import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 
 import styles from "../../styles/home/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
@@ -15,7 +10,7 @@ import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
 import QnA from "./QnA";
 import { AnchorRefs } from "../../pages/_app";
-import TagManager from 'react-gtm-module';
+import TagManager from "react-gtm-module";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -112,10 +107,10 @@ export default function ContactSection(props: Props) {
         });
         const dataLayerArgs = {
           dataLayer: {
-              event: 'contact-form-sent'
+            event: "contact-form-sent",
           },
-        }
-        TagManager.dataLayer(dataLayerArgs)
+        };
+        TagManager.dataLayer(dataLayerArgs);
       } else {
         toast.error(texts.mailError);
       }
@@ -191,7 +186,19 @@ export default function ContactSection(props: Props) {
               </p>
               <p>
                 <BsTelephoneFill className={styles.icon} />
-                <a href="tel:+4916098709043">0160 98709043</a>
+                <a
+                  href="tel:+4916098709043"
+                  onClick={() => {
+                    const dataLayerArgs = {
+                      dataLayer: {
+                        event: "phone-number-clicked",
+                      },
+                    };
+                    TagManager.dataLayer(dataLayerArgs);
+                  }}
+                >
+                  0160 98709043
+                </a>
               </p>
               <p>
                 <IoLocationSharp className={styles.icon} />
