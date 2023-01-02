@@ -5,7 +5,6 @@ import TagManager from 'react-gtm-module';
 
 const tagManagerArgs = {
     gtmId: 'GTM-MSM3HLM',
-    dataLayerName: 'dataLayer',
 }
 
 export default function CookieDisclaimer() {

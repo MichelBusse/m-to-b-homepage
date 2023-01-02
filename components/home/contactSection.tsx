@@ -114,7 +114,6 @@ export default function ContactSection(props: Props) {
           dataLayer: {
               event: 'contact-form-sent'
           },
-          dataLayerName: 'dataLayer'
         }
         TagManager.dataLayer(dataLayerArgs)
       } else {
