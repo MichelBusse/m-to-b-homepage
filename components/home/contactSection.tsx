@@ -15,6 +15,7 @@ import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
 import QnA from "./QnA";
 import { AnchorRefs } from "../../pages/_app";
+import TagManager from 'react-gtm-module';
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -109,6 +110,13 @@ export default function ContactSection(props: Props) {
           text: "",
           privacy: false,
         });
+        const dataLayerArgs = {
+          dataLayer: {
+              event: 'contact-form-sent'
+          },
+          dataLayerName: 'dataLayer'
+        }
+        TagManager.dataLayer(dataLayerArgs)
       } else {
         toast.error(texts.mailError);
       }
