@@ -202,7 +202,11 @@ export default function ContactSection(props: Props) {
               </p>
               <p>
                 <IoLocationSharp className={styles.icon} />
-                <strong>Leipzig</strong>
+                <Link href={"/App-Entwicklung-Leipzig"}>
+                  <a>
+                    <strong>Leipzig</strong>
+                  </a>
+                </Link>
               </p>
               <QnA />
             </div>
