@@ -95,7 +95,7 @@ export default function LeipzigServicesSection() {
         sectionRef={innovationRef}
         headline={texts.headlineSection1}
         text={texts.textSection1}
-        image="/images/smartphone.png"
+        image="/images/innovation.png"
         imageAlt={texts.headlineSection1}
         typewriterKey={"1"}
       />
@@ -104,7 +104,7 @@ export default function LeipzigServicesSection() {
         sectionRef={agileRef}
         headline={texts.headlineSection2}
         text={texts.textSection2}
-        image="/images/laptop.png"
+        image="/images/smartphone.png"
         imageAlt={texts.headlineSection2}
         typewriterKey={"2"}
       />
