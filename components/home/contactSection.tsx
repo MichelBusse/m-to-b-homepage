@@ -188,14 +188,6 @@ export default function ContactSection(props: Props) {
                 <BsTelephoneFill className={styles.icon} />
                 <a
                   href="tel:+4916098709043"
-                  onClick={() => {
-                    const dataLayerArgs = {
-                      dataLayer: {
-                        event: "phone-number-clicked",
-                      },
-                    };
-                    TagManager.dataLayer(dataLayerArgs);
-                  }}
                 >
                   0160 98709043
                 </a>
