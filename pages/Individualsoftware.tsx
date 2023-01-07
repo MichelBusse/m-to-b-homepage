@@ -40,7 +40,6 @@ export default function HomePage(props: Props) {
     title: "Individualsoftware - M-to-B",
     description:
       "Du möchtest deine App entwickeln lassen? Dann nutze unsere kostenlose Beratung und lass uns deine App verwirklichen! Als App Agentur aus Leipzig freuen wir uns auf dein Projekt!",
-    services: "Unsere Leistungen im Bereich Individualsoftware",
     concept: "Konzeption und Planung",
     development: "Entwicklung und Implementierung",
     support: "Wartung und Support",
@@ -63,7 +62,6 @@ export default function HomePage(props: Props) {
       </>
     ),
     individualsoftwareAlt: "Individualsoftware",
-    advantages: "Vorteile von Individualsoftware",
     personalized: "Massgeschneidert auf das Unternehmen",
     efficient: "Verbessert die Effizienz und Leistung",
     security: "Erhöht die Sicherheit",
@@ -103,7 +101,6 @@ export default function HomePage(props: Props) {
       title: "Individual Software - M-to-B",
       description:
         "Would you like to realize your app idea? Then use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
-      services: "Our Services for Individual Software",
       concept: "Conception and Planning",
       development: "Development and Implementation",
       support: "Maintenance and Support",
@@ -124,7 +121,6 @@ export default function HomePage(props: Props) {
         </>
       ),
       individualsoftwareAlt: "Individual Software",
-      advantages: "Advantages of Individual Software",
       personalized: "Tailored to your Requirements",
       efficient: "Improve Efficiency and Performance",
       security: "Strengthen Security",
@@ -171,7 +167,6 @@ export default function HomePage(props: Props) {
       />
       <main>
         <IconTextSection
-          headline={texts.services}
           icon1={<FaEdit />}
           icon2={<BsCodeSlash />}
           icon3={<FaWrench />}
@@ -191,7 +186,6 @@ export default function HomePage(props: Props) {
           typewriterKey={"1"}
         />
         <IconTextSection
-          headline={texts.advantages}
           icon1={<HiScissors />}
           icon2={<BsGraphUp />}
           icon3={<MdSecurity />}

@@ -1,7 +1,6 @@
 import styles from "../styles/IconTextSection.module.scss";
 
 type Props = {
-  headline: string;
   label1: string;
   label2: string;
   label3: string;
@@ -13,7 +12,6 @@ type Props = {
 const IconTextSection = (props: Props) => {
   return (
     <section className={styles.iconTextSection}>
-      <h2>{props.headline}</h2>
       <div className={styles.flexWrapper}>
         <div className={styles.cell}>
           <div className={styles.icon}>{props.icon1}</div>
