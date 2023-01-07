@@ -93,7 +93,7 @@ export default function HomePage(props: Props) {
       text: (
         <>
           <p>
-            Custom-tailored software solutions for your business's unique needs:
+            Custom-tailored software solutions for your business&apos;s unique needs:
             individual software development by our experienced team!
           </p>
           <p>Take advantage of our advisory and send us your request.</p>
@@ -119,7 +119,7 @@ export default function HomePage(props: Props) {
             efficiency and performance, as well as increase security. A software
             agency like ours offers professional support in the conception,
             planning, development, and implementation of individual software to
-            support your company's success.
+            support your company&apos;s success.
           </p>
         </>
       ),

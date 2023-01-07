@@ -28,7 +28,7 @@ const ServiceSection = ((props : Props) => {
   const prevHeadline = usePrevious(props.headline);
 
   useEffect(() => {
-    setRefresh(refresh + 1)  
+    setRefresh((prev) => prev + 1)  
   }, [props.headline])
 
   useEffect(() => {

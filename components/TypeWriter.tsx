@@ -23,7 +23,7 @@ const TypeWriter = (props : PropsWithChildren<Props>) => {
     return () => {
       if (props.typed.current != undefined) props.typed.current.destroy()
     };
-  }, [props.typewriterKey, props.refresh])
+  }, [props.typewriterKey, props.refresh, props.typed])
 
 
   return (
