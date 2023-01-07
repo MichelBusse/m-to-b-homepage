@@ -29,7 +29,7 @@ const TypeWriter = (props : PropsWithChildren<Props>) => {
   return (
     <>
       <div id={"typed-strings" + props.typewriterKey}>{props.children}</div>
-      <span style={{ whiteSpace: "pre" }} ref={el} />
+      <span style={{ whiteSpace: "pre-wrap" }} ref={el} />
     </>
   );
 };

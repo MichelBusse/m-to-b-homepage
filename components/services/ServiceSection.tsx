@@ -69,7 +69,7 @@ const ServiceSection = ((props : Props) => {
         </div>
         <div className={serviceSectionStyles.flexCell}>
           <div className={serviceSectionStyles.text}>
-            <h2>
+            <h2 style={{whiteSpace: "pre-wrap"}}>
               <TypeWriter typewriterKey={props.typewriterKey} typed={typed} refresh={refresh}>
                 <span>{props.headline}</span>
               </TypeWriter>

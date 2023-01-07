@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MutableRefObject } from "react";
 import styles from "../../styles/home/ProjectsSection.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { AnchorRefs } from "../../pages/_app";
 
 type Props = {
-  anchorRefs: AnchorRefs
+  projectsRef: MutableRefObject<null>
 }
 
 export default function ProjectsSection(props: Props) {
@@ -48,7 +48,7 @@ export default function ProjectsSection(props: Props) {
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
 
-      if (props.anchorRefs.projectsRef.current && centerPos(props.anchorRefs.projectsRef.current) < scrollPosition) {
+      if (props.projectsRef.current && centerPos(props.projectsRef.current) < scrollPosition) {
         setActive(styles.active);
       }
     };
@@ -56,12 +56,12 @@ export default function ProjectsSection(props: Props) {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [props.anchorRefs.projectsRef]);
+  }, [props.projectsRef]);
 
   return (
     <>
       <div className="scrollAnchor" id="projects"></div>
-      <section id={styles.projects} ref={props.anchorRefs.projectsRef}>
+      <section id={styles.projects} ref={props.projectsRef}>
         <div className={styles.text}>
           <h2>{texts.headline}</h2>
           <p>{texts.subHeadline}</p>

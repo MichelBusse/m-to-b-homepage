@@ -80,7 +80,7 @@ export default function HomePage(props: Props) {
         <CrossPlatformSection />
         <AgileSection />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection anchorRefs={props.anchorRefs} />
+        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>

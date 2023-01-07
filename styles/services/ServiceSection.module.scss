@@ -71,6 +71,10 @@
   opacity: 1;
 }
 
+.serviceSection.active .image img {
+  border-radius: 5em;
+}
+
 .serviceSection .text h2 {
   font-weight: bold;
   color: rgb(1, 80, 107);
