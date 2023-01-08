@@ -97,11 +97,6 @@
 .navbar ul li.active {
   color: #01506b;
 }
-.navbar ul li:last-of-type.active a {
-  color: #01506b;
-  background-color: transparent;
-  border: 0.1em solid #01506b;
-}
 .navbar ul li::before {
   content: "";
   position: absolute;

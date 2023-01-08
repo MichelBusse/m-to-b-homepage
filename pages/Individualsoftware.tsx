@@ -12,6 +12,7 @@ import { useRef } from "react";
 import ProjectsSection from "../components/home/projectsSection";
 import { HiScissors } from "react-icons/hi";
 import { MdSecurity } from "react-icons/md";
+import CustomersSection from "../components/home/customersSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -148,12 +149,12 @@ export default function HomePage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/Individualsoftware"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/en/Individualsoftware"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -162,7 +163,7 @@ export default function HomePage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         button={texts.button}
-        highlightImage={"/images/individualsoftware/individualsoftware_header.png"}
+        highlightImage={"/images/individual-software/individual-software-header.png"}
         highlightImageAlt="Individualsoftware"
       />
       <main>
@@ -181,7 +182,7 @@ export default function HomePage(props: Props) {
           sectionRef={individualsoftwareRef}
           headline={texts.individualsoftwareHeadline}
           text={texts.individualsoftwareText}
-          image="/images/individualsoftware/individualsoftware.png"
+          image="/images/individual-software/individual-software.png"
           imageAlt={texts.individualsoftwareAlt}
           typewriterKey={"1"}
         />
@@ -204,6 +205,7 @@ export default function HomePage(props: Props) {
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>
     </>

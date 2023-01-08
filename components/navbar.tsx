@@ -20,6 +20,9 @@ export default function Navbar(props: Props) {
 
   const setActiveMenuItemOfPage = () => {
     switch (router.asPath) {
+      case "/App-Entwicklung":
+        setActiveMenuItem("apps");
+        break;
       case "/Individualsoftware":
         setActiveMenuItem("software");
         break;
@@ -77,7 +80,7 @@ export default function Navbar(props: Props) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, [menuActive, props.anchorRefs, router.asPath]);
+  }, [menuActive, props.anchorRefs, router.asPath, setActiveMenuItemOfPage]);
 
   let texts = {
     apps: "Apps",
@@ -127,7 +130,7 @@ export default function Navbar(props: Props) {
         <div className={styles.ulWrapper}>
           <ul>
             <li className={activeMenuItem === "apps" ? styles.active : ""}>
-              <Link href="/#apps">
+              <Link href="/App-Entwicklung">
                 <a>{texts.apps}</a>
               </Link>
             </li>
@@ -142,12 +145,12 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "projects" ? styles.active : ""}>
-              <Link href="/#projects">
+              <Link href="#projects">
                 <a>{texts.projects}</a>
               </Link>
             </li>
             <li className={activeMenuItem === "contact" ? styles.active : ""}>
-              <Link href="/#contact">
+              <Link href="#contact">
                 <a>{texts.contact}</a>
               </Link>
             </li>
@@ -193,7 +196,7 @@ export default function Navbar(props: Props) {
         }
       >
         <ul>
-          <Link href="/#apps">
+          <Link href="/App-Entwicklung">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
@@ -226,7 +229,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/#projects">
+          <Link href="#projects">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
@@ -237,7 +240,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/#contact">
+          <Link href="#contact">
             <a>
               <li
                 onClick={() => setMenuActive(false)}

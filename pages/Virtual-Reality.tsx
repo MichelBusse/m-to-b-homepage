@@ -12,6 +12,7 @@ import { useRef } from "react";
 import ProjectsSection from "../components/home/projectsSection";
 import { HiUsers } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi";
+import CustomersSection from "../components/home/customersSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -40,7 +41,7 @@ export default function HomePage(props: Props) {
     button: "Beratungsgespräch vereinbaren!",
     title: "Virtual & Augmented Reality - M-to-B",
     description:
-      "Erlebe die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Unsere Entwickler bieten individuelle VR- und AR-Lösungen für Unternehmen und Endverbraucher.",
+      "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Unsere Entwickler bieten individuelle VR- und AR-Lösungen für Unternehmen und Endverbraucher.",
     concept: "Konzeption und Planung",
     development: "Entwicklung und Implementierung",
     support: "Wartung und Support",
@@ -114,7 +115,7 @@ export default function HomePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>Individual Software</>,
+      headline: <>Virtual & Augmented Reality</>,
       text: (
         <>
           <p>
@@ -205,12 +206,12 @@ export default function HomePage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/Virtual-Reality"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/en/Virtual-Reality"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -270,6 +271,7 @@ export default function HomePage(props: Props) {
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>
     </>

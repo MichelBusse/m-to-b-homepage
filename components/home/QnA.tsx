@@ -94,25 +94,25 @@ export default function QnA(props : Props) {
         <Stack>
           <Accordion>
             <AccordionSummary sx={{ fontSize: "1.2em" }}>
-              <strong>{texts.question1}</strong>
+              {texts.question1}
             </AccordionSummary>
             <AccordionDetails>{texts.answer1}</AccordionDetails>
           </Accordion>
           <Accordion>
             <AccordionSummary sx={{ fontSize: "1.2em" }}>
-              <strong>{texts.question2}</strong>
+              {texts.question2}
             </AccordionSummary>
             <AccordionDetails>{texts.answer2}</AccordionDetails>
           </Accordion>
           <Accordion>
             <AccordionSummary sx={{ fontSize: "1.2em" }}>
-              <strong>{texts.question3}</strong>
+              {texts.question3}
             </AccordionSummary>
             <AccordionDetails>{texts.answer3}</AccordionDetails>
           </Accordion>
           <Accordion>
             <AccordionSummary sx={{ fontSize: "1.2em" }}>
-              <strong>{texts.question4}</strong>
+              {texts.question4}
             </AccordionSummary>
             <AccordionDetails>{texts.answer4}</AccordionDetails>
           </Accordion>
