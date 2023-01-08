@@ -38,7 +38,7 @@ export default function HomePage(props: Props) {
     ),
     button: "Beratungsgespräch vereinbaren!",
     title: "Individualsoftware - M-to-B",
-    description: "Erstellen Sie individuelle Softwarelösungen für Ihr Unternehmen mit unserer Software Agentur. Wir bieten maßgeschneiderte Individualsoftware, die auf Ihre Anforderungen abgestimmt sind und dir dabei helfen, deine Geschäftsprozesse zu optimieren.",
+    description: "Erstellen Sie individuelle Softwarelösungen für Ihr Unternehmen mit unserer Software Agentur. Wir bieten maßgeschneiderte Individualsoftware!",
     concept: "Konzeption und Planung",
     development: "Entwicklung und Implementierung",
     support: "Wartung und Support",
@@ -99,7 +99,7 @@ export default function HomePage(props: Props) {
       button: "Schedule a free consultation!",
       title: "Individual Software - M-to-B",
       description:
-        "Create personalized software solutions for your business with our software agency. We offer custom development tailored to your requirements and help you optimize your business processes.",
+        "Create personalized software solutions for your business with our software agency. We offer custom development!",
       concept: "Conception and Planning",
       development: "Development and Implementation",
       support: "Maintenance and Support",

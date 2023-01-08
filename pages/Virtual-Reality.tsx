@@ -41,7 +41,7 @@ export default function HomePage(props: Props) {
     button: "Beratungsgespräch vereinbaren!",
     title: "Virtual & Augmented Reality - M-to-B",
     description:
-      "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Unsere Entwickler bieten individuelle VR- und AR-Lösungen für Unternehmen und Endverbraucher.",
+      "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Wir entwickeln VR und AR Apps!",
     concept: "Konzeption und Planung",
     development: "Entwicklung und Implementierung",
     support: "Wartung und Support",
@@ -128,7 +128,7 @@ export default function HomePage(props: Props) {
       button: "Schedule a free consultation!",
       title: "Virtual & Augmented Reality - M-to-B",
       description:
-        "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. Our developers offer custom VR and AR solutions for businesses and consumers.",
+        "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",
       concept: "Conception and Planning",
       development: "Development and Implementation",
       support: "Maintenance and Support",

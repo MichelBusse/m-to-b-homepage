@@ -35,7 +35,7 @@ export default function HomePage(props: Props) {
     ),
     button: "Beratungsgespräch vereinbaren!",
     title: "App Entwicklung aus Leipzig - M-to-B",
-    description: "Sie möchten Ihre App entwickeln lassen? Dann nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen! Als App Agentur aus Leipzig freuen wir uns auf Ihr Projekt!",
+    description: "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
     headlineSection1: "Innovation aus Leipzig",
     textSection1: (
       <>
@@ -90,7 +90,7 @@ export default function HomePage(props: Props) {
       ),
       button: "Schedule a free consultation!",
       title: "App Development from Leipzig - M-to-B",
-      description: "Would you like to realize your app idea? Then use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
+      description: "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
       headlineSection1: "Innovation from Leipzig",
       textSection1: (
         <>
