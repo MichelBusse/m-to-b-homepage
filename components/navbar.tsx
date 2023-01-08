@@ -132,7 +132,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "software" ? styles.active : ""}>
-              <Link href="/#software">
+              <Link href="/Individualsoftware">
                 <a>{texts.software}</a>
               </Link>
             </li>
@@ -204,7 +204,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/#software">
+          <Link href="/Individualsoftware">
             <a>
               <li
                 onClick={() => setMenuActive(false)}

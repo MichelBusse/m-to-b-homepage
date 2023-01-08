@@ -20,8 +20,8 @@ export default function HomePage(props: Props) {
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Wir realisieren deine Vorstellungen und
-          entwickeln deine App.
+          Moderne Apps aus der Region - Wir realisieren Ihre Vorstellungen und
+          entwickeln Ihre App.
         </p>
         <p>
           Nutze unsere kostenlose Beratung und sende uns jetzt eine Anfrage!
@@ -30,7 +30,7 @@ export default function HomePage(props: Props) {
     ),
     button: "Beratungsgespräch vereinbaren!",
     title: "App Entwicklung aus Leipzig - M-to-B",
-    description: "Du möchtest deine App entwickeln lassen? Dann nutze unsere kostenlose Beratung und lass uns deine App verwirklichen! Als App Agentur aus Leipzig freuen wir uns auf dein Projekt!",
+    description: "Sie möchten Ihre App entwickeln lassen? Dann nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen! Als App Agentur aus Leipzig freuen wir uns auf Ihr Projekt!",
   };
 
   if (router.locale == "en") {

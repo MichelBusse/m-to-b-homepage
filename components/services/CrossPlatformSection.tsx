@@ -12,7 +12,7 @@ export default function CrossPlatformSection() {
 
   let texts = {
     headline: "Cross-Platform App Entwicklung",
-    subHeadline: "Mit deiner App alle Nutzer erreichen",
+    subHeadline: "Mit Ihrer App alle Nutzer erreichen",
   };
 
   if (router.locale == "en") {

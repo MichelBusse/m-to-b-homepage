@@ -21,20 +21,20 @@ export default function HomePage(props: Props) {
   let texts = {
     headline: (
       <>
-        Deine Agentur für App- <br />
+        Ihre Agentur für App- <br />
         und Software-Entwicklung
       </>
     ),
     text: (
       <>
         <p>
-          Mit Erfahrung und Begeisterung realisieren wir deine Ideen!
+          Mit Erfahrung und Begeisterung realisieren wir Ihre Ideen!
           <br />
           Als App-Agentur helfen wir unseren Kunden, erfolgreiche und
           beeindruckende Apps zu entwickeln.
         </p>
         <p>
-          Nutze unsere kostenlose Beratung und lass uns gemeinsam dein Projekt
+          Nutzen Sie unsere kostenlose Beratung und lass uns gemeinsam Ihr Projekt
           verwirklichen!
         </p>
       </>

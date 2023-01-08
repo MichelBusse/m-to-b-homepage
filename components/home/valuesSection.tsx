@@ -6,7 +6,7 @@ const ValuesSection = () => {
 
   let texts = {
     headline1: "Persönlich",
-    text1: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bist du immer auf dem aktuellen Entwicklungsstand.",
+    text1: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bleiben Sie immer auf dem aktuellen Entwicklungsstand.",
     headline2: "Modern",
     text2: "Wir suchen für jedes Projekt individuell die optimalen Technologien und programmieren agil, effizient und zukunftsorientiert.",
     headline3: "Leidenschaftlich",

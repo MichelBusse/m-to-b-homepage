@@ -14,9 +14,9 @@ export default function ServicesSection(props: Props) {
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Von der Idee bis zum Upload in den App Store führen wir deine App
+          Von der Idee bis zum Upload in den App Store führen wir Ihre App
           durch den Entwicklungsprozess. Mit Erfahrung in der Cross-Platform und
-          nativen <strong>App-Entwicklung</strong> können wir deine
+          nativen <strong>App-Entwicklung</strong> können wir Ihre
           Anforderungen effizient und modern implementieren. Dabei legen wir
           genauso viel Wert auf verlässliche Funktionen wie auf ein
           überzeugendes und nutzbares UI-Design.
@@ -24,7 +24,7 @@ export default function ServicesSection(props: Props) {
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
           Ansprechpartnern und enger Beteiligung. So stellen wir sicher, dass
-          deine Anforderungen auch getroffen werden und alle Ressourcen
+          Ihre Anforderungen auch erfüllt werden und alle Ressourcen
           effizient genutzt werden.
         </p>
       </>
@@ -34,18 +34,18 @@ export default function ServicesSection(props: Props) {
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Mit <strong>individueller Software</strong> digitalisieren und
-          optimieren wir die Arbeitsprozesse in deinem Unternehmen und helfen
-          dabei, Stress und Zeit zu sparen.
+          optimieren wir die Arbeitsprozesse in Ihrem Unternehmen und helfen
+          dabei Stress und Zeit zu sparen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Gemeinsam mit dir erstellen wir dafür{" "}
-          <strong>maßgeschneiderte Softwarelösungen</strong>, die dann deine
+          Gemeinsam mit Ihnen erstellen wir dafür{" "}
+          <strong>maßgeschneiderte Softwarelösungen</strong>, die dann Ihre
           Anforderungen umsetzen und den Firmenprozess optimal abbilden.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Von Mitarbeitermanagement, Projektmanagement, Inventarsystemen oder
-          Kundenkommunikation - wir haben bereits Projekte in den
-          verschiedensten Bereichen entwickelt und freuen uns darauf, auch dich
+          Kundenkommunikation - Wir haben bereits Projekte in den
+          verschiedensten Bereichen entwickelt und freuen uns darauf, auch Sie
           dabei unterstützen zu können.
         </p>
       </>
@@ -61,7 +61,7 @@ export default function ServicesSection(props: Props) {
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
           entwickelt sich stetig weiter. Profitiere von unseren Experten und
-          finde neue Möglichkeiten für deine Gebiete!
+          finde neue Möglichkeiten für Ihre Gebiete!
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Wir haben bereits verschiedenste VR und AR Software entwickelt, bis

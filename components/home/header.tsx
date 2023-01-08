@@ -5,14 +5,14 @@ import Image from "next/image";
 import Software3D from "../three/Software3D";
 
 type Props = {
-  headline: JSX.Element, 
-  text: JSX.Element,
-  button: string
-}
+  headline: JSX.Element;
+  text: JSX.Element;
+  button: string;
+  highlightImage?: string;
+  highlightImageAlt?: string;
+};
 
 export default function Header(props: Props) {
-  const router = useRouter();
-
   const [headerVisible, setHeaderVisible] = useState(false);
   const [squareCount, setSquareCount] = useState(0);
 
@@ -63,26 +63,39 @@ export default function Header(props: Props) {
             </h1>
             {props.text}
             <a href="#formular">
-              <button className={`bounce ${headerVisible ? styles.visible : ""}`}>
+              <button
+                className={`bounce ${headerVisible ? styles.visible : ""}`}
+              >
                 <div>{props.button}</div>
               </button>
             </a>
           </header>
         </div>
         <div className={styles.cell}>
-          <div className={styles.highlightWrapper}>
-            <div className={styles.imageWrapper}>
+          {props.highlightImage ? (
+            <div className={styles.highlightImageWrapper}>
               <Image
-                src="/images/backgroundFigure.png"
-                alt="App-Entwickler Virtual Reality"
-                width={435}
-                height={580}
+                src={props.highlightImage}
+                alt={props.highlightImageAlt}
+                width={512}
+                height={512}
               />
             </div>
-            <div className={styles.interactiveWrapper}>
-              <Software3D />
+          ) : (
+            <div className={styles.highlightWrapper}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/images/backgroundFigure.png"
+                  alt="App-Entwickler Virtual Reality"
+                  width={435}
+                  height={580}
+                />
+              </div>
+              <div className={styles.interactiveWrapper}>
+                <Software3D />
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <div className={styles.bottomTriangleTransition}></div>
       </section>

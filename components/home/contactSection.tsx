@@ -22,7 +22,7 @@ export default function ContactSection(props: Props) {
   let texts = {
     headline1: "Kontakt",
     contactText:
-      "Du bist interessiert oder hast noch Fragen? Nutze unsere kostenlose Beratung und sende uns einfach eine Nachricht!",
+      "Sie sind interessiert oder haben noch Fragen? Nutzen Sie unsere kostenlose Beratung und senden Sie uns einfach eine Nachricht!",
     request: "Anfrage senden",
     privacyText: "Ich akzeptiere die ",
     privacy: "Datenschutzerklärung",
