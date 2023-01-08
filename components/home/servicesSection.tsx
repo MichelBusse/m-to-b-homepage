@@ -135,7 +135,7 @@ export default function ServicesSection(props: Props) {
         key={1}
         headline={texts.headlineSection1}
         text={texts.textSection1}
-        image="/images/app-development/cross-platform.png"
+        image="/images/app-development/app-development-header.png"
         imageAlt={texts.headlineSection1}
         typewriterKey={"1"}
         siteLink={"/App-Entwicklung"}
@@ -147,7 +147,7 @@ export default function ServicesSection(props: Props) {
         key={2}
         headline={texts.headlineSection2}
         text={texts.textSection2}
-        image="/images/individual-software/individual-software.png"
+        image="/images/individual-software/individual-software-header.png"
         imageAlt={texts.headlineSection2}
         typewriterKey={"2"}
         siteLink={"/Individualsoftware"}
@@ -159,7 +159,7 @@ export default function ServicesSection(props: Props) {
         key={3}
         headline={texts.headlineSection3}
         text={texts.textSection3}
-        image="/images/virtual-reality/virtual-reality.png"
+        image="/images/virtual-reality/virtual-reality-header.png"
         imageAlt={texts.headlineSection3}
         typewriterKey={"3"}
         siteLink={"/Virtual-Reality"}
