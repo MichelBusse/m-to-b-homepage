@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   let texts = {
-    title: "Deine App-Agentur - M-to-B Software - Entwickler aus Leipzig",
+    title: "Ihre App-Agentur - M-to-B Software - Entwickler aus Leipzig",
     description: "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality"
   };
 

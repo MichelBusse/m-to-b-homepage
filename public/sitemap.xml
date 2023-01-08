@@ -6,27 +6,32 @@
 -->
 		<url>
 		<loc>https://m-to-b.com/</loc>
-		<lastmod>2023-01-07T16:08:36+00:00</lastmod>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
 		<priority>1.00</priority>
 		</url>
 		<url>
 		<loc>https://m-to-b.com/App-Entwicklung-Leipzig</loc>
-		<lastmod>2023-01-07T16:08:36+00:00</lastmod>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
 		<priority>0.80</priority>
 		</url>
 		<url>
 		<loc>https://m-to-b.com/Individualsoftware</loc>
-		<lastmod>2023-01-07T16:08:36+00:00</lastmod>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
+		<priority>0.80</priority>
+		</url>
+		<url>
+		<loc>https://m-to-b.com/Virtual-Reality</loc>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
 		<priority>0.80</priority>
 		</url>
 		<url>
 		<loc>https://m-to-b.com/Datenschutz</loc>
-		<lastmod>2023-01-07T16:08:36+00:00</lastmod>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
 		<priority>0.20</priority>
 		</url>
 		<url>
 		<loc>https://m-to-b.com/Impressum</loc>
-		<lastmod>2023-01-07T16:08:36+00:00</lastmod>
+		<lastmod>2023-01-08T16:08:36+00:00</lastmod>
 		<priority>0.20</priority>
 		</url>
 </urlset>

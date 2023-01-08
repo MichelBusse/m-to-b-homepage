@@ -148,6 +148,8 @@ export default function ServicesSection(props: Props) {
         image="/images/laptop.png"
         imageAlt={texts.headlineSection2}
         typewriterKey={"2"}
+        siteLink={"/Individualsoftware"}
+        buttonDelay={"1.2s"}
       />
       <div className="scrollAnchor" id="vr"></div>
       <ServiceSection
@@ -158,6 +160,8 @@ export default function ServicesSection(props: Props) {
         image="/images/vr.png"
         imageAlt={texts.headlineSection3}
         typewriterKey={"3"}
+        siteLink={"/Virtual-Reality"}
+        buttonDelay={"1.2s"}
       />
     </>
   );

@@ -97,6 +97,15 @@
   opacity: 1;
 }
 
+.serviceSection .text button {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 0.6em;
+}
+.serviceSection.active .text button {
+  opacity: 1;
+}
+
 @media screen and (max-width: 1700px) {
   .serviceSection .text {
     width: 48em;

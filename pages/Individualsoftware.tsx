@@ -22,7 +22,6 @@ export default function HomePage(props: Props) {
 
   const individualsoftwareRef = useRef(null);
   const agencyRef = useRef(null);
-  const projectsRef = useRef(null);
 
   let texts = {
     headline: <>Individualsoftware</>,
@@ -38,8 +37,7 @@ export default function HomePage(props: Props) {
     ),
     button: "Beratungsgespräch vereinbaren!",
     title: "Individualsoftware - M-to-B",
-    description:
-      "Du möchtest deine App entwickeln lassen? Dann nutze unsere kostenlose Beratung und lass uns deine App verwirklichen! Als App Agentur aus Leipzig freuen wir uns auf dein Projekt!",
+    description: "Erstellen Sie individuelle Softwarelösungen für Ihr Unternehmen mit unserer Software Agentur. Wir bieten maßgeschneiderte Individualsoftware, die auf Ihre Anforderungen abgestimmt sind und dir dabei helfen, deine Geschäftsprozesse zu optimieren.",
     concept: "Konzeption und Planung",
     development: "Entwicklung und Implementierung",
     support: "Wartung und Support",
@@ -100,7 +98,7 @@ export default function HomePage(props: Props) {
       button: "Schedule a free consultation!",
       title: "Individual Software - M-to-B",
       description:
-        "Would you like to realize your app idea? Then use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
+        "Create personalized software solutions for your business with our software agency. We offer custom development tailored to your requirements and help you optimize your business processes.",
       concept: "Conception and Planning",
       development: "Development and Implementation",
       support: "Maintenance and Support",
@@ -128,7 +126,7 @@ export default function HomePage(props: Props) {
       agencyText: (
         <>
           <p>
-            Our experienced and qualified development team has the necessary
+            Our qualified development team has the necessary
             skills and experience to provide you with high-quality software
             solutions. We have already successfully completed projects in
             various industries and can therefore offer you valuable insights and
@@ -200,12 +198,12 @@ export default function HomePage(props: Props) {
           sectionRef={agencyRef}
           headline={texts.agencyHeadline}
           text={texts.agencyText}
-          image="/images/individualsoftware/agency.png"
+          image="/images/agency.png"
           imageAlt={texts.agencyAlt}
           typewriterKey={"2"}
         />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={projectsRef} />
+        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>
     </>

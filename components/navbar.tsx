@@ -17,6 +17,21 @@ export default function Navbar(props: Props) {
   const [menuActive, setMenuActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
+
+  const setActiveMenuItemOfPage = () => {
+    switch (router.asPath) {
+      case "/Individualsoftware":
+        setActiveMenuItem("software");
+        break;
+      case "/Virtual-Reality":
+        setActiveMenuItem("vr");
+        break;
+      default:
+        setActiveMenuItem("");
+        break;
+    }
+  }
+
   useEffect(() => {
     const centerPos = (element: HTMLElement) =>
       element.offsetTop + window.innerHeight * 0.5;
@@ -35,23 +50,8 @@ export default function Navbar(props: Props) {
           scrollPosition > centerPos(props.anchorRefs.projectsRef.current)
         ) {
           setActiveMenuItem("projects");
-        } else if (
-          props.anchorRefs.vrRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.vrRef.current)
-        ) {
-          setActiveMenuItem("vr");
-        } else if (
-          props.anchorRefs.softwareRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.softwareRef.current)
-        ) {
-          setActiveMenuItem("software");
-        } else if (
-          props.anchorRefs.appsRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.appsRef.current)
-        ) {
-          setActiveMenuItem("apps");
         } else {
-          setActiveMenuItem("");
+          setActiveMenuItemOfPage();
         }
       }
     };
@@ -137,7 +137,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "vr" ? styles.active : ""}>
-              <Link href="/#vr">
+              <Link href="/Virtual-Reality">
                 <a>{texts.vr}</a>
               </Link>
             </li>
@@ -215,7 +215,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/#vr">
+          <Link href="/Virtual-Reality">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
