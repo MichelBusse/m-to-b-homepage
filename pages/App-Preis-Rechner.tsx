@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import React, { ChangeEventHandler, useEffect, useRef, useState } from "react";
+import React, { ChangeEventHandler, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "../styles/AppPriceCalculator.module.scss";
 import { BsFillQuestionSquareFill, BsGridFill } from "react-icons/bs";
 import { RiUserStarFill } from "react-icons/ri";
@@ -44,7 +44,7 @@ export default function HomePage(props: Props) {
     mailError: "Senden fehlgeschlagen",
   };
 
-  let questions = [
+  let questions = useMemo(() => [
     {
       question: <>Soll die App intern oder frei verfügbar sein?</>,
       options: [
@@ -52,7 +52,7 @@ export default function HomePage(props: Props) {
         "Öffentlich für alle Nutzer",
         "Steht noch nicht fest",
       ],
-      icons: [<RiUserStarFill />, <MdPublic />, <BsSlashCircle />],
+      icons: [<RiUserStarFill key={0}/>, <MdPublic key={1}/>, <BsSlashCircle key={2}/>],
       selectMultiple: false,
     },
     {
@@ -62,31 +62,31 @@ export default function HomePage(props: Props) {
         "Individuelles Design",
         "Design ist bereits vorhanden",
       ],
-      icons: [<BsGridFill />, <FaPalette />, <MdSmartphone />],
+      icons: [<BsGridFill key={0}/>, <FaPalette key={1}/>, <MdSmartphone key={2}/>],
       selectMultiple: false,
     },
     {
       question: <>Benötigt die App ein Login-System?</>,
       options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle />, <BsXCircle />, <BsSlashCircle />],
+      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
       selectMultiple: false,
     },
     {
       question: <>Sollen bestehende Services angebunden werden? </>,
       options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle />, <BsXCircle />, <BsSlashCircle />],
+      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
       selectMultiple: false,
     },
     {
       question: <>Haben die Benutzer der App ein eigenes Profil?</>,
       options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle />, <BsXCircle />, <BsSlashCircle />],
+      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
       selectMultiple: false,
     },
     {
       question: <>Benötigt die Anwendung ein Backoffice-Bedienfeld?</>,
       options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle />, <BsXCircle />, <BsSlashCircle />],
+      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
       selectMultiple: false,
     },
     {
@@ -96,7 +96,7 @@ export default function HomePage(props: Props) {
         "Karten / Geodaten",
         "Kommunikation / Chat",
       ],
-      icons: [<FaCalendarDay />, <MdLocationOn />, <BsChatDotsFill />],
+      icons: [<FaCalendarDay key={0}/>, <MdLocationOn key={1}/>, <BsChatDotsFill key={2}/>],
       selectMultiple: true,
     },
     {
@@ -105,7 +105,7 @@ export default function HomePage(props: Props) {
       icons: [],
       selectMultiple: false,
     },
-  ];
+  ], []);
 
   if (router.locale == "en") {
     texts = {
@@ -204,7 +204,7 @@ export default function HomePage(props: Props) {
         </div>
       ))
     );
-  }, [currentFormState, currentFormIndex]);
+  }, [currentFormState, currentFormIndex, questions]);
 
   const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setEmail(e.target.value);

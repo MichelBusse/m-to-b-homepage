@@ -95,8 +95,11 @@ const ServiceSection = (props: Props) => {
           </h2>
           {props.text}
           {props.siteLink && (
-            <Link href={props.siteLink}>
-              <button className={`bounce`} style={{transitionDelay: props.buttonDelay ?? "0.6s"}}>
+            <Link href={props.siteLink} passHref>
+              <button
+                className={`bounce`}
+                style={{ transitionDelay: props.buttonDelay ?? "0.6s" }}
+              >
                 <div>{texts.viewMore}</div>
               </button>
             </Link>

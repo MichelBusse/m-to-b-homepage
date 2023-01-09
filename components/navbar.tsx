@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "../styles/Navbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -18,7 +18,7 @@ export default function Navbar(props: Props) {
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
 
-  const setActiveMenuItemOfPage = () => {
+  const setActiveMenuItemOfPage = useCallback(() => {
     switch (router.asPath) {
       case "/App-Entwicklung":
         setActiveMenuItem("apps");
@@ -33,7 +33,7 @@ export default function Navbar(props: Props) {
         setActiveMenuItem("");
         break;
     }
-  }
+  }, [router.asPath]);
 
   useEffect(() => {
     const centerPos = (element: HTMLElement) =>
