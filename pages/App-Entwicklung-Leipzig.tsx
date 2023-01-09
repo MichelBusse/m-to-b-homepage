@@ -29,7 +29,7 @@ export default function HomePage(props: Props) {
           entwickeln Ihre App.
         </p>
         <p>
-          Nutze unsere kostenlose Beratung und sende uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
         </p>
       </>
     ),
@@ -56,19 +56,19 @@ export default function HomePage(props: Props) {
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Deine App beginnt den Entwicklungsprozess mit dem Konzept und der
-          Planung. Gemeinsam mit dir entwickeln wir die beste Strategie für
-          deine Anforderungen und wählen die geeignetsten Technologien.
+          Ihre App beginnt den Entwicklungsprozess mit dem Konzept und der
+          Planung. Gemeinsam mit Ihnen entwickeln wir die beste Strategie für
+          Ihre Anforderungen und wählen die geeignetsten Technologien.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Anschließend beginnt der Designprozess, bei welchem du direkt deine
-          Vorstellungen einbringst und am Ende von unseren App-Designern ein
-          UI-Design als Vorlage erhälst.
+          Anschließend beginnt der Designprozess, bei welchem Sie direkt Ihre
+          Vorstellungen einbringen und am Ende von unseren App-Designern ein
+          UI-Design als Vorlage erhalten.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Die eigentliche Entwicklung läuft dann transparent und personalisiert
-          ab. Du bleibst immer up-to-date mit dem aktuellen Fortschritt deiner
-          App und verlierst so nie den Überblick.
+          ab. Sie bleiben immer up-to-date mit dem aktuellen Fortschritt Ihrer
+          App und verlieren so nie den Überblick.
         </p>
       </>
     ),

@@ -32,7 +32,7 @@ export default function HomePage(props: Props) {
         Maßgeschneiderte Softwarelösungen für die einzigartigen Bedürfnisse Ihres Unternehmens: Individualsoftware-Entwicklung durch unser erfahrenes Team!
         </p>
         <p>
-          Nutze unsere kostenlose Beratung und sende uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
         </p>
       </>
     ),

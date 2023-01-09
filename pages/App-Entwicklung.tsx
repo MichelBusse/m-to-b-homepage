@@ -33,7 +33,7 @@ export default function HomePage(props: Props) {
           von der Konzeption bis zur Veröffentlichung und Wartung.
         </p>
         <p>
-          Nutze unsere kostenlose Beratung und sende uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
         </p>
       </>
     ),
