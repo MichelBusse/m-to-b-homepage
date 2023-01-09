@@ -40,6 +40,10 @@
   font-weight: 100;
 }
 
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body{
   margin: 0;
   padding: 0;

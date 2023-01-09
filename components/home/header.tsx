@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/home/Header.module.scss";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Software3D from "../three/Software3D";
 

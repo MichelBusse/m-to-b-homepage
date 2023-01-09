@@ -34,7 +34,7 @@ export default function HomePage(props: Props) {
           beeindruckende Apps zu entwickeln.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und lass uns gemeinsam Ihr Projekt
+          Nutzen Sie unsere kostenlose Beratung und lassen Sie uns gemeinsam Ihr Projekt
           verwirklichen!
         </p>
       </>
