@@ -155,7 +155,7 @@ export default function HomePage(props: Props) {
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <ServiceSection
-          key={1}
+          key={"berlin1"}
           sectionRef={innovationRef}
           headline={texts.headlineSection1}
           text={texts.textSection1}
@@ -164,7 +164,7 @@ export default function HomePage(props: Props) {
           typewriterKey={"berlin1"}
         />
         <ServiceSection
-          key={2}
+          key={"berlin2"}
           sectionRef={agileRef}
           headline={texts.headlineSection2}
           text={texts.textSection2}

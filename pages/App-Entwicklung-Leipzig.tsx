@@ -29,12 +29,14 @@ export default function HomePage(props: Props) {
           entwickeln Ihre App.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
+          Anfrage!
         </p>
       </>
     ),
     title: "App Entwicklung aus Leipzig - M-to-B",
-    description: "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
+    description:
+      "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
     headlineSection1: "Innovation aus Leipzig",
     textSection1: (
       <>
@@ -82,13 +84,12 @@ export default function HomePage(props: Props) {
             Modern apps from your region - we realize your ideas and develop
             your app.
           </p>
-          <p>
-            Take advantage of our advisory and send us your request.
-          </p>
+          <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
       title: "App Development from Leipzig - M-to-B",
-      description: "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
+      description:
+        "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
       headlineSection1: "Innovation from Leipzig",
       textSection1: (
         <>
@@ -142,10 +143,7 @@ export default function HomePage(props: Props) {
           href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
         />
         <title key="title">{texts.title}</title>
-        <meta
-            name="description"
-            content={texts.description}
-          />
+        <meta name="description" content={texts.description} />
       </Head>
       <Header
         headline={texts.headline}
@@ -158,25 +156,25 @@ export default function HomePage(props: Props) {
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <ServiceSection
-        key={1}
-        sectionRef={innovationRef}
-        headline={texts.headlineSection1}
-        text={texts.textSection1}
-        image="/images/app-development/innovation.png"
-        imageAlt={texts.headlineSection1}
-        typewriterKey={"leipzig1"}
-      />
-      <ServiceSection
-        key={2}
-        sectionRef={agileRef}
-        headline={texts.headlineSection2}
-        text={texts.textSection2}
-        image="/images/app-development/cross-platform.png"
-        imageAlt={texts.headlineSection2}
-        typewriterKey={"leipzig2"}
-      />
+          key={"leipzig1"}
+          sectionRef={innovationRef}
+          headline={texts.headlineSection1}
+          text={texts.textSection1}
+          image="/images/app-development/innovation.png"
+          imageAlt={texts.headlineSection1}
+          typewriterKey={"leipzig1"}
+        />
+        <ServiceSection
+          key={"leipzig2"}
+          sectionRef={agileRef}
+          headline={texts.headlineSection2}
+          text={texts.textSection2}
+          image="/images/app-development/cross-platform.png"
+          imageAlt={texts.headlineSection2}
+          typewriterKey={"leipzig2"}
+        />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef}/>
+        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>

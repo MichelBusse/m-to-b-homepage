@@ -175,7 +175,7 @@ export default function HomePage(props: Props) {
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection
-          key={1}
+          key={"software1"}
           sectionRef={individualsoftwareRef}
           headline={texts.individualsoftwareHeadline}
           text={texts.individualsoftwareText}
@@ -192,7 +192,7 @@ export default function HomePage(props: Props) {
           label3={texts.security}
         />
         <ServiceSection
-          key={2}
+          key={"software2"}
           sectionRef={agencyRef}
           headline={texts.agencyHeadline}
           text={texts.agencyText}

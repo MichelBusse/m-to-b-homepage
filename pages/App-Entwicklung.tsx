@@ -258,7 +258,7 @@ export default function HomePage(props: Props) {
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection
-          key={1}
+          key={"app1"}
           sectionRef={virtualRealityRef}
           headline={texts.crossPlatformHeadline}
           text={texts.crossPlatformText}
@@ -267,7 +267,7 @@ export default function HomePage(props: Props) {
           typewriterKey={"app1"}
         />
         <ServiceSection
-          key={2}
+          key={"app2"}
           sectionRef={augmentedRealityRef}
           headline={texts.processHeadline}
           text={texts.processText}
@@ -277,7 +277,7 @@ export default function HomePage(props: Props) {
         />
         <CrossPlatformSection />
         <ServiceSection
-          key={3}
+          key={"app3"}
           sectionRef={agencyRef}
           headline={texts.agencyHeadline}
           text={texts.agencyText}

@@ -34,7 +34,8 @@ export default function HomePage(props: Props) {
           Augmented Reality-Lösungen für Unternehmen und Endverbraucher.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
+          Anfrage!
         </p>
       </>
     ),
@@ -95,17 +96,16 @@ export default function HomePage(props: Props) {
     agencyText: (
       <>
         <p>
-          Unser erfahrenes Entwicklerteam verfügt über die
-          nötigen Fähigkeiten und Erfahrungen, um Ihnen hochwertige VR- und
-          AR-Anwendungen anzubieten. Wir haben bereits erfolgreich in
-          verschiedenen Branchen Projekte durchgeführt und können Ihnen daher
-          wertvolle Einsichten und Lösungen für Ihr Unternehmen bieten.
-          Zusätzlich bieten wir eine flexible und individuelle Betreuung, um
-          sicherzustellen, dass wir Ihren Anforderungen entsprechen und Ihnen
-          die bestmögliche Unterstützung bieten. Wir sind überzeugt, dass wir
-          die richtige Wahl für Ihre VR- und AR-Entwicklungsprojekte sind.
-          Kontaktieren Sie uns noch heute, um mehr über unsere Leistungen zu
-          erfahren!
+          Unser erfahrenes Entwicklerteam verfügt über die nötigen Fähigkeiten
+          und Erfahrungen, um Ihnen hochwertige VR- und AR-Anwendungen
+          anzubieten. Wir haben bereits erfolgreich in verschiedenen Branchen
+          Projekte durchgeführt und können Ihnen daher wertvolle Einsichten und
+          Lösungen für Ihr Unternehmen bieten. Zusätzlich bieten wir eine
+          flexible und individuelle Betreuung, um sicherzustellen, dass wir
+          Ihren Anforderungen entsprechen und Ihnen die bestmögliche
+          Unterstützung bieten. Wir sind überzeugt, dass wir die richtige Wahl
+          für Ihre VR- und AR-Entwicklungsprojekte sind. Kontaktieren Sie uns
+          noch heute, um mehr über unsere Leistungen zu erfahren!
         </p>
       </>
     ),
@@ -182,10 +182,10 @@ export default function HomePage(props: Props) {
       agencyText: (
         <>
           <p>
-            Our experienced development team has the necessary
-            skills and experience to provide you with high-quality VR and AR
-            applications. We have already successfully completed projects in
-            various industries and can therefore offer you valuable insights and
+            Our experienced development team has the necessary skills and
+            experience to provide you with high-quality VR and AR applications.
+            We have already successfully completed projects in various
+            industries and can therefore offer you valuable insights and
             solutions for your company. In addition, we offer flexible and
             individual support to ensure that we meet your requirements and
             provide you with the best possible support. We are convinced that we
@@ -232,7 +232,7 @@ export default function HomePage(props: Props) {
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection
-          key={1}
+          key={"vr1"}
           sectionRef={virtualRealityRef}
           headline={texts.virtualRealityHeadline}
           text={texts.virtualRealityText}
@@ -241,7 +241,7 @@ export default function HomePage(props: Props) {
           typewriterKey={"vr1"}
         />
         <ServiceSection
-          key={2}
+          key={"vr2"}
           sectionRef={augmentedRealityRef}
           headline={texts.augmentedRealityHeadline}
           text={texts.augmentedRealityText}
