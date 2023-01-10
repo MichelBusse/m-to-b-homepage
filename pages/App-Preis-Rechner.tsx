@@ -1,9 +1,15 @@
 import Head from "next/head";
 import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import React, { ChangeEventHandler, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  ChangeEventHandler,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import styles from "../styles/AppPriceCalculator.module.scss";
-import { BsFillQuestionSquareFill, BsGridFill } from "react-icons/bs";
+import { BsGridFill } from "react-icons/bs";
 import { RiUserStarFill } from "react-icons/ri";
 import { FaPalette, FaCalendarDay } from "react-icons/fa";
 import {
@@ -42,82 +48,221 @@ export default function HomePage(props: Props) {
     checkInputs: "Bitte überprüfe deine Eingaben",
     mailSuccess: "Erfolgreich gesendet!",
     mailError: "Senden fehlgeschlagen",
+    introText:
+      "Nach Beantwortung der folgenden Fragen erhalten Sie direkt eine Einschätzung für das Budget, mit dem Sie für Ihre App rechnen können.",
   };
-
-  let questions = useMemo(() => [
-    {
-      question: <>Soll die App intern oder frei verfügbar sein?</>,
-      options: [
-        "Nur für bestimmte Nutzer",
-        "Öffentlich für alle Nutzer",
-        "Steht noch nicht fest",
-      ],
-      icons: [<RiUserStarFill key={0}/>, <MdPublic key={1}/>, <BsSlashCircle key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Wie soll das Design aussehen?</>,
-      options: [
-        "Einfaches Design",
-        "Individuelles Design",
-        "Design ist bereits vorhanden",
-      ],
-      icons: [<BsGridFill key={0}/>, <FaPalette key={1}/>, <MdSmartphone key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Benötigt die App ein Login-System?</>,
-      options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Sollen bestehende Services angebunden werden? </>,
-      options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Haben die Benutzer der App ein eigenes Profil?</>,
-      options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Benötigt die Anwendung ein Backoffice-Bedienfeld?</>,
-      options: ["Ja", "Nein", "Steht noch nicht fest"],
-      icons: [<BsCheckCircle key={0}/>, <BsXCircle key={1}/>, <BsSlashCircle key={2}/>],
-      selectMultiple: false,
-    },
-    {
-      question: <>Welche Funktionen soll die App besitzen?</>,
-      options: [
-        "Buchungen / Termine",
-        "Karten / Geodaten",
-        "Kommunikation / Chat",
-      ],
-      icons: [<FaCalendarDay key={0}/>, <MdLocationOn key={1}/>, <BsChatDotsFill key={2}/>],
-      selectMultiple: true,
-    },
-    {
-      question: <>Ergebnisse an diese E-Mail senden:</>,
-      options: [],
-      icons: [],
-      selectMultiple: false,
-    },
-  ], []);
 
   if (router.locale == "en") {
     texts = {
-      title: "App Development Costs Calculator - M-to-B",
+      title: "App Development Budget Calculator - M-to-B",
       description:
         "How much does app development cost? Calculate your budget beforehand and get an overview",
-      headline: "App Development Costs Calculator",
+      headline: "App Development Budget Calculator",
       checkInputs: "Please check your inputs",
       mailSuccess: "Sent successfully",
       mailError: "Error: Could not send mail",
+      introText:
+        "After answering the following questions you'll receive an overview of your apps potential budget.",
     };
   }
+
+  let questions = useMemo(() => {
+    if (router.locale == "en") {
+      return [
+        {
+          question: <>App Budget Calculator</>,
+          options: [],
+          icons: [],
+          selectMultiple: false,
+        },
+        {
+          question: (
+            <>
+              Should your app be visible publicly or only to specific members?
+            </>
+          ),
+          options: [
+            "Specific members",
+            "Publicly visible",
+            "Not decided yet",
+          ],
+          icons: [
+            <RiUserStarFill key={0} />,
+            <MdPublic key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>What about the design?</>,
+          options: ["Simple Design", "Individual Design", "Not decided yet"],
+          icons: [
+            <BsGridFill key={0} />,
+            <FaPalette key={1} />,
+            <MdSmartphone key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>Do you need a login system?</>,
+          options: ["Yes", "No", "Not decided yet"],
+          icons: [
+            <BsCheckCircle key={0} />,
+            <BsXCircle key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>Do you want to connect to existing software? </>,
+          options: ["Yes", "No", "Not decided yet"],
+          icons: [
+            <BsCheckCircle key={0} />,
+            <BsXCircle key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>Do your users need their own profile?</>,
+          options: ["Yes", "No", "Not decided yet"],
+          icons: [
+            <BsCheckCircle key={0} />,
+            <BsXCircle key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>Do you need a backoffice dashboard?</>,
+          options: ["Yes", "No", "Not decided yet"],
+          icons: [
+            <BsCheckCircle key={0} />,
+            <BsXCircle key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
+          question: <>Which functions should your app include?</>,
+          options: [
+            "Bookings / Dates",
+            "Maps / Geodata",
+            "Communication / Chat",
+          ],
+          icons: [
+            <FaCalendarDay key={0} />,
+            <MdLocationOn key={1} />,
+            <BsChatDotsFill key={2} />,
+          ],
+          selectMultiple: true,
+        },
+        {
+          question: <>Please provide your mail for the results:</>,
+          options: [],
+          icons: [],
+          selectMultiple: false,
+        },
+      ];
+    }
+
+    return [
+      {
+        question: <>App Preis Rechner</>,
+        options: [],
+        icons: [],
+        selectMultiple: false,
+      },
+      {
+        question: <>Soll die App intern oder frei verfügbar sein?</>,
+        options: [
+          "Nur ausgewählte Nutzer",
+          "Öffentlich für alle Nutzer",
+          "Noch nicht fest",
+        ],
+        icons: [
+          <RiUserStarFill key={0} />,
+          <MdPublic key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Wie soll das Design aussehen?</>,
+        options: [
+          "Einfaches Design",
+          "Individuelles Design",
+          "Bereits vorhanden",
+        ],
+        icons: [
+          <BsGridFill key={0} />,
+          <FaPalette key={1} />,
+          <MdSmartphone key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Benötigt die App ein Login-System?</>,
+        options: ["Ja", "Nein", "Noch nicht fest"],
+        icons: [
+          <BsCheckCircle key={0} />,
+          <BsXCircle key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Soll an bestehende Software angebunden werden? </>,
+        options: ["Ja", "Nein", "Noch nicht fest"],
+        icons: [
+          <BsCheckCircle key={0} />,
+          <BsXCircle key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Haben die Benutzer der App ein eigenes Profil?</>,
+        options: ["Ja", "Nein", "Noch nicht fest"],
+        icons: [
+          <BsCheckCircle key={0} />,
+          <BsXCircle key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Benötigt die Anwendung ein Backoffice-Bedienfeld?</>,
+        options: ["Ja", "Nein", "Noch nicht fest"],
+        icons: [
+          <BsCheckCircle key={0} />,
+          <BsXCircle key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
+        question: <>Welche Funktionen soll die App besitzen?</>,
+        options: [
+          "Buchungen / Termine",
+          "Karten / Geodaten",
+          "Kommunikation / Chat",
+        ],
+        icons: [
+          <FaCalendarDay key={0} />,
+          <MdLocationOn key={1} />,
+          <BsChatDotsFill key={2} />,
+        ],
+        selectMultiple: true,
+      },
+      {
+        question: <>Ergebnisse an diese E-Mail senden:</>,
+        options: [],
+        icons: [],
+        selectMultiple: false,
+      },
+    ];
+  }, [router.locale]);
 
   const [currentFormState, setCurrentFormState] = useState<number[][]>(
     questions.map((e) => [])
@@ -211,104 +356,112 @@ export default function HomePage(props: Props) {
   };
 
   const calculatePrice = () => {
-    let minPrice = 12000;
-    let maxPrice = 15000;
+    let minPrice = 0;
+    let maxPrice = 0;
+
+    // Private App
+    if (currentFormState[1].includes(0)) {
+      minPrice += 8850;
+      maxPrice += 8850;
+    }
 
     // Public App
-    if (currentFormState[0].includes(1)) {
-      minPrice += 4000;
-      maxPrice += 6500;
+    if (currentFormState[1].includes(1)) {
+      minPrice += 11800;
+      maxPrice += 11800;
     }
 
     // Public or Private App
-    if (currentFormState[0].includes(2)) {
-      minPrice += 0;
-      maxPrice += 6500;
+    if (currentFormState[1].includes(2)) {
+      minPrice += 8850;
+      maxPrice += 11800;
     }
 
     // Simple design
-    if (currentFormState[1].includes(0)) {
-      minPrice += 1000;
-      maxPrice += 2500;
+    if (currentFormState[2].includes(0)) {
+      minPrice += 944;
+      maxPrice += 944;
     }
 
     // Individual design
-    if (currentFormState[1].includes(1)) {
-      minPrice += 2500;
-      maxPrice += 6000;
+    if (currentFormState[2].includes(1)) {
+      minPrice += 4720;
+      maxPrice += 4720;
     }
 
     // Existing design
-    if (currentFormState[1].includes(2)) {
-      minPrice += 0;
-      maxPrice += 1500;
+    if (currentFormState[2].includes(2)) {
+      minPrice += 1180;
+      maxPrice += 1180;
     }
 
     // Login system 10h - 20h
-    if (currentFormState[2].includes(0)) {
-      minPrice += 1250;
-      maxPrice += 2500;
+    if (currentFormState[3].includes(0)) {
+      minPrice += 2832;
+      maxPrice += 2832;
     }
 
     // Login system not sure
-    if (currentFormState[2].includes(2)) {
+    if (currentFormState[3].includes(2)) {
       minPrice += 0;
-      maxPrice += 2500;
+      maxPrice += 2832;
     }
 
     // Existing services
-    if (currentFormState[3].includes(0)) {
-      minPrice += 1500;
-      maxPrice += 5850;
+    if (currentFormState[4].includes(0)) {
+      minPrice += 3776;
+      maxPrice += 3776;
     }
 
     // Existing services not sure
-    if (currentFormState[3].includes(2)) {
+    if (currentFormState[4].includes(2)) {
       minPrice += 0;
-      maxPrice += 5850;
+      maxPrice += 3776;
     }
 
     // Own profile
-    if (currentFormState[4].includes(0)) {
-      minPrice += 2000;
-      maxPrice += 5400;
+    if (currentFormState[5].includes(0)) {
+      minPrice += 2832;
+      maxPrice += 2832;
     }
 
     // Own profile not sure
-    if (currentFormState[4].includes(2)) {
+    if (currentFormState[5].includes(2)) {
       minPrice += 0;
-      maxPrice += 5400;
+      maxPrice += 2832;
     }
 
     // Backoffice
-    if (currentFormState[5].includes(0)) {
-      minPrice += 2000;
-      maxPrice += 3800;
+    if (currentFormState[6].includes(0)) {
+      minPrice += 4720;
+      maxPrice += 4720;
     }
 
     // Backoffice not sure
-    if (currentFormState[5].includes(2)) {
+    if (currentFormState[6].includes(2)) {
       minPrice += 0;
-      maxPrice += 3800;
+      maxPrice += 4720;
     }
 
     // Dates
-    if (currentFormState[5].includes(2)) {
-      minPrice += 800;
-      maxPrice += 1500;
+    if (currentFormState[7].includes(0)) {
+      minPrice += 3776;
+      maxPrice += 3776;
     }
 
     // Location
-    if (currentFormState[5].includes(2)) {
-      minPrice += 1000;
-      maxPrice += 2400;
+    if (currentFormState[7].includes(1)) {
+      minPrice += 3776;
+      maxPrice += 3776;
     }
 
     // Chat
-    if (currentFormState[5].includes(2)) {
-      minPrice += 1500;
-      maxPrice += 3800;
+    if (currentFormState[7].includes(2)) {
+      minPrice += 4720;
+      maxPrice += 4720;
     }
+
+    maxPrice = Math.round(maxPrice * 1.1);
 
     return {
       minPrice,
@@ -324,7 +477,7 @@ export default function HomePage(props: Props) {
 
     const { minPrice, maxPrice } = calculatePrice();
 
-    fetch("/api/contactSection", {
+    fetch("/api/appPriceCalculator", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -370,7 +523,8 @@ export default function HomePage(props: Props) {
           ref={formWrapperRef}
         >
           <h2>{questions[currentFormIndex].question}</h2>
-          {currentFormIndex == questions.length - 1 ? (
+          {currentFormIndex == 0 && <p>{texts.introText}</p>}
+          {currentFormIndex == questions.length - 1 && (
             <div className={styles.inputWrapper}>
               <button onClick={() => previousQuestion()}>
                 <MdArrowBackIosNew />
@@ -384,31 +538,36 @@ export default function HomePage(props: Props) {
               />
               <button onClick={() => submit()}>Senden</button>
             </div>
-          ) : (
+          )}
+          {currentFormIndex > 0 && currentFormIndex < questions.length && (
             <div className={styles.optionsWrapper}>{optionDivs}</div>
           )}
           <div className={styles.stepCounter}>
             <span>
-              {currentFormIndex + 1} / {questions.length}
+              {currentFormIndex} / {questions.length - 1}
             </span>
           </div>
         </div>
-        {currentFormIndex > 0 && currentFormIndex < questions.length - 1 && (
-          <div
-            className={styles.leftButtonWrapper}
-            onClick={() => previousQuestion()}
-          >
-            <MdArrowBackIosNew />
-          </div>
-        )}
-        {currentFormIndex < questions.length - 1 && (
-          <div
-            className={styles.rightButtonWrapper}
-            onClick={() => nextQuestion()}
-          >
-            <MdArrowForwardIos />
-          </div>
-        )}
+        <div className={styles.controlButtonWrapper}>
+          {currentFormIndex > 0 && currentFormIndex < questions.length - 1 ? (
+            <div
+              className={styles.leftButtonWrapper}
+              onClick={() => previousQuestion()}
+            >
+              <MdArrowBackIosNew />
+            </div>
+          ) : (
+            <div></div>
+          )}
+          {currentFormIndex < questions.length - 1 && (
+            <div
+              className={styles.rightButtonWrapper}
+              onClick={() => nextQuestion()}
+            >
+              <MdArrowForwardIos />
+            </div>
+          )}
+        </div>
       </main>
     </>
   );
