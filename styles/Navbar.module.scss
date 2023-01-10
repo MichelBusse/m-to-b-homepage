@@ -152,6 +152,7 @@
 }
 .mobileMenu {
   display: flex;
+  visibility: hidden;
   z-index: 1000;
   position: fixed;
   top: 5em;
@@ -177,6 +178,9 @@
   height: 2.5em;
   bottom: 2em;
   left: 5em;
+}
+.mobileMenu.initialized {
+  visibility: visible;
 }
 .mobileMenu.active {
   opacity: 1;

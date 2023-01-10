@@ -14,8 +14,8 @@ export default function Navbar(props: Props) {
   const router = useRouter();
 
   const [menuActive, setMenuActive] = useState(false);
+  const [menuInitialized, setMenuInitialized] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
-
 
   const setActiveMenuItemOfPage = useCallback(() => {
     switch (router.asPath) {
@@ -174,12 +174,11 @@ export default function Navbar(props: Props) {
           </a>
         </Link>
         <div
-          className={
-            menuActive
-              ? styles.hamburgerMenu + " " + styles.active
-              : styles.hamburgerMenu
-          }
-          onClick={() => setMenuActive(!menuActive)}
+          className={`${styles.hamburgerMenu} ${menuActive && styles.active}`}
+          onClick={() => {
+            setMenuActive((prev) => !prev);
+            setMenuInitialized(true);
+          }}
         >
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
@@ -188,11 +187,9 @@ export default function Navbar(props: Props) {
       </nav>
 
       <div
-        className={
-          menuActive
-            ? styles.mobileMenu + " " + styles.active
-            : styles.mobileMenu
-        }
+        className={`${styles.mobileMenu} ${menuActive && styles.active} ${
+          menuInitialized && styles.initialized
+        }`}
       >
         <ul>
           <Link href="/App-Entwicklung">
