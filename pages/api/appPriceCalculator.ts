@@ -11,8 +11,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const mailData = {
         from: 'kontakt@m-to-b.com',
         to: req.body.email,
-        subject: `Ihr Preisabschätzung für Ihre App Entwicklung`,
-        text: req.body.text + "Hallo, hier bitte dein preis: " + req.body.minPrice + "€ - " + req.body.maxPrice + "€",
+        bcc: 'kontakt@m-to-b.com',
+        subject: `Preisabschätzung für Ihre App - M-to-B`,
+        text: req.body.text + "Hallo, hier bitte, dein preis: " + req.body.minPrice + "€ - " + req.body.maxPrice + "€",
     }
 
     let mailRes = await new Promise((resolve, reject) => {
