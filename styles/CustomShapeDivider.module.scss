@@ -6,6 +6,7 @@
   overflow: hidden;
   line-height: 0;
   background-color: #ffffff;
+  margin-top: -2px;
 }
 
 .customShapeDivider svg {
@@ -14,9 +15,12 @@
   width: calc(100% + 1.3px);
   height: 80px;
   transition: all 0.5s ease-in-out;
+  top: -2px;
 }
 
 .flip {
+  margin-top: auto;
+  margin-bottom: -2px;
   transform: rotate(180deg);
 }
 

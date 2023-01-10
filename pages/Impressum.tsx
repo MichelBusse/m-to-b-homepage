@@ -1,12 +1,34 @@
+import Head from "next/head";
+import { useRouter } from "next/router";
 import styles from "../styles/Impressum.module.scss";
 
 export const config = {
-  unstable_runtimeJS : false
-}
+  unstable_runtimeJS: false,
+};
 
-export default function Impressum() {
+export default function Imprint() {
+  const router = useRouter()
+
+  let texts = {
+    title: "Impressum - M-to-B",
+    description:
+    "Das Impressum unserer Homepage von M-to-B Software",
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      title: "Imprint - M-to-B",
+      description:
+      "Imprint of our homepage M-to-B Software",
+    };
+  }
+
   return (
     <>
+      <Head>
+        <title key="title">{texts.title}</title>
+        <meta name="description" content={texts.description} />
+      </Head>
       <div className={styles.imprint}>
         <section>
           <div className={styles.text}>

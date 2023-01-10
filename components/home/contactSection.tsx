@@ -136,12 +136,12 @@ export default function ContactSection(props: Props) {
                 value: 50,
               },
               color: {
-                value: "#dddddd",
+                value: "#ebebeb",
               },
               links: {
                 enable: true,
                 distance: 300,
-                color: "#dddddd",
+                color: "#ebebeb",
                 opacity: 1,
                 width: 2,
               },

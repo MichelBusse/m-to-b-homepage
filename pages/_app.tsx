@@ -24,13 +24,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   let texts = {
     title: "Ihre App-Agentur - M-to-B Software",
-    description: "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality"
   };
 
   if (router.locale == "en") {
     texts = {
       title: "Your App Agency - M-to-B Software",
-      description: "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality"
     };
   }
 
@@ -95,10 +93,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="width=device-width, initial-scale=1.0"
           />
           <meta name="author" content="M-to-B Softwareentwicklung" />
-          <meta
-            name="description"
-            content={texts.description}
-          />
         </Head>
         <CookieDisclaimer />
         <Navbar

@@ -19,7 +19,7 @@ export default function ServicesSection(props: Props) {
           nativen App-Entwicklung können wir Ihre
           Anforderungen effizient und modern implementieren. Dabei legen wir
           genauso viel Wert auf verlässliche Funktionen wie auf ein
-          überzeugendes und nutzbares UI-Design.
+          überzeugendes und nutzbares Design.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
@@ -60,8 +60,8 @@ export default function ServicesSection(props: Props) {
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
-          entwickelt sich stetig weiter. Profitiere von unseren Experten und
-          finde neue Möglichkeiten für Ihre Gebiete!
+          entwickelt sich stetig weiter. Profitieren Sie von unseren Experten und
+          finden Sie neue Möglichkeiten für Ihre Gebiete!
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Wir haben bereits verschiedenste VR und AR Software entwickelt, bis
