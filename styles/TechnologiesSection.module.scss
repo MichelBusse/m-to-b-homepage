@@ -5,7 +5,8 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  background: rgba(2, 38, 54);
+  background: #022636;
+  color: #ffffff;
 }
 .technologiesSection .text {
   position: relative;
@@ -59,7 +60,7 @@
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255);
 }
 .technologiesSection .logoCaption {
   position: absolute;
@@ -74,7 +75,7 @@
   font-size: 1.4em;
 }
 .technologiesSection .logoCaption:before {
-  background: rgba(241, 59, 116, 0.8);
+  background: #f13b74;
   z-index: -1;
   transition: all 0.3s ease-in-out;
   transform: translate(-50%, -50%) rotate(45deg) scale(0);
