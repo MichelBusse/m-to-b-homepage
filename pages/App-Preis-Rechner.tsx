@@ -50,6 +50,7 @@ export default function HomePage(props: Props) {
     mailError: "Senden fehlgeschlagen",
     introText:
       "Nach Beantwortung der folgenden Fragen erhalten Sie direkt eine Einschätzung für das Budget, mit dem Sie für Ihre App rechnen können.",
+    send: "Senden",
   };
 
   if (router.locale == "en") {
@@ -63,6 +64,7 @@ export default function HomePage(props: Props) {
       mailError: "Error: Could not send mail",
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
+      send: "Send",
     };
   }
 
@@ -479,8 +481,8 @@ export default function HomePage(props: Props) {
       return;
     }
 
-    for(let i = 1; i < questions.length - 1; i++){
-      if(!questions[i].selectMultiple && currentFormState[i].length == 0){
+    for (let i = 1; i < questions.length - 1; i++) {
+      if (!questions[i].selectMultiple && currentFormState[i].length == 0) {
         toast.error(texts.checkInputs);
         return;
       }
@@ -547,7 +549,7 @@ export default function HomePage(props: Props) {
                 value={email}
                 onChange={onChange}
               />
-              <button onClick={() => submit()}>Senden</button>
+              <button onClick={() => submit()}>{texts.send}</button>
             </div>
           )}
           {currentFormIndex > 0 && currentFormIndex < questions.length && (

@@ -161,7 +161,7 @@ export default function HomePage(props: Props) {
           text={texts.textSection1}
           image="/images/app-development/innovation.png"
           imageAlt={texts.headlineSection1}
-          typewriterKey={"1"}
+          typewriterKey={"berlin1"}
         />
         <ServiceSection
           key={2}
@@ -170,7 +170,7 @@ export default function HomePage(props: Props) {
           text={texts.textSection2}
           image="/images/app-development/cross-platform.png"
           imageAlt={texts.headlineSection2}
-          typewriterKey={"2"}
+          typewriterKey={"berlin2"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

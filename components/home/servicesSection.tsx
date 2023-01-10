@@ -137,7 +137,7 @@ export default function ServicesSection(props: Props) {
         text={texts.textSection1}
         image="/images/app-development/app-development-header.png"
         imageAlt={texts.headlineSection1}
-        typewriterKey={"1"}
+        typewriterKey={"home1"}
         siteLink={"/App-Entwicklung"}
         buttonDelay={"0.6s"}
       />
@@ -149,7 +149,7 @@ export default function ServicesSection(props: Props) {
         text={texts.textSection2}
         image="/images/individual-software/individual-software-header.png"
         imageAlt={texts.headlineSection2}
-        typewriterKey={"2"}
+        typewriterKey={"home2"}
         siteLink={"/Individualsoftware"}
         buttonDelay={"1.2s"}
       />
@@ -161,7 +161,7 @@ export default function ServicesSection(props: Props) {
         text={texts.textSection3}
         image="/images/virtual-reality/virtual-reality-header.png"
         imageAlt={texts.headlineSection3}
-        typewriterKey={"3"}
+        typewriterKey={"home3"}
         siteLink={"/Virtual-Reality"}
         buttonDelay={"1.2s"}
       />

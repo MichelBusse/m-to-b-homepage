@@ -181,7 +181,7 @@ export default function HomePage(props: Props) {
           text={texts.individualsoftwareText}
           image="/images/individual-software/individual-software.png"
           imageAlt={texts.individualsoftwareAlt}
-          typewriterKey={"1"}
+          typewriterKey={"software1"}
         />
         <IconTextSection
           icon1={<HiScissors />}
@@ -198,7 +198,7 @@ export default function HomePage(props: Props) {
           text={texts.agencyText}
           image="/images/agency.png"
           imageAlt={texts.agencyAlt}
-          typewriterKey={"2"}
+          typewriterKey={"software2"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

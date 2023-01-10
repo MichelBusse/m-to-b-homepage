@@ -238,7 +238,7 @@ export default function HomePage(props: Props) {
           text={texts.virtualRealityText}
           image="/images/virtual-reality/virtual-reality.png"
           imageAlt={texts.virtualRealityAlt}
-          typewriterKey={"1"}
+          typewriterKey={"vr1"}
         />
         <ServiceSection
           key={2}
@@ -247,7 +247,7 @@ export default function HomePage(props: Props) {
           text={texts.augmentedRealityText}
           image="/images/virtual-reality/augmented-reality.png"
           imageAlt={texts.augmentedRealityAlt}
-          typewriterKey={"2"}
+          typewriterKey={"vr2"}
         />
         <IconTextSection
           icon1={<HiUsers />}
@@ -264,7 +264,7 @@ export default function HomePage(props: Props) {
           text={texts.agencyText}
           image="/images/agency.png"
           imageAlt={texts.agencyAlt}
-          typewriterKey={"3"}
+          typewriterKey={"vr3"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

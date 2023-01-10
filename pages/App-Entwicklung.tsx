@@ -264,7 +264,7 @@ export default function HomePage(props: Props) {
           text={texts.crossPlatformText}
           image="/images/app-development/cross-platform.png"
           imageAlt={texts.crossPlatformAlt}
-          typewriterKey={"1"}
+          typewriterKey={"app1"}
         />
         <ServiceSection
           key={2}
@@ -273,7 +273,7 @@ export default function HomePage(props: Props) {
           text={texts.processText}
           image="/images/app-development/app-development-process.png"
           imageAlt={texts.processAlt}
-          typewriterKey={"2"}
+          typewriterKey={"app2"}
         />
         <CrossPlatformSection />
         <ServiceSection
@@ -283,7 +283,7 @@ export default function HomePage(props: Props) {
           text={texts.agencyText}
           image="/images/agency.png"
           imageAlt={texts.agencyAlt}
-          typewriterKey={"3"}
+          typewriterKey={"app3"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
