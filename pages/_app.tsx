@@ -1,15 +1,15 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import { CookiesProvider } from "react-cookie";
 import { MutableRefObject, useEffect, useRef } from "react";
 import { Router, useRouter } from "next/router";
 import { useSmoothScroll } from "../hooks/SmoothScroll";
-import CookieDisclaimer from "../components/cookieDisclaimer";
+import CookieDisclaimer from "../components/CookieDisclaimer";
 
 export type AnchorRefs = {
   appsRef: MutableRefObject<null>,

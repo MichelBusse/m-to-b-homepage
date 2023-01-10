@@ -1,14 +1,14 @@
-import Header from "../components/home/header";
-import ContactSection from "../components/home/contactSection";
+import Header from "../components/Header";
+import ContactSection from "../components/ContactSection";
 import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import { AnchorRefs } from "./_app";
-import ValuesSection from "../components/home/valuesSection";
+import ValuesSection from "../components/ValuesSection";
 import { useRouter } from "next/router";
-import ProjectsSection from "../components/home/projectsSection";
-import CustomersSection from "../components/home/customersSection";
+import ProjectsSection from "../components/ProjectsSection";
+import CustomersSection from "../components/CustomersSection";
 import { useRef } from "react";
-import ServiceSection from "../components/services/ServiceSection";
+import ServiceSection from "../components/ServiceSection";
 
 type Props = {
   anchorRefs: AnchorRefs;

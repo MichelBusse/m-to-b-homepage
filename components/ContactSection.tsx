@@ -1,6 +1,5 @@
 import { ChangeEventHandler, MouseEventHandler, useState } from "react";
-
-import styles from "../../styles/home/ContactSection.module.scss";
+import styles from "../styles/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
@@ -9,7 +8,7 @@ import Link from "next/link";
 import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
 import QnA from "./QnA";
-import { AnchorRefs } from "../../pages/_app";
+import { AnchorRefs } from "../pages/_app";
 import TagManager from "react-gtm-module";
 
 type Props = {

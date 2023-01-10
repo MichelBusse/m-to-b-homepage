@@ -1,18 +1,18 @@
-import Header from "../components/home/header";
-import ContactSection from "../components/home/contactSection";
+import Header from "../components/Header";
+import ContactSection from "../components/ContactSection";
 import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import IconTextSection from "../components/iconTextSection";
+import IconTextSection from "../components/IconTextSection";
 import { FaEdit, FaWrench } from "react-icons/fa";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
-import ServiceSection from "../components/services/ServiceSection";
+import ServiceSection from "../components/ServiceSection";
 import { useRef } from "react";
-import ProjectsSection from "../components/home/projectsSection";
+import ProjectsSection from "../components/ProjectsSection";
 import { HiScissors } from "react-icons/hi";
 import { MdSecurity } from "react-icons/md";
-import CustomersSection from "../components/home/customersSection";
+import CustomersSection from "../components/CustomersSection";
 
 type Props = {
   anchorRefs: AnchorRefs;

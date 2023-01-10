@@ -4,9 +4,19 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  background: url("/images/Softwareentwicklung/background.jpg");
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
-  background: #022636;
-  color: #fff;
+}
+.technologiesSection .blueCurtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 38, 54, 0.8);
+  z-index: 0;
 }
 
 .technologiesSection .text {
@@ -24,7 +34,9 @@
 
 .technologiesSection .text h2 {
   font-size: 2.2em;
-  font-family: "Roboto Mono";
+}
+.technologiesSection .text p {
+  font-size: 1.2em;
 }
 .technologiesSection img {
   object-fit: contain;
@@ -59,7 +71,7 @@
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
 }
 .technologiesSection .logoCaption {
   position: absolute;
@@ -74,7 +86,7 @@
   font-size: 1.4em;
 }
 .technologiesSection .logoCaption:before {
-  background: rgba(241, 59, 116);
+  background: rgba(241, 59, 116, 0.8);
   z-index: -1;
   transition: all 0.3s ease-in-out;
   transform: translate(-50%, -50%) rotate(45deg) scale(0);

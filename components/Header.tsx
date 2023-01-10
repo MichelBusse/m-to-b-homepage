@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/home/Header.module.scss";
+import styles from "../styles/Header.module.scss";
 import Image from "next/image";
-import Software3D from "../three/Software3D";
+import Software3D from "./three/Software3D";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -20,13 +20,13 @@ export default function Header(props: Props) {
 
   let texts = {
     requestButtonText: "Beratungsgespräch vereinbaren!",
-    priceCalculatorButtonText: "App-Preis-Rechner!",
+    priceCalculatorButtonText: "App-Preis-Rechner",
   };
 
   if (router.locale == "en") {
     texts = {
       requestButtonText: "Schedule a free consultation!",
-      priceCalculatorButtonText: "Calculate app's budget!",
+      priceCalculatorButtonText: "Calculate app's budget",
     };
   }
 

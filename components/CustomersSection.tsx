@@ -1,6 +1,6 @@
-import styles from "../../styles/home/CustomersSection.module.scss";
+import styles from "../styles/CustomersSection.module.scss";
 import Image from "next/image";
-import InfiniteHorizontalScroll from "../InfiniteHorizontalScroll";
+import InfiniteHorizontalScroll from "./InfiniteHorizontalScroll";
 
 export default function CustomersSection() {
   return (

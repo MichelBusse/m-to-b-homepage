@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/services/AgileSection.module.scss";
+import styles from "../styles/AgileSection.module.scss";
 import { MdPlayArrow } from "react-icons/md";
 import { useRouter } from "next/router";
 

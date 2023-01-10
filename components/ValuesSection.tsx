@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import styles from "../../styles/home/ValuesSection.module.scss";
+import styles from "../styles/ValuesSection.module.scss";
 
 const ValuesSection = () => {
   const router = useRouter();

@@ -1,11 +1,9 @@
-import styles from "../../styles/services/CrossPlatformSection.module.scss";
-import { BsApple } from "react-icons/bs";
-import { DiAndroid } from "react-icons/di";
+import styles from "../styles/CrossPlatformSection.module.scss";
 import { useRouter } from "next/router";
-import WWWIcon from "../icons/WWWIcon";
-import IOSIcon from "../icons/iOSIcon";
-import AndroidIcon from "../icons/AndroidIcon";
-import DesktopIcon from "../icons/DesktopIcon";
+import WWWIcon from "./icons/WWWIcon";
+import IOSIcon from "./icons/iOSIcon";
+import AndroidIcon from "./icons/AndroidIcon";
+import DesktopIcon from "./icons/DesktopIcon";
 
 export default function CrossPlatformSection() {
   const router = useRouter();

@@ -1,8 +1,7 @@
 import { useState, useEffect, MutableRefObject } from "react";
-import styles from "../../styles/home/ProjectsSection.module.scss";
+import styles from "../styles/ProjectsSection.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { AnchorRefs } from "../../pages/_app";
 
 type Props = {
   projectsRef: MutableRefObject<null>

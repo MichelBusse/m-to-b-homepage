@@ -1,7 +1,7 @@
-import serviceSectionStyles from "../../styles/services/ServiceSection.module.scss";
+import serviceSectionStyles from "../styles/ServiceSection.module.scss";
 import React, { useState, useEffect, MutableRefObject, useRef } from "react";
 import Image from "next/image";
-import TypeWriter from "../TypeWriter";
+import TypeWriter from "./TypeWriter";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 import Typed from "typed.js";
 import Link from "next/link";

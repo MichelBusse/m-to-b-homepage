@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AnchorRefs } from "../pages/_app";
 import Image from "next/image";
-import { style } from "@mui/system";
 
 type Props = {
   anchorRefs: AnchorRefs;
