@@ -10,6 +10,7 @@ import AgileSection from "../components/services/AgileSection";
 import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/home/valuesSection";
 import CrossPlatformSection from "../components/services/CrossPlatformSection";
+import TechnologiesSection from "../components/TechnologiesSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -88,7 +89,7 @@ export default function HomePage(props: Props) {
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <ServicesSection anchorRefs={props.anchorRefs} />
-        <CrossPlatformSection />
+        <TechnologiesSection />
         <AgileSection />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

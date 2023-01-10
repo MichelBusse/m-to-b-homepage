@@ -1,0 +1,107 @@
+.technologiesSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #022636;
+  color: #fff;
+}
+
+.technologiesSection .text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 35em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+.technologiesSection .text:nth-last-of-type(1) {
+  margin-bottom: 6em;
+  margin-top: 6em;
+}
+
+.technologiesSection .text h2 {
+  font-size: 2.2em;
+  font-family: "Roboto Mono";
+}
+.technologiesSection img {
+  object-fit: contain;
+}
+
+.technologiesSection .logoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.technologiesSection .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8em;
+}
+.technologiesSection .logo {
+  position: relative;
+  padding: 1.5em;
+  box-sizing: border-box;
+  margin: 3em;
+  cursor: pointer;
+}
+.technologiesSection .logo:before,
+.technologiesSection .logoCaption:before {
+  content: "";
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffffff;
+}
+.technologiesSection .logoCaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.technologiesSection .logoCaption span {
+  font-size: 1.4em;
+}
+.technologiesSection .logoCaption:before {
+  background: rgba(241, 59, 116);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform-origin: center;
+}
+.technologiesSection .logo:hover .logoCaption {
+  opacity: 1;
+}
+.technologiesSection .logo:hover .logoCaption:before {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+@media screen and (max-width: 470px){
+  .technologiesSection .logo:before,
+  .technologiesSection .logoCaption:before {
+    width: 8em;
+    height: 8em;
+  }
+  .technologiesSection .logo {
+    margin: 1em;
+    padding: 3em;
+  }
+  .technologiesSection .logo img{
+    width: 3em;
+    height: 3em;
+  }
+  .technologiesSection .row {
+    height: 6em;
+  }
+}
