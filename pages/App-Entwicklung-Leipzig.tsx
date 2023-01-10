@@ -153,6 +153,8 @@ export default function HomePage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         button={texts.button}
+        highlightImage={"/images/app-development/app-development-header.png"}
+        highlightImageAlt="App Entwicklung Leipzig"
       />
       <main>
         <ValuesSection />

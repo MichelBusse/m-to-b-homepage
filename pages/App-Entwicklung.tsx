@@ -246,7 +246,7 @@ export default function HomePage(props: Props) {
         text={texts.text}
         button={texts.button}
         highlightImage={"/images/app-development/app-development-header.png"}
-        highlightImageAlt="Individualsoftware"
+        highlightImageAlt="App Entwicklung"
       />
       <main>
         <IconTextSection

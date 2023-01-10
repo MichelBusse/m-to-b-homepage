@@ -221,7 +221,7 @@ export default function HomePage(props: Props) {
         text={texts.text}
         button={texts.button}
         highlightImage={"/images/virtual-reality/virtual-reality-header.png"}
-        highlightImageAlt="Individualsoftware"
+        highlightImageAlt="Virtual & Augmented Reality"
       />
       <main>
         <IconTextSection
