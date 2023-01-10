@@ -58,9 +58,9 @@
 
 .home header {
   margin-left: 10em;
-  max-width: 38em;
+  max-width: 40em;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1405px) {
     margin-left: 5em;
   }
 
@@ -117,8 +117,18 @@
   white-space: pre-wrap;
 }
 
+.buttonWrapper {
+  display: flex;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
 .home header button {
-  margin-top: 1.5rem;
+  margin: 0.5em 1em 0.5em 0;
+}
+
+.home header button.priceCalculatorButton {
+  background: #f0f0f0;
 }
 
 .highlightImageWrapper{

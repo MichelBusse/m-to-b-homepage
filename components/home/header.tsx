@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/home/Header.module.scss";
 import Image from "next/image";
 import Software3D from "../three/Software3D";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 type Props = {
   headline: JSX.Element;
   text: JSX.Element;
-  button: string;
+  priceCalculatorButton?: boolean;
   highlightImage?: string;
   highlightImageAlt?: string;
 };
@@ -14,6 +16,19 @@ type Props = {
 export default function Header(props: Props) {
   const [headerVisible, setHeaderVisible] = useState(false);
   const [squareCount, setSquareCount] = useState(0);
+  const router = useRouter();
+
+  let texts = {
+    requestButtonText: "Beratungsgespräch vereinbaren!",
+    priceCalculatorButtonText: "App-Preis-Rechner!",
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      requestButtonText: "Schedule a free consultation!",
+      priceCalculatorButtonText: "Calculate app's budget!",
+    };
+  }
 
   useEffect(() => {
     if (squareCount == 0) {
@@ -61,13 +76,30 @@ export default function Header(props: Props) {
               <span className={styles.typewriterCursor}>|</span>
             </h1>
             {props.text}
-            <a href="#formular">
-              <button
-                className={`bounce ${headerVisible ? styles.visible : ""}`}
-              >
-                <div>{props.button}</div>
-              </button>
-            </a>
+            <div className={styles.buttonWrapper}>
+              <Link href="#formular">
+                <a>
+                  <button
+                    className={`bounce ${headerVisible ? styles.visible : ""}`}
+                  >
+                    <div>{texts.requestButtonText}</div>
+                  </button>
+                </a>
+              </Link>
+              {props.priceCalculatorButton && (
+                <Link href="/App-Preis-Rechner">
+                  <a>
+                    <button
+                      className={`bounce ${
+                        headerVisible ? styles.visible : ""
+                      } ${styles.priceCalculatorButton}`}
+                    >
+                      <div>{texts.priceCalculatorButtonText}</div>
+                    </button>
+                  </a>
+                </Link>
+              )}
+            </div>
           </header>
         </div>
         <div className={styles.cell}>

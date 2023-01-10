@@ -21,33 +21,34 @@ export default function HomePage(props: Props) {
   const agileRef = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung aus Leipzig</>,
+    headline: <>App-Entwicklung für Berlin</>,
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Wir realisieren Ihre Vorstellungen und
-          entwickeln Ihre App.
+          Professionelle App-Entwicklung für Unternehmen und Endverbraucher -
+          Wir realisieren Ihre Vorstellungen und entwickeln Ihre App.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
+          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
+          Anfrage!
         </p>
       </>
     ),
-    title: "App Entwicklung aus Leipzig - M-to-B",
-    description: "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
-    headlineSection1: "Innovation aus Leipzig",
+    title: "App Entwicklung für Berlin - M-to-B",
+    description:
+      "Wir entwickeln Apps für Berliner Unternehmen. Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
+    headlineSection1: "Innovation für Berlin",
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Als App Agentur aus Leipzig ist es unser Ziel, die neusten
-          Technologien in die Region zu bringen. Ob Mobile Apps für Android und
-          iOS oder Virtual Reality Systeme - wir freuen uns immer auf neue
-          Software-Herausforderungen.
+          Wir entwickeln Apps für Berliner Unternehmen! Ob StartUp oder
+          Dax-Unternehmen, wir möchten bestmögliche Ergebnisse für Ihr
+          Projekt schaffen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Mit großem Interesse entwickeln wir auch an neuen Technologien für die
-          Universität und Uniklinik Leipzig und konnten bereits neue
-          Augmented-Reality-Systeme für die Lehre und den OP entwickeln.
+          Ob iOS, Android oder Web, wir entwickeln Ihre App auf dem neuesten Stand
+          der Technik. Lassen Sie sich von uns überzeugen und schaffen Sie
+          moderne Lösungen.
         </p>
       </>
     ),
@@ -82,14 +83,13 @@ export default function HomePage(props: Props) {
             Modern apps from your region - we realize your ideas and develop
             your app.
           </p>
-          <p>
-            Take advantage of our advisory and send us your request.
-          </p>
+          <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      title: "App Development from Leipzig - M-to-B",
-      description: "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
-      headlineSection1: "Innovation from Leipzig",
+      title: "App Development for Berlin - M-to-B",
+      description:
+        "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Berlin.",
+      headlineSection1: "Innovation for Berlin",
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -134,49 +134,46 @@ export default function HomePage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/App-Entwicklung-Berlin"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/en/App-Entwicklung-Berlin"
         />
         <title key="title">{texts.title}</title>
-        <meta
-            name="description"
-            content={texts.description}
-          />
+        <meta name="description" content={texts.description} />
       </Head>
       <Header
         headline={texts.headline}
         text={texts.text}
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
-        highlightImageAlt="App Entwicklung Leipzig"
+        highlightImageAlt="App Entwicklung Berlin"
       />
       <main>
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <ServiceSection
-        key={1}
-        sectionRef={innovationRef}
-        headline={texts.headlineSection1}
-        text={texts.textSection1}
-        image="/images/app-development/innovation.png"
-        imageAlt={texts.headlineSection1}
-        typewriterKey={"1"}
-      />
-      <ServiceSection
-        key={2}
-        sectionRef={agileRef}
-        headline={texts.headlineSection2}
-        text={texts.textSection2}
-        image="/images/app-development/cross-platform.png"
-        imageAlt={texts.headlineSection2}
-        typewriterKey={"2"}
-      />
+          key={1}
+          sectionRef={innovationRef}
+          headline={texts.headlineSection1}
+          text={texts.textSection1}
+          image="/images/app-development/innovation.png"
+          imageAlt={texts.headlineSection1}
+          typewriterKey={"1"}
+        />
+        <ServiceSection
+          key={2}
+          sectionRef={agileRef}
+          headline={texts.headlineSection2}
+          text={texts.textSection2}
+          image="/images/app-development/cross-platform.png"
+          imageAlt={texts.headlineSection2}
+          typewriterKey={"2"}
+        />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef}/>
+        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>

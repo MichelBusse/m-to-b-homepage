@@ -37,7 +37,6 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    button: "Beratungsgespräch vereinbaren!",
     title: "App Entwicklung - M-to-B",
     description:
       "Entwickeln Sie Ihre App mit uns als App Agentur. Wir bieten professionelle Beratung und individuelle Lösungen für iOS, Android und Cross-Platform.",
@@ -140,7 +139,6 @@ export default function HomePage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      button: "Schedule a free consultation!",
       title: "App Development - M-to-B",
       description:
         "Develop your app with us as an app agency. We offer professional advice and individual solutions for iOS, Android and Cross-Platform.",
@@ -244,7 +242,7 @@ export default function HomePage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        button={texts.button}
+        priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
         highlightImageAlt="App Entwicklung"
       />

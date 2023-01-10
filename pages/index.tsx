@@ -40,7 +40,6 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    button: "Beratungsgespräch vereinbaren!",
     description:
       "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
   };
@@ -67,7 +66,6 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      button: "Schedule a free consultation!",
       description:
         "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality",
     };
@@ -84,7 +82,7 @@ export default function HomePage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        button={texts.button}
+        priceCalculatorButton={true}
       />
       <main>
         <ValuesSection />

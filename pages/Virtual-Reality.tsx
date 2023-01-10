@@ -38,7 +38,6 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    button: "Beratungsgespräch vereinbaren!",
     title: "Virtual & Augmented Reality - M-to-B",
     description:
       "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Wir entwickeln VR und AR Apps!",
@@ -125,7 +124,6 @@ export default function HomePage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      button: "Schedule a free consultation!",
       title: "Virtual & Augmented Reality - M-to-B",
       description:
         "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",
@@ -219,7 +217,6 @@ export default function HomePage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        button={texts.button}
         highlightImage={"/images/virtual-reality/virtual-reality-header.png"}
         highlightImageAlt="Virtual & Augmented Reality"
       />

@@ -81,11 +81,7 @@ export default function HomePage(props: Props) {
               Should your app be visible publicly or only to specific members?
             </>
           ),
-          options: [
-            "Specific members",
-            "Publicly visible",
-            "Not decided yet",
-          ],
+          options: ["Specific members", "Publicly visible", "Not decided yet"],
           icons: [
             <RiUserStarFill key={0} />,
             <MdPublic key={1} />,
@@ -470,9 +466,24 @@ export default function HomePage(props: Props) {
   };
 
   const submit = () => {
-    if (email.trim() == "") {
+    if (
+      email.trim() == "" ||
+      currentFormState[1].length == 0 ||
+      currentFormState[2].length == 0 ||
+      currentFormState[3].length == 0 ||
+      currentFormState[4].length == 0 ||
+      currentFormState[5].length == 0 ||
+      currentFormState[6].length == 0
+    ) {
       toast.error(texts.checkInputs);
       return;
+    }
+
+    for(let i = 1; i < questions.length - 1; i++){
+      if(!questions[i].selectMultiple && currentFormState[i].length == 0){
+        toast.error(texts.checkInputs);
+        return;
+      }
     }
 
     const { minPrice, maxPrice } = calculatePrice();
