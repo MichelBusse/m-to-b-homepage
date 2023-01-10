@@ -4,21 +4,9 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  background: url("/images/Softwareentwicklung/background.jpg");
-  background-position: center;
-  background-size: cover;
   overflow: hidden;
+  background: rgba(2, 38, 54);
 }
-.technologiesSection .blueCurtain {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(2, 38, 54, 0.8);
-  z-index: 0;
-}
-
 .technologiesSection .text {
   position: relative;
   z-index: 1;
