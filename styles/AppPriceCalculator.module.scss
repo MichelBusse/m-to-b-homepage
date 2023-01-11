@@ -123,6 +123,7 @@
   user-select: none;
   font-size: 2em;
   padding: 0 1em;
+  pointer-events: none;
 
   @media screen and (max-width: 750px) {
     padding: 0 0.5em;
@@ -131,9 +132,11 @@
 
 .leftButtonWrapper {
   cursor: pointer;
+  pointer-events: all;
 }
 .rightButtonWrapper {
   cursor: pointer;
+  pointer-events: all;
 }
 .inputWrapper {
   display: flex;

@@ -1,4 +1,6 @@
 User-Agent: *
 Allow: /
+Disallow: /App-Preis-Rechner-Callback
+Disallow: /en/App-Preis-Rechner-Callback
 
 Sitemap: https://m-to-b.com/sitemap.xml
