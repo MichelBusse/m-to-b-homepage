@@ -19,7 +19,7 @@ export default function AppPriceCalculatorCallbackPage() {
     mailSuccess: "Erfolgreich gesendet!",
     mailError: "Senden fehlgeschlagen",
     description: "Jetzt unser kostenloses Beratungsgespräch anfragen",
-    headline: "Nutze jetzt unser kostenloses 30 minütiges Beratungsgespräch!",
+    headline: "Nutzen Sie jetzt unser kostenloses 30 minütiges Beratungsgespräch!",
     send: "Senden",
   };
 
