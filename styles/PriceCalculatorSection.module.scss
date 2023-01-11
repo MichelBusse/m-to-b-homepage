@@ -1,0 +1,50 @@
+.priceCalculatorSection {
+    width: 100%;
+    color: #ffffff;
+    background-color: #022636;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 6em 0;
+}
+
+.icon {
+    fill: #ffffff;
+    stroke: #ffffff;
+    width: 14em;
+    height: 14em;
+    margin: 1em 2em;
+
+    @media screen and (max-width: 749px) {
+        width: 10em;
+        height: 10em;
+    }
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30em;
+    max-width: 100%;
+    margin: 0 2em;
+}
+.textWrapper h2{
+    margin-bottom: 0em;
+}
+.textWrapper p{
+    margin: 1.6em 0;
+}
+.textWrapper button{
+    color: #022636;
+    transition: color 0.2s ease-in-out;
+}
+.textWrapper button:hover{
+    color: #ffffff;
+}
+.textWrapper button::after{
+    background: #ffffff;
+}

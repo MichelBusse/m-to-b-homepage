@@ -42,9 +42,9 @@ const logos = [
   </div>,
   <div className={styles.logo} key={7}>
     <div className={styles.logoCaption}>
-      <span>MongoDB</span>
+      <span>Supabase</span>
     </div>
-    <Image src="/images/technologies/mongodb.svg" width={100} height={100} alt="MongoDB Logo" />
+    <Image src="/images/technologies/supabase.png" width={100} height={100} alt="Supabase Logo" />
   </div>,
   <div className={styles.logo} key={8}>
     <div className={styles.logoCaption}>

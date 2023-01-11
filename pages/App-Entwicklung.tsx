@@ -4,20 +4,18 @@ import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import IconTextSection from "../components/IconTextSection";
-import { FaEdit, FaWrench } from "react-icons/fa";
-import { BsCodeSlash } from "react-icons/bs";
 import ServiceSection from "../components/ServiceSection";
 import { useRef } from "react";
 import ProjectsSection from "../components/ProjectsSection";
 import CustomersSection from "../components/CustomersSection";
 import CrossPlatformSection from "../components/CrossPlatformSection";
+import PriceCalculatorSection from "../components/PriceCalculatorSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function HomePage(props: Props) {
+export default function AppDevelopmentPage(props: Props) {
   const router = useRouter();
 
   const virtualRealityRef = useRef(null);
@@ -247,14 +245,7 @@ export default function HomePage(props: Props) {
         highlightImageAlt="App Entwicklung"
       />
       <main>
-        <IconTextSection
-          icon1={<FaEdit />}
-          icon2={<BsCodeSlash />}
-          icon3={<FaWrench />}
-          label1={texts.concept}
-          label2={texts.development}
-          label3={texts.support}
-        />
+        <PriceCalculatorSection />
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection

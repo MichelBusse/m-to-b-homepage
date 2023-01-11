@@ -3,18 +3,18 @@ import ContactSection from "../components/ContactSection";
 import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import { AnchorRefs } from "./_app";
-import ValuesSection from "../components/ValuesSection";
 import { useRouter } from "next/router";
 import ProjectsSection from "../components/ProjectsSection";
 import CustomersSection from "../components/CustomersSection";
 import { useRef } from "react";
 import ServiceSection from "../components/ServiceSection";
+import PriceCalculatorSection from "../components/PriceCalculatorSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function HomePage(props: Props) {
+export default function AppDevelopmentBerlinPage(props: Props) {
   const router = useRouter();
 
   const innovationRef = useRef(null);
@@ -152,7 +152,7 @@ export default function HomePage(props: Props) {
         highlightImageAlt="App Entwicklung Berlin"
       />
       <main>
-        <ValuesSection />
+        <PriceCalculatorSection />
         <CustomShapeDivider flip={true} />
         <ServiceSection
           key={"berlin1"}

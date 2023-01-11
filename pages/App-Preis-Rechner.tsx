@@ -27,12 +27,9 @@ import {
 } from "react-icons/bs";
 import { toast } from "react-toastify";
 import TagManager from "react-gtm-module";
+import BudgetIcon from "../components/icons/BudgetIcon";
 
-type Props = {
-  anchorRefs: AnchorRefs;
-};
-
-export default function HomePage(props: Props) {
+export default function AppPriceCalculatorPage() {
   const router = useRouter();
   const formWrapperRef = useRef(null);
   const [currentFormIndex, setCurrentFormIndex] = useState(0);
@@ -535,6 +532,7 @@ export default function HomePage(props: Props) {
           className={`${styles.formWrapper} ${transitionClass}`}
           ref={formWrapperRef}
         >
+          {currentFormIndex == 0 && <div className={styles.iconWrapper}><BudgetIcon className={styles.icon}/></div>}
           <h2>{questions[currentFormIndex].question}</h2>
           {currentFormIndex == 0 && <p>{texts.introText}</p>}
           {currentFormIndex == questions.length - 1 && (

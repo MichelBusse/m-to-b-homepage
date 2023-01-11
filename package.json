@@ -47,7 +47,8 @@
     "include": [
       "components",
       "hooks",
-      "styles"
+      "styles",
+      "public"
     ],
     "exclude": [],
     "entrypoints": []

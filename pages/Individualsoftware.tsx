@@ -18,7 +18,7 @@ type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function HomePage(props: Props) {
+export default function IndividualSoftwarePage(props: Props) {
   const router = useRouter();
 
   const individualsoftwareRef = useRef(null);

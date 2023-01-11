@@ -18,7 +18,7 @@ type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function HomePage(props: Props) {
+export default function VirtualRealityDevelopmentPage(props: Props) {
   const router = useRouter();
 
   const virtualRealityRef = useRef(null);
@@ -26,7 +26,7 @@ export default function HomePage(props: Props) {
   const agencyRef = useRef(null);
 
   let texts = {
-    headline: <>Virtual & Augmented Reality</>,
+    headline: <>Virtual & Augmented Reality Entwicklung</>,
     text: (
       <>
         <p>
@@ -39,7 +39,7 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    title: "Virtual & Augmented Reality - M-to-B",
+    title: "Virtual & Augmented Reality Entwicklung - M-to-B",
     description:
       "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Wir entwickeln VR und AR Apps!",
     concept: "Konzeption und Planung",
@@ -62,7 +62,7 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    virtualRealityAlt: "Virtual Reality",
+    virtualRealityAlt: "Virtual Reality Entwicklung",
     augmentedRealityHeadline: "Was ist Augmented Reality (AR)?",
     augmentedRealityText: (
       <>
@@ -88,7 +88,7 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    augmentedRealityAlt: "Augmented Reality",
+    augmentedRealityAlt: "Augmented Reality Entwicklung",
     connection: "Verbesserte Kundeninteraktion und -bindung",
     efficient: "Verbessert die Effizienz und Leistung",
     expand: "Neue Märkte erschließen",
@@ -114,7 +114,7 @@ export default function HomePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>Virtual & Augmented Reality</>,
+      headline: <>Virtual & Augmented Reality Development</>,
       text: (
         <>
           <p>
@@ -124,7 +124,7 @@ export default function HomePage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      title: "Virtual & Augmented Reality - M-to-B",
+      title: "Virtual & Augmented Reality Development - M-to-B",
       description:
         "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",
       concept: "Conception and Planning",
@@ -146,7 +146,7 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      virtualRealityAlt: "Virtual Reality",
+      virtualRealityAlt: "Virtual Reality Development",
       augmentedRealityHeadline: "What is Augmented Reality (AR)?",
       augmentedRealityText: (
         <>
@@ -174,7 +174,7 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      augmentedRealityAlt: "Augmented Reality",
+      augmentedRealityAlt: "Augmented Reality Development",
       connection: "Improved customer interaction and engagement",
       efficient: "Improve Efficiency and Performance",
       expand: "Expansion into new markets",
@@ -204,12 +204,12 @@ export default function HomePage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/Virtual-Reality"
+          href="https://m-to-b.com/Virtual-Reality-Entwicklung"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/Virtual-Reality"
+          href="https://m-to-b.com/en/Virtual-Reality-Entwicklung"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

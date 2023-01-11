@@ -25,7 +25,7 @@ export default function Navbar(props: Props) {
       case "/Individualsoftware":
         setActiveMenuItem("software");
         break;
-      case "/Virtual-Reality":
+      case "/Virtual-Reality-Entwicklung":
         setActiveMenuItem("vr");
         break;
       default:
@@ -139,7 +139,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "vr" ? styles.active : ""}>
-              <Link href="/Virtual-Reality">
+              <Link href="/Virtual-Reality-Entwicklung">
                 <a>{texts.vr}</a>
               </Link>
             </li>
@@ -214,7 +214,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/Virtual-Reality">
+          <Link href="/Virtual-Reality-Entwicklung">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
