@@ -16,9 +16,10 @@ export default async function handler(
     to: "kontakt@m-to-b.com",
     subject: `Preis-Rechner Anfrage Beratungsgespräch`,
     text:
+      "Anfrage über Preis-Rechner-Callback für Beratungsgespräch: \n\n" +
       "E-Mail: " + req.body.email + "\n" +
-      "Telefom: " + req.body.phone + "\n" +
-      "Preis-Rechner-Tag:" + req.body.tag
+      "Telefon: " + req.body.phone + "\n" +
+      "Preis-Rechner-Tag: " + req.body.tag
   };
 
   let mailRes = await new Promise((resolve, reject) => {
