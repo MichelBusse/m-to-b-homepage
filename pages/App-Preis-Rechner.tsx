@@ -493,7 +493,7 @@ export default function AppPriceCalculatorPage() {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: email, minPrice, maxPrice }),
+      body: JSON.stringify({ email: email, minPrice, maxPrice, language: router.locale, }),
     }).then((res) => {
       if (res.status === 200) {
         toast.success(texts.mailSuccess);
