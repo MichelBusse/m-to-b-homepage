@@ -20,7 +20,7 @@ export default function AppPriceCalculatorCallbackPage() {
     mailError: "Senden fehlgeschlagen",
     description: "Jetzt unser kostenloses Beratungsgespräch anfragen",
     headline: "Nutzen Sie jetzt unser kostenloses 30 minütiges Beratungsgespräch!",
-    send: "Senden",
+    send: "Jetzt anfragen!",
   };
 
   if (router.locale == "en") {
@@ -31,7 +31,7 @@ export default function AppPriceCalculatorCallbackPage() {
       mailError: "Error: Could not send mail",
       description: "Request a free consultation",
       headline: "Get a free 30 minute consultation now",
-      send: "Send",
+      send: "Send request",
     };
   }
 
@@ -117,7 +117,7 @@ export default function AppPriceCalculatorCallbackPage() {
               onClick={() => submit()}
               sx={{background : "#ffffff", width : "100%", margin: "0.5em 0", fontSize: "1.2em", padding: "0.5em", fontWeight: "bold", textTransform: "none"}}
               variant="contained"
-            >Jetzt anfragen!</Button>
+            >{texts.send}</Button>
           </div>
         </div>
       </main>

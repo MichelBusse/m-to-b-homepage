@@ -100,7 +100,7 @@ export default async function handler(
       from: "kontakt@m-to-b.com",
       to: req.body.email,
       bcc: "kontakt@m-to-b.com",
-      subject: `Preisabschätzung für Ihre App - M-to-B`,
+      subject: `Price estimation for your app - M-to-B`,
       text:
         "Good day,\n\n" +
         "we look forward to helping you plan your app.\n" +
