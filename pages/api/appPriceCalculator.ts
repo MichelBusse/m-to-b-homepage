@@ -65,7 +65,7 @@ export default async function handler(
       " €</strong></p>" +
       "<p>Beachten Sie bitte, dass dieses Budget nur eine grobe Vorabschätzung mit wenigen Angaben ist.<br/>" +
       "<p>Gerne bieten wir Ihnen ein kostenloses 30 minütiges Beratungsgespräch an, in dem Sie von einem Experten genau zu Ihren Vorstellungen beraten werden und am Ende ein unverbindliches Angebot mit den genauen Kosten erhalten können.</p>" +
-      `<a href='https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag}'><button style='font-size: inherit; padding: 8px; background-color: white; color: black; font-weight: bold; outline: none; border: none;'>Jetzt kostenloses Beratungsgespräch vereinbaren!</button></a>` +
+      `<a href='https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag}'><button style='font-size: inherit; padding: 8px; background-color: #022636; color: white; font-weight: bold; outline: none; border: none;'>Jetzt kostenloses Beratungsgespräch vereinbaren!</button></a>` +
       "<p>Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie ihr den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.</p>" +
       "<p>Für alle weiteren Fragen helfen wir Ihnen sehr gerne unter der Adresse kontakt@m-to-b.com weiter. Schicken Sie uns dafür einfach eine Nachricht mit Ihrem Anliegen.</p>" +
       "<p>Wir wünschen Ihnen viel Erfolg im weiteren Verlauf Ihres Projekt,<br/>" +
@@ -147,7 +147,7 @@ export default async function handler(
         " €</strong></p>" +
         "<p>Beachten Sie bitte, dass dieses Budget nur eine grobe Vorabschätzung mit wenigen Angaben ist.<br/>" +
         "<p>Gerne bieten wir Ihnen ein kostenloses 30 minütiges Beratungsgespräch an, in dem Sie von einem Experten genau zu Ihren Vorstellungen beraten werden und am Ende ein unverbindliches Angebot mit den genauen Kosten erhalten können.</p>" +
-        `<a href='https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag}'><button style='font-size: inherit; padding: 8px; background-color: #022636; color: #ffffff; font-weight: bold; outline: none;'>Jetzt kostenloses Beratungsgespräch vereinbaren!</button></a>` +
+        `<a href='https://m-to-b.com/en/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag}'><button style='font-size: inherit; padding: 8px; background-color: #022636; color: white; font-weight: bold; outline: none; border: none;'>Jetzt kostenloses Beratungsgespräch vereinbaren!</button></a>` +
         "<p>Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie ihr den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.</p>" +
         "<p>Für alle weiteren Fragen helfen wir Ihnen sehr gerne unter der Adresse kontakt@m-to-b.com weiter. Schicken Sie uns dafür einfach eine Nachricht mit Ihrem Anliegen.</p>" +
         "<p>Wir wünschen Ihnen viel Erfolg im weiteren Verlauf Ihres Projekt,<br/>" +
