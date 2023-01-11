@@ -11,7 +11,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const tag = Math.round(Math.random() * 1000) 
+  const tag = Math.round(Math.random() * 1000);
 
   const mailData = {
     from: "kontakt@m-to-b.com",
@@ -28,7 +28,8 @@ export default async function handler(
       " €\n\n" +
       "Beachten Sie bitte, dass dieses Budget nur eine grobe Vorabschätzung mit wenigen Angaben ist.\n" +
       "Gerne bieten wir Ihnen ein kostenloses 30 minütiges Beratungsgespräch an, in dem Sie von einem Experten genau zu Ihren Vorstellungen beraten werden und am Ende ein unverbindliches Angebot mit den genauen Kosten erhalten können.\n\n" +
-      `Jetzt kostenloses Beratungsgespräch vereinbaren! https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag} \n\n` + 
+      "Jetzt kostenloses Beratungsgespräch vereinbaren:\n" +
+      `https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag} \n\n` +
       "Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie ihr den Entwicklungs-Aufwand etwas genauer ausarbeiten und abschätzen können.\n\n" +
       "Für alle weiteren Fragen helfen wir Ihnenn sehr gerne unter der Adresse kontakt@m-to-b.com weiter. Schicken Sie uns dafür einfach eine Nachricht mit Ihrem Anliegen.\n\n\n" +
       "Wir wünschen Ihnen viel Erfolg im weiteren Verlauf Ihres Projekt,\n" +
