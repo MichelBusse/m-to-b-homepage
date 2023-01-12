@@ -2,6 +2,7 @@ import { useState, useEffect, MutableRefObject } from "react";
 import styles from "../styles/ProjectsSection.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {
   projectsRef: MutableRefObject<null>
@@ -13,7 +14,7 @@ export default function ProjectsSection(props: Props) {
   let texts = {
     headline: "Referenzen",
     subHeadline: "Eine Auswahl unserer Projekte:",
-    project1Name: "Managementsoftware",
+    project1Name: "Management Software",
     project1Company: "Special-Solutions GmbH",
     project2Name: "Konferenzsoftware",
     project2Company: "ZLS Leipzig",
@@ -73,10 +74,11 @@ export default function ProjectsSection(props: Props) {
             id={styles.project1}
             style={{ transitionDelay: "0.2s" }}
           >
-            <a href="https://special-s.de" target="_blank" rel="noreferrer">
+            <Link href={"/projects/Management-Software"}>
+            <a>
               <Image
                 className={styles.projectBackgroundImage}
-                alt="Webdesign Special Solutions"
+                alt={styles.project1Name}
                 src="/images/projects/project1.jpg"
                 width={600}
                 height={746}
@@ -87,7 +89,7 @@ export default function ProjectsSection(props: Props) {
                   <p>{texts.project1Company}</p>
                 </div>
               </div>
-            </a>
+            </a></Link>
           </div>
           <div
             className={

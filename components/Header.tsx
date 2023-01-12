@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 type Props = {
   headline: JSX.Element;
+  topHeadline?: JSX.Element;
   text: JSX.Element;
   priceCalculatorButton?: boolean;
   highlightImage?: string;
@@ -71,6 +72,7 @@ export default function Header(props: Props) {
         </div>
         <div className={styles.cell}>
           <header id={styles.header}>
+            {props.topHeadline && <span className={styles.topHeadline}>{props.topHeadline}</span>}
             <h1 className={headerVisible ? styles.visible : ""}>
               {props.headline}{" "}
               <span className={styles.typewriterCursor}>|</span>

@@ -72,6 +72,26 @@ h1,h2,h3{
   font-family: "Roboto";
   font-weight: 700;
 }
+h1 {
+  font-family: "Roboto";
+  position: relative;
+  text-align: left;
+  font-size: 2.8em;
+  white-space: nowrap;
+  color: rgb(1, 80, 107);
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+
+  @media screen and (max-width: 950px) {
+    br{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2em;
+  }
+}
 h4,h5{
   font-family: "Roboto";
 }
