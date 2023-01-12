@@ -10,7 +10,7 @@ const QuoteSection = (props: Props) => {
     <section className={styles.quoteSection}>
       <div className={styles.text}>
         <blockquote>
-          <p className={styles.quote}>"{props.quote}"</p>
+          <p className={styles.quote}>&quot;{props.quote}&quot;</p>
         </blockquote>
         <p className={styles.source}>- {props.source}</p>
       </div>
