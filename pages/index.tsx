@@ -227,7 +227,7 @@ export default function HomePage(props: Props) {
           image="/images/virtual-reality/virtual-reality-header.png"
           imageAlt={texts.headlineSection3}
           typewriterKey={"home3"}
-          siteLink={"/Virtual-Reality"}
+          siteLink={"/Virtual-Reality-Entwicklung"}
           buttonDelay={"1.2s"}
         />
         <TechnologiesSection />
