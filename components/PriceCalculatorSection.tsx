@@ -32,7 +32,9 @@ const PriceCalculatorSection = () => {
         <p>{texts.text}</p>
         <Link href={"/App-Preis-Rechner"}>
           <a>
-            <button className="bounce">{texts.buttonText}</button>
+            <button className="bounce">
+              <div>{texts.buttonText}</div>
+            </button>
           </a>
         </Link>
       </div>

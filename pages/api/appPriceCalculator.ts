@@ -16,7 +16,7 @@ export default async function handler(
   let mailData = {
     from: "kontakt@m-to-b.com",
     to: req.body.email,
-    bcc: "kontakt@m-to-b.com",
+    bcc: "preisrechner@m-to-b.com",
     subject: `Preisabschätzung für Ihre App - M-to-B`,
     text:
       "Guten Tag,\n\n" +
@@ -30,7 +30,7 @@ export default async function handler(
       "Gerne bieten wir Ihnen ein kostenloses 30 minütiges Beratungsgespräch an, in dem Sie von einem Experten genau zu Ihren Vorstellungen beraten werden und am Ende ein unverbindliches Angebot mit den genauen Kosten erhalten können.\n\n" +
       "Jetzt kostenloses Beratungsgespräch vereinbaren:\n" +
       `https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag} \n\n` +
-      "Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie ihr den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.\n\n" +
+      "Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.\n\n" +
       "Für alle weiteren Fragen helfen wir Ihnen sehr gerne unter der Adresse kontakt@m-to-b.com weiter. Schicken Sie uns dafür einfach eine Nachricht mit Ihrem Anliegen.\n\n" +
       "Wir wünschen Ihnen viel Erfolg im weiteren Verlauf Ihres Projekt,\n" +
       "Mit freundlichen Grüßen,\n" +
@@ -51,7 +51,13 @@ export default async function handler(
       "7. Berücksichtigen Sie regelmäßige Updates und Wartung:\n" +
       "Wird es regelmäßige Updates oder Wartung der App geben, die in den Preis einbezogen werden müssen?\n\n" +
       "8. Berücksichtigen Sie die Leistungsanforderungen:\n" +
-      "Gibt es besondere Anforderungen an die Leistung der App, wie zum Beispiel hohe Verarbeitungsgeschwindigkeit? Dies kann den Preis erhöhen.\n\n",
+      "Gibt es besondere Anforderungen an die Leistung der App, wie zum Beispiel hohe Verarbeitungsgeschwindigkeit? Dies kann den Preis erhöhen.\n\n" +
+      "M-to-B Software\n" +
+      "Inh. Michel Busse\n" +
+      "Kirchberger Str. 62\n" +
+      "08107 Kirchberg\n" +
+      "www.m-to-b.com\n" +
+      "+49 160 98709043",
     html:
       "<body>" +
       "<div style='font-size: 14px; font-weight: normal; font-family: Roboto, Helvetica, Aral, sans-serif;'>" +
@@ -66,7 +72,7 @@ export default async function handler(
       "<p>Beachten Sie bitte, dass dieses Budget nur eine grobe Vorabschätzung mit wenigen Angaben ist.<br/>" +
       "<p>Gerne bieten wir Ihnen ein kostenloses 30 minütiges Beratungsgespräch an, in dem Sie von einem Experten genau zu Ihren Vorstellungen beraten werden und am Ende ein unverbindliches Angebot mit den genauen Kosten erhalten können.</p>" +
       `<a href='https://m-to-b.com/App-Preis-Rechner-Callback?mail=${req.body.email}&tag=${tag}'><button style='font-size: inherit; padding: 8px; background-color: #022636; color: white; font-weight: bold; outline: none; border: none;'>Jetzt kostenloses Beratungsgespräch vereinbaren!</button></a>` +
-      "<p>Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie ihr den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.</p>" +
+      "<p>Außerdem geben wir Ihnen am Ende dieser Mail noch einen Leitfaden, wie Sie den Entwicklungs-Aufwand Ihrer App etwas genauer ausarbeiten und abschätzen können.</p>" +
       "<p>Für alle weiteren Fragen helfen wir Ihnen sehr gerne unter der Adresse kontakt@m-to-b.com weiter. Schicken Sie uns dafür einfach eine Nachricht mit Ihrem Anliegen.</p>" +
       "<p>Wir wünschen Ihnen viel Erfolg im weiteren Verlauf Ihres Projekt,<br/>" +
       "Mit freundlichen Grüßen,<br/>" +
@@ -90,12 +96,17 @@ export default async function handler(
       "<li>Berücksichtigen Sie die Leistungsanforderungen:<br/>" +
       "Gibt es besondere Anforderungen an die Leistung der App, wie zum Beispiel hohe Verarbeitungsgeschwindigkeit? Dies kann den Preis erhöhen.</li>" +
       "</ol>" +
+      "<p>M-to-B Software<br/>" +
+      "Inh. Michel Busse<br/>" +
+      "Kirchberger Str. 62<br/>" +
+      "08107 Kirchberg<br/>" +
+      "www.m-to-b.com<br/>" +
+      "+49 160 98709043</p>" +
       "</div>" +
       "</body>",
   };
-  
 
-  if(req.body.language == "en"){
+  if (req.body.language == "en") {
     mailData = {
       from: "kontakt@m-to-b.com",
       to: req.body.email,
@@ -134,7 +145,13 @@ export default async function handler(
         "7. Consider regular updates and maintenance:\n" +
         "Will there be regular updates or maintenance to the app that need to be factored into the price?\n\n" +
         "8. Consider the performance requirements:\n" +
-        "Are there special requirements for the performance of the app, such as high processing speed? This can increase the price.\n\n",
+        "Are there special requirements for the performance of the app, such as high processing speed? This can increase the price.\n\n" +
+        "M-to-B Software\n" +
+        "Owner Michel Busse\n" +
+        "Kirchberger Str. 62\n" +
+        "08107 Kirchberg\n" +
+        "www.m-to-b.com\n" +
+        "+49 160 98709043",
       html:
         "<body>" +
         "<div style='font-size: 14px; font-weight: normal; font-family: Roboto, Helvetica, Aral, sans-serif;'>" +
@@ -173,6 +190,12 @@ export default async function handler(
         "<li>Consider the performance requirements:<br/>" +
         "Are there special requirements for the performance of the app, such as high processing speed? This can increase the price.</li>" +
         "</ol>" +
+        "<p>M-to-B Software<br/>" +
+        "Owner Michel Busse<br/>" +
+        "Kirchberger Str. 62<br/>" +
+        "08107 Kirchberg<br/>" +
+        "www.m-to-b.com<br/>" +
+        "+49 160 98709043</p>" +
         "</div>" +
         "</body>",
     };
