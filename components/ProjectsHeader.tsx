@@ -1,5 +1,4 @@
-import styles from "../../styles/ProjectsHeader.module.scss";
-import { useRouter } from "next/router";
+import styles from "../styles/ProjectsHeader.module.scss";
 
 type Props = {
   headline: JSX.Element;
