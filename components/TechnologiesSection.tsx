@@ -48,9 +48,9 @@ const logos = [
   </div>,
   <div className={styles.logo} key={8}>
     <div className={styles.logoCaption}>
-      <span>Docker</span>
+      <span>Unity</span>
     </div>
-    <Image src="/images/technologies/docker.webp" width={100} height={100} alt="Docker Logo"/>
+    <Image src="/images/technologies/unity.png" width={100} height={100} alt="Unity Logo"/>
   </div>,
   <div className={styles.logo} key={9}>
     <div className={styles.logoCaption}>

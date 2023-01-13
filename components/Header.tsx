@@ -48,7 +48,7 @@ export default function Header(props: Props) {
 
   return (
     <>
-      <section id="home" className={styles.home}>
+      <section className={styles.home}>
         <div className={styles.squareContainer}>
           {Array.from(Array(18).keys()).map((index) => {
             return (

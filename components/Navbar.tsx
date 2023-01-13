@@ -17,7 +17,7 @@ export default function Navbar(props: Props) {
   const [menuInitialized, setMenuInitialized] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
 
-  const setActiveMenuItemOfPage = useCallback(() => {
+  const setActiveMenuItemOfPage = useEffect(() => {
     switch (router.asPath) {
       case "/App-Entwicklung":
         setActiveMenuItem("apps");
@@ -28,6 +28,9 @@ export default function Navbar(props: Props) {
       case "/Virtual-Reality-Entwicklung":
         setActiveMenuItem("vr");
         break;
+      case "/Referenzen":
+        setActiveMenuItem("projects");
+        break;
       default:
         setActiveMenuItem("");
         break;
@@ -35,31 +38,6 @@ export default function Navbar(props: Props) {
   }, [router.asPath]);
 
   useEffect(() => {
-    const centerPos = (element: HTMLElement) =>
-      element.offsetTop + window.innerHeight * 0.5;
-
-    const onScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-
-      if (props.anchorRefs) {
-        if (
-          props.anchorRefs.contactRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.contactRef.current)
-        ) {
-          setActiveMenuItem("contact");
-        } else if (
-          props.anchorRefs.projectsRef.current &&
-          scrollPosition > centerPos(props.anchorRefs.projectsRef.current)
-        ) {
-          setActiveMenuItem("projects");
-        } else {
-          setActiveMenuItemOfPage();
-        }
-      }
-    };
-
-    onScroll();
-
     if (menuActive) {
       document.body.style.overflowY = "hidden";
     } else {
@@ -72,11 +50,9 @@ export default function Navbar(props: Props) {
       }
     };
 
-    window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onResize);
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
   }, [menuActive, props.anchorRefs, router.asPath, setActiveMenuItemOfPage]);
@@ -114,7 +90,7 @@ export default function Navbar(props: Props) {
         }
       >
         <div className={styles.logoLinkWrapper}>
-          <Link href="/#home">
+          <Link href="/">
             <a>
               <div className={styles.logo}>
                 <div
@@ -144,7 +120,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "projects" ? styles.active : ""}>
-              <Link href="/#projects">
+              <Link href="/Referenzen">
                 <a>{texts.projects}</a>
               </Link>
             </li>
@@ -225,7 +201,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/#projects">
+          <Link href="/Referenzen">
             <a>
               <li
                 onClick={() => setMenuActive(false)}

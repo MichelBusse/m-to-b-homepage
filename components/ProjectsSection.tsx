@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 type Props = {
-  projectsRef: MutableRefObject<null>
-}
+  projectsRef: MutableRefObject<null>;
+};
 
 export default function ProjectsSection(props: Props) {
   const router = useRouter();
@@ -15,12 +15,12 @@ export default function ProjectsSection(props: Props) {
     headline: "Referenzen",
     subHeadline: "Eine Auswahl unserer Projekte:",
     project1Name: "Management Software",
-    project1Company: "Special-Solutions GmbH",
-    project2Name: "Konferenzsoftware",
-    project2Company: "ZLS Leipzig",
-    project3Name: "Mixed Reality im OP",
+    project1Company: "Special Solutions GmbH",
+    project2Name: "ERP-Software",
+    project2Company: "Schülertreff GbR",
+    project3Name: "AR im OP",
     project3Company: "UPMC Pittsburgh",
-    project4Name: 'Immobilien-Website',
+    project4Name: "Immobilien-Website",
     project4Company: "K&S GmbH",
   };
 
@@ -28,32 +28,37 @@ export default function ProjectsSection(props: Props) {
     texts = {
       headline: "Projects",
       subHeadline: "A selection of our projects:",
-      project1Name: "Managementsoftware",
-      project1Company: "Special-Solutions GmbH",  
-      project2Name: "Conference-Software",
-      project2Company: "ZLS Leipzig",
-      project3Name: "Mixed Reality in Surgery",
+      project1Name: "Management Software",
+      project1Company: "Special Solutions GmbH",
+      project2Name: "ERP Software",
+      project2Company: "Schülertreff GbR",
+      project3Name: "AR in Surgery",
       project3Company: "UPMC Pittsburgh",
-      project4Name: 'Real Estate Website',
+      project4Name: "Real Estate Website",
       project4Company: "K&S GmbH",
     };
   }
 
   const [active, setActive] = useState("");
 
-  const centerPos = (element : HTMLElement) =>
+  const centerPos = (element: HTMLElement) =>
     element.offsetTop + element.offsetHeight * 0.35;
 
   useEffect(() => {
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
 
-      if (props.projectsRef.current && centerPos(props.projectsRef.current) < scrollPosition) {
+      if (
+        props.projectsRef.current &&
+        centerPos(props.projectsRef.current) < scrollPosition
+      ) {
         setActive(styles.active);
       }
     };
 
     window.addEventListener("scroll", onScroll);
+
+    onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [props.projectsRef]);
@@ -75,21 +80,23 @@ export default function ProjectsSection(props: Props) {
             style={{ transitionDelay: "0.2s" }}
           >
             <Link href={"/projects/Management-Software"}>
-            <a>
-              <Image
-                className={styles.projectBackgroundImage}
-                alt={styles.project1Name}
-                src="/images/projects/project1.jpg"
-                width={600}
-                height={746}
-              />
-              <div className={styles.captionWrapper}>
-                <div className={styles.caption}>
-                  <h3>{texts.project1Name}</h3>
-                  <p>{texts.project1Company}</p>
+              <a>
+                <Image
+                  className={styles.projectBackgroundImage}
+                  alt={styles.project1Name}
+                  src="/images/projects/project1/project1-header.png"
+                  layout="fill"
+                  objectFit="cover"
+                  
+                />
+                <div className={styles.captionWrapper}>
+                  <div className={styles.caption}>
+                    <h3>{texts.project1Name}</h3>
+                    <p>{texts.project1Company}</p>
+                  </div>
                 </div>
-              </div>
-            </a></Link>
+              </a>
+            </Link>
           </div>
           <div
             className={
@@ -98,25 +105,23 @@ export default function ProjectsSection(props: Props) {
             id={styles.project2}
             style={{ transitionDelay: "0.4s" }}
           >
-            <a
-              href="https://conference.uni-leipzig.de/buko2021/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                className={styles.projectBackgroundImage}
-                alt="Webdesign Bundeskonferenz für Lehrer:innenbildung"
-                src="/images/projects/project2.jpg"
-                width={600}
-                height={746}
-              />
-              <div className={styles.captionWrapper}>
-                <div className={styles.caption}>
-                  <h3>{texts.project2Name}</h3>
-                  <p>{texts.project2Company}</p>
+            <Link href={"/projects/ERP-Software"}>
+              <a>
+                <Image
+                  className={styles.projectBackgroundImage}
+                  alt={styles.project2Name}
+                  src="/images/projects/project2/project2-header.png"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className={styles.captionWrapper}>
+                  <div className={styles.caption}>
+                    <h3>{texts.project2Name}</h3>
+                    <p>{texts.project2Company}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div
             className={
@@ -125,25 +130,23 @@ export default function ProjectsSection(props: Props) {
             id={styles.project3}
             style={{ transitionDelay: "0.6s" }}
           >
-            <a
-              href="https://www.linkedin.com/feed/update/urn:li:activity:6936760153329315840"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                className={styles.projectBackgroundImage}
-                alt="Mixed Reality im OP"
-                src="/images/projects/project3.jpg"
-                width={600}
-                height={746}
-              />
-              <div className={styles.captionWrapper}>
-                <div className={styles.caption}>
-                  <h3>{texts.project3Name}</h3>
-                  <p>{texts.project3Company}</p>
+            <Link href={"/projects/Augmented-Reality-Entwicklung"}>
+              <a>
+                <Image
+                  className={styles.projectBackgroundImage}
+                  alt="Mixed Reality im OP"
+                  src="/images/projects/project3/project3-2.jpg"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className={styles.captionWrapper}>
+                  <div className={styles.caption}>
+                    <h3>{texts.project3Name}</h3>
+                    <p>{texts.project3Company}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </Link>
           </div>
           <div
             className={

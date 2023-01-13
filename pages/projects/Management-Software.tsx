@@ -47,11 +47,11 @@ export default function ManagementSoftwarePage(props: Props) {
           der zugehörigen Arbeiter des gleichen Projekts.
         </p>
         <p>
-          Außerdem wurden die Stundenzettel mit im System digitalisiert und
-          persönliche Daten sowie Dokumente können nun selbstständig von den
-          Mitarbeitern in das Firmensystem eingetragen werden. Weitere
-          Funktionen wie die Generierung von Auswertungen und Erinnerungsmails
-          bei Planungsänderung ergänzen das Programm weiterhin.
+          Außerdem wurden die Stundenzettel digitalisiert und persönliche Daten
+          sowie Dokumente können nun selbstständig von den Mitarbeitern in das
+          Firmensystem eingetragen werden. Weitere Funktionen wie die
+          Generierung von Auswertungen und Erinnerungsmails bei Planungsänderung
+          ergänzen das Programm weiterhin.
         </p>
       </>
     ),
@@ -83,35 +83,35 @@ export default function ManagementSoftwarePage(props: Props) {
     texts = {
       title: "Management Software - M-to-B",
       description:
-        "Develop your app with us as an app agency. We offer professional advice and individual solutions for iOS, Android and Cross-Platform.",
+        "We develop management software for employee management and resource planning. Facilitate and automate your processes.",
       headline: <>Management Software</>,
       company: <>Special-Solutions GmbH</>,
       headlineText: (
         <p>
-          Software-Lösung für das Mitarbeitermanagement und die Einsatzplanung
-          eines IT-Dienstleisters
+          Software solution for employee management and resource planning for an
+          IT service provider
         </p>
       ),
       section1Headline: "Motivation",
       section1Text: (
         <>
           <p>
-            Für den IT-Dienstleister Special-Solutions war es unser Ziel, eine
-            effiziente Lösung für die Einsatzplanung zu entwickeln.
+            Our goal for the IT service provider Special-Solutions was to
+            develop an efficient software for resource planning.
           </p>
           <p>
-            Das Backoffice soll die Möglichkeit haben, jedem Mitarbeiter
-            Einsätze zuzuweisen und die Mitarbeiter nach Projekten und
-            Projektleiter zu sortieren. Jeder Mitarbeiter kann dann über seinen
-            Zugang auf das Programm zugreifen und seine Wochenplanung aufrufen
-            bzw. die Einsätze der zugehörigen Arbeiter des gleichen Projekts.
+            The back office should be able to assign projects to each employee
+            and to sort the employees according to their project managers. Each
+            employee can then access the program via his login credentials and
+            view his weekly plan or the assignments of the associated workers of
+            the same project.
           </p>
           <p>
-            Außerdem wurden die Stundenzettel mit im System digitalisiert und
-            persönliche Daten sowie Dokumente können nun selbstständig von den
-            Mitarbeitern in das Firmensystem eingetragen werden. Weitere
-            Funktionen wie die Generierung von Auswertungen und Erinnerungsmails
-            bei Planungsänderung ergänzen das Programm weiterhin.
+            In addition, the timesheets were digitized and personal data and
+            documents can now be entered independently by the employees into the
+            company system. Further functions such as the generation of
+            evaluations and reminder e-mails in the event of a change in
+            planning continue to improve the program.
           </p>
         </>
       ),
@@ -120,22 +120,22 @@ export default function ManagementSoftwarePage(props: Props) {
       section2Text: (
         <>
           <p>
-            Die Firma Special Solutions GmbH besitzt nun ein universelles
-            System, auf das von überall parallel zugegriffen werden kann und
-            welches optimal ihre individuelle Arbeitsplanung abbildet.
+            The company Special Solutions GmbH now has a universal system that
+            can be accessed from anywhere in parallel and which optimally maps
+            their individual workflow.
           </p>
           <p>
-            Durch die selbstständige Eintragung der Arbeitszeit durch die
-            Mitarbeiter, effiziente Zusammenfassungen und Auswertungen, sowie
-            ständige Erreichbarkeit und Backups konnte die Effizienz im
-            Management und der Buchhaltung optimiert und die Kommunikation
-            zwischen Backoffice und Mitarbeitern automatisiert werden.
+            Through the independent entry of working hours by the employees,
+            efficient summaries and evaluations, as well as constant
+            availability and backups, efficiency in management and accounting
+            was optimized and communication between the back office and
+            employees was automated.
           </p>
         </>
       ),
       section2Alt: "Management Software Example",
       quote:
-        "Wir können M-to-B Softwareentwicklung nur weiterempfehlen [...]! Das Team von M-to-B hat uns eine auf unsere Bedürfnisse zugeschnittene Einsatzplanung für unsere Mitarbeiter entwickelt.",
+        "We can recommend M-to-B software development [...]! The M-to-B team has developed a project management software for our employees that is tailored to our needs.",
       source: "Special Solutions GmbH",
     };
   }
@@ -165,34 +165,37 @@ export default function ManagementSoftwarePage(props: Props) {
       <main>
         <IconTextSection
           label1="ReactJS"
-          label2="NestJS"
+          label2="NodeJS"
           label3="AWS"
           icon1={
             <div className={styles.logoWrapper}>
-            <Image
-              src="/images/technologies/reactjs.png"
-              width={80}
-              height={70}
-              alt="ReactJS"
-            /></div>
+              <Image
+                src="/images/technologies/reactjs.png"
+                width={80}
+                height={70}
+                alt="ReactJS"
+              />
+            </div>
           }
           icon2={
             <div className={styles.logoWrapper}>
-            <Image
-              src="/images/technologies/nest.svg"
-              width={80}
-              height={80}
-              alt="NestJS"
-            /></div>
+              <Image
+                src="/images/technologies/nodejs.png"
+                width={80}
+                height={50}
+                alt="NodeJS"
+              />
+            </div>
           }
           icon3={
             <div className={styles.logoWrapper}>
-            <Image
-              src="/images/technologies/aws.png"
-              width={80}
-              height={55}
-              alt="AWS"
-            /></div>
+              <Image
+                src="/images/technologies/aws.png"
+                width={80}
+                height={50}
+                alt="AWS"
+              />
+            </div>
           }
         />
         <CustomShapeDivider flip={true} />
