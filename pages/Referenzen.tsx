@@ -37,8 +37,8 @@ export default function HomePage(props: Props) {
     <>
       <Head>
         <title key="title">{texts.title}</title>
-        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/" />
-        <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en" />
+        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/Referenzen" />
+        <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en/Referenzen" />
         <meta name="description" content={texts.description} />
       </Head>
       <main>
