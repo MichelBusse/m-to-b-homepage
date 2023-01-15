@@ -99,6 +99,16 @@ export default function AppPriceCalculatorPage() {
           selectMultiple: false,
         },
         {
+          question: <>Do you need an interface for existing software? </>,
+          options: ["Yes", "No", "Not decided yet"],
+          icons: [
+            <BsCheckCircle key={0} />,
+            <BsXCircle key={1} />,
+            <BsSlashCircle key={2} />,
+          ],
+          selectMultiple: false,
+        },
+        {
           question: <>Do you need a login system?</>,
           options: ["Yes", "No", "Not decided yet"],
           icons: [
@@ -109,7 +119,7 @@ export default function AppPriceCalculatorPage() {
           selectMultiple: false,
         },
         {
-          question: <>Do you want to connect to existing software? </>,
+          question: <>Do your users need their own profile?</>,
           options: ["Yes", "No", "Not decided yet"],
           icons: [
             <BsCheckCircle key={0} />,
@@ -119,7 +129,7 @@ export default function AppPriceCalculatorPage() {
           selectMultiple: false,
         },
         {
-          question: <>Do your users need their own profile?</>,
+          question: <>Does your app need push notifications?</>,
           options: ["Yes", "No", "Not decided yet"],
           icons: [
             <BsCheckCircle key={0} />,
@@ -197,6 +207,16 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: false,
       },
       {
+        question: <>Benötigt die App eine Schnittstelle zu bestehender Software? </>,
+        options: ["Ja", "Nein", "Noch nicht fest"],
+        icons: [
+          <BsCheckCircle key={0} />,
+          <BsXCircle key={1} />,
+          <BsSlashCircle key={2} />,
+        ],
+        selectMultiple: false,
+      },
+      {
         question: <>Benötigt die App ein Login-System?</>,
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
@@ -207,7 +227,7 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: false,
       },
       {
-        question: <>Soll an bestehende Software angebunden werden? </>,
+        question: <>Benötigen die Benutzer der App ein eigenes Profil?</>,
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
           <BsCheckCircle key={0} />,
@@ -217,7 +237,7 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: false,
       },
       {
-        question: <>Haben die Benutzer der App ein eigenes Profil?</>,
+        question: <>Benötigt die App Push-Notifications?</>,
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
           <BsCheckCircle key={0} />,
@@ -227,7 +247,7 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: false,
       },
       {
-        question: <>Benötigt die Anwendung ein Backoffice-Bedienfeld?</>,
+        question: <>Benötigt die App ein Backoffice-Bedienfeld?</>,
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
           <BsCheckCircle key={0} />,
@@ -356,20 +376,20 @@ export default function AppPriceCalculatorPage() {
 
     // Private App
     if (currentFormState[1].includes(0)) {
-      minPrice += 8850;
-      maxPrice += 8850;
+      minPrice += 7670;
+      maxPrice += 7670;
     }
 
     // Public App
     if (currentFormState[1].includes(1)) {
-      minPrice += 11800;
-      maxPrice += 11800;
+      minPrice += 10620;
+      maxPrice += 10620;
     }
 
     // Public or Private App
     if (currentFormState[1].includes(2)) {
-      minPrice += 8850;
-      maxPrice += 11800;
+      minPrice += 7670;
+      maxPrice += 10620;
     }
 
     // Simple design
@@ -390,28 +410,28 @@ export default function AppPriceCalculatorPage() {
       maxPrice += 1180;
     }
 
-    // Login system 10h - 20h
+    // Interface for existing services
     if (currentFormState[3].includes(0)) {
+      minPrice += 3776;
+      maxPrice += 3776;
+    }
+
+    // Interface for existing services not sure
+    if (currentFormState[3].includes(2)) {
+      minPrice += 0;
+      maxPrice += 3776;
+    }
+
+    // Login system 10h - 20h
+    if (currentFormState[4].includes(0)) {
       minPrice += 2832;
       maxPrice += 2832;
     }
 
     // Login system not sure
-    if (currentFormState[3].includes(2)) {
-      minPrice += 0;
-      maxPrice += 2832;
-    }
-
-    // Existing services
-    if (currentFormState[4].includes(0)) {
-      minPrice += 3776;
-      maxPrice += 3776;
-    }
-
-    // Existing services not sure
     if (currentFormState[4].includes(2)) {
       minPrice += 0;
-      maxPrice += 3776;
+      maxPrice += 2832;
     }
 
     // Own profile
@@ -426,32 +446,44 @@ export default function AppPriceCalculatorPage() {
       maxPrice += 2832;
     }
 
-    // Backoffice
+    // Push notifications
     if (currentFormState[6].includes(0)) {
+      minPrice += 2832;
+      maxPrice += 2832;
+    }
+
+    // Push notifications not sure
+    if (currentFormState[6].includes(2)) {
+      minPrice += 0;
+      maxPrice += 2832;
+    }
+
+    // Backoffice
+    if (currentFormState[7].includes(0)) {
       minPrice += 4720;
       maxPrice += 4720;
     }
 
     // Backoffice not sure
-    if (currentFormState[6].includes(2)) {
+    if (currentFormState[7].includes(2)) {
       minPrice += 0;
       maxPrice += 4720;
     }
 
     // Dates
-    if (currentFormState[7].includes(0)) {
+    if (currentFormState[8].includes(0)) {
       minPrice += 3776;
       maxPrice += 3776;
     }
 
     // Location
-    if (currentFormState[7].includes(1)) {
+    if (currentFormState[8].includes(1)) {
       minPrice += 3776;
       maxPrice += 3776;
     }
 
     // Chat
-    if (currentFormState[7].includes(2)) {
+    if (currentFormState[8].includes(2)) {
       minPrice += 4720;
       maxPrice += 4720;
     }
@@ -472,7 +504,8 @@ export default function AppPriceCalculatorPage() {
       currentFormState[3].length == 0 ||
       currentFormState[4].length == 0 ||
       currentFormState[5].length == 0 ||
-      currentFormState[6].length == 0
+      currentFormState[6].length == 0 ||
+      currentFormState[7].length == 0
     ) {
       toast.error(texts.checkInputs);
       return;
