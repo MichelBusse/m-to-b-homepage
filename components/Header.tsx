@@ -120,8 +120,8 @@ export default function Header(props: Props) {
                 <Image
                   src="/images/backgroundFigure.png"
                   alt="App-Entwickler Virtual Reality"
-                  width={435}
-                  height={580}
+                  layout={"fill"}
+                  objectFit="contain"
                 />
               </div>
               <div className={styles.interactiveWrapper}>
