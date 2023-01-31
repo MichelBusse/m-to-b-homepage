@@ -35,7 +35,8 @@ export default function AppPriceCalculatorPage() {
   const [currentFormIndex, setCurrentFormIndex] = useState(0);
   const [transitionClass, setTransitionClass] = useState("");
   const [optionDivs, setOptionDivs] = useState<JSX.Element[]>([]);
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
 
   let texts = {
     title: "App Entwicklung Preis Rechner - M-to-B",
@@ -271,7 +272,7 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: true,
       },
       {
-        question: <>Ergebnisse an diese E-Mail senden:</>,
+        question: <>Ergebnisse an:</>,
         options: [],
         icons: [],
         selectMultiple: false,
@@ -365,10 +366,6 @@ export default function AppPriceCalculatorPage() {
       ))
     );
   }, [currentFormState, currentFormIndex, questions]);
-
-  const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    setEmail(e.target.value);
-  };
 
   const calculatePrice = () => {
     let minPrice = 0;
@@ -498,7 +495,8 @@ export default function AppPriceCalculatorPage() {
 
   const submit = () => {
     if (
-      email.trim() == "" ||
+      name.trim() == "" ||
+      phone.trim() == "" ||
       currentFormState[1].length == 0 ||
       currentFormState[2].length == 0 ||
       currentFormState[3].length == 0 ||
@@ -526,11 +524,12 @@ export default function AppPriceCalculatorPage() {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: email, minPrice, maxPrice, language: router.locale, }),
+      body: JSON.stringify({ phone, name, currentFormState, minPrice, maxPrice, language: router.locale, }),
     }).then((res) => {
       if (res.status === 200) {
         toast.success(texts.mailSuccess);
-        setEmail("");
+        setName("");
+        setPhone("");
         const dataLayerArgs = {
           dataLayer: {
             event: "app-price-sent",
@@ -570,15 +569,21 @@ export default function AppPriceCalculatorPage() {
           {currentFormIndex == 0 && <p>{texts.introText}</p>}
           {currentFormIndex == questions.length - 1 && (
             <div className={styles.inputWrapper}>
-              <button onClick={() => previousQuestion()}>
-                <MdArrowBackIosNew />
-              </button>
               <input
-                name="email"
+                name="name"
                 type="textfield"
                 required
-                value={email}
-                onChange={onChange}
+                value={name}
+                placeholder="Vorname"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                name="phone"
+                type="textfield"
+                required
+                value={phone}
+                placeholder="Telefon"
+                onChange={(e) => setPhone(e.target.value)}
               />
               <button onClick={() => submit()}>{texts.send}</button>
             </div>
@@ -593,7 +598,7 @@ export default function AppPriceCalculatorPage() {
           </div>
         </div>
         <div className={styles.controlButtonWrapper}>
-          {currentFormIndex > 0 && currentFormIndex < questions.length - 1 ? (
+          {currentFormIndex > 0 && currentFormIndex < questions.length ? (
             <div
               className={styles.leftButtonWrapper}
               onClick={() => previousQuestion()}
