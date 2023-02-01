@@ -161,7 +161,7 @@ export default function AppPriceCalculatorPage() {
           selectMultiple: true,
         },
         {
-          question: <>Please provide your mail for the results:</>,
+          question: <>Almost done!</>,
           options: [],
           icons: [],
           selectMultiple: false,
@@ -271,7 +271,7 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: true,
       },
       {
-        question: <>Ergebnisse an:</>,
+        question: <>Fast geschafft!</>,
         options: [],
         icons: [],
         selectMultiple: false,
