@@ -33,11 +33,14 @@ export default function HomePage(props: Props) {
           <br />
           Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
           Umsetzung?
-          <br />
-          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutzen Sie einen individuellen Leitfaden und bringen Sie Ihre App zum Erfolg!
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Zeit- und Kostenfresser werden.
+        </p>
+        <p>
+          Jetzt individuellen Leitfaden anfordern und Ihre App zum
+          Erfolg bringen!
         </p>
       </>
     ),
