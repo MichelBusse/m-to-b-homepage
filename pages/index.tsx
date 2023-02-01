@@ -31,16 +31,17 @@ export default function HomePage(props: Props) {
         <p>
           Sie suchen einen Partner für die Realisierung Ihrer App?
           <br />
-          Sie haben eine Idee, aber brauchen noch Unterstützung bei der
-          Umsetzung? Erhalten Sie konkrete Informationen und einen individuellen
-          Fahrplan zum Erfolg Ihrer App.
+          Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
+          Umsetzung?
+          <br />
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutzen Sie eine kostenlose Beratung und lassen Sie uns gemeinsam Ihr
-          Projekt verwirklichen!
+          Nutzen Sie einen individuellen Leitfaden und bringen Sie Ihre App zum Erfolg!
         </p>
       </>
     ),
+    requestButtonText: "Leitfaden anfordern!",
     description:
       "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
     headlineSection1: "App Entwicklung",
@@ -127,6 +128,7 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       description:
         "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality",
       headlineSection1: "App Development",
@@ -194,6 +196,7 @@ export default function HomePage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         priceCalculatorButton={true}
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <ValuesSection />

@@ -36,6 +36,7 @@ export default function IndividualSoftwarePage(props: Props) {
         </p>
       </>
     ),
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     title: "Individualsoftware - M-to-B",
     description: "Erstellen Sie individuelle Softwarelösungen für Ihr Unternehmen mit unserer Software Agentur. Wir bieten maßgeschneiderte Individualsoftware!",
     concept: "Konzeption und Planung",
@@ -95,6 +96,7 @@ export default function IndividualSoftwarePage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       title: "Individual Software - M-to-B",
       description:
         "Create personalized software solutions for your business with our software agency. We offer custom development!",
@@ -162,6 +164,7 @@ export default function IndividualSoftwarePage(props: Props) {
         text={texts.text}
         highlightImage={"/images/individual-software/individual-software-header.png"}
         highlightImageAlt="Individualsoftware"
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <IconTextSection

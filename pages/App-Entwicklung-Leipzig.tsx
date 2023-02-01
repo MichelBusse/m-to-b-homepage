@@ -25,15 +25,18 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Wir realisieren Ihre Vorstellungen und
-          entwickeln Ihre App.
+          Moderne Apps aus der Region - Auf der Suche nach einem Partner für
+          App-Entwicklung?
+          <br />
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
-          Anfrage!
+          Nutzen Sie einen individuellen Leitfaden und bringen Sie Ihre App zum Erfolg!
         </p>
       </>
     ),
+    requestButtonText: "Leitfaden anfordern!",
     title: "App Entwicklung aus Leipzig - M-to-B",
     description:
       "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
@@ -87,6 +90,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       title: "App Development from Leipzig - M-to-B",
       description:
         "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
@@ -151,6 +155,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
         highlightImageAlt="App Entwicklung Leipzig"
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <PriceCalculatorSection />

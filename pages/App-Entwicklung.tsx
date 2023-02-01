@@ -35,6 +35,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     title: "App Entwicklung - M-to-B",
     description:
       "Entwickeln Sie Ihre App mit uns als App Agentur. Wir bieten professionelle Beratung und individuelle Lösungen für iOS, Android und Cross-Platform.",
@@ -137,6 +138,7 @@ export default function AppDevelopmentPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       title: "App Development - M-to-B",
       description:
         "Develop your app with us as an app agency. We offer professional advice and individual solutions for iOS, Android and Cross-Platform.",
@@ -243,6 +245,7 @@ export default function AppDevelopmentPage(props: Props) {
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
         highlightImageAlt="App Entwicklung"
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <PriceCalculatorSection />

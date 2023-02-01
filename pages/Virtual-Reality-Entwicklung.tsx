@@ -39,6 +39,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
         </p>
       </>
     ),
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     title: "Virtual & Augmented Reality Entwicklung - M-to-B",
     description:
       "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Wir entwickeln VR und AR Apps!",
@@ -124,6 +125,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       title: "Virtual & Augmented Reality Development - M-to-B",
       description:
         "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",
@@ -219,6 +221,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
         text={texts.text}
         highlightImage={"/images/virtual-reality/virtual-reality-header.png"}
         highlightImageAlt="Virtual & Augmented Reality"
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <IconTextSection

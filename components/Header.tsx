@@ -12,6 +12,7 @@ type Props = {
   priceCalculatorButton?: boolean;
   highlightImage?: string;
   highlightImageAlt?: string;
+  requestButtonText: string;
 };
 
 export default function Header(props: Props) {
@@ -20,13 +21,11 @@ export default function Header(props: Props) {
   const router = useRouter();
 
   let texts = {
-    requestButtonText: "Beratungsgespräch vereinbaren!",
     priceCalculatorButtonText: "App-Preis-Rechner",
   };
 
   if (router.locale == "en") {
     texts = {
-      requestButtonText: "Schedule a free consultation!",
       priceCalculatorButtonText: "Calculate app's budget",
     };
   }
@@ -84,7 +83,7 @@ export default function Header(props: Props) {
                   <button
                     className={`bounce ${headerVisible ? styles.visible : ""}`}
                   >
-                    <div>{texts.requestButtonText}</div>
+                    <div>{props.requestButtonText}</div>
                   </button>
                 </a>
               </Link>

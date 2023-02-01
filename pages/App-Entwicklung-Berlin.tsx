@@ -34,6 +34,7 @@ export default function AppDevelopmentBerlinPage(props: Props) {
         </p>
       </>
     ),
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     title: "App Entwicklung für Berlin - M-to-B",
     description:
       "Wir entwickeln Apps für Berliner Unternehmen. Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
@@ -86,6 +87,7 @@ export default function AppDevelopmentBerlinPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
+      requestButtonText: "Schedule a free consultation!",
       title: "App Development for Berlin - M-to-B",
       description:
         "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Berlin.",
@@ -150,6 +152,7 @@ export default function AppDevelopmentBerlinPage(props: Props) {
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
         highlightImageAlt="App Entwicklung Berlin"
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <PriceCalculatorSection />
