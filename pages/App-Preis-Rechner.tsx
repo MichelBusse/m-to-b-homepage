@@ -43,7 +43,7 @@ export default function AppPriceCalculatorPage() {
       "Nach Beantwortung der folgenden Fragen erhalten Sie direkt eine Einschätzung für das Budget, mit dem Sie für Ihre App rechnen können.",
     namePlaceholder: "Name *",
     phonePlaceholder: "Telefon *",
-    send: "Jetzt erhalten!",
+    send: "Preis jetzt erhalten!",
   };
 
   if (router.locale == "en") {
@@ -59,7 +59,7 @@ export default function AppPriceCalculatorPage() {
         "After answering the following questions you'll receive an overview of your apps potential budget.",
       namePlaceholder: "Name *",
       phonePlaceholder: "Phone *",
-      send: "Receive now!",
+      send: "Receive costs now!",
     };
   }
 
