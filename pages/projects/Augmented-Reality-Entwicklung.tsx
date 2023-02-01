@@ -24,6 +24,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
     title: "AR Entwicklung für den OP - M-to-B",
     description:
       "Wir entwickeln Augmente Reality Anwengunen für komplexe Anforderungen und schaffen neue Technologien.",
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     headline: <>AR Entwicklung für den OP</>,
     company: <>Universität Leipzig / UPMC Pittsburgh</>,
     headlineText: (
@@ -80,6 +81,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
       description:
         "We develop augmented reality applications for complex requirements and create new technologies.",
       headline: <>AR Development for surgery</>,
+      requestButtonText: "Schedule a free consultation!",
       company: <>University Leipzig / UPMC Pittsburgh</>,
       headlineText: (
         <p>
@@ -152,6 +154,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
         topHeadline={texts.company}
         text={texts.headlineText}
         highlightImage={"/images/projects/project3/project3-header.png"}
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <IconTextSection

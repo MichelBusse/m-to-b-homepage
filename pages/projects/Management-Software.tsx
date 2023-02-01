@@ -24,6 +24,7 @@ export default function ManagementSoftwarePage(props: Props) {
     title: "Management Software - M-to-B",
     description:
       "Wir entwickeln Management Software für das Mitarbeitermanagement und die Einsatzplanung. Erleichtern und automatisieren Sie Ihre Prozesse.",
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     headline: <>Management Software</>,
     company: <>Special-Solutions GmbH</>,
     headlineText: (
@@ -84,6 +85,7 @@ export default function ManagementSoftwarePage(props: Props) {
       title: "Management Software - M-to-B",
       description:
         "We develop management software for employee management and resource planning. Facilitate and automate your processes.",
+      requestButtonText: "Schedule a free consultation!",
       headline: <>Management Software</>,
       company: <>Special-Solutions GmbH</>,
       headlineText: (
@@ -161,6 +163,7 @@ export default function ManagementSoftwarePage(props: Props) {
         topHeadline={texts.company}
         text={texts.headlineText}
         highlightImage={"/images/projects/project1/project1-header.png"}
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <IconTextSection

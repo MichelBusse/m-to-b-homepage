@@ -24,6 +24,7 @@ export default function ERPSoftwarePage(props: Props) {
     title: "ERP-Software - M-to-B",
     description:
       "Wir entwickeln ERP-Software für alle individuellen Anforderungen Ihres Unternehmens. Erleichtern und automatisieren Sie Ihre Prozesse.",
+    requestButtonText: "Beratungsgespräch vereinbaren!",
     headline: <>ERP-Software</>,
     company: <>Schülertreff GbR</>,
     headlineText: (
@@ -71,8 +72,7 @@ export default function ERPSoftwarePage(props: Props) {
       </>
     ),
     section2Alt: "ERP-Software Beispiel",
-    quote:
-      "",
+    quote: "",
     source: "",
   };
 
@@ -81,6 +81,7 @@ export default function ERPSoftwarePage(props: Props) {
       title: "ERP-Software - M-to-B",
       description:
         "We develop ERP software for all individual requirements of your company. Facilitate and automate your processes.",
+      requestButtonText: "Schedule a free consultation!",
       headline: <>ERP Software</>,
       company: <>Schülertreff GbR</>,
       headlineText: (
@@ -126,8 +127,7 @@ export default function ERPSoftwarePage(props: Props) {
         </>
       ),
       section2Alt: "ERP Software Example",
-      quote:
-        "",
+      quote: "",
       source: "",
     };
   }
@@ -153,6 +153,7 @@ export default function ERPSoftwarePage(props: Props) {
         topHeadline={texts.company}
         text={texts.headlineText}
         highlightImage={"/images/projects/project2/project2-header.png"}
+        requestButtonText={texts.requestButtonText}
       />
       <main>
         <IconTextSection
