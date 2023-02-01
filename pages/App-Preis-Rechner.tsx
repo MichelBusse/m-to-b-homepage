@@ -1,13 +1,6 @@
 import Head from "next/head";
-import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import React, {
-  ChangeEventHandler,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import styles from "../styles/AppPriceCalculator.module.scss";
 import { BsGridFill } from "react-icons/bs";
 import { RiUserStarFill } from "react-icons/ri";
@@ -48,7 +41,9 @@ export default function AppPriceCalculatorPage() {
     mailError: "Senden fehlgeschlagen",
     introText:
       "Nach Beantwortung der folgenden Fragen erhalten Sie direkt eine Einschätzung für das Budget, mit dem Sie für Ihre App rechnen können.",
-    send: "Senden",
+    namePlaceholder: "Name *",
+    phonePlaceholder: "Telefon *",
+    send: "Jetzt erhalten!",
   };
 
   if (router.locale == "en") {
@@ -62,7 +57,9 @@ export default function AppPriceCalculatorPage() {
       mailError: "Error: Could not send mail",
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
-      send: "Send",
+      namePlaceholder: "Name *",
+      phonePlaceholder: "Phone *",
+      send: "Receive now!",
     };
   }
 
@@ -208,7 +205,9 @@ export default function AppPriceCalculatorPage() {
         selectMultiple: false,
       },
       {
-        question: <>Benötigt die App eine Schnittstelle zu bestehender Software? </>,
+        question: (
+          <>Benötigt die App eine Schnittstelle zu bestehender Software? </>
+        ),
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
           <BsCheckCircle key={0} />,
@@ -524,7 +523,14 @@ export default function AppPriceCalculatorPage() {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ phone, name, currentFormState, minPrice, maxPrice, language: router.locale, }),
+      body: JSON.stringify({
+        phone,
+        name,
+        currentFormState,
+        minPrice,
+        maxPrice,
+        language: router.locale,
+      }),
     }).then((res) => {
       if (res.status === 200) {
         toast.success(texts.mailSuccess);
@@ -564,7 +570,11 @@ export default function AppPriceCalculatorPage() {
           className={`${styles.formWrapper} ${transitionClass}`}
           ref={formWrapperRef}
         >
-          {currentFormIndex == 0 && <div className={styles.iconWrapper}><BudgetIcon className={styles.icon}/></div>}
+          {currentFormIndex == 0 && (
+            <div className={styles.iconWrapper}>
+              <BudgetIcon className={styles.icon} />
+            </div>
+          )}
           <h2>{questions[currentFormIndex].question}</h2>
           {currentFormIndex == 0 && <p>{texts.introText}</p>}
           {currentFormIndex == questions.length - 1 && (
@@ -574,7 +584,7 @@ export default function AppPriceCalculatorPage() {
                 type="textfield"
                 required
                 value={name}
-                placeholder="Vorname"
+                placeholder={texts.namePlaceholder}
                 onChange={(e) => setName(e.target.value)}
               />
               <input
@@ -582,7 +592,7 @@ export default function AppPriceCalculatorPage() {
                 type="textfield"
                 required
                 value={phone}
-                placeholder="Telefon"
+                placeholder={texts.phonePlaceholder}
                 onChange={(e) => setPhone(e.target.value)}
               />
               <button onClick={() => submit()}>{texts.send}</button>
