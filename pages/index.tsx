@@ -29,13 +29,14 @@ export default function HomePage(props: Props) {
     text: (
       <>
         <p>
-          Mit Erfahrung und Begeisterung realisieren wir Ihre Ideen!
+          Sie suchen einen Partner für die Realisierung Ihrer App?
           <br />
-          Als App-Agentur helfen wir unseren Kunden, erfolgreiche und
-          beeindruckende Apps zu entwickeln.
+          Sie haben eine Idee, aber brauchen noch Unterstützung bei der
+          Umsetzung? Erhalten Sie konkrete Informationen und einen individuellen
+          Fahrplan zum Erfolg Ihrer App.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und lassen Sie uns gemeinsam Ihr
+          Nutzen Sie eine kostenlose Beratung und lassen Sie uns gemeinsam Ihr
           Projekt verwirklichen!
         </p>
       </>
