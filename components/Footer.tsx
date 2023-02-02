@@ -97,7 +97,7 @@ export default function Footer() {
       </footer>
       <Script
         type="text/javascript"
-        src="//www.provenexpert.com/widget/bar_m-to-b-softwareentwicklung.js?style=black&amp;feedback=1"
+        src="//www.provenexpert.com/widget/bar_m-to-b-software.js?style=black&amp;feedback=1"
         strategy="lazyOnload"
       />
     </>
