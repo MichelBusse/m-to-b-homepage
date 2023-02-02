@@ -16,8 +16,11 @@ export default function Navbar(props: Props) {
   const [menuActive, setMenuActive] = useState(false);
   const [menuInitialized, setMenuInitialized] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("");
+  const [contactLink, setContactLink] = useState("#contact");
 
-  const setActiveMenuItemOfPage = useEffect(() => {
+  // Set active Menu Item and correct contact Link
+  useEffect(() => {
+    setContactLink("#contact");
     switch (router.asPath) {
       case "/App-Entwicklung":
         setActiveMenuItem("apps");
@@ -30,6 +33,10 @@ export default function Navbar(props: Props) {
         break;
       case "/Referenzen":
         setActiveMenuItem("projects");
+        break;
+      case "/App-Preis-Rechner":
+        setActiveMenuItem("");
+        setContactLink("/#contact");
         break;
       default:
         setActiveMenuItem("");
@@ -55,7 +62,7 @@ export default function Navbar(props: Props) {
     return () => {
       window.removeEventListener("resize", onResize);
     };
-  }, [menuActive, props.anchorRefs, router.asPath, setActiveMenuItemOfPage]);
+  }, [menuActive, props.anchorRefs, router.asPath]);
 
   let texts = {
     apps: "Apps",
@@ -125,7 +132,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "contact" ? styles.active : ""}>
-              <Link href="#contact">
+              <Link href={contactLink}>
                 <a>{texts.contact}</a>
               </Link>
             </li>
@@ -212,7 +219,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="#contact">
+          <Link href={contactLink}>
             <a>
               <li
                 onClick={() => setMenuActive(false)}
