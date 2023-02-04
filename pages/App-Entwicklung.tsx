@@ -27,15 +27,22 @@ export default function AppDevelopmentPage(props: Props) {
     text: (
       <>
         <p>
-          Professionelle App-Entwicklung für Unternehmen und Endverbraucher -
-          von der Konzeption bis zur Veröffentlichung und Wartung.
+          Sie suchen einen Partner für die Realisierung Ihrer App?
+          <br />
+          Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
+          Umsetzung?
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Zeit- und Kostenfresser werden.
+        </p>
+        <p>
+          Informieren Sie sich zu effizienten Strategien für Ihre App und
+          ebnen Sie den Weg zum Erfolg!
         </p>
       </>
     ),
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+    requestButtonText: "Strategie anfordern",
     title: "App Entwicklung - M-to-B",
     description:
       "Entwickeln Sie Ihre App mit uns als App Agentur. Wir bieten professionelle Beratung und individuelle Lösungen für iOS, Android und Cross-Platform.",

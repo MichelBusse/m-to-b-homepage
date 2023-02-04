@@ -25,16 +25,18 @@ export default function AppDevelopmentBerlinPage(props: Props) {
     text: (
       <>
         <p>
-          Professionelle App-Entwicklung für Unternehmen und Endverbraucher -
-          Wir realisieren Ihre Vorstellungen und entwickeln Ihre App.
+          Auf der Suche nach einem Partner für App-Entwicklung?
+          <br />
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
-          Anfrage!
+          Informieren Sie sich zu effizienten Strategien für Ihre App und
+          ebnen Sie den Weg zum Erfolg!
         </p>
       </>
     ),
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+    requestButtonText: "Strategie anfordern",
     title: "App Entwicklung für Berlin - M-to-B",
     description:
       "Wir entwickeln Apps für Berliner Unternehmen. Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
@@ -43,12 +45,12 @@ export default function AppDevelopmentBerlinPage(props: Props) {
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Wir entwickeln Apps für Berliner Unternehmen! Ob StartUp oder
-          Dax-Unternehmen, wir möchten bestmögliche Ergebnisse für Ihr
-          Projekt schaffen.
+          Dax-Unternehmen, wir möchten bestmögliche Ergebnisse für Ihr Projekt
+          schaffen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Ob iOS, Android oder Web, wir entwickeln Ihre App auf dem neuesten Stand
-          der Technik. Lassen Sie sich von uns überzeugen und schaffen Sie
+          Ob iOS, Android oder Web, wir entwickeln Ihre App auf dem neuesten
+          Stand der Technik. Lassen Sie sich von uns überzeugen und schaffen Sie
           moderne Lösungen.
         </p>
       </>

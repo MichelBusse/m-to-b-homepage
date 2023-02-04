@@ -29,22 +29,22 @@ export default function HomePage(props: Props) {
     text: (
       <>
         <p>
-          Sie suchen einen Partner für die Realisierung Ihrer App?
+          Sie suchen einen Partner für die Realisierung Ihr App- oder Software-Projekt?
           <br />
           Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
           Umsetzung?
         </p>
         <p>
-          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Der Software-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
           Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Jetzt individuellen Leitfaden anfordern und Ihre App zum
-          Erfolg bringen!
+          Informieren Sie sich zu effizienten Strategien für Ihr Projekt und
+          ebnen Sie den Weg zum Erfolg!
         </p>
       </>
     ),
-    requestButtonText: "Leitfaden anfordern!",
+    requestButtonText: "Strategie anfordern",
     description:
       "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
     headlineSection1: "App Entwicklung",

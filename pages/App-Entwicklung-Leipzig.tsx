@@ -32,11 +32,12 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutzen Sie einen individuellen Leitfaden und bringen Sie Ihre App zum Erfolg!
+          Informieren Sie sich zu effizienten Strategien für Ihre App und
+          ebnen Sie den Weg zum Erfolg!
         </p>
       </>
     ),
-    requestButtonText: "Leitfaden anfordern!",
+    requestButtonText: "Strategie anfordern",
     title: "App Entwicklung aus Leipzig - M-to-B",
     description:
       "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
