@@ -69,7 +69,7 @@ export default function IndividualSoftwarePage(props: Props) {
       </>
     ),
     individualsoftwareAlt: "Individualsoftware",
-    personalized: "Massgeschneidert auf das Unternehmen",
+    personalized: "Maßgeschneidert auf das Unternehmen",
     efficient: "Verbessert die Effizienz und Leistung",
     security: "Erhöht die Sicherheit",
     agencyHeadline: "Warum unsere Software-Agentur?",
