@@ -25,7 +25,7 @@ const ServiceSection = (props: Props) => {
   const router = useRouter();
 
   let texts = {
-    viewMore: "Mehr entdecken",
+    viewMore: "Mehr erfahren",
   };
 
   if (router.locale == "en") {

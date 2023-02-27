@@ -29,19 +29,27 @@ export default function IndividualSoftwarePage(props: Props) {
     text: (
       <>
         <p>
-        Maßgeschneiderte Softwarelösungen für die einzigartigen Bedürfnisse Ihres Unternehmens: Individualsoftware-Entwicklung durch unser erfahrenes Team!
+          Mit Standardsoftware stößt dein Unternehmen an die Grenzen?
+          <br />
+          Für deine Anforderungen gibt es noch kein Programm?
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine Anfrage!
+          Der Software-Entwicklungsprozess kann ohne eine klare Strategie
+          schnell zum Zeit- und Kostenfresser werden.
+        </p>
+        <p>
+          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
+          effizienten Strategien um dein Software-Projekt zum Erfolg zu führen!
         </p>
       </>
     ),
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+    requestButtonText: "Kostenlose Beratung",
     title: "Individualsoftware - M-to-B",
-    description: "Erstellen Sie individuelle Softwarelösungen für Ihr Unternehmen mit unserer Software Agentur. Wir bieten maßgeschneiderte Individualsoftware!",
-    concept: "Konzeption und Planung",
-    development: "Entwicklung und Implementierung",
-    support: "Wartung und Support",
+    description:
+      "Individualsoftware kann teuer sein - muss sie aber nicht! Erhalte individuelle Softwarelösungen für dein Unternehmen mit kosteneffizienten Strategien.",
+    concept: "Strategie",
+    development: "Implementierung",
+    support: "Betreuung",
     individualsoftwareHeadline: "Was ist Individualsoftware?",
     individualsoftwareText: (
       <>
@@ -55,8 +63,8 @@ export default function IndividualSoftwarePage(props: Props) {
           Effizienz und Leistung verbessern und gleichzeitig auch die Sicherheit
           erhöhen. Eine Software Agentur wie unsere bietet professionelle
           Unterstützung bei der Konzeption, Planung, Entwicklung und
-          Implementierung von Individualsoftware, um Ihr Unternehmen erfolgreich
-          zu unterstützen.
+          Implementierung von Individualsoftware, um dein Unternehmen
+          erfolgreich zu unterstützen.
         </p>
       </>
     ),
@@ -64,20 +72,26 @@ export default function IndividualSoftwarePage(props: Props) {
     personalized: "Massgeschneidert auf das Unternehmen",
     efficient: "Verbessert die Effizienz und Leistung",
     security: "Erhöht die Sicherheit",
-    agencyHeadline: "Warum unsere Software Agentur?",
+    agencyHeadline: "Warum unsere Software-Agentur?",
     agencyText: (
       <>
         <p>
-          Unser qualifiziertes Entwicklerteam verfügt über die nötigen
-          Fähigkeiten und Erfahrungen, um Ihnen hochwertige Softwarelösungen
-          anzubieten. Wir haben bereits erfolgreich in verschiedenen Branchen
-          Projekte durchgeführt und können Ihnen daher wertvolle Einsichten und
-          Lösungen für Ihr Unternehmen bieten. Zusätzlich bieten wir eine
-          flexible und individuelle Betreuung, um sicherzustellen, dass wir
-          Ihren Anforderungen entsprechen und Ihnen die bestmögliche
-          Unterstützung bieten. Wir sind überzeugt, dass wir die richtige Wahl
-          für Ihre Software-Entwicklungsprojekte sind. Kontaktieren Sie uns noch
-          heute, um mehr über unsere Leistungen zu erfahren!
+          Wir setzen auf Kommunikation - In unseren Projekten haben wir
+          festgestellt, dass der Erfolg deiner Software vor allem davon abhängt,
+          dass wir deine Ziele richtig verstehen und nicht nur blind entwickeln.
+          Deshalb wirst du bei uns nicht nur während der Entwicklung, sondern
+          vor allem bei der Planung deiner Software von den richtigen Experten
+          unterstützt.
+        </p>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
+          Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
+          Ziel zu unternehmen.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          In unserem unverbindlichem Erstgespräch kannst du deine Fragen
+          beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
+          unseren Experten.
         </p>
       </>
     ),
@@ -90,13 +104,13 @@ export default function IndividualSoftwarePage(props: Props) {
       text: (
         <>
           <p>
-            Custom-tailored software solutions for your business&apos;s unique needs:
-            individual software development by our experienced team!
+            Custom-tailored software solutions for your business&apos;s unique
+            needs: individual software development by our experienced team!
           </p>
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       title: "Individual Software - M-to-B",
       description:
         "Create personalized software solutions for your business with our software agency. We offer custom development!",
@@ -127,15 +141,20 @@ export default function IndividualSoftwarePage(props: Props) {
       agencyText: (
         <>
           <p>
-            Our qualified development team has the necessary
-            skills and experience to provide you with high-quality software
-            solutions. We have already successfully completed projects in
-            various industries and can therefore offer you valuable insights and
-            solutions for your company. In addition, we offer flexible and
-            individual support to ensure that we meet your requirements and
-            provide you with the best possible support. We are convinced that we
-            are the right choice for your software development projects. Contact
-            us today to learn more about our services.
+            We focus on communication - In our projects, we have found that the
+            success of your software depends on us understanding your goal
+            correctly instead of blindly executing the development. Therefore,
+            you are supported not only during development, but above all in
+            planning of your software by the right experts.
+          </p>
+          <p style={{ transitionDelay: "0.3s" }}>
+            You have the opportunity for frequent consultation and brainstorming
+            together, whereby we help you to take the right steps towards your
+            goal.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            In our relaxed initial meeting, you can have your questions answered
+            and get a foretaste of working with our experts.
           </p>
         </>
       ),
@@ -162,7 +181,9 @@ export default function IndividualSoftwarePage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        highlightImage={"/images/individual-software/individual-software-header.png"}
+        highlightImage={
+          "/images/individual-software/individual-software-header.png"
+        }
         highlightImageAlt="Individualsoftware"
         requestButtonText={texts.requestButtonText}
       />

@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   let texts = {
-    title: "Ihre App-Agentur - M-to-B Software",
+    title: "Deine App-Agentur - M-to-B Software",
   };
 
   if (router.locale == "en") {

@@ -9,14 +9,14 @@ export default function CrossPlatformSection() {
   const router = useRouter();
 
   let texts = {
-    headline: "App Plattformen",
-    subHeadline: "Mit Ihrer App alle Nutzer erreichen",
+    headline: "Cross-Platform Apps",
+    subHeadline: "Mit einer App alle Nutzer erreichen",
   };
 
   if (router.locale == "en") {
     texts = {
-      headline: "App Platforms",
-      subHeadline: "Target all customers",
+      headline: "Cross Platform Apps",
+      subHeadline: "Target all customers with one app",
     };
   }
   return (

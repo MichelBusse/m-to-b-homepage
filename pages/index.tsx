@@ -19,50 +19,47 @@ export default function HomePage(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Ihre App-Agentur - M-to-B Software",
+    title: "Deine App-Agentur - M-to-B Software",
     headline: (
       <>
-        Ihre Agentur für App- <br />
+        Deine Agentur für App- <br />
         und Software-Entwicklung
       </>
     ),
     text: (
       <>
         <p>
-          Sie suchen einen Partner für die Realisierung Ihr App- oder Software-Projekt?
+          Du suchst einen Partner für die Realisierung deines Software-Projekts?
           <br />
-          Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
+          Du hast schon eine Idee, brauchst aber noch Unterstützung bei der
           Umsetzung?
         </p>
         <p>
-          Der Software-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
-          Zeit- und Kostenfresser werden.
+          Der Software-Entwicklungsprozess kann ohne eine klare Strategie
+          schnell zum Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Informieren Sie sich zu effizienten Strategien für Ihr Projekt und
-          ebnen Sie den Weg zum Erfolg!
+          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
+          effizienten Strategien um dein Software-Projekt zum Erfolg zu führen!
         </p>
       </>
     ),
-    requestButtonText: "Strategie anfordern",
+    requestButtonText: "Kostenlose Beratung",
     description:
       "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
     headlineSection1: "App Entwicklung",
     textSection1: (
       <>
-        <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Von der Idee bis zum Upload in den App Store führen wir Ihre App durch
-          den Entwicklungsprozess. Mit Erfahrung in der Cross-Platform und
-          nativen App-Entwicklung können wir Ihre Anforderungen effizient und
-          modern implementieren. Dabei legen wir genauso viel Wert auf
-          verlässliche Funktionen wie auf ein überzeugendes und nutzbares
-          Design.
+        <p>
+          Von der Idee bis in den App-Store begleiten wir deine App durch den
+          Entwicklungsprozess. Mit der Lean-Prototype-Strategie hälst du schon
+          nach kürzester Zeit und minimalem Budget die erste Version deiner App
+          in den Händen und verhinderst unnötige Ausgaben.
         </p>
-        <p style={{ transitionDelay: "0.6s" }} key={2}>
+        <p style={{ transitionDelay: "0.3s" }}>
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
-          Ansprechpartnern und enger Beteiligung. So stellen wir sicher, dass
-          Ihre Anforderungen auch erfüllt werden und alle Ressourcen effizient
-          genutzt werden.
+          Ansprechpartnern und enger Kommunikation. So stellen wir sicher, dass
+          deine Ziele erreicht und alle Ressourcen effizient genutzt werden.
         </p>
       </>
     ),
@@ -76,7 +73,7 @@ export default function HomePage(props: Props) {
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Gemeinsam mit Ihnen erstellen wir dafür maßgeschneiderte
-          Softwarelösungen, die dann Ihre Anforderungen umsetzen und den
+          Softwarelösungen, die dann deine Anforderungen umsetzen und den
           Firmenprozess optimal abbilden.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
@@ -97,8 +94,8 @@ export default function HomePage(props: Props) {
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
-          entwickelt sich stetig weiter. Profitieren Sie von unseren Experten
-          und finden Sie neue Möglichkeiten für Ihre Gebiete!
+          entwickelt sich stetig weiter. Profitiere von unseren Experten und
+          finde neue Möglichkeiten für deine Einsatzgebiete!
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
           Wir haben bereits verschiedenste VR und AR Software entwickelt, bis
@@ -131,7 +128,7 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       description:
         "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality",
       headlineSection1: "App Development",

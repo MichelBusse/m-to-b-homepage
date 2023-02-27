@@ -27,20 +27,21 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         <p>
           Moderne Apps aus der Region - Auf der Suche nach einem Partner für
           App-Entwicklung?
-          <br />
+        </p>
+        <p>
           Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
           Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Informieren Sie sich zu effizienten Strategien für Ihre App und
-          ebnen Sie den Weg zum Erfolg!
+          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
+          effizienten Strategien um deine App zum Erfolg zu führen!
         </p>
       </>
     ),
-    requestButtonText: "Strategie anfordern",
+    requestButtonText: "Kostenlose Beratung",
     title: "App Entwicklung aus Leipzig - M-to-B",
     description:
-      "Wir sind eine App Agentur aus Leipzig und freuen uns auf Ihr Projekt! Nutzen Sie unsere kostenlose Beratung und lassen Sie uns Ihre App verwirklichen!",
+      "Wir sind eine App Agentur aus Leipzig und freuen uns auf dein Projekt! Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
     headlineSection1: "Innovation aus Leipzig",
     textSection1: (
       <>
@@ -60,21 +61,32 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
     headlineSection2: "App-Entwicklungs-Prozess",
     textSection2: (
       <>
-        <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Ihre App beginnt den Entwicklungsprozess mit dem Konzept und der
-          Planung. Gemeinsam mit Ihnen entwickeln wir die beste Strategie für
-          Ihre Anforderungen und wählen die geeignetsten Technologien.
-        </p>
-        <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Anschließend beginnt der Designprozess, bei welchem Sie direkt Ihre
-          Vorstellungen einbringen und am Ende von unseren App-Designern ein
-          UI-Design als Vorlage erhalten.
-        </p>
-        <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Die eigentliche Entwicklung läuft dann transparent und personalisiert
-          ab. Sie bleiben immer up-to-date mit dem aktuellen Fortschritt Ihrer
-          App und verlieren so nie den Überblick.
-        </p>
+        <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
+        <ol>
+          <li style={{ transitionDelay: "0.3s" }}>
+            <b>Strategie:</b> Hier wird das Ziel deiner App festgelegt und ein
+            Konzept erstellt, wie deine App ohne Umwege dorthin geführt werden
+            kann.
+          </li>
+          <li style={{ transitionDelay: "0.6s" }}>
+            <b>Design:</b> Das Layout deiner App wird erstellt. Dabei dreht sich
+            alles um Nutzerfreundlichkeit und Wiedererkennungswert.
+          </li>
+          <li style={{ transitionDelay: "0.9s" }}>
+            <b>Implementierung:</b> In diesem Schritt wird deine Idee Realität.
+            Deine App erhält ihre Funktionen und wird zu einem fertigen Produkt.
+          </li>
+          <li style={{ transitionDelay: "1.2s" }}>
+            <b>Rollout:</b> Sobald deine App fertig und auf Fehler getestet ist,
+            wird sie im App-Store, oder auf den Plattformen deiner Wahl
+            veröffentlicht.
+          </li>
+          <li style={{ transitionDelay: "1.5s" }}>
+            <b>Betreuung:</b> Nach der Veröffentlichung ist es wichtig, die App
+            regelmäßig zu aktualisieren und Probleme zu beheben. Mit uns hast du
+            dafür auch nach der Veröffentlichung einen Ansprechpartner.
+          </li>
+        </ol>
       </>
     ),
   };
@@ -91,7 +103,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       title: "App Development from Leipzig - M-to-B",
       description:
         "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
@@ -114,21 +126,30 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
       headlineSection2: "App Development Process",
       textSection2: (
         <>
-          <p style={{ transitionDelay: "0.3s" }} key={1}>
-            Your app starts the development process with the concept and
-            planning. Together with you, we develop the best strategy for your
-            requirements and select the most suitable technologies.
-          </p>
-          <p style={{ transitionDelay: "0.6s" }} key={2}>
-            Then the design process begins, in which you directly contribute
-            your ideas and at the end receive a UI design as a template from our
-            app designers.
-          </p>
-          <p style={{ transitionDelay: "0.9s" }} key={3}>
-            The actual development then runs transparently and personalized. You
-            always stay up to date with the current progress of your app and
-            never lose track.
-          </p>
+          <p>The app development typically involves the following steps:</p>
+          <ol>
+            <li style={{ transitionDelay: "0.3s" }}>
+              Strategy: Here the goal of your app is determined and a concept is
+              created as to how your app can be led there most efficiently.
+            </li>
+            <li style={{ transitionDelay: "0.6s" }}>
+              Design: The layout of your app is created. Everything revolves
+              around user-friendliness and recognition value.
+            </li>
+            <li style={{ transitionDelay: "0.9s" }}>
+              Implementation: In this step, your idea becomes reality. Your app
+              gets its functions and becomes a finished product.
+            </li>
+            <li style={{ transitionDelay: "1.2s" }}>
+              Release: Once your app is complete and bug tested, it will be
+              released to the app store or platforms of your choice.
+            </li>
+            <li style={{ transitionDelay: "1.5s" }}>
+              Maintenance: After release, it is important to regularly update
+              the app and fix problems. With us you have a contact person for
+              this even after the publication.
+            </li>
+          </ol>
         </>
       ),
     };

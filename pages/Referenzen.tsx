@@ -22,7 +22,7 @@ export default function HomePage(props: Props) {
   let texts = {
     title: "Referenzen - M-to-B",
     description:
-      "Entdecken Sie eine Auswahl unserer bisherigen Projekte und lassen Sie sich zu Ihrem Software Projekt inspirieren.",
+      "Entdecke eine Auswahl unserer bisherigen Projekte und lass dich zu deinem Software-Projekt inspirieren.",
   };
 
   if (router.locale == "en") {

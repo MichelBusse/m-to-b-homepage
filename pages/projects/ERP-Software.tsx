@@ -23,8 +23,8 @@ export default function ERPSoftwarePage(props: Props) {
   let texts = {
     title: "ERP-Software - M-to-B",
     description:
-      "Wir entwickeln ERP-Software für alle individuellen Anforderungen Ihres Unternehmens. Erleichtern und automatisieren Sie Ihre Prozesse.",
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+      "Wir entwickeln ERP-Software für alle individuellen Anforderungen Ihres Unternehmens. Erleichtere und automatisiere deine Prozesse.",
+    requestButtonText: "Kostenloses Beratungsgespräch",
     headline: <>ERP-Software</>,
     company: <>Schülertreff GbR</>,
     headlineText: (
@@ -81,7 +81,7 @@ export default function ERPSoftwarePage(props: Props) {
       title: "ERP-Software - M-to-B",
       description:
         "We develop ERP software for all individual requirements of your company. Facilitate and automate your processes.",
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       headline: <>ERP Software</>,
       company: <>Schülertreff GbR</>,
       headlineText: (

@@ -18,10 +18,10 @@ export default function ProjectsSection(props: Props) {
     project1Company: "Special Solutions GmbH",
     project2Name: "ERP-Software",
     project2Company: "Schülertreff GbR",
-    project3Name: "AR im OP",
-    project3Company: "UPMC Pittsburgh",
-    project4Name: "Immobilien-Website",
-    project4Company: "K&S GmbH",
+    project3Name: "Event App",
+    project3Company: "Clubz",
+    project4Name: "AR im OP",
+    project4Company: "UPMC Pittsburgh",
   };
 
   if (router.locale == "en") {
@@ -32,10 +32,10 @@ export default function ProjectsSection(props: Props) {
       project1Company: "Special Solutions GmbH",
       project2Name: "ERP Software",
       project2Company: "Schülertreff GbR",
-      project3Name: "AR in Surgery",
-      project3Company: "UPMC Pittsburgh",
-      project4Name: "Real Estate Website",
-      project4Company: "K&S GmbH",
+      project3Name: "Event App",
+      project3Company: "Clubz",
+      project4Name: "AR in Surgery",
+      project4Company: "UPMC Pittsburgh",
     };
   }
 
@@ -87,7 +87,6 @@ export default function ProjectsSection(props: Props) {
                   src="/images/projects/project1/project1-header.png"
                   layout="fill"
                   objectFit="cover"
-                  
                 />
                 <div className={styles.captionWrapper}>
                   <div className={styles.caption}>
@@ -130,12 +129,12 @@ export default function ProjectsSection(props: Props) {
             id={styles.project3}
             style={{ transitionDelay: "0.6s" }}
           >
-            <Link href={"/projects/Augmented-Reality-Entwicklung"}>
+            <Link href={"/projects/Mobile-Event-App"}>
               <a>
                 <Image
                   className={styles.projectBackgroundImage}
-                  alt="Mixed Reality im OP"
-                  src="/images/projects/project3/project3-2.jpg"
+                  alt="Mobile Event App"
+                  src="/images/projects/project3/project3-header.png"
                   layout="fill"
                   objectFit="cover"
                 />
@@ -155,19 +154,23 @@ export default function ProjectsSection(props: Props) {
             id={styles.project4}
             style={{ transitionDelay: "0.8s" }}
           >
-            <Image
-              className={styles.projectBackgroundImage}
-              alt="Webdesign K&amp;S GmbH"
-              src="/images/projects/project4.jpg"
-              width={600}
-              height={746}
-            />
-            <div className={styles.captionWrapper}>
-              <div className={styles.caption}>
-                <h3>{texts.project4Name}</h3>
-                <p>{texts.project4Company}</p>
-              </div>
-            </div>
+            <Link href={"/projects/Augmented-Reality-Entwicklung"}>
+              <a>
+                <Image
+                  className={styles.projectBackgroundImage}
+                  alt="Mixed Reality im OP"
+                  src="/images/projects/project4/project4-header.png"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className={styles.captionWrapper}>
+                  <div className={styles.caption}>
+                    <h3>{texts.project4Name}</h3>
+                    <p>{texts.project4Company}</p>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
     title: "AR Entwicklung für den OP - M-to-B",
     description:
       "Wir entwickeln Augmente Reality Anwengunen für komplexe Anforderungen und schaffen neue Technologien.",
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+    requestButtonText: "Kostenloses Beratungsgespräch",
     headline: <>AR Entwicklung für den OP</>,
     company: <>Universität Leipzig / UPMC Pittsburgh</>,
     headlineText: (
@@ -81,7 +81,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
       description:
         "We develop augmented reality applications for complex requirements and create new technologies.",
       headline: <>AR Development for surgery</>,
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       company: <>University Leipzig / UPMC Pittsburgh</>,
       headlineText: (
         <p>
@@ -153,7 +153,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
         headline={texts.headline}
         topHeadline={texts.company}
         text={texts.headlineText}
-        highlightImage={"/images/projects/project3/project3-header.png"}
+        highlightImage={"/images/projects/project4/project4-header.png"}
         requestButtonText={texts.requestButtonText}
       />
       <main>
@@ -194,22 +194,22 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
         />
         <CustomShapeDivider flip={true} />
         <ServiceSection
-          key={"project3-1"}
+          key={"project4-1"}
           sectionRef={section1Ref}
           headline={texts.section1Headline}
           text={texts.section1Text}
-          image="/images/projects/project3/project3-1.jpg"
+          image="/images/projects/project4/project4-1.jpg"
           imageAlt={texts.section1Alt}
-          typewriterKey={"project3-1"}
+          typewriterKey={"project4-1"}
         />
         <ServiceSection
-          key={"project3-2"}
+          key={"project4-2"}
           sectionRef={section2Ref}
           headline={texts.section2Headline}
           text={texts.section2Text}
-          image="/images/projects/project3/project3-2.jpg"
+          image="/images/projects/project4/project4-2.jpg"
           imageAlt={texts.section2Alt}
-          typewriterKey={"project3-2"}
+          typewriterKey={"project4-2"}
         />
         <CustomShapeDivider flip={false} />
         <QuoteSection quote={texts.quote} />

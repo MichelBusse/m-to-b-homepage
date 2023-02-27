@@ -101,6 +101,30 @@
   opacity: 1;
 }
 
+.serviceSection .text ol {
+  list-style: none;
+  counter-reset: numbers 0;
+  padding-left: 1.6em;
+}
+
+.serviceSection .text ol li{
+  margin: 0.4em 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.serviceSection.active .text ol li {
+  opacity: 1;
+}
+
+.serviceSection .text ol li::before {
+  counter-increment: numbers;
+  content: counter(numbers);
+  font-weight: bold;
+  margin-left: -1.1em;
+  margin-right: 0.5em;
+}
+
 .serviceSection .text button {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

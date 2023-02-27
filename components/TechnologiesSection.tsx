@@ -54,9 +54,9 @@ const logos = [
   </div>,
   <div className={styles.logo} key={9}>
     <div className={styles.logoCaption}>
-      <span>AWS</span>
+      <span>Vite</span>
     </div>
-    <Image src="/images/technologies/aws.png" width={100} height={100} alt="AWS Logo"/>
+    <Image src="/images/technologies/vite.png" width={100} height={100} alt="Vite Logo"/>
   </div>,
   <div className={styles.logo} key={10}>
     <div className={styles.logoCaption}>
@@ -73,7 +73,7 @@ export default function TechnologiesSection() {
 
   let texts = {
     headline: "Technologien",
-    text: "...oder individuell nach Ihren Anforderungen"
+    text: "...oder individuell für deine Anforderungen"
   };
 
   if (router.locale == "en") {

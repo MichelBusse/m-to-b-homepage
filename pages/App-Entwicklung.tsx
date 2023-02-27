@@ -27,9 +27,9 @@ export default function AppDevelopmentPage(props: Props) {
     text: (
       <>
         <p>
-          Sie suchen einen Partner für die Realisierung Ihrer App?
+          Du suchst einen Partner für die Realisierung deiner App?
           <br />
-          Sie haben schon eine Idee, brauchen aber noch Unterstützung bei der
+          Du hast schon eine Idee, brauchst aber noch Unterstützung bei der
           Umsetzung?
         </p>
         <p>
@@ -37,96 +37,96 @@ export default function AppDevelopmentPage(props: Props) {
           Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Informieren Sie sich zu effizienten Strategien für Ihre App und
-          ebnen Sie den Weg zum Erfolg!
+          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
+          effizienten Strategien um deine App zum Erfolg zu führen!
         </p>
       </>
     ),
-    requestButtonText: "Strategie anfordern",
+    requestButtonText: "Kostenlose Beratung",
     title: "App Entwicklung - M-to-B",
     description:
-      "Entwickeln Sie Ihre App mit uns als App Agentur. Wir bieten professionelle Beratung und individuelle Lösungen für iOS, Android und Cross-Platform.",
-    concept: "Konzeption und Planung",
-    development: "Entwicklung und Implementierung",
-    support: "Wartung und Support",
-    crossPlatformHeadline: "Cross-Platform App Entwicklung",
-    crossPlatformText: (
+      "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
+    concept: "Strategie",
+    development: "Implementierung",
+    support: "Betreuung",
+    strategyHeadline: "Die Lean-Prototype-Strategie",
+    strategyText: (
       <>
         <p>
-          Cross-Platform App Entwicklung steht für die Erstellung von Apps, die
-          auf mehreren Plattformen wie iOS, Android oder im Web verfügbar sind.
-          Cross-Platform-Apps werden in der Regel mit Hilfe von sogenannten
-          &quot;Hybrid-Technologien&quot; entwickelt, die es ermöglichen, den Code für
-          mehrere Plattformen zu verwenden, anstatt für jede Plattform einen
-          eigenen Code zu schreiben. Der Vorteil von Cross-Platform-Apps ist,
-          dass sie schneller und kostengünstiger zu entwickeln sind als native
-          Apps und dass sie auf mehreren Plattformen verfügbar sind. Unsere
-          Software Agentur bietet insbesondere Unterstützung bei der Entwicklung
-          von Cross-Platform-Apps für Unternehmen und Endverbraucher. Dabei
-          setzen wir meistens auf die Entwicklung mit Flutter für eine optimale
-          Leistung und Nutzererfahrung.
+          Viele App-Projekte scheitern durch schlechte Planung und aufgeblasenen
+          Funktionen. Bei Änderungen in den Anforderungen kann dann nicht agil
+          reagiert werden und das Budget wird schon vor den ersten messbaren
+          Ergebnissen verschlungen.
+        </p>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Mit der Lean-Prototype-Strategie minimierst du dieses Risiko. In der
+          ersten Phase der App-Entwicklung erarbeiten wir gemeinsam die
+          Hauptanforderungen und Kernkomponenten deiner App. Diese werden dann
+          direkt in einem ersten "schmalen" (lean) Prototypen umgesetzt.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Dadurch hälst du bereits nach wenigen Wochen und mit minimalem Budget
+          die erste Version deiner App in den Händen und kannst zeitnah
+          anfangen, die Funktionen zu validieren und im Einsatz zu testen.
         </p>
       </>
     ),
-    crossPlatformAlt: "Virtual Reality",
-    processHeadline: "Ablauf einer App Entwicklung",
+    crossPlatformAlt: "Cross-Plattform",
+    processHeadline: "Ablauf der App-Entwicklung",
     processText: (
       <>
-        <p>
-          Der Ablauf der App-Entwicklung umfasst in der Regel folgende Schritte:
-          <ul>
-            <li>
-              Konzeption und Planung: Hier wird das Ziel der App festgelegt und
-              ein Konzept erstellt, das die Funktionen und die
-              Benutzeroberfläche der App beschreibt.
-            </li>
-            <li>
-              Design: Im Design-Schritt werden das Aussehen und die
-              Benutzerfreundlichkeit der App festgelegt. Dazu gehört auch die
-              Erstellung von Wireframes und Prototypen.
-            </li>
-            <li>
-              Entwicklung: In diesem Schritt wird der Code für die App
-              geschrieben und die Funktionen implementiert.
-            </li>
-            <li>
-              Testen: Vor der Veröffentlichung wird die App auf Fehler und
-              Performance-Probleme überprüft und entsprechende Korrekturen
-              vorgenommen.
-            </li>
-            <li>
-              Veröffentlichung: Sobald die App fehlerfrei ist, wird sie im App
-              Store oder auf anderen Plattformen veröffentlicht.
-            </li>
-            <li>
-              Wartung und Support: Nach der Veröffentlichung ist es wichtig, die
-              App regelmäßig zu aktualisieren und eventuelle Probleme zu
-              beheben.
-            </li>
-          </ul>
-        </p>
+        <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
+        <ol>
+          <li style={{ transitionDelay: "0.3s" }}>
+            <b>Strategie:</b> Hier wird das Ziel deiner App festgelegt und ein
+            Konzept erstellt, wie deine App ohne Umwege dorthin geführt werden
+            kann.
+          </li>
+          <li style={{ transitionDelay: "0.6s" }}>
+            <b>Design:</b> Das Layout deiner App wird erstellt. Dabei dreht sich
+            alles um Nutzerfreundlichkeit und Wiedererkennungswert.
+          </li>
+          <li style={{ transitionDelay: "0.9s" }}>
+            <b>Implementierung:</b> In diesem Schritt wird deine Idee Realität.
+            Deine App erhält ihre Funktionen und wird zu einem fertigen Produkt.
+          </li>
+          <li style={{ transitionDelay: "1.2s" }}>
+            <b>Rollout:</b> Sobald deine App fertig und auf Fehler getestet ist,
+            wird sie im App-Store, oder auf den Plattformen deiner Wahl
+            veröffentlicht.
+          </li>
+          <li style={{ transitionDelay: "1.5s" }}>
+            <b>Betreuung:</b> Nach der Veröffentlichung ist es wichtig, die App
+            regelmäßig zu aktualisieren und Probleme zu beheben. Mit uns hast du
+            dafür auch nach der Veröffentlichung einen Ansprechpartner.
+          </li>
+        </ol>
       </>
     ),
-    processAlt: "Ablauf einer App Entwicklung",
+    processAlt: "App-Entwicklungsprozess",
     connection: "Verbesserte Kundeninteraktion und -bindung",
     efficient: "Verbessert die Effizienz und Leistung",
     expand: "Neue Märkte erschließen",
-    agencyHeadline: "Warum unsere App Agentur?",
+    agencyHeadline: "Warum unsere App-Agentur?",
     agencyText: (
       <>
         <p>
-          Unser Entwicklerteam verfügt über die nötigen Fähigkeiten und
-          Erfahrungen, um Ihnen moderne und nutzerfreundliche Apps anbieten zu
-          können. Wir sind stets bereit, neue Ideen zu entwickeln und haben
-          keine Angst, uns an sich ändernde Anforderungen anzupassen. Erwarten
-          Sie den neuesten Stand der Technologie und die besten Tools und
-          Plattformen. So stellen wir sicher, dass unsere Apps von höchster
-          Qualität sind. Außerdem bieten wir eine individuelle Betreuung und
-          arbeiten eng mit unseren Kunden zusammen, damit auch alle ihre
-          Bedürfnisse und Wünsche vollständig erfüllt werden können. Wir haben
-          bereits erfolgreich in verschiedenen Branchen Projekte durchgeführt
-          und können Ihnen daher wertvolle Einsichten und Lösungen für Ihr
-          Unternehmen bieten.
+          Wir setzen auf Kommunikation - In unseren Projekten haben wir
+          festgestellt, dass der Erfolg deiner App vor allem davon abhängt, dass
+          wir deine Ziele richtig verstehen und nicht nur blind entwickeln.
+          Deshalb wirst du bei uns nicht nur während der Entwicklung, sondern
+          vor allem bei der Planung deiner App von den richtigen Experten
+          unterstützt.
+        </p>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
+          Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
+          Ziel zu unternehmen.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          In unserem unverbindlichem Erstgespräch kannst du deine Fragen
+          beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
+          unseren Experten.
         </p>
       </>
     ),
@@ -139,32 +139,46 @@ export default function AppDevelopmentPage(props: Props) {
       text: (
         <>
           <p>
-            Custom App Development for Your Business Needs - From Concept to
-            Launch and Maintenance
+            Are you looking for a partner to realize your app?
+            <br />
+            Do you already have an idea, but still need help with the
+            implementation?
           </p>
-          <p>Take advantage of our advisory and send us your request.</p>
+          <p>
+            Without a clear strategy, the app development process can quickly
+            become a waste of time and money.
+          </p>
+          <p>
+            Use a free consultation and learn efficient strategies to make your
+            app a success!
+          </p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation!",
       title: "App Development - M-to-B",
       description:
-        "Develop your app with us as an app agency. We offer professional advice and individual solutions for iOS, Android and Cross-Platform.",
-      concept: "Conception and Planning",
-      development: "Development and Implementation",
-      support: "Maintenance and Support",
-      crossPlatformHeadline: "Cross Platform App Development",
-      crossPlatformText: (
+        "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
+      concept: "Strategy",
+      development: "Implementation",
+      support: "Maintenance",
+      strategyHeadline: "The Lean Prototype Strategy",
+      strategyText: (
         <>
           <p>
-            Cross platform app development is the process of creating apps that
-            are available on multiple platforms such as iOS, Android, and
-            Windows. Cross platform apps are usually developed using &quot;hybrid&quot;
-            technologies that allow the code to be used on multiple platforms
-            rather than writing separate code for each platform. The advantage
-            of cross platform apps is that they are faster and more cost
-            effective to develop than native apps and are available on multiple
-            platforms. Our software agency offers professional support for cross
-            platform app development for businesses and consumers.
+            Many app projects fail due to poor planning and inflated functions.
+            If the requirements change, it is then not possible to react agilely
+            and the budget is gobbled up before the first measurable results.
+          </p>
+          <p style={{ transitionDelay: "0.3s" }}>
+            With the lean prototype strategy you minimize this risk. In the
+            first phase of app development, we work out the main requirements
+            and core components of your app together. These are then immediately
+            implemented in a lean prototype.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            As a result, after just a few weeks and with a minimal budget, you
+            will have the first version of your app in your hands and can
+            promptly start validating and testing the functions in use.
           </p>
         </>
       ),
@@ -172,37 +186,30 @@ export default function AppDevelopmentPage(props: Props) {
       processHeadline: "App Development Process",
       processText: (
         <>
-          <p>
-            The app development process typically involves the following steps:
-            <ul>
-              <li>
-                Conceptualization and planning: This involves setting the goals
-                for the app and creating a concept that outlines the features
-                and user interface of the app.
-              </li>
-              <li>
-                Design: In the design step, the appearance and usability of the
-                app are determined. This includes creating wireframes and
-                prototypes.
-              </li>
-              <li>
-                Development: In this step, the code for the app is written and
-                the features are implemented.
-              </li>
-              <li>
-                Testing: Before release, the app is tested for errors and
-                performance issues and any necessary corrections are made.
-              </li>
-              <li>
-                Release: Once the app is error-free, it is released on the app
-                store or other platforms.
-              </li>
-              <li>
-                Maintenance and support: After release, it is important to
-                regularly update the app and address any issues that arise.
-              </li>
-            </ul>
-          </p>
+          <p>The app development typically involves the following steps:</p>
+          <ol>
+            <li style={{ transitionDelay: "0.3s" }}>
+              Strategy: Here the goal of your app is determined and a concept is
+              created as to how your app can be led there most efficiently.
+            </li>
+            <li style={{ transitionDelay: "0.6s" }}>
+              Design: The layout of your app is created. Everything revolves
+              around user-friendliness and recognition value.
+            </li>
+            <li style={{ transitionDelay: "0.9s" }}>
+              Implementation: In this step, your idea becomes reality. Your app
+              gets its functions and becomes a finished product.
+            </li>
+            <li style={{ transitionDelay: "1.2s" }}>
+              Release: Once your app is complete and bug tested, it will be
+              released to the app store or platforms of your choice.
+            </li>
+            <li style={{ transitionDelay: "1.5s" }}>
+              Maintenance: After release, it is important to regularly update
+              the app and fix problems. With us you have a contact person for
+              this even after the publication.
+            </li>
+          </ol>
         </>
       ),
       processAlt: "App Development Process",
@@ -213,16 +220,20 @@ export default function AppDevelopmentPage(props: Props) {
       agencyText: (
         <>
           <p>
-            Our development team has the necessary skills and experience to
-            offer you modern and user-friendly apps. We are always ready to
-            develop new ideas and are not afraid to adapt to changing
-            requirements. You can expect cutting edge technology and the best
-            tools and platforms to ensure that our apps are of the highest
-            quality. We also offer individual attention and work closely with
-            our customers to ensure that all of their needs and desires can be
-            fully met. We have already successfully completed projects in
-            various industries and can therefore offer you valuable insights and
-            solutions for your company.
+            We focus on communication - In our projects, we have found that the
+            success of your app depends on us understanding your goal correctly
+            instead of blindly executing the development. Therefore, you are
+            supported not only during development, but above all in planning of
+            your app by the right experts.
+          </p>
+          <p style={{ transitionDelay: "0.3s" }}>
+            You have the opportunity for frequent consultation and brainstorming
+            together, whereby we help you to take the right steps towards your
+            goal.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            In our relaxed initial meeting, you can have your questions answered
+            and get a foretaste of working with our experts.
           </p>
         </>
       ),
@@ -261,8 +272,8 @@ export default function AppDevelopmentPage(props: Props) {
         <ServiceSection
           key={"app1"}
           sectionRef={virtualRealityRef}
-          headline={texts.crossPlatformHeadline}
-          text={texts.crossPlatformText}
+          headline={texts.strategyHeadline}
+          text={texts.strategyText}
           image="/images/app-development/cross-platform.png"
           imageAlt={texts.crossPlatformAlt}
           typewriterKey={"app1"}

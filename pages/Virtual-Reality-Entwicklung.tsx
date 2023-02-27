@@ -30,22 +30,22 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
     text: (
       <>
         <p>
-          Erweitern Sie Ihre Welt mit innovativer Technologie: Virtual &
+          Erweiter deine Realität mit innovativer Technologie: Virtual &
           Augmented Reality-Lösungen für Unternehmen und Endverbraucher.
         </p>
         <p>
-          Nutzen Sie unsere kostenlose Beratung und senden Sie uns jetzt eine
-          Anfrage!
+          Nutzen unsere kostenlose Beratung und entdecke deine
+          Anwendungsmöglichkeiten!
         </p>
       </>
     ),
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+    requestButtonText: "Kostenloses Beratungsgespräch",
     title: "Virtual & Augmented Reality Entwicklung - M-to-B",
     description:
-      "Erleben Sie die Zukunft der Realität durch Virtual Reality (VR) und Augmented Reality (AR) von unserer Software Agentur. Wir entwickeln VR und AR Apps!",
-    concept: "Konzeption und Planung",
-    development: "Entwicklung und Implementierung",
-    support: "Wartung und Support",
+      "Erlebe die Zukunft der Realität durch Virtual und Augmented Reality Entwicklung. Entdecke deine Einsatzmöglichkeiten!",
+    concept: "Strategie",
+    development: "Implementierung",
+    support: "Betreuung",
     virtualRealityHeadline: "Was ist Virtual Reality (VR)?",
     virtualRealityText: (
       <>
@@ -59,7 +59,6 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
           Ausbildung, im Marketing, in der Architektur und in vielen anderen.
           Unsere Software Agentur bietet professionelle Unterstützung bei der
           Entwicklung von VR-Anwendungen für Unternehmen und Endverbraucher.
-          Kontaktieren Sie uns, um mehr über unsere Leistungen zu erfahren.
         </p>
       </>
     ),
@@ -85,7 +84,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
         <p>
           Die Möglichkeiten der AR-Technologie sind vielfältig und bieten
           zahlreiche Vorteile. Wir können Ihnen dabei helfen, die richtige
-          AR-Lösung für Ihre Bedürfnisse zu entwickeln und umzusetzen.
+          AR-Lösung für deine Bedürfnisse zu entwickeln und umzusetzen.
         </p>
       </>
     ),
@@ -97,16 +96,22 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
     agencyText: (
       <>
         <p>
-          Unser erfahrenes Entwicklerteam verfügt über die nötigen Fähigkeiten
-          und Erfahrungen, um Ihnen hochwertige VR- und AR-Anwendungen
-          anzubieten. Wir haben bereits erfolgreich in verschiedenen Branchen
-          Projekte durchgeführt und können Ihnen daher wertvolle Einsichten und
-          Lösungen für Ihr Unternehmen bieten. Zusätzlich bieten wir eine
-          flexible und individuelle Betreuung, um sicherzustellen, dass wir
-          Ihren Anforderungen entsprechen und Ihnen die bestmögliche
-          Unterstützung bieten. Wir sind überzeugt, dass wir die richtige Wahl
-          für Ihre VR- und AR-Entwicklungsprojekte sind. Kontaktieren Sie uns
-          noch heute, um mehr über unsere Leistungen zu erfahren!
+          Wir setzen auf Kommunikation - In unseren Projekten haben wir
+          festgestellt, dass der Erfolg deiner Software vor allem davon abhängt,
+          dass wir deine Ziele richtig verstehen und nicht nur blind entwickeln.
+          Deshalb wirst du bei uns nicht nur während der Entwicklung, sondern
+          vor allem bei der Planung deiner Software von den richtigen Experten
+          unterstützt.
+        </p>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
+          Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
+          Ziel zu unternehmen.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          In unserem unverbindlichem Erstgespräch kannst du deine Fragen
+          beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
+          unseren Experten.
         </p>
       </>
     ),
@@ -125,7 +130,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       title: "Virtual & Augmented Reality Development - M-to-B",
       description:
         "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",
@@ -184,15 +189,20 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
       agencyText: (
         <>
           <p>
-            Our experienced development team has the necessary skills and
-            experience to provide you with high-quality VR and AR applications.
-            We have already successfully completed projects in various
-            industries and can therefore offer you valuable insights and
-            solutions for your company. In addition, we offer flexible and
-            individual support to ensure that we meet your requirements and
-            provide you with the best possible support. We are convinced that we
-            are the right choice for your VR and AR development projects.
-            Contact us today to learn more about our services!
+            We focus on communication - In our projects, we have found that the
+            success of your software depends on us understanding your goal
+            correctly instead of blindly executing the development. Therefore,
+            you are supported not only during development, but above all in
+            planning of your software by the right experts.
+          </p>
+          <p style={{ transitionDelay: "0.3s" }}>
+            You have the opportunity for frequent consultation and brainstorming
+            together, whereby we help you to take the right steps towards your
+            goal.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            In our relaxed initial meeting, you can have your questions answered
+            and get a foretaste of working with our experts.
           </p>
         </>
       ),

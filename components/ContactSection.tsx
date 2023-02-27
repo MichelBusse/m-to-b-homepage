@@ -21,18 +21,18 @@ export default function ContactSection(props: Props) {
   let texts = {
     headline1: "Kontakt",
     contactText:
-      "Sie sind interessiert oder haben noch Fragen? Nutzen Sie unsere kostenlose Beratung und senden Sie uns einfach eine Nachricht!",
-    request: "Strategie anfordern",
+      "Du bist interessiert oder hast noch Fragen? Nutze unsere kostenlose Beratung und sende uns einfach eine Nachricht!",
+    request: "Kostenlose Beratung",
     privacyText: "Ich akzeptiere die ",
     privacy: "Datenschutzerklärung",
     send: "Absenden",
-    formName: "Ihr Name",
-    formMail: "Ihre E-Mail",
-    formPhone: "Ihre Telefonnummer",
-    formMessage: "Ihre Nachricht",
+    formName: "Name",
+    formMail: "E-Mail",
+    formPhone: "Telefonnummer",
+    formMessage: "Nachricht",
     checkInputs: "Bitte überprüfe die Eingaben",
     mailSuccess: "E-Mail erfolgreich versendet!",
-    mailError: "Fehler beim Versenden",
+    mailError: "Fehler beim Versenden!",
   };
 
   if (router.locale == "en") {

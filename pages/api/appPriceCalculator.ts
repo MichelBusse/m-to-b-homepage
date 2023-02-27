@@ -16,7 +16,7 @@ export default async function handler(
   let mailData = {
     from: "preisrechner@m-to-b.com",
     to: "kontakt@m-to-b.com",
-    subject: `Preisabschätzung für Ihre App - M-to-B`,
+    subject: `Preisabschätzung für deine App - M-to-B`,
     text:
       "Guten Tag,\n\n" +
       "wir freuen uns, Ihnen bei der Planung Ihrer App helfen zu können.\n" +
@@ -32,7 +32,7 @@ export default async function handler(
       req.body.currentFormState.join('],[') +
       "]\n\n" +
       "Mit freundlichen Grüßen,\n" +
-      "Ihr Team von M-to-B\n\n\n" +
+      "Dein Team von M-to-B\n\n\n" +
       "M-to-B Software\n" +
       "Inh. Michel Busse\n" +
       "Kirchberger Str. 62\n" +
@@ -60,7 +60,7 @@ export default async function handler(
       req.body.currentFormState.join('],[') +
       "]</p>" +
       "<p>Mit freundlichen Grüßen,<br/>" +
-      "Ihr Team von M-to-B</p><br/>" +
+      "Dein Team von M-to-B</p><br/>" +
       "<p>M-to-B Software<br/>" +
       "Inh. Michel Busse<br/>" +
       "Kirchberger Str. 62<br/>" +

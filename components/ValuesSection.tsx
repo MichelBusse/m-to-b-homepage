@@ -6,11 +6,11 @@ const ValuesSection = () => {
 
   let texts = {
     headline1: "Persönlich",
-    text1: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bleiben Sie immer auf dem aktuellen Entwicklungsstand.",
+    text1: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bleibst du immer auf dem aktuellen Entwicklungsstand.",
     headline2: "Modern",
     text2: "Wir suchen für jedes Projekt individuell die optimalen Technologien und programmieren agil, effizient und zukunftsorientiert.",
     headline3: "Leidenschaftlich",
-    text3: "Jede Software-Entwicklung begeistert uns auf's Neue und als App-Agentur freut es uns, die Vorstellungen unserer Kunden zu realisieren.",
+    text3: "Jede Software-Entwicklung begeistert uns auf's Neue und als App-Agentur freut es uns, deine Vorstellungen zu realisieren.",
   };
   let phrases = ["Software", "Apps", "Zukunft"];
 

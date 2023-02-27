@@ -40,10 +40,10 @@ export default function AppPriceCalculatorPage() {
     mailSuccess: "Erfolgreich gesendet!",
     mailError: "Senden fehlgeschlagen",
     introText:
-      "Nach Beantwortung der folgenden Fragen erhalten Sie direkt eine Einschätzung für das Budget, mit dem Sie für Ihre App rechnen können.",
+      "Nach Beantwortung der folgenden Fragen erhälst du direkt eine Einschätzung für das Budget, mit dem du für deine App rechnen kannst.",
     namePlaceholder: "Name *",
     phonePlaceholder: "Telefon *",
-    send: "Preis jetzt erhalten!",
+    send: "Preis jetzt erhalten",
   };
 
   if (router.locale == "en") {

@@ -23,8 +23,8 @@ export default function ManagementSoftwarePage(props: Props) {
   let texts = {
     title: "Management Software - M-to-B",
     description:
-      "Wir entwickeln Management Software für das Mitarbeitermanagement und die Einsatzplanung. Erleichtern und automatisieren Sie Ihre Prozesse.",
-    requestButtonText: "Beratungsgespräch vereinbaren!",
+      "Wir entwickeln Management Software für das Mitarbeitermanagement und die Einsatzplanung. Erleichtere und automatisiere deine Prozesse.",
+    requestButtonText: "Kostenloses Beratungsgespräch",
     headline: <>Management Software</>,
     company: <>Special-Solutions GmbH</>,
     headlineText: (
@@ -85,7 +85,7 @@ export default function ManagementSoftwarePage(props: Props) {
       title: "Management Software - M-to-B",
       description:
         "We develop management software for employee management and resource planning. Facilitate and automate your processes.",
-      requestButtonText: "Schedule a free consultation!",
+      requestButtonText: "Free consultation",
       headline: <>Management Software</>,
       company: <>Special-Solutions GmbH</>,
       headlineText: (
