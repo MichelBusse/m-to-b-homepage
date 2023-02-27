@@ -62,7 +62,7 @@ export default function AppDevelopmentPage(props: Props) {
           Mit der Lean-Prototype-Strategie minimierst du dieses Risiko. In der
           ersten Phase der App-Entwicklung erarbeiten wir gemeinsam die
           Hauptanforderungen und Kernkomponenten deiner App. Diese werden dann
-          direkt in einem ersten "schmalen" (lean) Prototypen umgesetzt.
+          direkt in einem ersten &quot;schmalen&quot; (lean) Prototypen umgesetzt.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
           Dadurch hälst du bereits nach wenigen Wochen und mit minimalem Budget

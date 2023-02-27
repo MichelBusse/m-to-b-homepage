@@ -86,7 +86,7 @@ export default function ERPSoftwarePage(props: Props) {
       headlineText: (
         <p>
           Clubz is your network for party planning and club research Find events
-          and clubs in your area, discover your friends' parties and share your
+          and clubs in your area, discover your friends&apos; parties and share your
           events.
         </p>
       ),
@@ -100,7 +100,7 @@ export default function ERPSoftwarePage(props: Props) {
             information such as tickets and dress code at a glance and compare
             different events to find the best one.
           </p>
-          <h3>See your friends' plans</h3>
+          <h3>See your friends&apos; plans</h3>
           <p>
             You can see what events your friends are attending and make plans
             with them. Discover who you can meet at which party and where your
