@@ -40,7 +40,7 @@ export default function HomePage(props: Props) {
         </p>
         <p>
           Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Strategien um dein Software-Projekt zum Erfolg zu führen!
+          effizienten Strategien, um dein Software-Projekt zum Erfolg zu führen!
         </p>
       </>
     ),
@@ -67,20 +67,19 @@ export default function HomePage(props: Props) {
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Mit individueller Software digitalisieren und optimieren wir die
-          Arbeitsprozesse in deinem Unternehmen und helfen dabei Stress und Zeit
-          zu sparen.
+          Eine maßgeschneiderte Software-Lösungen automatisiert die Prozesse in
+          deinem Unternehmen zukunftssicher und investierst in langfristige
+          Effizienz.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Gemeinsam mit Ihnen erstellen wir dafür maßgeschneiderte
-          Softwarelösungen, die dann deine Anforderungen umsetzen und den
-          Firmenprozess optimal abbilden.
+          Mit der richtigen Methode wird die Entwicklung kein Kostenfresser,
+          sondern führt schon nach minimaler Entwicklungszeit zu messbaren
+          Ergebnissen.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Von Mitarbeitermanagement, Projektmanagement, Inventarsystemen oder
-          Kundenkommunikation - Wir haben bereits Projekte in den
-          verschiedensten Bereichen entwickelt und freuen uns darauf, auch Sie
-          dabei unterstützen zu können.
+          Wir begleiten dich Schritt für Schritt, von einer kosteneffizienten
+          Strategie, bis zum Einstatz im Unternehmen. Realisiere deine
+          Software-Lösung und bringe dein Unternehmen auf die nächste Stufe!
         </p>
       </>
     ),
@@ -146,19 +145,17 @@ export default function HomePage(props: Props) {
       textSection2: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            Individual software development provides value to all sectors, where
-            excisting software cannot represent all the requirements or where
-            there are completely new ideas and processes.
+            With tailor-made software solutions, you automate your processes in
+            a future-proof manner and invest in long-term efficiency.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
-            Together with you as the customer, we develop fully customized
-            software, with the target of realizing your vision in a modern and
-            efficient fashion.
+            With the right method, the development does not become a cost hog,
+            but leads to measurable results after a minimal development time.
           </p>
           <p style={{ transitionDelay: "0.9s" }} key={3}>
-            The use cases are extremly versatile, from employee and project
-            management, invoice systems, logistics and medical technologies to
-            industrial processes.
+            We accompany you step by step, from a cost-efficient strategy to
+            implementation in the company. Realize your software solution and
+            take your business to the next level!
           </p>
         </>
       ),

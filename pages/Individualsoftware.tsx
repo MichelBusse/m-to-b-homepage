@@ -68,7 +68,7 @@ export default function IndividualSoftwarePage(props: Props) {
           Dadurch kann die Effizienz und Leistung um ein Vielfaches gesteigert
           und gleichzeitig auch die Sicherheit erhöht werden. Mit
           professioneller Unterstützung bei der Strategie, Entwicklung und
-          Betreuung von individueller Software bringst du dein Unternehmen auf
+          Betreuung von individueller Software, bringst du dein Unternehmen auf
           die nächste Stufe.
         </p>
       </>
@@ -84,13 +84,13 @@ export default function IndividualSoftwarePage(props: Props) {
         <p style={{ transitionDelay: "0.6s" }}>
           Mit der Lean-Prototype-Methode steht der Return-Of-Investment für dein
           Unternehmen im Fokus und unnötige Funktionen, die am Ende niemand
-          wirklich nutzt, werden vermieden.
+          braucht, werden vermieden.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
           Du wirst Schritt-Für-Schritt von Experten begleitet und kannst schon
           nach wenigen Wochen den ersten &quot;schmalen&quot; (lean) Prototypen
-          deiner Software in deinem Unternehmen effektiv einsetzen. Schluss
-          mit langwierigen und kostenfressenden Software-Entwicklungen.
+          deiner Software in deinem Unternehmen effektiv einsetzen. Schluss mit
+          langwierigen und kostenfressenden Software-Entwicklungen.
         </p>
       </>
     ),

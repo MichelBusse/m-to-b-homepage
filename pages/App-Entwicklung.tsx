@@ -38,7 +38,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
         <p>
           Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Strategien um deine App zum Erfolg zu führen!
+          effizienten Strategien, um deine App zum Erfolg zu führen!
         </p>
       </>
     ),
