@@ -50,13 +50,13 @@ export default function HomePage(props: Props) {
     headlineSection1: "App Entwicklung",
     textSection1: (
       <>
-        <p>
+        <p style={{ transitionDelay: "0.3s" }} key={1}>
           Von der Idee bis in den App-Store begleiten wir deine App durch den
           Entwicklungsprozess. Mit der Lean-Prototype-Strategie hälst du schon
           nach kürzester Zeit und minimalem Budget die erste Version deiner App
           in den Händen und verhinderst unnötige Ausgaben.
         </p>
-        <p style={{ transitionDelay: "0.3s" }}>
+        <p style={{ transitionDelay: "0.6s" }} key={2}>
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
           Ansprechpartnern und enger Kommunikation. So stellen wir sicher, dass
           deine Ziele erreicht und alle Ressourcen effizient genutzt werden.
@@ -68,7 +68,7 @@ export default function HomePage(props: Props) {
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Eine maßgeschneiderte Software-Lösungen automatisiert die Prozesse in
-          deinem Unternehmen zukunftssicher und investierst in langfristige
+          deinem Unternehmen zukunftssicher und investiert in langfristige
           Effizienz.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
