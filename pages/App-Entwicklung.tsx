@@ -42,7 +42,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    requestButtonText: "Kostenlose Beratung",
+    requestButtonText: "Kostenloses Beratungungsgespräch",
     title: "App Entwicklung - M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",

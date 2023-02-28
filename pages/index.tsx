@@ -44,7 +44,7 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    requestButtonText: "Kostenlose Beratung",
+    requestButtonText: "Kostenloses Beratungungsgespräch",
     description:
       "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
     headlineSection1: "App Entwicklung",
@@ -68,7 +68,7 @@ export default function HomePage(props: Props) {
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Mit individueller Software digitalisieren und optimieren wir die
-          Arbeitsprozesse in Ihrem Unternehmen und helfen dabei Stress und Zeit
+          Arbeitsprozesse in deinem Unternehmen und helfen dabei Stress und Zeit
           zu sparen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>

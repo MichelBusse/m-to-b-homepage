@@ -43,7 +43,7 @@ export default function IndividualSoftwarePage(props: Props) {
         </p>
       </>
     ),
-    requestButtonText: "Kostenlose Beratung",
+    requestButtonText: "Kostenloses Beratungungsgespräch",
     title: "Individualsoftware - M-to-B",
     description:
       "Individualsoftware kann teuer sein - muss sie aber nicht! Erhalte individuelle Softwarelösungen für dein Unternehmen mit kosteneffizienten Strategien.",
@@ -55,7 +55,7 @@ export default function IndividualSoftwarePage(props: Props) {
       <>
         <p>
           Individualsoftware ist genau auf die spezifischen Bedürfnisse und
-          Anforderungen eines Unternehmens zugeschnitten. Im Gegensatz zu
+          Anforderungen deines Unternehmens zugeschnitten. Im Gegensatz zu
           Standardsoftware, die für eine breite Masse von Anwendern entwickelt
           wurde und nur begrenzte Anpassungsmöglichkeiten besitzt, bietet
           Individualsoftware die Möglichkeit, genau auf die Prozesse und

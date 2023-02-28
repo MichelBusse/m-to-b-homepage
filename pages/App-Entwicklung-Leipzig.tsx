@@ -38,7 +38,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         </p>
       </>
     ),
-    requestButtonText: "Kostenlose Beratung",
+    requestButtonText: "Kostenloses Beratungungsgespräch",
     title: "App Entwicklung aus Leipzig - M-to-B",
     description:
       "Wir sind eine App Agentur aus Leipzig und freuen uns auf dein Projekt! Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",

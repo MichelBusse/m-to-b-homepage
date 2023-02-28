@@ -35,7 +35,7 @@ export default function AppDevelopmentBerlinPage(props: Props) {
         </p>
       </>
     ),
-    requestButtonText: "Kostenlose Beratung",
+    requestButtonText: "Kostenloses Beratungungsgespräch",
     title: "App Entwicklung für Berlin - M-to-B",
     description:
       "Wir entwickeln Apps für Berliner Unternehmen. Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
