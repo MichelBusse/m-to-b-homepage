@@ -177,7 +177,7 @@ export default function IndividualSoftwarePage(props: Props) {
         <>
           <p style={{ transitionDelay: "0.3s" }}>
             The development of individual software solutions can be expensive,
-            time-consuming and stressful - but it doesn't have to be!
+            time-consuming and stressful - but it doesn&apos;t have to be!
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
             With the lean prototype method, the focus is on the return of
