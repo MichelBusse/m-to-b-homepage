@@ -85,7 +85,7 @@ export default function ManagementSoftwarePage(props: Props) {
       title: "Management Software - M-to-B",
       description:
         "We develop management software for employee management and resource planning. Facilitate and automate your processes.",
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       headline: <>Management Software</>,
       company: <>Special-Solutions GmbH</>,
       headlineText: (

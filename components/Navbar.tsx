@@ -21,26 +21,20 @@ export default function Navbar(props: Props) {
   // Set active Menu Item and correct contact Link
   useEffect(() => {
     setContactLink("#contact");
-    switch (router.asPath) {
-      case "/App-Entwicklung":
-        setActiveMenuItem("apps");
-        break;
-      case "/Individualsoftware":
-        setActiveMenuItem("software");
-        break;
-      case "/Virtual-Reality-Entwicklung":
-        setActiveMenuItem("vr");
-        break;
-      case "/Referenzen":
-        setActiveMenuItem("projects");
-        break;
-      case "/App-Preis-Rechner":
-        setActiveMenuItem("");
-        setContactLink("/#contact");
-        break;
-      default:
-        setActiveMenuItem("");
-        break;
+
+    if (router.asPath.startsWith("/App-Entwicklung")) {
+      setActiveMenuItem("apps");
+    } else if (router.asPath.startsWith("/Individualsoftware")) {
+      setActiveMenuItem("software");
+    } else if (router.asPath.startsWith("/Virtual-Reality-Entwicklung")) {
+      setActiveMenuItem("vr");
+    } else if (router.asPath.startsWith("/Referenzen")) {
+      setActiveMenuItem("projects");
+    } else if (router.asPath.startsWith("/App-Preis-Rechner")) {
+      setActiveMenuItem("");
+      setContactLink("/#contact");
+    } else {
+      setActiveMenuItem("");
     }
   }, [router.asPath]);
 

@@ -22,6 +22,7 @@ export default function IndividualSoftwarePage(props: Props) {
   const router = useRouter();
 
   const individualsoftwareRef = useRef(null);
+  const advantageRef = useRef(null);
   const agencyRef = useRef(null);
 
   let texts = {
@@ -31,15 +32,16 @@ export default function IndividualSoftwarePage(props: Props) {
         <p>
           Mit Standardsoftware stößt dein Unternehmen an die Grenzen?
           <br />
-          Für deine Anforderungen gibt es noch kein Programm?
+          Für deine Anforderungen gibt es noch nicht das richtige Programm?
         </p>
         <p>
-          Der Software-Entwicklungsprozess kann ohne eine klare Strategie
-          schnell zum Zeit- und Kostenfresser werden.
+          Mit maßgeschneiderten Software-Lösungen automatisierst du deine
+          Prozesse zukunftssicher und investierst in langfristige Effizienz.
         </p>
         <p>
           Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Strategien um dein Software-Projekt zum Erfolg zu führen!
+          effizienten Software-Strategien um dein Unternehmen auf die nächste
+          Stufe zu bringen!
         </p>
       </>
     ),
@@ -50,32 +52,56 @@ export default function IndividualSoftwarePage(props: Props) {
     concept: "Strategie",
     development: "Implementierung",
     support: "Betreuung",
-    individualsoftwareHeadline: "Was ist Individualsoftware?",
+    individualsoftwareHeadline: "Warum Individualsoftware?",
     individualsoftwareText: (
       <>
-        <p>
-          Individualsoftware ist genau auf die spezifischen Bedürfnisse und
-          Anforderungen deines Unternehmens zugeschnitten. Im Gegensatz zu
-          Standardsoftware, die für eine breite Masse von Anwendern entwickelt
-          wurde und nur begrenzte Anpassungsmöglichkeiten besitzt, bietet
-          Individualsoftware die Möglichkeit, genau auf die Prozesse und
-          Arbeitsabläufe eines Unternehmens abgestimmt zu werden. Dies kann die
-          Effizienz und Leistung verbessern und gleichzeitig auch die Sicherheit
-          erhöhen. Eine Software Agentur wie unsere bietet professionelle
-          Unterstützung bei der Konzeption, Planung, Entwicklung und
-          Implementierung von Individualsoftware, um dein Unternehmen
-          erfolgreich zu unterstützen.
+        <p style={{ transitionDelay: "0.3s" }}>
+          Standardsoftware lässt sich oft nicht genau auf deinen Bedarf anpassen
+          und kostet vor allem für wachsende Unternehmen Nerven, Zeit und Geld.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Individualsoftware hingegen ist speziell für dein Unternehmen
+          entwickelt und wird genau auf deine Prozesse und Anforderungen
+          zugeschnitten.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }}>
+          Dadurch kann die Effizienz und Leistung um ein Vielfaches gesteigert
+          und gleichzeitig auch die Sicherheit erhöht werden. Mit
+          professioneller Unterstützung bei der Strategie, Entwicklung und
+          Betreuung von individueller Software bringst du dein Unternehmen auf
+          die nächste Stufe.
         </p>
       </>
     ),
     individualsoftwareAlt: "Individualsoftware",
+    advantageHeadline: "Die Lean-Prototype-Methode",
+    advantageText: (
+      <>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Die Entwicklung von individuellen Software-Lösungen kann teuer,
+          aufwändig und stressig werden - muss sie aber nicht!
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Mit der Lean-Prototype-Methode steht das Return-Of-Investment für dein
+          Unternehmen im Fokus und unnötige Funktionen, die am Ende niemand
+          wirklich nutzt, werden vermieden.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }}>
+          Du wirst Schritt-Für-Schritt von Experten begleitet und kannst schon
+          nach wenigen Wochen den ersten &quot;schmalen&quot; (lean) Prototypen
+          deiner Software in deinem Unternehmen effektiv einsetzen. Schluss
+          mit langwierigen und kostenfressenden Software-Entwicklungen.
+        </p>
+      </>
+    ),
+    advantageAlt: "Individualsoftware",
     personalized: "Maßgeschneidert auf das Unternehmen",
-    efficient: "Verbessert die Effizienz und Leistung",
+    efficient: "Verbessert Leistung und Effizienz",
     security: "Erhöht die Sicherheit",
     agencyHeadline: "Warum unsere Software-Agentur?",
     agencyText: (
       <>
-        <p>
+        <p style={{ transitionDelay: "0.3s" }}>
           Wir setzen auf Kommunikation - In unseren Projekten haben wir
           festgestellt, dass der Erfolg deiner Software vor allem davon abhängt,
           dass wir deine Ziele richtig verstehen und nicht nur blind entwickeln.
@@ -83,12 +109,12 @@ export default function IndividualSoftwarePage(props: Props) {
           vor allem bei der Planung deiner Software von den richtigen Experten
           unterstützt.
         </p>
-        <p style={{ transitionDelay: "0.3s" }}>
+        <p style={{ transitionDelay: "0.6s" }}>
           Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
           Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
           Ziel zu unternehmen.
         </p>
-        <p style={{ transitionDelay: "0.6s" }}>
+        <p style={{ transitionDelay: "0.9s" }}>
           In unserem unverbindlichem Erstgespräch kannst du deine Fragen
           beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
           unseren Experten.
@@ -104,36 +130,68 @@ export default function IndividualSoftwarePage(props: Props) {
       text: (
         <>
           <p>
-            Custom-tailored software solutions for your business&apos;s unique
-            needs: individual software development by our experienced team!
+            Does your company reach its limits with standard software?
+            <br />
+            There is no app for your requirements yet?
           </p>
-          <p>Take advantage of our advisory and send us your request.</p>
+          <p>
+            With tailor-made software solutions, you automate your processes in
+            a future-proof manner and invest in long-term efficiency.
+          </p>
+          <p>
+            Use a free consultation and find out about efficient software
+            strategies to take your business to the next level!
+          </p>
         </>
       ),
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       title: "Individual Software - M-to-B",
       description:
         "Create personalized software solutions for your business with our software agency. We offer custom development!",
       concept: "Conception and Planning",
       development: "Development and Implementation",
       support: "Maintenance and Support",
-      individualsoftwareHeadline: "What is Individual Software?",
+      individualsoftwareHeadline: "Why Individual Software?",
       individualsoftwareText: (
         <>
-          <p>
-            Individual software is tailored to the specific needs and
-            requirements of a company. Unlike standard software, which is
-            developed for a broad range of users and offers limited
-            customization options, individual software allows for a tailored fit
-            to the processes and workflows of a company. This can improve
-            efficiency and performance, as well as increase security. A software
-            agency like ours offers professional support in the conception,
-            planning, development, and implementation of individual software to
-            support your company&apos;s success.
+          <p style={{ transitionDelay: "0.3s" }}>
+            Standard software often cannot be adapted exactly to your needs and
+            costs nerves, time and money, especially for growing companies.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            Individual software, on the other hand, is specially developed and
+            tailored for your company and is precisely adapted to your processes
+            and requirements.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            As a result, efficiency and performance can be increased many times
+            over, while at the same time safety gets improved. With professional
+            support in strategy, development and support of individual software,
+            you take your business to the next level.
           </p>
         </>
       ),
       individualsoftwareAlt: "Individual Software",
+      advantageHeadline: "The Lean Prototype Method",
+      advantageText: (
+        <>
+          <p style={{ transitionDelay: "0.3s" }}>
+            The development of individual software solutions can be expensive,
+            time-consuming and stressful - but it doesn't have to be!
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            With the lean prototype method, the focus is on the return of
+            investment for your company and unnecessary functions that nobody
+            really uses are avoided.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            You will be accompanied step-by-step by experts and after just a few
+            weeks you will be able to use the first lean prototype of your
+            software in your company. No more lengthy and costly developments.
+          </p>
+        </>
+      ),
+      advantageAlt: "Individual Software",
       personalized: "Tailored to your Requirements",
       efficient: "Improve Efficiency and Performance",
       security: "Strengthen Security",
@@ -207,6 +265,15 @@ export default function IndividualSoftwarePage(props: Props) {
           imageAlt={texts.individualsoftwareAlt}
           typewriterKey={"software1"}
         />
+        <ServiceSection
+          key={"software2"}
+          sectionRef={advantageRef}
+          headline={texts.advantageHeadline}
+          text={texts.advantageText}
+          image="/images/individual-software/advantage.png"
+          imageAlt={texts.advantageAlt}
+          typewriterKey={"software2"}
+        />
         <IconTextSection
           icon1={<HiScissors />}
           icon2={<BsGraphUp />}
@@ -216,13 +283,13 @@ export default function IndividualSoftwarePage(props: Props) {
           label3={texts.security}
         />
         <ServiceSection
-          key={"software2"}
+          key={"software3"}
           sectionRef={agencyRef}
           headline={texts.agencyHeadline}
           text={texts.agencyText}
           image="/images/agency.png"
           imageAlt={texts.agencyAlt}
-          typewriterKey={"software2"}
+          typewriterKey={"software3"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

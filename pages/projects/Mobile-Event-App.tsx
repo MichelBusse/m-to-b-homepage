@@ -80,7 +80,7 @@ export default function ERPSoftwarePage(props: Props) {
       title: "Mobile Event App - M-to-B",
       description:
         "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       headline: <>Mobile Event App</>,
       company: <>Clubz</>,
       headlineText: (
@@ -139,12 +139,12 @@ export default function ERPSoftwarePage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/projects/ERP-Software"
+          href="https://m-to-b.com/projects/Mobile-Event-App"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/projects/ERP-Software"
+          href="https://m-to-b.com/en/projects/Mobile-Event-App"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

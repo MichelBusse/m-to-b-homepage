@@ -81,7 +81,7 @@ export default function ERPSoftwarePage(props: Props) {
       title: "ERP-Software - M-to-B",
       description:
         "We develop ERP software for all individual requirements of your company. Facilitate and automate your processes.",
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       headline: <>ERP Software</>,
       company: <>Schülertreff GbR</>,
       headlineText: (

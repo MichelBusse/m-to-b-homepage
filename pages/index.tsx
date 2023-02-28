@@ -128,7 +128,7 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       description:
         "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality",
       headlineSection1: "App Development",

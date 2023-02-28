@@ -49,7 +49,7 @@ export default function AppDevelopmentPage(props: Props) {
     concept: "Strategie",
     development: "Implementierung",
     support: "Betreuung",
-    strategyHeadline: "Die Lean-Prototype-Strategie",
+    strategyHeadline: "Die Lean-Prototype-Methode",
     strategyText: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -59,7 +59,7 @@ export default function AppDevelopmentPage(props: Props) {
           ersten messbaren Ergebnissen verschlungen.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Mit der Lean-Prototype-Strategie minimierst du dieses Risiko. In der
+          Mit der Lean-Prototype-Methode minimierst du dieses Risiko. In der
           ersten Phase der App-Entwicklung erarbeiten wir gemeinsam die
           Hauptanforderungen und Kernkomponenten deiner App. Diese werden dann
           direkt mit einem ersten &quot;schmalen&quot; (lean) Prototypen
@@ -158,14 +158,14 @@ export default function AppDevelopmentPage(props: Props) {
           </p>
         </>
       ),
-      requestButtonText: "Free consultation!",
+      requestButtonText: "Schedule a free consultation!",
       title: "App Development - M-to-B",
       description:
         "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
       concept: "Strategy",
       development: "Implementation",
       support: "Maintenance",
-      strategyHeadline: "The Lean Prototype Strategy",
+      strategyHeadline: "The Lean Prototype Method",
       strategyText: (
         <>
           <p>
@@ -174,7 +174,7 @@ export default function AppDevelopmentPage(props: Props) {
             and the budget is gobbled up before the first measurable results.
           </p>
           <p style={{ transitionDelay: "0.3s" }}>
-            With the lean prototype strategy you minimize this risk. In the
+            With the lean prototype method you minimize this risk. In the
             first phase of app development, we work out the main requirements
             and core components of your app together. These are then immediately
             implemented in a lean prototype.

@@ -81,7 +81,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
       description:
         "We develop augmented reality applications for complex requirements and create new technologies.",
       headline: <>AR Development for surgery</>,
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       company: <>University Leipzig / UPMC Pittsburgh</>,
       headlineText: (
         <p>

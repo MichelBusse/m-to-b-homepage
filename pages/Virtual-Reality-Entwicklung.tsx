@@ -30,7 +30,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
     text: (
       <>
         <p>
-          Erweiter deine Realität mit innovativer Technologie: Virtual &
+          Erweitere deine Realität mit innovativer Technologie: Virtual &
           Augmented Reality-Lösungen für Unternehmen und Endverbraucher.
         </p>
         <p>
@@ -130,7 +130,7 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       title: "Virtual & Augmented Reality Development - M-to-B",
       description:
         "Experience the future of reality through Virtual Reality (VR) and Augmented Reality (AR) from our software agency. We develop VR and AR apps!",

@@ -103,7 +103,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       title: "App Development from Leipzig - M-to-B",
       description:
         "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",

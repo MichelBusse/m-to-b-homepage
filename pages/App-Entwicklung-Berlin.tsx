@@ -98,7 +98,7 @@ export default function AppDevelopmentBerlinPage(props: Props) {
           <p>Take advantage of our advisory and send us your request.</p>
         </>
       ),
-      requestButtonText: "Free consultation",
+      requestButtonText: "Schedule a free consultation",
       title: "App Development for Berlin - M-to-B",
       description:
         "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Berlin.",
