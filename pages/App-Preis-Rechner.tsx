@@ -137,16 +137,6 @@ export default function AppPriceCalculatorPage() {
           selectMultiple: false,
         },
         {
-          question: <>Do you need a backoffice dashboard?</>,
-          options: ["Yes", "No", "Not decided yet"],
-          icons: [
-            <BsCheckCircle key={0} />,
-            <BsXCircle key={1} />,
-            <BsSlashCircle key={2} />,
-          ],
-          selectMultiple: false,
-        },
-        {
           question: <>Which functions should your app include?</>,
           options: [
             "Bookings / Dates",
@@ -238,16 +228,6 @@ export default function AppPriceCalculatorPage() {
       },
       {
         question: <>Benötigt die App Push-Notifications?</>,
-        options: ["Ja", "Nein", "Noch nicht fest"],
-        icons: [
-          <BsCheckCircle key={0} />,
-          <BsXCircle key={1} />,
-          <BsSlashCircle key={2} />,
-        ],
-        selectMultiple: false,
-      },
-      {
-        question: <>Benötigt die App ein Backoffice-Bedienfeld?</>,
         options: ["Ja", "Nein", "Noch nicht fest"],
         icons: [
           <BsCheckCircle key={0} />,
@@ -454,18 +434,6 @@ export default function AppPriceCalculatorPage() {
       maxPrice += 2832;
     }
 
-    // Backoffice
-    if (currentFormState[7].includes(0)) {
-      minPrice += 4720;
-      maxPrice += 4720;
-    }
-
-    // Backoffice not sure
-    if (currentFormState[7].includes(2)) {
-      minPrice += 0;
-      maxPrice += 4720;
-    }
-
     // Dates
     if (currentFormState[8].includes(0)) {
       minPrice += 3776;
@@ -501,8 +469,7 @@ export default function AppPriceCalculatorPage() {
       currentFormState[3].length == 0 ||
       currentFormState[4].length == 0 ||
       currentFormState[5].length == 0 ||
-      currentFormState[6].length == 0 ||
-      currentFormState[7].length == 0
+      currentFormState[6].length == 0
     ) {
       toast.error(texts.checkInputs);
       return;
