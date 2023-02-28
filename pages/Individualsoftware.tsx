@@ -40,7 +40,7 @@ export default function IndividualSoftwarePage(props: Props) {
         </p>
         <p>
           Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Software-Strategien um dein Unternehmen auf die nächste
+          effizienten Software-Strategien, um dein Unternehmen auf die nächste
           Stufe zu bringen!
         </p>
       </>
@@ -82,7 +82,7 @@ export default function IndividualSoftwarePage(props: Props) {
           aufwändig und stressig werden - muss sie aber nicht!
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Mit der Lean-Prototype-Methode steht das Return-Of-Investment für dein
+          Mit der Lean-Prototype-Methode steht der Return-Of-Investment für dein
           Unternehmen im Fokus und unnötige Funktionen, die am Ende niemand
           wirklich nutzt, werden vermieden.
         </p>
