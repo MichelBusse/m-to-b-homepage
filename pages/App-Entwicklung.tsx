@@ -23,7 +23,7 @@ export default function AppDevelopmentPage(props: Props) {
   const agencyRef = useRef(null);
 
   let texts = {
-    headline: <>App Entwicklung</>,
+    headline: <>App-Entwicklung & -Agentur</>,
     text: (
       <>
         <p>
@@ -43,7 +43,7 @@ export default function AppDevelopmentPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Entwicklung - M-to-B",
+    title: "App-Entwicklung & -Agentur - M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     concept: "Strategie",
@@ -52,19 +52,20 @@ export default function AppDevelopmentPage(props: Props) {
     strategyHeadline: "Die Lean-Prototype-Strategie",
     strategyText: (
       <>
-        <p>
-          Viele App-Projekte scheitern durch schlechte Planung und aufgeblasenen
-          Funktionen. Bei Änderungen in den Anforderungen kann dann nicht agil
-          reagiert werden und das Budget wird schon vor den ersten messbaren
-          Ergebnissen verschlungen.
-        </p>
         <p style={{ transitionDelay: "0.3s" }}>
+          Viele App-Projekte scheitern durch schlechte Planung und überladene
+          Funktionen. Bei Änderungen in den Anforderungen kann dann von der App
+          Agentur nicht agil reagiert werden und das Budget wird schon vor den
+          ersten messbaren Ergebnissen verschlungen.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
           Mit der Lean-Prototype-Strategie minimierst du dieses Risiko. In der
           ersten Phase der App-Entwicklung erarbeiten wir gemeinsam die
           Hauptanforderungen und Kernkomponenten deiner App. Diese werden dann
-          direkt in einem ersten &quot;schmalen&quot; (lean) Prototypen umgesetzt.
+          direkt mit einem ersten &quot;schmalen&quot; (lean) Prototypen
+          entwickelt.
         </p>
-        <p style={{ transitionDelay: "0.6s" }}>
+        <p style={{ transitionDelay: "0.9s" }}>
           Dadurch hälst du bereits nach wenigen Wochen und mit minimalem Budget
           die erste Version deiner App in den Händen und kannst zeitnah
           anfangen, die Funktionen zu validieren und im Einsatz zu testen.
@@ -75,27 +76,30 @@ export default function AppDevelopmentPage(props: Props) {
     processHeadline: "Ablauf der App-Entwicklung",
     processText: (
       <>
-        <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Die App-Entwicklung in unserer Agentur besteht aus folgenden
+          Schritten:
+        </p>
         <ol>
-          <li style={{ transitionDelay: "0.3s" }}>
+          <li style={{ transitionDelay: "0.6s" }}>
             <b>Strategie:</b> Hier wird das Ziel deiner App festgelegt und ein
             Konzept erstellt, wie deine App ohne Umwege dorthin geführt werden
             kann.
           </li>
-          <li style={{ transitionDelay: "0.6s" }}>
+          <li style={{ transitionDelay: "0.9s" }}>
             <b>Design:</b> Das Layout deiner App wird erstellt. Dabei dreht sich
             alles um Nutzerfreundlichkeit und Wiedererkennungswert.
           </li>
-          <li style={{ transitionDelay: "0.9s" }}>
+          <li style={{ transitionDelay: "1.2s" }}>
             <b>Implementierung:</b> In diesem Schritt wird deine Idee Realität.
             Deine App erhält ihre Funktionen und wird zu einem fertigen Produkt.
           </li>
-          <li style={{ transitionDelay: "1.2s" }}>
+          <li style={{ transitionDelay: "1.5s" }}>
             <b>Rollout:</b> Sobald deine App fertig und auf Fehler getestet ist,
             wird sie im App-Store, oder auf den Plattformen deiner Wahl
             veröffentlicht.
           </li>
-          <li style={{ transitionDelay: "1.5s" }}>
+          <li style={{ transitionDelay: "1.8s" }}>
             <b>Betreuung:</b> Nach der Veröffentlichung ist es wichtig, die App
             regelmäßig zu aktualisieren und Probleme zu beheben. Mit uns hast du
             dafür auch nach der Veröffentlichung einen Ansprechpartner.
@@ -110,20 +114,20 @@ export default function AppDevelopmentPage(props: Props) {
     agencyHeadline: "Warum unsere App-Agentur?",
     agencyText: (
       <>
-        <p>
-          Wir setzen auf Kommunikation - In unseren Projekten haben wir
-          festgestellt, dass der Erfolg deiner App vor allem davon abhängt, dass
-          wir deine Ziele richtig verstehen und nicht nur blind entwickeln.
-          Deshalb wirst du bei uns nicht nur während der Entwicklung, sondern
-          vor allem bei der Planung deiner App von den richtigen Experten
-          unterstützt.
-        </p>
         <p style={{ transitionDelay: "0.3s" }}>
+          Wir setzen auf Kommunikation - In unseren Projekten haben wir
+          festgestellt, dass der Erfolg deiner App-Entwicklung vor allem davon
+          abhängt, dass wir als App-Agentur deine Ziele richtig verstehen und
+          nicht nur blind entwickeln. Deshalb wirst du bei uns nicht nur während
+          der Entwicklung, sondern vor allem bei der Planung deiner App von den
+          richtigen Experten unterstützt.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
           Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
           Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
           Ziel zu unternehmen.
         </p>
-        <p style={{ transitionDelay: "0.6s" }}>
+        <p style={{ transitionDelay: "0.9s" }}>
           In unserem unverbindlichem Erstgespräch kannst du deine Fragen
           beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
           unseren Experten.
