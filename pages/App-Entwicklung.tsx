@@ -23,7 +23,7 @@ export default function AppDevelopmentPage(props: Props) {
   const agencyRef = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung & -Agentur</>,
+    headline: <>App-Entwicklung & Agentur</>,
     text: (
       <>
         <p>

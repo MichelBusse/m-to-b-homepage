@@ -73,7 +73,7 @@ export default function Header(props: Props) {
           <header id={styles.header}>
             {props.topHeadline && <span className={styles.topHeadline}>{props.topHeadline}</span>}
             <h1 className={headerVisible ? styles.visible : ""}>
-              {props.headline}{" "}
+              {props.headline}&nbsp;
               <span className={styles.typewriterCursor}>|</span>
             </h1>
             {props.text}
