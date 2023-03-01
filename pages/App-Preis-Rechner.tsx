@@ -30,6 +30,7 @@ export default function AppPriceCalculatorPage() {
   const [optionDivs, setOptionDivs] = useState<JSX.Element[]>([]);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  let [tracked, setTracked] = useState(false);
 
   let texts = {
     title: "App Entwicklung Preis Rechner - M-to-B",
@@ -265,6 +266,19 @@ export default function AppPriceCalculatorPage() {
 
   const nextQuestion = () => {
     setTransitionClass(styles.fadeOut);
+    if(currentFormIndex == questions.length - 2) {
+      setTracked(true);
+      fetch("/api/appPriceCalculatorTracking", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          currentFormState,
+        }),
+      });
+    }
     setTimeout(() => {
       setCurrentFormIndex((prev) => {
         if (prev < questions.length - 1) {
