@@ -43,7 +43,7 @@ export default function AppDevelopmentPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App-Entwicklung & -Agentur - M-to-B",
+    title: "App-Entwicklung & Agentur - M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     concept: "Strategie",
@@ -139,7 +139,7 @@ export default function AppDevelopmentPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development</>,
+      headline: <>App Development & Agency</>,
       text: (
         <>
           <p>
@@ -159,7 +159,7 @@ export default function AppDevelopmentPage(props: Props) {
         </>
       ),
       requestButtonText: "Schedule a free consultation!",
-      title: "App Development - M-to-B",
+      title: "App Development & Agency - M-to-B",
       description:
         "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
       concept: "Strategy",
@@ -174,9 +174,9 @@ export default function AppDevelopmentPage(props: Props) {
             and the budget is gobbled up before the first measurable results.
           </p>
           <p style={{ transitionDelay: "0.3s" }}>
-            With the lean prototype method you minimize this risk. In the
-            first phase of app development, we work out the main requirements
-            and core components of your app together. These are then immediately
+            With the lean prototype method you minimize this risk. In the first
+            phase of app development, we work out the main requirements and core
+            components of your app together. These are then immediately
             implemented in a lean prototype.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
