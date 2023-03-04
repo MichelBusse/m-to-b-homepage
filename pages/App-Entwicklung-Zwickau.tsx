@@ -50,9 +50,10 @@ export default function AppDevelopmentZwickauPage(props: Props) {
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          App-Entwicklung kann kompliziert sein - muss sie aber nicht! Wir haben
-          M&#8209;to&#8209;B 2020 in Zwickau gegründet, um Unternehmen bei der
-          Verwirklichung ihrer Projekte zu unterstützen.
+          App-Entwicklung kann kompliziert sein - muss sie aber nicht!
+          <br />
+          Wir haben M&#8209;to&#8209;B 2020 in Zwickau gegründet, um Unternehmen
+          bei der Verwirklichung ihrer Projekte zu unterstützen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Nach unserer Erfahrung ist die App-Entwicklung für alle Seiten ein
@@ -143,6 +144,7 @@ export default function AppDevelopmentZwickauPage(props: Props) {
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
             App development can be complicated - but it doesn&apos;t have to be!
+            <br />
             We founded M&#8209;to&#8209;B 2020 in Zwickau to support companies
             in realizing their projects.
           </p>
@@ -152,8 +154,8 @@ export default function AppDevelopmentZwickauPage(props: Props) {
             strategy is developed together.
           </p>
           <p style={{ transitionDelay: "0.9s" }} key={3}>
-            We accompany companies from Zwickau in the realization of their app and
-            support them in bringing successful innovations to the region.
+            We accompany companies from Zwickau in the realization of their app
+            and support them in bringing successful innovations to the region.
           </p>
         </>
       ),

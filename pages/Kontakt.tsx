@@ -14,16 +14,16 @@ export default function HomePage(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Referenzen - M-to-B",
+    title: "Kontakt - M-to-B",
     description:
-      "Entdecke eine Auswahl unserer bisherigen Projekte und lass dich zu deinem Software-Projekt inspirieren.",
+      "Nutze unser kostenloses Beratungsgespräch und lass dich von einem Experten zu deinem Software-Projekt beraten.",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Projects - M-to-B",
+      title: "Contact - M-to-B",
       description:
-        "Discover a selection of our previous projects and let yourself be inspired for your software project.",
+        "Use our free consultation and let an expert advise you on your software project.",
     };
   }
 
@@ -31,14 +31,16 @@ export default function HomePage(props: Props) {
     <>
       <Head>
         <title key="title">{texts.title}</title>
-        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/Referenzen" />
-        <link rel="alternate" hrefLang="en" href="https://m-to-b.com/en/Referenzen" />
+        <link rel="alternate" hrefLang="de" href="https://m-to-b.com/Kontakt" />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://m-to-b.com/en/Kontakt"
+        />
         <meta name="description" content={texts.description} />
       </Head>
       <main>
         <MenuPlaceholder />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
-        <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>
     </>

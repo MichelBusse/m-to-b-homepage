@@ -50,9 +50,11 @@ export default function AppDevelopmentJenaPage(props: Props) {
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
-          App-Entwicklung kann kompliziert sein - muss sie aber nicht! Wir haben
-          M&#8209;to&#8209;B 2020 in Zwickau, in der Nähe von Jena gegründet, um
-          Unternehmen bei der Verwirklichung ihrer Projekte zu unterstützen.
+          App-Entwicklung kann kompliziert sein - muss sie aber nicht!
+          <br />
+          Wir haben M&#8209;to&#8209;B 2020 in Zwickau, in der Nähe von Jena
+          gegründet, um Unternehmen bei der Verwirklichung ihrer Projekte zu
+          unterstützen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Nach unserer Erfahrung ist die App-Entwicklung für alle Seiten ein
@@ -141,8 +143,9 @@ export default function AppDevelopmentJenaPage(props: Props) {
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            App development can be complicated - but it doesn&apos;t have to be! We
-            founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Jena,
+            App development can be complicated - but it doesn&apos;t have to be!
+            <br />
+            We founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Jena,
             to support companies in realizing their projects.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
@@ -151,8 +154,8 @@ export default function AppDevelopmentJenaPage(props: Props) {
             strategy is developed together.
           </p>
           <p style={{ transitionDelay: "0.9s" }} key={3}>
-            We accompany companies from Jena in the realization of their app
-            and support them in bringing successful innovations to the region.
+            We accompany companies from Jena in the realization of their app and
+            support them in bringing successful innovations to the region.
           </p>
         </>
       ),

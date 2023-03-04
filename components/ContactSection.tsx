@@ -1,4 +1,9 @@
-import { ChangeEventHandler, MouseEventHandler, useState } from "react";
+import {
+  ChangeEventHandler,
+  MouseEventHandler,
+  useEffect,
+  useState,
+} from "react";
 import styles from "../styles/ContactSection.module.scss";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -23,8 +28,7 @@ export default function ContactSection(props: Props) {
     contactText:
       "Du bist interessiert oder hast noch Fragen? Nutze unsere kostenlose Beratung und sende uns einfach eine Nachricht!",
     request: "Kostenlose Beratung",
-    privacyText: "Ich akzeptiere die ",
-    privacy: "Datenschutzerklärung",
+    privacyText: "Ich akzeptiere die Datenschutzerklärung",
     send: "Absenden",
     formName: "Name",
     formMail: "E-Mail",
@@ -41,8 +45,7 @@ export default function ContactSection(props: Props) {
       contactText:
         "Interested? Get free advice on all possibilities for your project and receive a non-binding offer!",
       request: "Get in touch",
-      privacyText: "I accept the ",
-      privacy: "privacy policy",
+      privacyText: "I accept the privacy policy",
       send: "Send Request",
       formName: "Your name",
       formMail: "Your mail",
@@ -61,6 +64,27 @@ export default function ContactSection(props: Props) {
     text: "",
     privacy: false,
   });
+
+  useEffect(() => {
+    if (router.query.name != null) {
+      setFormState((state) => ({
+        ...state,
+        name: router.query.name as string,
+      }));
+    }
+    if (router.query.phone != null) {
+      setFormState((state) => ({
+        ...state,
+        tel: router.query.phone as string,
+      }));
+    }
+    if (router.query.email != null) {
+      setFormState((state) => ({
+        ...state,
+        email: router.query.email as string,
+      }));
+    }
+  }, []);
 
   const onChange: ChangeEventHandler<any> = (event) => {
     const elementName = event.target.name;
@@ -94,7 +118,6 @@ export default function ContactSection(props: Props) {
       },
       body: JSON.stringify(formState),
     }).then((res) => {
-      console.log(res);
       if (res.status === 200) {
         toast.success(texts.mailSuccess);
         setFormState({
@@ -110,6 +133,9 @@ export default function ContactSection(props: Props) {
           },
         };
         TagManager.dataLayer(dataLayerArgs);
+        if(router.pathname == "/Kontakt"){
+          router.push("/");
+        }
       } else {
         toast.error(texts.mailError);
       }
@@ -185,18 +211,12 @@ export default function ContactSection(props: Props) {
               </p>
               <p>
                 <BsTelephoneFill className={styles.icon} />
-                <a
-                  href="tel:+4916098709043"
-                >
-                  0160 98709043
-                </a>
+                <a href="tel:+4916098709043">0160 98709043</a>
               </p>
               <p>
                 <IoLocationSharp className={styles.icon} />
                 <Link href={"/App-Entwicklung-Leipzig"}>
-                  <a>
-                    Leipzig
-                  </a>
+                  <a>Leipzig</a>
                 </Link>
               </p>
               <QnA />
@@ -276,10 +296,7 @@ export default function ContactSection(props: Props) {
                       onChange={onChange}
                     />
                     <label htmlFor="privacy">
-                      {texts.privacyText}{" "}
-                      <Link href="/Datenschutz">
-                        <a>{texts.privacy}</a>
-                      </Link>
+                      {texts.privacyText}
                     </label>
                   </p>
                   <button

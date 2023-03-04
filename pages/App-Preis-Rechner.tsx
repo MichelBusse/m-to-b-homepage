@@ -21,6 +21,12 @@ import {
 import { toast } from "react-toastify";
 import TagManager from "react-gtm-module";
 import BudgetIcon from "../components/icons/BudgetIcon";
+import { BiArrowBack } from "react-icons/bi";
+
+type PriceResult = {
+  minPrice: number;
+  maxPrice: number;
+};
 
 export default function AppPriceCalculatorPage() {
   const router = useRouter();
@@ -30,7 +36,7 @@ export default function AppPriceCalculatorPage() {
   const [optionDivs, setOptionDivs] = useState<JSX.Element[]>([]);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  let [tracked, setTracked] = useState(false);
+  const [price, setPrice] = useState<PriceResult | null>(null);
 
   let texts = {
     title: "App Entwicklung Preis Rechner - M-to-B",
@@ -38,13 +44,23 @@ export default function AppPriceCalculatorPage() {
       "Wie viel kostet App Entwicklung? Berechne den Preis deiner App vorab und erhalte einen Kostenüberblick",
     headline: "App Entwicklung Preis Rechner",
     checkInputs: "Bitte überprüfe deine Eingaben",
-    mailSuccess: "Erfolgreich gesendet! Deine Angaben werden nun von uns bearbeitet und du erhälst so schnell wie möglich eine Antwort.",
+    mailSuccess:
+      "Erfolgreich gesendet! Deine Angaben werden nun von uns bearbeitet und du erhälst so schnell wie möglich eine Antwort.",
     mailError: "Senden fehlgeschlagen",
     introText:
       "Nach Beantwortung der folgenden Fragen erhälst du direkt eine Einschätzung für das Budget, mit dem du für deine App rechnen kannst.",
     namePlaceholder: "Name *",
     phonePlaceholder: "Telefon *",
     send: "Preis jetzt erhalten",
+    resultsNewTry: "Neuer Versuch",
+    resultsHeadline: "Deine Ergebnisse",
+    resultsText1:
+      "Wir freuen uns, dir bei der Planung deiner App helfen zu können.",
+    resultsText2:
+      "Basierend auf deinen Angaben schätzen wir das nötige Budget für deine App auf:",
+    resultsText3:
+      "Das ist nur eine grobe Schätzung, die wir mit sehr wenigen Infos machen konnten. Für deine genauere Planung kannst du unser unverbindliches Gespräch nutzen und von einem Experten 1:1 zu deiner App beraten werden.",
+    resultsButton: "Kostenloses Beratungsgespräch",
   };
 
   if (router.locale == "en") {
@@ -54,13 +70,22 @@ export default function AppPriceCalculatorPage() {
         "How much does app development cost? Calculate your budget beforehand and get an overview",
       headline: "App Development Budget Calculator",
       checkInputs: "Please check your inputs",
-      mailSuccess: "Sent successfully! Your details will now be processed by us and you will receive an answer as soon as possible.",
+      mailSuccess:
+        "Sent successfully! Your details will now be processed by us and you will receive an answer as soon as possible.",
       mailError: "Error: Could not send mail",
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
       namePlaceholder: "Name *",
       phonePlaceholder: "Phone *",
       send: "Receive costs now!",
+      resultsNewTry: "New Try",
+      resultsHeadline: "Your Results",
+      resultsText1: "We look forward to helping you plan your app.",
+      resultsText2:
+        "Based on your information, we estimate the necessary budget for your app:",
+      resultsText3:
+        "This is just a rough estimate that we were able to make with very little information. For more detailed planning, you can use our non-binding discussion and get advice from an expert 1:1 on your app.",
+      resultsButton: "Schedule a free consultation",
     };
   }
 
@@ -266,8 +291,7 @@ export default function AppPriceCalculatorPage() {
 
   const nextQuestion = () => {
     setTransitionClass(styles.fadeOut);
-    if(currentFormIndex == questions.length - 2) {
-      setTracked(true);
+    if (currentFormIndex == questions.length - 2) {
       fetch("/api/appPriceCalculatorTracking", {
         method: "POST",
         headers: {
@@ -512,22 +536,22 @@ export default function AppPriceCalculatorPage() {
         maxPrice,
         language: router.locale,
       }),
-    }).then((res) => {
-      if (res.status === 200) {
-        toast.success(texts.mailSuccess);
-        setName("");
-        setPhone("");
-        const dataLayerArgs = {
-          dataLayer: {
-            event: "app-price-sent",
-          },
-        };
-        TagManager.dataLayer(dataLayerArgs);
-        router.push("/App-Entwicklung");
-      } else {
-        toast.error(texts.mailError);
-      }
-    });
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setName("");
+          setPhone("");
+          const dataLayerArgs = {
+            dataLayer: {
+              event: "app-price-sent",
+            },
+          };
+          TagManager.dataLayer(dataLayerArgs);
+        }
+      })
+      .finally(() => {
+        setPrice({ minPrice, maxPrice });
+      });
   };
 
   return (
@@ -547,67 +571,101 @@ export default function AppPriceCalculatorPage() {
         <meta name="description" content={texts.description} />
       </Head>
       <main className={styles.appPriceCalculator}>
-        <div
-          className={`${styles.formWrapper} ${transitionClass}`}
-          ref={formWrapperRef}
-        >
-          {currentFormIndex == 0 && (
-            <div className={styles.iconWrapper}>
-              <BudgetIcon className={styles.icon} />
-            </div>
-          )}
-          <h2>{questions[currentFormIndex].question}</h2>
-          {currentFormIndex == 0 && <p>{texts.introText}</p>}
-          {currentFormIndex == questions.length - 1 && (
-            <div className={styles.inputWrapper}>
-              <input
-                name="name"
-                type="textfield"
-                required
-                value={name}
-                placeholder={texts.namePlaceholder}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <input
-                name="phone"
-                type="textfield"
-                required
-                value={phone}
-                placeholder={texts.phonePlaceholder}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-              <button onClick={() => submit()}>{texts.send}</button>
-            </div>
-          )}
-          {currentFormIndex > 0 && currentFormIndex < questions.length && (
-            <div className={styles.optionsWrapper}>{optionDivs}</div>
-          )}
-          <div className={styles.stepCounter}>
-            <span>
-              {currentFormIndex} / {questions.length - 1}
-            </span>
-          </div>
-        </div>
-        <div className={styles.controlButtonWrapper}>
-          {currentFormIndex > 0 && currentFormIndex < questions.length ? (
+        {price == null ? (
+          <>
             <div
-              className={styles.leftButtonWrapper}
-              onClick={() => previousQuestion()}
+              className={`${styles.formWrapper} ${transitionClass}`}
+              ref={formWrapperRef}
             >
-              <MdArrowBackIosNew />
+              {currentFormIndex == 0 && (
+                <div className={styles.iconWrapper}>
+                  <BudgetIcon className={styles.icon} />
+                </div>
+              )}
+              <h2>{questions[currentFormIndex].question}</h2>
+              {currentFormIndex == 0 && <p>{texts.introText}</p>}
+              {currentFormIndex == questions.length - 1 && (
+                <div className={styles.inputWrapper}>
+                  <input
+                    name="name"
+                    type="textfield"
+                    required
+                    value={name}
+                    placeholder={texts.namePlaceholder}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <input
+                    name="phone"
+                    type="textfield"
+                    required
+                    value={phone}
+                    placeholder={texts.phonePlaceholder}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                  <button onClick={() => submit()}>{texts.send}</button>
+                </div>
+              )}
+              {currentFormIndex > 0 && currentFormIndex < questions.length && (
+                <div className={styles.optionsWrapper}>{optionDivs}</div>
+              )}
+              <div className={styles.stepCounter}>
+                <span>
+                  {currentFormIndex} / {questions.length - 1}
+                </span>
+              </div>
             </div>
-          ) : (
-            <div></div>
-          )}
-          {currentFormIndex < questions.length - 1 && (
-            <div
-              className={styles.rightButtonWrapper}
-              onClick={() => nextQuestion()}
-            >
-              <MdArrowForwardIos />
+            <div className={styles.controlButtonWrapper}>
+              {currentFormIndex > 0 && currentFormIndex < questions.length ? (
+                <div
+                  className={styles.leftButtonWrapper}
+                  onClick={() => previousQuestion()}
+                >
+                  <MdArrowBackIosNew />
+                </div>
+              ) : (
+                <div></div>
+              )}
+              {currentFormIndex < questions.length - 1 && (
+                <div
+                  className={styles.rightButtonWrapper}
+                  onClick={() => nextQuestion()}
+                >
+                  <MdArrowForwardIos />
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          <>
+            <div className={styles.resultWrapper}>
+              <div
+                className={styles.retryButton}
+                onClick={() => router.reload()}
+              >
+                <BiArrowBack />
+                {texts.resultsNewTry}
+              </div>
+              <h2>{texts.resultsHeadline}</h2>
+              <p>{texts.resultsText1}</p>
+              <p>{texts.resultsText2}</p>
+              <p>
+                <strong>{`${price.minPrice.toLocaleString(router.locale)} € - ${price.maxPrice.toLocaleString(router.locale)} €`}</strong>
+              </p>
+              <p>{texts.resultsText3}</p>
+              <button
+                className="bounce"
+                onClick={() =>
+                  router.push({
+                    pathname: "/Kontakt",
+                    query: { name: name, phone: phone },
+                  })
+                }
+              >
+                {texts.resultsButton}
+              </button>
+            </div>
+          </>
+        )}
       </main>
     </>
   );

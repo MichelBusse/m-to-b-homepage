@@ -7,7 +7,7 @@
   overflow: hidden;
   background: #022636;
   color: #ffffff;
-  padding-bottom: 6em;
+  padding-bottom: 8em;
 }
 .technologiesSection .text {
   position: relative;
@@ -15,8 +15,9 @@
   text-align: center;
   max-width: 35em;
   margin-top: 6em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
+
 .technologiesSection .text h2 {
   font-size: 2.2em;
 }
@@ -29,7 +30,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
+  @media screen and (max-width: 919px) {
+    flex-direction: column;
+  }
 }
 .technologiesSection .row {
   display: flex;
@@ -80,4 +84,23 @@
 }
 .technologiesSection .logo:hover .logoCaption:before {
   transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+@media screen and (max-width: 470px){
+  .technologiesSection .logo:before,
+  .technologiesSection .logoCaption:before {
+    width: 8em;
+    height: 8em;
+  }
+  .technologiesSection .logo {
+    margin: 1.5em;
+    padding: 3em;
+  }
+  .technologiesSection .logo img{
+    width: 3em;
+    height: 3em;
+  }
+  .technologiesSection .row {
+    height: 7.2em;
+  }
 }

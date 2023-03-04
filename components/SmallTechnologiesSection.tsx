@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import styles from "../styles/SmallTechnologiesSection.module.scss";
 
 export const logos = {
@@ -17,7 +18,7 @@ export const logos = {
     </div>
   ),
   firebase: (
-    <div className={styles.logo} key={1}>
+    <div className={styles.logo} key={2}>
       <div className={styles.logoCaption}>
         <span>Firebase</span>
       </div>
@@ -30,7 +31,7 @@ export const logos = {
     </div>
   ),
   dart: (
-    <div className={styles.logo} key={1}>
+    <div className={styles.logo} key={3}>
       <div className={styles.logoCaption}>
         <span>Dart</span>
       </div>
@@ -43,7 +44,7 @@ export const logos = {
     </div>
   ),
   react: (
-    <div className={styles.logo} key={2}>
+    <div className={styles.logo} key={4}>
       <div className={styles.logoCaption}>
         <span>ReactJS</span>
       </div>
@@ -56,7 +57,7 @@ export const logos = {
     </div>
   ),
   next: (
-    <div className={styles.logo} key={3}>
+    <div className={styles.logo} key={5}>
       <div className={styles.logoCaption}>
         <span>NextJS</span>
       </div>
@@ -69,7 +70,7 @@ export const logos = {
     </div>
   ),
   nest: (
-    <div className={styles.logo} key={4}>
+    <div className={styles.logo} key={6}>
       <div className={styles.logoCaption}>
         <span>NestJS</span>
       </div>
@@ -82,7 +83,7 @@ export const logos = {
     </div>
   ),
   three: (
-    <div className={styles.logo} key={5}>
+    <div className={styles.logo} key={7}>
       <div className={styles.logoCaption}>
         <span>ThreeJS</span>
       </div>
@@ -95,7 +96,7 @@ export const logos = {
     </div>
   ),
   postgre: (
-    <div className={styles.logo} key={6}>
+    <div className={styles.logo} key={8}>
       <div className={styles.logoCaption}>
         <span>PostgreSQL</span>
       </div>
@@ -108,7 +109,7 @@ export const logos = {
     </div>
   ),
   supabase: (
-    <div className={styles.logo} key={7}>
+    <div className={styles.logo} key={9}>
       <div className={styles.logoCaption}>
         <span>Supabase</span>
       </div>
@@ -121,7 +122,7 @@ export const logos = {
     </div>
   ),
   unity: (
-    <div className={styles.logo} key={8}>
+    <div className={styles.logo} key={10}>
       <div className={styles.logoCaption}>
         <span>Unity</span>
       </div>
@@ -134,7 +135,7 @@ export const logos = {
     </div>
   ),
   vite: (
-    <div className={styles.logo} key={9}>
+    <div className={styles.logo} key={11}>
       <div className={styles.logoCaption}>
         <span>Vite</span>
       </div>
@@ -147,7 +148,7 @@ export const logos = {
     </div>
   ),
   flutter: (
-    <div className={styles.logo} key={10}>
+    <div className={styles.logo} key={12}>
       <div className={styles.logoCaption}>
         <span>Flutter</span>
       </div>
@@ -178,6 +179,26 @@ export default function SmallTechnologiesSection(props: Props) {
     };
   }
 
+  const [mobileMode, setMobileMode] = useState(false);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth < 920 && !mobileMode) {
+        setMobileMode(true);
+      } else if (window.innerWidth >= 920 && mobileMode) {
+        setMobileMode(false);
+      }
+    };
+
+    onResize();
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  });
+
   return (
     <>
       <section className={styles.technologiesSection}>
@@ -185,7 +206,15 @@ export default function SmallTechnologiesSection(props: Props) {
           <h2>{texts.headline}</h2>
         </div>
         <div className={styles.logoWrapper}>
-          {props.logos}
+          {mobileMode ? (
+            <>
+              <div className={styles.row}>{props.logos.slice(0, 1)}</div>
+              <div className={styles.row}>{props.logos.slice(1, 3)}</div>
+              <div className={styles.row}>{props.logos.slice(3, 4)}</div>
+            </>
+          ) : (
+            <>{props.logos}</>
+          )}
         </div>
       </section>
     </>
