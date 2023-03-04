@@ -539,8 +539,6 @@ export default function AppPriceCalculatorPage() {
     })
       .then((res) => {
         if (res.status === 200) {
-          setName("");
-          setPhone("");
           const dataLayerArgs = {
             dataLayer: {
               event: "app-price-sent",
