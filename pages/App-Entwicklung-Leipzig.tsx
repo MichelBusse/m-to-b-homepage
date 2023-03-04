@@ -142,15 +142,18 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            As an app agency from Leipzig, it is our goal to bring the latest
-            technologies into our region. Whether they are mobile apps for
-            Android and iOS or virtual reality systems - we always look forward
-            to new software challenges.
+            App development can be complicated - but it doesn&apos;t have to be! We
+            founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Leipzig,
+            to support companies in realizing their projects.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
-            We are also developing new technologies for the University of
-            Leipzig and their Medical Center and have already been able to
-            create new augmented reality systems for teaching and surgery.
+            In our experience, app development is an exciting and goal-oriented
+            process for all parties if communication is right and a clear
+            strategy is developed together.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }} key={3}>
+            We accompany companies from Leipzig in the realization of their app
+            and support them in bringing successful innovations to the region.
           </p>
         </>
       ),

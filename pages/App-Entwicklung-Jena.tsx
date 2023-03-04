@@ -141,7 +141,7 @@ export default function AppDevelopmentJenaPage(props: Props) {
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            App development can be complicated - but it doesn't have to be! We
+            App development can be complicated - but it doesn&apos;t have to be! We
             founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Jena,
             to support companies in realizing their projects.
           </p>

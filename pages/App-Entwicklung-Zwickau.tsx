@@ -142,12 +142,18 @@ export default function AppDevelopmentZwickauPage(props: Props) {
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            We develop apps for Zwickau companies! Whether start-up or DAX
-            company, we want the best possible results for your project.{" "}
+            App development can be complicated - but it doesn&apos;t have to be!
+            We founded M&#8209;to&#8209;B 2020 in Zwickau to support companies
+            in realizing their projects.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
-            Whether iOS, Android or web, we create your app using the latest
-            technology. Let us convince you and realize your app.
+            In our experience, app development is an exciting and goal-oriented
+            process for all parties if communication is right and a clear
+            strategy is developed together.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }} key={3}>
+            We accompany companies from Zwickau in the realization of their app and
+            support them in bringing successful innovations to the region.
           </p>
         </>
       ),
