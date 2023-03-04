@@ -38,7 +38,7 @@ export default function AppPriceCalculatorPage() {
       "Wie viel kostet App Entwicklung? Berechne den Preis deiner App vorab und erhalte einen Kostenüberblick",
     headline: "App Entwicklung Preis Rechner",
     checkInputs: "Bitte überprüfe deine Eingaben",
-    mailSuccess: "Erfolgreich gesendet!",
+    mailSuccess: "Erfolgreich gesendet! Deine Angaben werden nun von uns bearbeitet und du erhälst so schnell wie möglich eine Antwort.",
     mailError: "Senden fehlgeschlagen",
     introText:
       "Nach Beantwortung der folgenden Fragen erhälst du direkt eine Einschätzung für das Budget, mit dem du für deine App rechnen kannst.",
@@ -54,7 +54,7 @@ export default function AppPriceCalculatorPage() {
         "How much does app development cost? Calculate your budget beforehand and get an overview",
       headline: "App Development Budget Calculator",
       checkInputs: "Please check your inputs",
-      mailSuccess: "Sent successfully",
+      mailSuccess: "Sent successfully! Your details will now be processed by us and you will receive an answer as soon as possible.",
       mailError: "Error: Could not send mail",
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
