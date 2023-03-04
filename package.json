@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "find:unused": "next-unused"
@@ -16,6 +17,7 @@
     "@react-three/fiber": "^8.9.1",
     "@types/nodemailer": "^6.4.6",
     "next": "12.1.4",
+    "next-sitemap": "^4.0.1",
     "nodemailer": "^6.7.3",
     "react": "18.0.0",
     "react-cookie": "^4.1.1",

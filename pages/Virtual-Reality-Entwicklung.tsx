@@ -34,8 +34,8 @@ export default function VirtualRealityDevelopmentPage(props: Props) {
           Augmented Reality-Lösungen für Unternehmen und Endverbraucher.
         </p>
         <p>
-          Nutzen unsere kostenlose Beratung und entdecke deine
-          Anwendungsmöglichkeiten!
+          Entdecke in einem unverbindlichen Beratungsgespräch neue
+          Anwendungsmöglichkeiten für dein Unternehmen!
         </p>
       </>
     ),

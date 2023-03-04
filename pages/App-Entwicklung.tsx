@@ -10,6 +10,9 @@ import ProjectsSection from "../components/ProjectsSection";
 import CustomersSection from "../components/CustomersSection";
 import CrossPlatformSection from "../components/CrossPlatformSection";
 import PriceCalculatorSection from "../components/PriceCalculatorSection";
+import SmallTechnologiesSection, {
+  logos,
+} from "../components/SmallTechnologiesSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -18,9 +21,10 @@ type Props = {
 export default function AppDevelopmentPage(props: Props) {
   const router = useRouter();
 
-  const virtualRealityRef = useRef(null);
-  const augmentedRealityRef = useRef(null);
-  const agencyRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
 
   let texts = {
     headline: <>App-Entwicklung & Agentur</>,
@@ -37,8 +41,8 @@ export default function AppDevelopmentPage(props: Props) {
           Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Strategien, um deine App zum Erfolg zu führen!
+          In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
+          Strategien informieren, um deine App zum Erfolg zu führen!
         </p>
       </>
     ),
@@ -49,8 +53,8 @@ export default function AppDevelopmentPage(props: Props) {
     concept: "Strategie",
     development: "Implementierung",
     support: "Betreuung",
-    strategyHeadline: "Die Lean-Prototype-Methode",
-    strategyText: (
+    headlineSection1: "Die Lean-Prototype-Methode",
+    textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
           Viele App-Projekte scheitern durch schlechte Planung und überladene
@@ -72,9 +76,8 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    crossPlatformAlt: "Cross-Plattform",
-    processHeadline: "Ablauf der App-Entwicklung",
-    processText: (
+    headlineSection2: "Ablauf der App-Entwicklung",
+    textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
           Die App-Entwicklung in unserer Agentur besteht aus folgenden
@@ -107,12 +110,30 @@ export default function AppDevelopmentPage(props: Props) {
         </ol>
       </>
     ),
-    processAlt: "App-Entwicklungsprozess",
-    connection: "Verbesserte Kundeninteraktion und -bindung",
-    efficient: "Verbessert die Effizienz und Leistung",
-    expand: "Neue Märkte erschließen",
-    agencyHeadline: "Warum unsere App-Agentur?",
-    agencyText: (
+    headlineSection3: "App-Entwicklung mit Flutter",
+    textSection3: (
+      <>
+        <p style={{ transitionDelay: "0.3s" }}>
+          Bei der Entwicklung von Apps ist Flutter das fortschrittlichste
+          Framework unserer Wahl. Es ermöglicht uns, deinen ersten Prototypen
+          schnell und kosteneffektiv zu präsentieren und teure
+          Fehleinschätzungen zu vermeiden.
+        </p>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Flutter ist in der Lage, gleichzeitig für Android, iOS und Web zu
+          entwickeln, was Zeit und Kosten spart. Mit seiner hohen Performance
+          und niedrigen Speicherkosten, bietet Flutter eine nahtlose
+          Benutzererfahrung und beeindruckende Animationen.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }}>
+          Durch kontinuierliche Updates von Flutter wird deine App immer auf dem
+          neuesten Stand der Technologie gehalten und hält mit allen
+          Entwicklungen problemlos mit.
+        </p>
+      </>
+    ),
+    headlineSection4: "Warum unsere App-Agentur?",
+    textSection4: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
           Wir setzen auf Kommunikation - In unseren Projekten haben wir
@@ -134,7 +155,6 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    agencyAlt: "Software Agentur",
   };
 
   if (router.locale == "en") {
@@ -165,8 +185,8 @@ export default function AppDevelopmentPage(props: Props) {
       concept: "Strategy",
       development: "Implementation",
       support: "Maintenance",
-      strategyHeadline: "The Lean Prototype Method",
-      strategyText: (
+      headlineSection1: "The Lean Prototype Method",
+      textSection1: (
         <>
           <p>
             Many app projects fail due to poor planning and inflated functions.
@@ -186,9 +206,8 @@ export default function AppDevelopmentPage(props: Props) {
           </p>
         </>
       ),
-      crossPlatformAlt: "Virtual Reality",
-      processHeadline: "App Development Process",
-      processText: (
+      headlineSection2: "App Development Process",
+      textSection2: (
         <>
           <p>The app development typically involves the following steps:</p>
           <ol>
@@ -216,12 +235,28 @@ export default function AppDevelopmentPage(props: Props) {
           </ol>
         </>
       ),
-      processAlt: "App Development Process",
-      connection: "Improved customer interaction and engagement",
-      efficient: "Improve Efficiency and Performance",
-      expand: "Expansion into new markets",
-      agencyHeadline: "Why our App Agency?",
-      agencyText: (
+      headlineSection3: "App Development with Flutter",
+      textSection3: (
+        <>
+          <p style={{ transitionDelay: "0.3s" }}>
+            When it comes to app development, Flutter is our most advanced
+            framework of choice. It enables us to present your first prototype
+            quickly and cost-effectively, avoiding costly misjudgments.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            Flutter is able to develop simultaneously for Android, iOS and web,
+            saving time and money. With its high performance and low storage
+            costs, Flutter offers a seamless user experience and stunning
+            animations.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            Continuous updates from Flutter keep your app up to date with the
+            latest technology and easily keep up with all technical trends.
+          </p>
+        </>
+      ),
+      headlineSection4: "Why our App Agency?",
+      textSection4: (
         <>
           <p>
             We focus on communication - In our projects, we have found that the
@@ -241,7 +276,6 @@ export default function AppDevelopmentPage(props: Props) {
           </p>
         </>
       ),
-      agencyAlt: "Software Agency",
     };
   }
 
@@ -275,31 +309,43 @@ export default function AppDevelopmentPage(props: Props) {
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection
           key={"app1"}
-          sectionRef={virtualRealityRef}
-          headline={texts.strategyHeadline}
-          text={texts.strategyText}
+          sectionRef={section1Ref}
+          headline={texts.headlineSection1}
+          text={texts.textSection1}
           image="/images/app-development/cross-platform.png"
-          imageAlt={texts.crossPlatformAlt}
+          imageAlt={texts.headlineSection1}
           typewriterKey={"app1"}
         />
         <ServiceSection
           key={"app2"}
-          sectionRef={augmentedRealityRef}
-          headline={texts.processHeadline}
-          text={texts.processText}
+          sectionRef={section2Ref}
+          headline={texts.headlineSection2}
+          text={texts.textSection2}
           image="/images/app-development/app-development-process.png"
-          imageAlt={texts.processAlt}
+          imageAlt={texts.headlineSection2}
           typewriterKey={"app2"}
+        />
+        <SmallTechnologiesSection
+          logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
+        />
+        <ServiceSection
+          key={"app3"}
+          sectionRef={section3Ref}
+          headline={texts.headlineSection3}
+          text={texts.textSection3}
+          image="/images/app-development/flutter.png"
+          imageAlt={texts.headlineSection3}
+          typewriterKey={"app3"}
         />
         <CrossPlatformSection />
         <ServiceSection
-          key={"app3"}
-          sectionRef={agencyRef}
-          headline={texts.agencyHeadline}
-          text={texts.agencyText}
+          key={"app4"}
+          sectionRef={section4Ref}
+          headline={texts.headlineSection4}
+          text={texts.textSection4}
           image="/images/agency.png"
-          imageAlt={texts.agencyAlt}
-          typewriterKey={"app3"}
+          imageAlt={texts.headlineSection4}
+          typewriterKey={"app4"}
         />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />

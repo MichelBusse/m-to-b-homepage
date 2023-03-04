@@ -69,7 +69,7 @@ export default function Header(props: Props) {
             );
           })}
         </div>
-        <div className={styles.cell}>
+        <div className={`${styles.cell} ${styles.headerCell}`}>
           <header id={styles.header}>
             {props.topHeadline && <span className={styles.topHeadline}>{props.topHeadline}</span>}
             <h1 className={headerVisible ? styles.visible : ""}>

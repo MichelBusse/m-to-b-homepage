@@ -10,14 +10,14 @@ const PriceCalculatorSection = () => {
 
   let texts = {
     headline: "App Preis Rechner",
-    text: "Erhalte sofort eine erste Einschätzung für das Budget deiner App",
+    text: "Erhalte eine erste Einschätzung über das Budget deiner App",
     buttonText: "Jetzt Preis berechnen",
   };
 
   if (router.locale == "en") {
     texts = {
       headline: "App Budget Calculator",
-      text: "Receive a first approximation of your app's budget immediately",
+      text: "Receive a first approximation of your app's budget",
       buttonText: "Calculate budget now",
     };
   }

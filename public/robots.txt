@@ -1,8 +1,13 @@
-User-Agent: *
+# *
+User-agent: *
 Allow: /
 Disallow: /Impressum
 Disallow: /en/Impressum
 Disallow: /Datenschutz
 Disallow: /en/Datenschutz
 
+# Host
+Host: https://m-to-b.com
+
+# Sitemaps
 Sitemap: https://m-to-b.com/sitemap.xml

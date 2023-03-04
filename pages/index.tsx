@@ -39,8 +39,8 @@ export default function HomePage(props: Props) {
           schnell zum Zeit- und Kostenfresser werden.
         </p>
         <p>
-          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Strategien, um dein Software-Projekt zum Erfolg zu führen!
+          In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
+          Strategien informieren, um dein Software-Projekt zum Erfolg zu führen!
         </p>
       </>
     ),

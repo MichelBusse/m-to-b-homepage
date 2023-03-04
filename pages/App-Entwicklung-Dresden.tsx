@@ -17,7 +17,7 @@ type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function AppDevelopmentLeipzigPage(props: Props) {
+export default function AppDevelopmentDresdenPage(props: Props) {
   const router = useRouter();
 
   const section1Ref = useRef(null);
@@ -25,12 +25,12 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
   const section3Ref = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung aus Leipzig</>,
+    headline: <>App-Entwicklung für Dresden</>,
     text: (
       <>
         <p>
           Moderne Apps aus der Region - Auf der Suche nach einem Partner für
-          App-Entwicklung in Leipzig?
+          App-Entwicklung in Dresden?
         </p>
         <p>
           Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
@@ -43,16 +43,17 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Entwicklung für Leipzig - App Agentur M-to-B",
+    title: "App Entwicklung für Dresden - App Agentur M-to-B",
     description:
-      "Wir sind eine App Agentur aus Leipzig und freuen uns auf dein Projekt! Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
-    headlineSection1: "Innovation für Leipzig",
+      "Wir entwickeln Apps für Dresdner Unternehmen und Start-Ups. Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
+    headlineSection1: "Innovation für Dresden",
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           App-Entwicklung kann kompliziert sein - muss sie aber nicht! Wir haben
-          M&#8209;to&#8209;B 2020 in Zwickau, ganz in der Nähe von Leipzig gegründet, um
-          Unternehmen bei der Verwirklichung ihrer Projekte zu unterstützen.
+          M&#8209;to&#8209;B 2020 in Zwickau, ganz in der Nähe von Dresden
+          gegründet, um Unternehmen bei der Verwirklichung ihrer Projekte zu
+          unterstützen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Nach unserer Erfahrung ist die App-Entwicklung für alle Seiten ein
@@ -60,7 +61,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           und gemeinsam eine klare Strategie entwickelt wird.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Wir begleiten Unternehmen aus Leipzig bei der Realisierung ihrer App
+          Wir begleiten Unternehmen aus Dresden bei der Realisierung ihrer App
           und unterstützen sie, erfolgreiche Innovationen in die Region zu
           bringen.
         </p>
@@ -89,7 +90,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "Full-Service App-Entwicklungs",
+    headlineSection3: "Ablauf der App-Entwicklung",
     textSection3: (
       <>
         <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
@@ -124,7 +125,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development from Leipzig</>,
+      headline: <>App Development for Dresden</>,
       text: (
         <>
           <p>
@@ -135,22 +136,25 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         </>
       ),
       requestButtonText: "Schedule a free consultation",
-      title: "App Development from Leipzig - M-to-B",
+      title: "App Development for Dresden - M-to-B",
       description:
-        "Use our free consultation and let us make your app a reality! As an app agency from Leipzig, we look forward to your project!",
-      headlineSection1: "Innovation from Leipzig",
+        "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Dresden.",
+      headlineSection1: "Innovation for Dresden",
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
-            As an app agency from Leipzig, it is our goal to bring the latest
-            technologies into our region. Whether they are mobile apps for
-            Android and iOS or virtual reality systems - we always look forward
-            to new software challenges.
+            App development can be complicated - but it doesn't have to be! We
+            founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Dresden,
+            to support companies in realizing their projects.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
-            We are also developing new technologies for the University of
-            Leipzig and their Medical Center and have already been able to
-            create new augmented reality systems for teaching and surgery.
+            In our experience, app development is an exciting and goal-oriented
+            process for all parties if communication is right and a clear
+            strategy is developed together.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }} key={3}>
+            We accompany companies from Dresden in the realization of their app
+            and support them in bringing successful innovations to the region.
           </p>
         </>
       ),
@@ -175,7 +179,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           </p>
         </>
       ),
-      headlineSection3: "Full Service App Development",
+      headlineSection3: "App Development Process",
       textSection3: (
         <>
           <p>The app development typically involves the following steps:</p>
@@ -213,12 +217,12 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/App-Entwicklung-Dresden"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/en/App-Entwicklung-Dresden"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -228,7 +232,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         text={texts.text}
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
-        highlightImageAlt="App Entwicklung Leipzig"
+        highlightImageAlt="App Entwicklung Dresden"
         requestButtonText={texts.requestButtonText}
       />
       <main>

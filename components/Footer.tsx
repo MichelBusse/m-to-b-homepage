@@ -12,16 +12,12 @@ export default function Footer() {
   let texts = {
     imprint: "Impressum",
     privacy: "Datenschutz",
-    leipzig: "Leipzig",
-    berlin: "Berlin",
   };
 
   if (router.locale == "en") {
     texts = {
       imprint: "Imprint",
       privacy: "Privacy Policy",
-      leipzig: "Leipzig",
-      berlin: "Berlin",
     };
   }
   return (
@@ -40,16 +36,6 @@ export default function Footer() {
           <li>
             <Link href="/Datenschutz">
               <a>{texts.privacy}</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/App-Entwicklung-Leipzig">
-              <a>{texts.leipzig}</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/App-Entwicklung-Berlin">
-              <a>{texts.berlin}</a>
             </Link>
           </li>
           <li>

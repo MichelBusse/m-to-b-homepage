@@ -39,8 +39,8 @@ export default function IndividualSoftwarePage(props: Props) {
           Prozesse zukunftssicher und investierst in langfristige Effizienz.
         </p>
         <p>
-          Nutze ein kostenloses Beratungsgespräch und informiere dich zu
-          effizienten Software-Strategien, um dein Unternehmen auf die nächste
+          In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
+          Software-Strategien informieren, um dein Unternehmen auf die nächste
           Stufe zu bringen!
         </p>
       </>
