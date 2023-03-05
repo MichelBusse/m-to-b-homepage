@@ -78,7 +78,7 @@ export default function Header(props: Props) {
             </h1>
             {props.text}
             <div className={styles.buttonWrapper}>
-              <Link href="#formular">
+              <Link href="#contact">
                 <a>
                   <button
                     className={`bounce ${headerVisible ? styles.visible : ""}`}
