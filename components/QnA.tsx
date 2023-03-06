@@ -66,11 +66,10 @@ export default function QnA(props: Props) {
       question1: "How expensive is app development?",
       answer1: (
         <>
-          It is impossible to calculate the price of an app without knowing the
-          required features. Normally, we talk with our clients, gather all
-          necessary information about their ideas and budget and then try to
-          combine their vision with their budget. To calculate your budget
-          beforehand, you can use our{" "}
+          A flat-rate estimate without detailed information is difficult in app
+          development. The majority of our customers&apos; app projects have a budget
+          between <strong>€12,000 and €35,000</strong>. To get an idea for your
+          app in advance, you can use our{" "}
           <Link href="/App-Preis-Rechner">
             <a>app budget calculator</a>
           </Link>
@@ -78,7 +77,7 @@ export default function QnA(props: Props) {
         </>
       ),
       answer1String:
-        "It is impossible to calculate the price of an app without knowing the required features. Normally, we talk with our clients, gather all necessary information about their ideas and budget and then try to combine their vision with their budget. To calculate your budget beforehand, you can use our app budget calculator.",
+        "A flat-rate estimate without detailed information is difficult in app development. The majority of our customers' app projects have a budget between <strong>€12,000 and €35,000</strong>. To get an idea for your app in advance, you can use our app budget calculator.",
       question2: "How long does it take to develop an app?",
       answer2: (
         <>

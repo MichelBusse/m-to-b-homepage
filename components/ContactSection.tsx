@@ -84,7 +84,7 @@ export default function ContactSection(props: Props) {
         email: router.query.email as string,
       }));
     }
-  }, []);
+  }, [router.query.email, router.query.name, router.query.phone]);
 
   const onChange: ChangeEventHandler<any> = (event) => {
     const elementName = event.target.name;
