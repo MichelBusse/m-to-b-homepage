@@ -13,18 +13,18 @@ export default function QnA(props: Props) {
     question1: "Wie viel kostet die Entwicklung einer App?",
     answer1: (
       <>
-        Vollständige Kosten vorab und ohne weitere Infos zu geben ist in der
-        App-Entwicklung schwierig. In der Regel setzen wir uns mit dir zusammen
-        und besprechen deine Vorstellungen, die gewünschten Funktionen, die
-        Ziele und dein Budget. Um eine Vorstellung für dein Budget vorab zu
-        bekommen, kannst du unseren{" "}
+        Ein pauschaler Kostenvoranschlag ohne detaillierte Infos ist in der
+        App-Entwicklung schwierig. Der Großteil der App-Projekte unserer Kunden
+        liegt bei einem Budget zwischen <strong>12.000 € bis 35.000 €</strong>.
+        Um eine Vorstellung für deine App vorab zu bekommen, kannst du unseren{" "}
         <Link href="/App-Preis-Rechner">
           <a>App-Preis-Rechner</a>
         </Link>{" "}
         nutzen.
       </>
     ),
-    answer1String: "Vollständige Kosten vorab und ohne weitere Infos zu geben ist in der App-Entwicklung schwierig. In der Regel setzen wir uns mit dir zusammen und besprechen deine Vorstellungen, die gewünschten Funktionen, die Ziele und dein Budget. Um eine Vorstellung für dein Budget vorab zu bekommen, kannst du unseren App-Preis-Rechner nutzen.",
+    answer1String:
+      "Ein pauschaler Kostenvoranschlag ohne detaillierte Infos ist in der App-Entwicklung schwierig. Der Großteil der App-Projekte unserer Kunden liegt bei einem Budget zwischen <strong>12.000 € bis 35.000 €</strong>. Um eine Vorstellung für deine App vorab zu bekommen, kannst du unseren App-Preis-Rechner nutzen.",
     question2: "Wie lange dauert die Entwicklung einer App?",
     answer2: (
       <>
@@ -35,18 +35,20 @@ export default function QnA(props: Props) {
         transparenten und nachvollziehbaren Entwicklungsablauf.
       </>
     ),
-    answer2String: "Für die zeitliche Einordnung und einen Überblick über den aktuellen Entwicklungsstand setzen wir auf umfassende Kommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Entwicklungsablauf.",
+    answer2String:
+      "Für die zeitliche Einordnung und einen Überblick über den aktuellen Entwicklungsstand setzen wir auf umfassende Kommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Entwicklungsablauf.",
     question3: "Was passiert nach der Fertigstellung?",
     answer3: (
       <>
         Sobald deine App alle Features fertig enthält und du mit dem Ergebnis
         zufrieden bist kann es ganz unterschiedlich weitergehen. Entweder
-        übergeben wir die App komplett an dich, oder begleiten dich beim weiteren
-        Prozess, wie z.B. dem Upload in den App-Store, der Live-Schaltung oder
-        der anschließenden Betreuung.
+        übergeben wir die App komplett an dich, oder begleiten dich beim
+        weiteren Prozess, wie z.B. dem Upload in den App-Store, der
+        Live-Schaltung oder der anschließenden Betreuung.
       </>
     ),
-    answer3String: "Sobald deine App alle Features fertig enthält und du mit dem Ergebnis zufrieden bist kann es ganz unterschiedlich weitergehen. Entweder übergeben wir die App komplett an dich, oder begleiten dich beim weiteren Prozess, wie z.B. dem Upload in den App-Store, der Live-Schaltung oder der anschließenden Betreuung.",
+    answer3String:
+      "Sobald deine App alle Features fertig enthält und du mit dem Ergebnis zufrieden bist kann es ganz unterschiedlich weitergehen. Entweder übergeben wir die App komplett an dich, oder begleiten dich beim weiteren Prozess, wie z.B. dem Upload in den App-Store, der Live-Schaltung oder der anschließenden Betreuung.",
     question4: "Haben wir aktuell freie Projektkapazitäten?",
     answer4: (
       <>
@@ -55,7 +57,8 @@ export default function QnA(props: Props) {
         bei uns ohne Wartezeit verwirklichen.
       </>
     ),
-    answer4String: "Ja. Natürlich ist das abhängig vom Umfang des Projekts und der aktuellen Auslastung unseres Teams, aber in der Regel lassen sich neue Projekte bei uns ohne Wartezeit verwirklichen.",
+    answer4String:
+      "Ja. Natürlich ist das abhängig vom Umfang des Projekts und der aktuellen Auslastung unseres Teams, aber in der Regel lassen sich neue Projekte bei uns ohne Wartezeit verwirklichen.",
   };
 
   if (router.locale == "en") {
@@ -74,7 +77,8 @@ export default function QnA(props: Props) {
           .
         </>
       ),
-      answer1String: "It is impossible to calculate the price of an app without knowing the required features. Normally, we talk with our clients, gather all necessary information about their ideas and budget and then try to combine their vision with their budget. To calculate your budget beforehand, you can use our app budget calculator.",
+      answer1String:
+        "It is impossible to calculate the price of an app without knowing the required features. Normally, we talk with our clients, gather all necessary information about their ideas and budget and then try to combine their vision with their budget. To calculate your budget beforehand, you can use our app budget calculator.",
       question2: "How long does it take to develop an app?",
       answer2: (
         <>
@@ -83,7 +87,8 @@ export default function QnA(props: Props) {
           Thereby, we create a transparent and comprehensive workflow.
         </>
       ),
-      answer2String: "To give our costumers information about the state of the app developing process, we rely on extensive individual communication. Thereby, we create a transparent and comprehensive workflow.",
+      answer2String:
+        "To give our costumers information about the state of the app developing process, we rely on extensive individual communication. Thereby, we create a transparent and comprehensive workflow.",
       question3: "What happens after my app is finished?",
       answer3: (
         <>
@@ -94,7 +99,8 @@ export default function QnA(props: Props) {
           maintenance of your app.
         </>
       ),
-      answer3String: "After we included all features and you are happy with the results, there are different ways for your app to go. Either we hand you the finished product and you go on with the journey by yourself or we accompany you further through the placement in the app store or the maintenance of your app.",
+      answer3String:
+        "After we included all features and you are happy with the results, there are different ways for your app to go. Either we hand you the finished product and you go on with the journey by yourself or we accompany you further through the placement in the app store or the maintenance of your app.",
       question4: "Do we currently have free project capacities?",
       answer4: (
         <>
@@ -103,7 +109,8 @@ export default function QnA(props: Props) {
           without any delay!
         </>
       ),
-      answer4String: "Yes. Of course that depends on the size of your project and our current utilization of the team but normally we can realize your ideas without any delay!",
+      answer4String:
+        "Yes. Of course that depends on the size of your project and our current utilization of the team but normally we can realize your ideas without any delay!",
     };
   }
 

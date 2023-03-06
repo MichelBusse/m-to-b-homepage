@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/favicon/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
           />
           <link
             rel="icon"
@@ -77,9 +77,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <link
             rel="mask-icon"
             href="/favicon/safari-pinned-tab.svg"
-            color="#ffffff"
+            color="#01506b"
           />
-          <link rel="shortcut icon" href="/favicon/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <meta name="msapplication-TileColor" content="#022636" />
           <meta
             name="msapplication-config"
