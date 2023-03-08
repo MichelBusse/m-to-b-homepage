@@ -16,6 +16,7 @@ import CustomersSection from "../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
 } from "../components/SmallTechnologiesSection";
+import AugmentedRealityQnA from "../components/AugmentedRealityQnA";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -352,7 +353,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
           sectionRef={section1Ref}
           headline={texts.headlineSection1}
           text={texts.textSection1}
-          image="/images/augmented-reality/augmented-reality.png"
+          image="/images/augmented-reality/augmented-reality.jpg"
           imageAlt={texts.headlineSection1}
           typewriterKey={"vr1"}
         />
@@ -397,7 +398,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} />
+        <ContactSection anchorRefs={props.anchorRefs} qnaSection={<AugmentedRealityQnA/>}/>
       </main>
     </>
   );

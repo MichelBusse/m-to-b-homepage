@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 type Props = {};
 
-export default function QnA(props: Props) {
+export default function AppQnA(props: Props) {
   const router = useRouter();
 
   let texts = {

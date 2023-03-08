@@ -12,12 +12,13 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
-import QnA from "./QnA";
+import AppQnA from "./AppQnA";
 import { AnchorRefs } from "../pages/_app";
 import TagManager from "react-gtm-module";
 
 type Props = {
   anchorRefs: AnchorRefs;
+  qnaSection?: JSX.Element;
 };
 
 export default function ContactSection(props: Props) {
@@ -219,7 +220,7 @@ export default function ContactSection(props: Props) {
                   <a>Leipzig</a>
                 </Link>
               </p>
-              <QnA />
+              {props.qnaSection ?? <AppQnA />}
             </div>
           </div>
           <div className={styles.contactFormular} id="formular">
