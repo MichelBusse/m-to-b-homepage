@@ -161,7 +161,7 @@ export const logos = {
     </div>
   ),
   mrtk: (
-    <div className={styles.logo} key={12}>
+    <div className={styles.logo} key={13}>
       <div className={styles.logoCaption}>
         <span>MRTK</span>
       </div>
@@ -174,7 +174,7 @@ export const logos = {
     </div>
   ),
   opencv: (
-    <div className={styles.logo} key={12}>
+    <div className={styles.logo} key={14}>
       <div className={styles.logoCaption}>
         <span>OpenCV</span>
       </div>
