@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/Virtual-Reality-Entwicklung',
+        destination: '/Augmented-Reality-Agentur',
+        permanent: true,
+      },
+    ]
+  },
   reactStrictMode: true,
   i18n: {
     locales: ["de", "en"],
