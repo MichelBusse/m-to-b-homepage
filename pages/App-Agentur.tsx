@@ -27,11 +27,11 @@ export default function AppDevelopmentPage(props: Props) {
   const section4Ref = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung & Agentur</>,
+    headline: <>App Agentur & Entwicklung</>,
     text: (
       <>
         <p>
-          Du suchst einen Partner für die Realisierung deiner App?
+          Du suchst eine Agentur für die Realisierung deiner App?
           <br />
           Du hast schon eine Idee, brauchst aber noch Unterstützung bei der
           Umsetzung?
@@ -47,7 +47,7 @@ export default function AppDevelopmentPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App-Entwicklung & Agentur - M-to-B",
+    title: "App Agentur & Entwicklung - M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     concept: "Strategie",
@@ -76,7 +76,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection2: "Ablauf der App-Entwicklung",
+    headlineSection2: "Full-Service App Agentur",
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -132,13 +132,13 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection4: "Warum unsere App-Agentur?",
+    headlineSection4: "Warum unsere App Agentur?",
     textSection4: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
           Wir setzen auf Kommunikation - In unseren Projekten haben wir
           festgestellt, dass der Erfolg deiner App-Entwicklung vor allem davon
-          abhängt, dass wir als App-Agentur deine Ziele richtig verstehen und
+          abhängt, dass wir als App Agentur deine Ziele richtig verstehen und
           nicht nur blind entwickeln. Deshalb wirst du bei uns nicht nur während
           der Entwicklung, sondern vor allem bei der Planung deiner App von den
           richtigen Experten unterstützt.
@@ -159,11 +159,11 @@ export default function AppDevelopmentPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development & Agency</>,
+      headline: <>App Agency & Development</>,
       text: (
         <>
           <p>
-            Are you looking for a partner to realize your app?
+            Are you looking for an agency to realize your app?
             <br />
             Do you already have an idea, but still need help with the
             implementation?
@@ -285,12 +285,12 @@ export default function AppDevelopmentPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung"
+          href="https://m-to-b.com/App-Agentur"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung"
+          href="https://m-to-b.com/en/App-Agentur"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

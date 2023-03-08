@@ -25,11 +25,11 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
   const section3Ref = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung aus Leipzig</>,
+    headline: <>App Agentur & Entwicklung aus Leipzig</>,
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Auf der Suche nach einem Partner für
+          Moderne Apps aus der Region - Auf der Suche nach einer Agentur für
           App-Entwicklung in Leipzig?
         </p>
         <p>
@@ -43,7 +43,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Entwicklung für Leipzig - App Agentur M-to-B",
+    title: "App Agentur für Leipzig - App Entwicklung M-to-B",
     description:
       "Wir sind eine App Agentur aus Leipzig und freuen uns auf dein Projekt! Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
     headlineSection1: "Innovation für Leipzig",
@@ -91,7 +91,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "Full-Service App-Entwicklungs",
+    headlineSection3: "Full-Service App Agentur",
     textSection3: (
       <>
         <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
@@ -126,7 +126,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development from Leipzig</>,
+      headline: <>App Agency & Development from Leipzig</>,
       text: (
         <>
           <p>
@@ -219,12 +219,12 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/App-Agentur-Leipzig"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Leipzig"
+          href="https://m-to-b.com/en/App-Agentur-Leipzig"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

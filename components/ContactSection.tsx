@@ -216,7 +216,7 @@ export default function ContactSection(props: Props) {
               </p>
               <p>
                 <IoLocationSharp className={styles.icon} />
-                <Link href={"/App-Entwicklung-Leipzig"}>
+                <Link href={"/App-Agentur-Leipzig"}>
                   <a>Leipzig</a>
                 </Link>
               </p>

@@ -25,11 +25,11 @@ export default function AppDevelopmentZwickauPage(props: Props) {
   const section3Ref = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung aus Zwickau</>,
+    headline: <>App Agentur & Entwicklung aus Zwickau</>,
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Auf der Suche nach einem Partner für
+          Moderne Apps aus der Region - Auf der Suche nach einer Agentur für
           App-Entwicklung in Zwickau?
         </p>
         <p>
@@ -43,7 +43,7 @@ export default function AppDevelopmentZwickauPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Entwicklung aus Zwickau - App Agentur M-to-B",
+    title: "App Agentur aus Zwickau - App Entwicklung M-to-B",
     description:
       "Wir entwickeln Apps für Zwickauer Unternehmen und Start-Ups. Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
     headlineSection1: "Innovation aus Zwickau",
@@ -90,7 +90,7 @@ export default function AppDevelopmentZwickauPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "Ablauf der App-Entwicklung",
+    headlineSection3: "Full-Service App Agentur",
     textSection3: (
       <>
         <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
@@ -125,7 +125,7 @@ export default function AppDevelopmentZwickauPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development for Zwickau</>,
+      headline: <>App Agency & Development for Zwickau</>,
       text: (
         <>
           <p>
@@ -218,12 +218,12 @@ export default function AppDevelopmentZwickauPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Zwickau"
+          href="https://m-to-b.com/App-Agentur-Zwickau"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Zwickau"
+          href="https://m-to-b.com/en/App-Agentur-Zwickau"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

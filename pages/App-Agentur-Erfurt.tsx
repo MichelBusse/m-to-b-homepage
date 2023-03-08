@@ -17,7 +17,7 @@ type Props = {
   anchorRefs: AnchorRefs;
 };
 
-export default function AppDevelopmentDresdenPage(props: Props) {
+export default function AppDevelopmentErfurtPage(props: Props) {
   const router = useRouter();
 
   const section1Ref = useRef(null);
@@ -25,12 +25,12 @@ export default function AppDevelopmentDresdenPage(props: Props) {
   const section3Ref = useRef(null);
 
   let texts = {
-    headline: <>App-Entwicklung für Dresden</>,
+    headline: <>App Agentur & Entwicklung für Erfurt</>,
     text: (
       <>
         <p>
-          Moderne Apps aus der Region - Auf der Suche nach einem Partner für
-          App-Entwicklung in Dresden?
+          Moderne Apps aus der Region - Auf der Suche nach einer Agentur für
+          App-Entwicklung in Erfurt?
         </p>
         <p>
           Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
@@ -43,18 +43,18 @@ export default function AppDevelopmentDresdenPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Entwicklung für Dresden - App Agentur M-to-B",
+    title: "App Agentur für Erfurt - App Entwicklung M-to-B",
     description:
-      "Wir entwickeln Apps für Dresdner Unternehmen und Start-Ups. Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
-    headlineSection1: "Innovation für Dresden",
+      "Wir entwickeln Apps für Erfurter Unternehmen. Nutze unsere kostenlose Beratung und lass uns deine App verwirklichen!",
+    headlineSection1: "Innovation für Erfurt",
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           App-Entwicklung kann kompliziert sein - muss sie aber nicht!
           <br />
-          Wir haben M&#8209;to&#8209;B 2020 in Zwickau, ganz in der Nähe von
-          Dresden gegründet, um Unternehmen bei der Verwirklichung ihrer
-          Projekte zu unterstützen.
+          Wir haben M&#8209;to&#8209;B 2020 in Zwickau, in der Nähe von Erfurt
+          gegründet, um Unternehmen bei der Verwirklichung ihrer Projekte zu
+          unterstützen.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
           Nach unserer Erfahrung ist die App-Entwicklung für alle Seiten ein
@@ -62,7 +62,7 @@ export default function AppDevelopmentDresdenPage(props: Props) {
           und gemeinsam eine klare Strategie entwickelt wird.
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Wir begleiten Unternehmen aus Dresden bei der Realisierung ihrer App
+          Wir begleiten Unternehmen aus Erfurt bei der Realisierung ihrer App
           und unterstützen sie, erfolgreiche Innovationen in die Region zu
           bringen.
         </p>
@@ -91,7 +91,7 @@ export default function AppDevelopmentDresdenPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "Ablauf der App-Entwicklung",
+    headlineSection3: "Full-Service App Agentur",
     textSection3: (
       <>
         <p>Die App-Entwicklung besteht aus folgenden Schritten:</p>
@@ -126,7 +126,7 @@ export default function AppDevelopmentDresdenPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>App Development for Dresden</>,
+      headline: <>App Agency & Development for Erfurt</>,
       text: (
         <>
           <p>
@@ -137,17 +137,17 @@ export default function AppDevelopmentDresdenPage(props: Props) {
         </>
       ),
       requestButtonText: "Schedule a free consultation",
-      title: "App Development for Dresden - M-to-B",
+      title: "App Development for Erfurt - M-to-B",
       description:
-        "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Dresden.",
-      headlineSection1: "Innovation for Dresden",
+        "Use our free consultation and let us make your app a reality! We develop apps for enterprises and start ups from Erfurt.",
+      headlineSection1: "Innovation for Erfurt",
       textSection1: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
             App development can be complicated - but it doesn&apos;t have to be!
             <br />
-            We founded M&#8209;to&#8209;B 2020 in Zwickau, very close to
-            Dresden, to support companies in realizing their projects.
+            We founded M&#8209;to&#8209;B 2020 in Zwickau, very close to Erfurt,
+            to support companies in realizing their projects.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
             In our experience, app development is an exciting and goal-oriented
@@ -155,7 +155,7 @@ export default function AppDevelopmentDresdenPage(props: Props) {
             strategy is developed together.
           </p>
           <p style={{ transitionDelay: "0.9s" }} key={3}>
-            We accompany companies from Dresden in the realization of their app
+            We accompany companies from Erfurt in the realization of their app
             and support them in bringing successful innovations to the region.
           </p>
         </>
@@ -219,12 +219,12 @@ export default function AppDevelopmentDresdenPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Entwicklung-Dresden"
+          href="https://m-to-b.com/App-Agentur-Erfurt"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Entwicklung-Dresden"
+          href="https://m-to-b.com/en/App-Agentur-Erfurt"
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -234,7 +234,7 @@ export default function AppDevelopmentDresdenPage(props: Props) {
         text={texts.text}
         priceCalculatorButton={true}
         highlightImage={"/images/app-development/app-development-header.png"}
-        highlightImageAlt="App Entwicklung Dresden"
+        highlightImageAlt="App Entwicklung Erfurt"
         requestButtonText={texts.requestButtonText}
       />
       <main>

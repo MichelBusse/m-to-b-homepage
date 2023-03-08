@@ -10,7 +10,7 @@ const ValuesSection = () => {
     headline2: "Modern",
     text2: "Wir suchen für jedes Projekt individuell die optimalen Technologien und programmieren agil, effizient und zukunftsorientiert.",
     headline3: "Leidenschaftlich",
-    text3: "Jede Software-Entwicklung begeistert uns auf's Neue und als App-Agentur freut es uns, deine Vorstellungen zu realisieren.",
+    text3: "Jede Software-Entwicklung begeistert uns auf's Neue und als App Agentur freut es uns, deine Vorstellungen zu realisieren.",
   };
   let phrases = ["Software", "Apps", "Zukunft"];
 

@@ -22,7 +22,7 @@ export default function Navbar(props: Props) {
   useEffect(() => {
     setContactLink("#contact");
 
-    if (router.asPath.startsWith("/App-Entwicklung")) {
+    if (router.asPath.startsWith("/App-Agentur")) {
       setActiveMenuItem("apps");
     } else if (router.asPath.startsWith("/Individualsoftware")) {
       setActiveMenuItem("software");
@@ -106,7 +106,7 @@ export default function Navbar(props: Props) {
         <div className={styles.ulWrapper}>
           <ul>
             <li className={activeMenuItem === "apps" ? styles.active : ""}>
-              <Link href="/App-Entwicklung">
+              <Link href="/App-Agentur">
                 <a>{texts.apps}</a>
               </Link>
             </li>
@@ -169,7 +169,7 @@ export default function Navbar(props: Props) {
         }`}
       >
         <ul>
-          <Link href="/App-Entwicklung">
+          <Link href="/App-Agentur">
             <a>
               <li
                 onClick={() => setMenuActive(false)}

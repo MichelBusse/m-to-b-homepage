@@ -19,7 +19,7 @@ export default function HomePage(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Deine App-Agentur - M-to-B Software",
+    title: "Deine App Agentur - M-to-B Software",
     headline: (
       <>
         Deine Agentur für App- <br />
@@ -46,7 +46,7 @@ export default function HomePage(props: Props) {
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
     description:
-      "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Augmented Reality",
+      "Als Software und App Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Augmented Reality",
     headlineSection1: "App Entwicklung",
     textSection1: (
       <>
@@ -206,7 +206,7 @@ export default function HomePage(props: Props) {
           image="/images/app-development/app-development-header.png"
           imageAlt={texts.headlineSection1}
           typewriterKey={"home1"}
-          siteLink={"/App-Entwicklung"}
+          siteLink={"/App-Agentur"}
           buttonDelay={"0.6s"}
         />
         <ServiceSection
