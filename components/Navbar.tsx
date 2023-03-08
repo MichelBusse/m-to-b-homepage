@@ -26,7 +26,7 @@ export default function Navbar(props: Props) {
       setActiveMenuItem("apps");
     } else if (router.asPath.startsWith("/Individualsoftware")) {
       setActiveMenuItem("software");
-    } else if (router.asPath.startsWith("/Virtual-Reality-Entwicklung")) {
+    } else if (router.asPath.startsWith("/Augmented-Reality-Agentur")) {
       setActiveMenuItem("vr");
     } else if (router.asPath.startsWith("/Referenzen")) {
       setActiveMenuItem("projects");
@@ -61,7 +61,7 @@ export default function Navbar(props: Props) {
   let texts = {
     apps: "Apps",
     software: "Software",
-    vr: "Virtual Reality",
+    vr: "Augmented Reality",
     projects: "Referenzen",
     contact: "Kontakt",
     languageLink: "en",
@@ -73,7 +73,7 @@ export default function Navbar(props: Props) {
     texts = {
       apps: "Apps",
       software: "Software",
-      vr: "Virtual Reality",
+      vr: "Augmented Reality",
       projects: "Projects",
       contact: "Contact",
       languageLink: "de",
@@ -116,7 +116,7 @@ export default function Navbar(props: Props) {
               </Link>
             </li>
             <li className={activeMenuItem === "vr" ? styles.active : ""}>
-              <Link href="/Virtual-Reality-Entwicklung">
+              <Link href="/Augmented-Reality-Agentur">
                 <a>{texts.vr}</a>
               </Link>
             </li>
@@ -191,7 +191,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/Virtual-Reality-Entwicklung">
+          <Link href="/Augmented-Reality-Agentur">
             <a>
               <li
                 onClick={() => setMenuActive(false)}

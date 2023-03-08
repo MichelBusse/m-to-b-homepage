@@ -46,7 +46,7 @@ export default function HomePage(props: Props) {
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
     description:
-      "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Virtual Reality",
+      "Als Software- und App-Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Augmented Reality",
     headlineSection1: "App Entwicklung",
     textSection1: (
       <>
@@ -83,23 +83,23 @@ export default function HomePage(props: Props) {
         </p>
       </>
     ),
-    headlineSection3: "Virtual Reality",
+    headlineSection3: "Augmented Reality",
     textSection3: (
       <>
         <p style={{ transitionDelay: "0.3s" }} key={1}>
           Nicht mitlaufen, sondern voran gehen - ganz nach diesem Motto
           entwickeln wir mit großem Interesse an neuen Einsatzmöglichkeiten für
-          Virtual und Augmented Reality.
+          Augmented Reality.
         </p>
         <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Zukünftige Anwendungen sind praktisch grenzenlos und der VR-Bereich
+          Zukünftige Anwendungen sind praktisch grenzenlos und der AR-Bereich
           entwickelt sich stetig weiter. Profitiere von unseren Experten und
           finde neue Möglichkeiten für deine Einsatzgebiete!
         </p>
         <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Wir haben bereits verschiedenste VR und AR Software entwickelt, bis
-          hin zur Augmented Reality Navigation in der Chirurgie oder zur Lehre
-          an der Universität.
+          Wir haben bereits verschiedenste AR Projekte entwickelt, bis hin zur
+          Augmented Reality Navigation in der Chirurgie oder zur Lehre an der
+          Universität.
         </p>
       </>
     ),
@@ -129,7 +129,7 @@ export default function HomePage(props: Props) {
       ),
       requestButtonText: "Schedule a free consultation",
       description:
-        "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to virtual reality",
+        "Gain an advantage by individual software development with modern technologies and experience - from apps and impressive webdesign all the way to augmented reality",
       headlineSection1: "App Development",
       textSection1: (
         <p style={{ transitionDelay: "0.3s" }} key={1}>
@@ -159,13 +159,13 @@ export default function HomePage(props: Props) {
           </p>
         </>
       ),
-      headlineSection3: "Virtual Reality",
+      headlineSection3: "Augmented Reality",
       textSection3: (
         <>
           <p style={{ transitionDelay: "0.3s" }} key={1}>
             Innovate with disruptive technologies - according to this motto, we
-            create and develop new applications of Virtual and Augmented Reality
-            in various sectors.
+            create and develop new applications of Augmented Reality in various
+            sectors.
           </p>
           <p style={{ transitionDelay: "0.6s" }} key={2}>
             There are endless future possibilities of VR and the technology gets
@@ -225,10 +225,10 @@ export default function HomePage(props: Props) {
           key={"home3"}
           headline={texts.headlineSection3}
           text={texts.textSection3}
-          image="/images/virtual-reality/virtual-reality-header.png"
+          image="/images/augmented-reality/augmented-reality-header.png"
           imageAlt={texts.headlineSection3}
           typewriterKey={"home3"}
-          siteLink={"/Virtual-Reality-Entwicklung"}
+          siteLink={"/Augmented-Reality-Agentur"}
           buttonDelay={"1.2s"}
         />
         <TechnologiesSection />

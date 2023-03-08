@@ -160,6 +160,32 @@ export const logos = {
       />
     </div>
   ),
+  mrtk: (
+    <div className={styles.logo} key={12}>
+      <div className={styles.logoCaption}>
+        <span>MRTK</span>
+      </div>
+      <Image
+        src="/images/technologies/mrtk.png"
+        width={100}
+        height={100}
+        alt="MRTK Logo"
+      />
+    </div>
+  ),
+  opencv: (
+    <div className={styles.logo} key={12}>
+      <div className={styles.logoCaption}>
+        <span>OpenCV</span>
+      </div>
+      <Image
+        src="/images/technologies/opencv.png"
+        width={100}
+        height={100}
+        alt="MRTK Logo"
+      />
+    </div>
+  ),
 };
 
 type Props = {

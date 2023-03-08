@@ -129,16 +129,16 @@ export default function IndividualSoftwarePage(props: Props) {
       headline: <>Individual Software</>,
       text: (
         <>
-          <p>
+          <p style={{ transitionDelay: "0.3s" }}>
             Does your company reach its limits with standard software?
             <br />
             There is no app for your requirements yet?
           </p>
-          <p>
+          <p style={{ transitionDelay: "0.6s" }}>
             With tailor-made software solutions, you automate your processes in
             a future-proof manner and invest in long-term efficiency.
           </p>
-          <p>
+          <p style={{ transitionDelay: "0.9s" }}>
             Use a free consultation and find out about efficient software
             strategies to take your business to the next level!
           </p>
@@ -148,9 +148,9 @@ export default function IndividualSoftwarePage(props: Props) {
       title: "Individual Software - M-to-B",
       description:
         "Create personalized software solutions for your business with our software agency. We offer custom development!",
-      concept: "Conception and Planning",
-      development: "Development and Implementation",
-      support: "Maintenance and Support",
+      concept: "Strategy",
+      development: "Development",
+      support: "Support",
       individualsoftwareHeadline: "Why Individual Software?",
       individualsoftwareText: (
         <>
