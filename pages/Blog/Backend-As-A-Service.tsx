@@ -6,7 +6,6 @@ export function getTexts(lan: string | undefined) {
   let texts = {
     title: "Backend-As-A-Service",
     headline: "Was ist Backend-As-A-Service (BaaS)?",
-    category: "App Entwicklung",
     content: (
       <>
         <p>
@@ -80,7 +79,6 @@ export function getTexts(lan: string | undefined) {
     texts = {
       title: "Backend-As-A-Service",
       headline: "What is Backend-as-a-Service (BaaS)?",
-      category: "App Development",
       content: (
         <>
           <p>
@@ -154,15 +152,15 @@ export default function BlogEntryPage() {
         <link
           rel="alternate"
           hrefLang="de"
-          href={"https://m-to-b.com/" + texts.title}
+          href={"https://m-to-b.com/Blog/" + texts.title}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={"https://m-to-b.com/en/" + texts.title}
+          href={"https://m-to-b.com/en/Blog/" + texts.title}
         />
         <title key="title">
-          {texts.headline + " - " + texts.category + " - M-to-B"}
+          {texts.headline + " - M-to-B"}
         </title>
         <meta name="description" content={texts.shortDescription} />
       </Head>
