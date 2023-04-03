@@ -12,7 +12,7 @@ type Props = {
   priceCalculatorButton?: boolean;
   highlightImage?: string;
   highlightImageAlt?: string;
-  requestButtonText: string;
+  requestButtonText?: string;
 };
 
 export default function Header(props: Props) {
@@ -78,6 +78,7 @@ export default function Header(props: Props) {
             </h1>
             {props.text}
             <div className={styles.buttonWrapper}>
+              {props.requestButtonText &&
               <Link href="#contact">
                 <a>
                   <button
@@ -86,7 +87,7 @@ export default function Header(props: Props) {
                     <div>{props.requestButtonText}</div>
                   </button>
                 </a>
-              </Link>
+              </Link>}
               {props.priceCalculatorButton && (
                 <Link href="/App-Preis-Rechner">
                   <a>

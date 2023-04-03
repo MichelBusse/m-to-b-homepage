@@ -28,8 +28,8 @@ export default function Navbar(props: Props) {
       setActiveMenuItem("software");
     } else if (router.asPath.startsWith("/Augmented-Reality-Agentur")) {
       setActiveMenuItem("vr");
-    } else if (router.asPath.startsWith("/Referenzen")) {
-      setActiveMenuItem("projects");
+    } else if (router.asPath.startsWith("/Blog")) {
+      setActiveMenuItem("blog");
     } else if (router.asPath.startsWith("/App-Preis-Rechner")) {
       setActiveMenuItem("");
       setContactLink("/#contact");
@@ -62,7 +62,7 @@ export default function Navbar(props: Props) {
     apps: "Apps",
     software: "Software",
     vr: "Augmented Reality",
-    projects: "Referenzen",
+    blog: "Blog",
     contact: "Kontakt",
     languageLink: "en",
     languageAlt: "Switch Language to English",
@@ -74,7 +74,7 @@ export default function Navbar(props: Props) {
       apps: "Apps",
       software: "Software",
       vr: "Augmented Reality",
-      projects: "Projects",
+      blog: "Blog",
       contact: "Contact",
       languageLink: "de",
       languageAlt: "Switch Language to German",
@@ -120,9 +120,9 @@ export default function Navbar(props: Props) {
                 <a>{texts.vr}</a>
               </Link>
             </li>
-            <li className={activeMenuItem === "projects" ? styles.active : ""}>
-              <Link href="/Referenzen">
-                <a>{texts.projects}</a>
+            <li className={activeMenuItem === "blog" ? styles.active : ""}>
+              <Link href="/Blog">
+                <a>{texts.blog}</a>
               </Link>
             </li>
             <li className={activeMenuItem === "contact" ? styles.active : ""}>
@@ -202,14 +202,14 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/Referenzen">
+          <Link href="/Blog">
             <a>
               <li
                 onClick={() => setMenuActive(false)}
                 style={{ transitionDelay: "0.25s" }}
-                className={activeMenuItem === "projects" ? styles.active : ""}
+                className={activeMenuItem === "blog" ? styles.active : ""}
               >
-                {texts.projects}
+                {texts.blog}
               </li>
             </a>
           </Link>

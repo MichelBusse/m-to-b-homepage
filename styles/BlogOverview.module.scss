@@ -1,0 +1,67 @@
+.blogOverview {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #f0f0f0;
+  padding: 1.5em;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(0, 0);
+  margin: 0 auto;
+}
+.blogOverview::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.blogOverview::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f13b74;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(0, 0);
+}
+
+.blogOverview:hover {
+  transform: translate(0, -5px);
+}
+.blogOverview:hover::before {
+  transform: translate(0, 5px);
+}
+
+.blogOverview .image {
+  width: 100%;
+}
+
+.blogOverview h2 {
+  font-size: 1.8em;
+  color: rgb(1, 80, 107);
+}
+
+.blogOverview p {
+  margin: 1.8em 0 2em 0;
+}
+.blogOverview a {
+  margin-top: auto;
+}
+.blogOverview button {
+  transform: none;
+}
+.blogOverview button div {
+  transform: none;
+}

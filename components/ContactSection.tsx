@@ -134,7 +134,7 @@ export default function ContactSection(props: Props) {
           },
         };
         TagManager.dataLayer(dataLayerArgs);
-        if(router.pathname == "/Kontakt"){
+        if (router.pathname == "/Kontakt") {
           router.push("/");
         }
       } else {
@@ -296,9 +296,7 @@ export default function ContactSection(props: Props) {
                       checked={formState.privacy}
                       onChange={onChange}
                     />
-                    <label htmlFor="privacy">
-                      {texts.privacyText}
-                    </label>
+                    <label htmlFor="privacy">{texts.privacyText}</label>
                   </p>
                   <button
                     type="submit"
@@ -316,6 +314,10 @@ export default function ContactSection(props: Props) {
           </div>
         </div>
       </section>
+      <div
+        id="ProvenExpert_widgetbar_container"
+        className={styles.ProvenExpert_widgetbar_container}
+      ></div>
     </>
   );
 }

@@ -23,10 +23,6 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <div
-          id="ProvenExpert_widgetbar_container"
-          className={styles.ProvenExpert_widgetbar_container}
-        ></div>
         <ul>
           <li>
             <Link href="/Impressum">

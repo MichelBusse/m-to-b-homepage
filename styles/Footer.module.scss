@@ -27,26 +27,3 @@
     font-size: 1.4em;
     vertical-align: middle;
 }
-
-.ProvenExpert_widgetbar_container > div {
-    position: relative !important;
-    padding: 0.2em 1em 0.6em 1em;
-    box-sizing: border-box;
-}
-.ProvenExpert_widgetbar_container > div > div:first-child {
-    display: none;
-}
-.ProvenExpert_widgetbar_container > div > div:last-child {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: auto !important;
-}
-.ProvenExpert_widgetbar_container img {
-    margin-left: auto !important;
-}
-@media (max-width: 750px) {
-  .ProvenExpert_widgetbar_container {
-    display: none !important;
-  }
-}

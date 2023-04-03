@@ -64,6 +64,11 @@ html, body{
 body{
   overflow-x: hidden;
   font-size: 90%;
+  min-height: 100%;
+}
+
+main {
+  min-height: 100%;
 }
 .no-js body{
   overflow-y: auto;
