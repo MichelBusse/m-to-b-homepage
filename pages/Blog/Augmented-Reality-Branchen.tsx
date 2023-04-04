@@ -145,11 +145,11 @@ export function getTexts(lan: string | undefined) {
           <p>
             Overall, augmented reality offers a wealth of opportunities to
             create immersive experiences across multiple industries. Whether
-            it's in retail, healthcare, automotive, tourism or entertainment, AR
-            can help enhance users' experience by injecting digital elements
-            into the real world. We're excited to see what the future holds for
-            AR and look forward to continuing to develop innovative uses of this
-            exciting technology.
+            it&apos;s in retail, healthcare, automotive, tourism or
+            entertainment, AR can help enhance users&apos; experience by
+            injecting digital elements into the real world. We&apos;re excited
+            to see what the future holds for AR and look forward to continuing
+            to develop innovative uses of this exciting technology.
           </p>
         </>
       ),
