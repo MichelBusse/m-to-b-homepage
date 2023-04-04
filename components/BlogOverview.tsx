@@ -13,15 +13,15 @@ type Props = {
 
 export default function BlogOverview(props: Props) {
   const router = useRouter();
-  
+
   let texts = {
     read: "Mehr lesen",
-  }
+  };
 
-  if(router.locale == "en"){
+  if (router.locale == "en") {
     texts = {
       read: "Read more",
-    }
+    };
   }
 
   return (
@@ -42,14 +42,14 @@ export default function BlogOverview(props: Props) {
       <div className={styles.text}>
         <h2>{props.headline}</h2>
         <p>{props.shortDescription}</p>
+        <Link href={"/Blog/" + props.title}>
+          <a>
+            <button className={"bounce"}>
+              <div>{texts.read}</div>
+            </button>
+          </a>
+        </Link>
       </div>
-      <Link href={"/Blog/" + props.title}>
-        <a>
-          <button className={"bounce"}>
-            <div>{texts.read}</div>
-          </button>
-        </a>
-      </Link>
     </div>
   );
 }
