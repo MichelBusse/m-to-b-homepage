@@ -140,7 +140,7 @@ export function getTexts(lan: string | undefined) {
             The main advantage of using custom input masks together with the
             ChatGPT API is that developers can save themselves the trouble of
             developing algorithms for these tasks. Instead of writing an
-            algorithm that automatically calculates a car's configuration or
+            algorithm that automatically calculates a car&apos;s configuration or
             development costs, developers can create their own input masks that
             allow users to select the parameters they need. This makes creating
             such applications easier and faster.
@@ -149,7 +149,7 @@ export function getTexts(lan: string | undefined) {
             However, it should be noted that ChatGPT is never deterministic and
             is not necessarily correct. Although ChatGPT is capable of
             supporting human-like communication, there is no guarantee that
-            ChatGPT's assumptions or estimates are always correct. ChatGPT may
+            ChatGPT&apos;s assumptions or estimates are always correct. ChatGPT may
             provide inaccurate or incorrect information which may lead to
             incorrect results. Because of this, developers should always
             exercise caution when using ChatGPT and ensure that the
@@ -162,7 +162,7 @@ export function getTexts(lan: string | undefined) {
             input masks, developers can simplify and speed up application
             development without having to develop complex algorithms. Using
             ChatGPT also allows for the integration of human interaction with
-            applications, which increases the applications' usability and
+            applications, which increases the applications&apos; usability and
             usability. In business, using a custom input mask along with the
             ChatGPT API can also be economically beneficial. By automating tasks
             like vehicle tuning or estimating development costs, companies can
