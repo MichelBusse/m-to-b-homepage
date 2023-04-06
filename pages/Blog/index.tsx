@@ -6,6 +6,7 @@ import styles from "../../styles/Blog.module.scss";
 import { getTexts as post1Texts } from "./Backend-As-A-Service";
 import { getTexts as post2Texts } from "./Flutter-App-Entwicklung";
 import { getTexts as post3Texts } from "./Augmented-Reality-Branchen";
+import { getTexts as post4Texts } from "./ChatGPT-API-Schnittstellen";
 
 export default function BlogEntryPage() {
   const router = useRouter();
@@ -39,6 +40,12 @@ export default function BlogEntryPage() {
       <main>
         <MenuPlaceholder />
         <div className={styles.content}>
+          <BlogOverview
+            title={post4Texts(router.locale).title}
+            headline={post4Texts(router.locale).headline}
+            shortDescription={post4Texts(router.locale).shortDescription}
+            image={post4Texts(router.locale).image}
+          />
           <BlogOverview
             title={post3Texts(router.locale).title}
             headline={post3Texts(router.locale).headline}
