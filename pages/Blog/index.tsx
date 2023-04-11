@@ -7,6 +7,7 @@ import { getTexts as post1Texts } from "./Backend-As-A-Service";
 import { getTexts as post2Texts } from "./Flutter-App-Entwicklung";
 import { getTexts as post3Texts } from "./Augmented-Reality-Branchen";
 import { getTexts as post4Texts } from "./ChatGPT-API-Schnittstellen";
+import { getTexts as post5Texts } from "./Augmented-Reality-Im-OP";
 
 export default function BlogEntryPage() {
   const router = useRouter();
@@ -40,6 +41,12 @@ export default function BlogEntryPage() {
       <main>
         <MenuPlaceholder />
         <div className={styles.content}>
+          <BlogOverview
+            title={post5Texts(router.locale).title}
+            headline={post5Texts(router.locale).headline}
+            shortDescription={post5Texts(router.locale).shortDescription}
+            image={post5Texts(router.locale).image}
+          />
           <BlogOverview
             title={post4Texts(router.locale).title}
             headline={post4Texts(router.locale).headline}
