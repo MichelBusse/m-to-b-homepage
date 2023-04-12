@@ -23,7 +23,7 @@ export function getTexts(lan: string | undefined) {
         </p>
         <p>
           Die Navigation im Gehirn ist aktuell die erste und einzige
-          Navigationmöglichkeit im OP. Während die herkömmlichen Geräte dabei
+          Navigationsmöglichkeit im OP. Während die herkömmlichen Geräte dabei
           auf große Stative, Kameras und Referenzpunkte am OP-Tisch setzen und
           per Bilderkennung des Instruments die Position im Patienten zu
           berechnen, versuchen wir die gleiche Funktionalität in der AR-Brille
