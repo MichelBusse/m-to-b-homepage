@@ -30,6 +30,7 @@ export default function Navbar(props: Props) {
       setActiveMenuItem("vr");
     } else if (router.asPath.startsWith("/Blog")) {
       setActiveMenuItem("blog");
+      setContactLink("/#contact");
     } else if (router.asPath.startsWith("/App-Preis-Rechner")) {
       setActiveMenuItem("");
       setContactLink("/#contact");
