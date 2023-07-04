@@ -35,7 +35,6 @@ export default function AppPriceCalculatorPage() {
   const [transitionClass, setTransitionClass] = useState("");
   const [optionDivs, setOptionDivs] = useState<JSX.Element[]>([]);
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [price, setPrice] = useState<PriceResult | null>(null);
 
   let texts = {
@@ -50,16 +49,15 @@ export default function AppPriceCalculatorPage() {
     introText:
       "Nach Beantwortung der folgenden Fragen erhälst du direkt eine Einschätzung für das Budget, mit dem du für deine App rechnen kannst.",
     namePlaceholder: "Name *",
-    phonePlaceholder: "Telefon *",
     send: "Preis jetzt erhalten",
     resultsNewTry: "Neuer Versuch",
-    resultsHeadline: "Deine Ergebnisse",
+    resultsHeadline: "Hallo {0},",
     resultsText1:
       "Wir freuen uns, dir bei der Planung deiner App helfen zu können.",
     resultsText2:
-      "Basierend auf deinen Angaben schätzen wir das nötige Budget für deine App auf:",
+      "Basierend auf deinen Angaben im Preisrechner, schätzen wir das Budget für die Entwicklung deiner App auf:",
     resultsText3:
-      "Das ist nur eine grobe Schätzung, die wir mit sehr wenigen Infos machen konnten. Für deine genauere Planung kannst du unser unverbindliches Gespräch nutzen und von einem Experten 1:1 zu deiner App beraten werden.",
+      "Beachte, dass unser Preisrechner dir nur eine grobe Einschätzung geben kann. Für eine genauere Planung und alle offenen Fragen, kannst du ein kostenloses Beratungsgespräch mit einem Experten aus unserem Team vereinbaren:",
     resultsButton: "Kostenloses Beratungsgespräch",
   };
 
@@ -76,10 +74,9 @@ export default function AppPriceCalculatorPage() {
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
       namePlaceholder: "Name *",
-      phonePlaceholder: "Phone *",
       send: "Receive costs now!",
       resultsNewTry: "New Try",
-      resultsHeadline: "Your Results",
+      resultsHeadline: "Hey {0},",
       resultsText1: "We look forward to helping you plan your app.",
       resultsText2:
         "Based on your information, we estimate the necessary budget for your app:",
@@ -501,7 +498,6 @@ export default function AppPriceCalculatorPage() {
   const submit = () => {
     if (
       name.trim() == "" ||
-      phone.trim() == "" ||
       currentFormState[1].length == 0 ||
       currentFormState[2].length == 0 ||
       currentFormState[3].length == 0 ||
@@ -529,7 +525,6 @@ export default function AppPriceCalculatorPage() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        phone,
         name,
         currentFormState,
         minPrice,
@@ -592,14 +587,6 @@ export default function AppPriceCalculatorPage() {
                     placeholder={texts.namePlaceholder}
                     onChange={(e) => setName(e.target.value)}
                   />
-                  <input
-                    name="phone"
-                    type="textfield"
-                    required
-                    value={phone}
-                    placeholder={texts.phonePlaceholder}
-                    onChange={(e) => setPhone(e.target.value)}
-                  />
                   <button onClick={() => submit()}>{texts.send}</button>
                 </div>
               )}
@@ -643,11 +630,15 @@ export default function AppPriceCalculatorPage() {
                 <BiArrowBack />
                 {texts.resultsNewTry}
               </div>
-              <h2>{texts.resultsHeadline}</h2>
+              <h2>{texts.resultsHeadline.replace("{0}", name)}</h2>
               <p>{texts.resultsText1}</p>
               <p>{texts.resultsText2}</p>
               <p>
-                <strong>{`${price.minPrice.toLocaleString(router.locale)} € - ${price.maxPrice.toLocaleString(router.locale)} €`}</strong>
+                <strong>{`${price.minPrice.toLocaleString(
+                  router.locale
+                )} € - ${price.maxPrice.toLocaleString(
+                  router.locale
+                )} €`}</strong>
               </p>
               <p>{texts.resultsText3}</p>
               <button
@@ -655,11 +646,11 @@ export default function AppPriceCalculatorPage() {
                 onClick={() =>
                   router.push({
                     pathname: "/Kontakt",
-                    query: { name: name, phone: phone },
+                    query: { name: name },
                   })
                 }
               >
-                {texts.resultsButton}
+                <div>{texts.resultsButton}</div>
               </button>
             </div>
           </>

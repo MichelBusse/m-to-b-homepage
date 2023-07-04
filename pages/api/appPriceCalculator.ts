@@ -26,8 +26,6 @@ export default async function handler(
       req.body.maxPrice.toLocaleString("de-de") +
       " €\n\n" +
       req.body.name +
-      "\n\n" +
-      req.body.phone +
       "\n\n[" +
       req.body.currentFormState.join('],[') +
       "]\n\n" +
@@ -43,14 +41,11 @@ export default async function handler(
       "<body>" +
       "<div style='font-size: 14px; font-weight: normal; font-family: Roboto, Helvetica, Aral, sans-serif;'>" +
       "<p>Guten Tag,</p>" +
-      "<p>wir freuen uns, Ihnen bei der Planung Ihrer App helfen zu können.<br/>" +
+      "<p>wir freuen uns, dir bei der Planung Ihrer App helfen zu können.<br/>" +
       "Basierend auf den Angaben im Preis-Rechner:</p>" +
       "<p>" +
       req.body.name +  
       "</p>" +
-      "<p>" +
-      req.body.phone +  
-      "</p>" + 
       "<p><strong>" +
       req.body.minPrice.toLocaleString("de-de") +
       " € - " +
