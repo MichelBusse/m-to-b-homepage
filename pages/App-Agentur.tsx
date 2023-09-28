@@ -6,13 +6,11 @@ import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
 import ServiceSection from "../components/ServiceSection";
 import { useRef } from "react";
-import ProjectsSection from "../components/ProjectsSection";
 import CustomersSection from "../components/CustomersSection";
-import CrossPlatformSection from "../components/CrossPlatformSection";
-import PriceCalculatorSection from "../components/PriceCalculatorSection";
 import SmallTechnologiesSection, {
   logos,
 } from "../components/SmallTechnologiesSection";
+import JourneySection from "../components/JourneySection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -27,33 +25,28 @@ export default function AppDevelopmentPage(props: Props) {
   const section4Ref = useRef(null);
 
   let texts = {
-    headline: <>App Agentur & Entwicklung</>,
+    headline: <>Abenteuer App-Entwicklung<br/>- Deine App-Agentur</>,
     text: (
       <>
         <p>
-          Du suchst eine Agentur für die Realisierung deiner App?
-          <br />
-          Du hast schon eine Idee, brauchst aber noch Unterstützung bei der
-          Umsetzung?
+          Du hast die Idee für eine App und suchst noch nach Unterstützung für die Umsetzung?
         </p>
         <p>
-          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
-          Zeit- und Kostenfresser werden.
+          Bei der Entwicklung musst du dich verschiedenen Herausforderungen und Gefahren stellen. Ohne den richtigen Plan verlierst du dabei schnell Zeit und dein Budget.
         </p>
         <p>
-          In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
-          Strategien informieren, um deine App zum Erfolg zu führen!
+          Wir begleiten dich durch deine Entwicklungs-Reise und führen deine App gemeinsam mit dir und der richtigen Strategie sicher zum Ziel!
         </p>
       </>
     ),
-    requestButtonText: "Kostenloses Beratungungsgespräch",
-    title: "App Agentur & Entwicklung - M-to-B",
+    requestButtonText: "Starte deine Reise!",
+    title: "Abenteuer App-Entwicklung - Deine App-Agentur M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     concept: "Strategie",
     development: "Implementierung",
     support: "Betreuung",
-    headlineSection1: "Die Lean-Prototype-Methode",
+    headlineSection1: "01 Die Strategie",
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -76,7 +69,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection2: "Full-Service App Agentur",
+    headlineSection2: "02 Die Umsetzung",
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -110,7 +103,7 @@ export default function AppDevelopmentPage(props: Props) {
         </ol>
       </>
     ),
-    headlineSection3: "App-Entwicklung mit Flutter",
+    headlineSection3: "03 Der Release",
     textSection3: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -132,7 +125,7 @@ export default function AppDevelopmentPage(props: Props) {
         </p>
       </>
     ),
-    headlineSection4: "Warum unsere App Agentur?",
+    headlineSection4: "Warum unsere App-Agentur?",
     textSection4: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -298,13 +291,15 @@ export default function AppDevelopmentPage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        priceCalculatorButton={true}
-        highlightImage={"/images/app-development/app-development-header.png"}
+        priceCalculatorButton={false}
+        highlightImage={"/images/app-development/header.png"}
         highlightImageAlt="App Entwicklung"
         requestButtonText={texts.requestButtonText}
+        buttonLink="#start"
       />
       <main>
-        <PriceCalculatorSection />
+        <div className="scrollAnchor" id="start"></div>
+        <JourneySection />
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
         <ServiceSection
@@ -312,7 +307,7 @@ export default function AppDevelopmentPage(props: Props) {
           sectionRef={section1Ref}
           headline={texts.headlineSection1}
           text={texts.textSection1}
-          image="/images/app-development/cross-platform.png"
+          image="/images/app-development/section1.png"
           imageAlt={texts.headlineSection1}
           typewriterKey={"app1"}
         />
@@ -321,23 +316,22 @@ export default function AppDevelopmentPage(props: Props) {
           sectionRef={section2Ref}
           headline={texts.headlineSection2}
           text={texts.textSection2}
-          image="/images/app-development/app-development-process.png"
+          image="/images/app-development/section2.png"
           imageAlt={texts.headlineSection2}
           typewriterKey={"app2"}
-        />
-        <SmallTechnologiesSection
-          logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
         />
         <ServiceSection
           key={"app3"}
           sectionRef={section3Ref}
           headline={texts.headlineSection3}
           text={texts.textSection3}
-          image="/images/app-development/flutter.png"
+          image="/images/app-development/section3.png"
           imageAlt={texts.headlineSection3}
           typewriterKey={"app3"}
         />
-        <CrossPlatformSection />
+        <SmallTechnologiesSection
+          logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
+        />
         <ServiceSection
           key={"app4"}
           sectionRef={section4Ref}
@@ -348,7 +342,6 @@ export default function AppDevelopmentPage(props: Props) {
           typewriterKey={"app4"}
         />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />
       </main>

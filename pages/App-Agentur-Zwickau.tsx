@@ -232,7 +232,7 @@ export default function AppDevelopmentZwickauPage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         priceCalculatorButton={true}
-        highlightImage={"/images/app-development/app-development-header.png"}
+        highlightImage={"/images/app-development/haeder.png"}
         highlightImageAlt="App Entwicklung Zwickau"
         requestButtonText={texts.requestButtonText}
       />

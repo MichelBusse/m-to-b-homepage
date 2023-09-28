@@ -87,12 +87,6 @@ h1 {
   margin-bottom: 1.5rem;
   white-space: pre-wrap;
 
-  @media screen and (max-width: 950px) {
-    br{
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 500px) {
     font-size: 2em;
   }

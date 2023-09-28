@@ -13,6 +13,7 @@ type Props = {
   highlightImage?: string;
   highlightImageAlt?: string;
   requestButtonText?: string;
+  buttonLink?: string;
 };
 
 export default function Header(props: Props) {
@@ -79,7 +80,7 @@ export default function Header(props: Props) {
             {props.text}
             <div className={styles.buttonWrapper}>
               {props.requestButtonText &&
-              <Link href="#contact">
+              <Link href={props.buttonLink ?? "#contact"}>
                 <a>
                   <button
                     className={`bounce ${headerVisible ? styles.visible : ""}`}
