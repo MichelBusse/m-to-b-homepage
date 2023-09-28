@@ -22,25 +22,24 @@ export default function HomePage(props: Props) {
     title: "Deine App Agentur - M-to-B Software",
     headline: (
       <>
-        Deine Agentur für App- <br />
-        und Software-Entwicklung
+        Deine Agentur für App-Entwicklung
       </>
     ),
     text: (
       <>
         <p>
-          Du suchst einen Partner für die Realisierung deines Software-Projekts?
+          Du suchst einen Partner für die Realisierung deines App-Projekts?
           <br />
           Du hast schon eine Idee, brauchst aber noch Unterstützung bei der
           Umsetzung?
         </p>
         <p>
-          Der Software-Entwicklungsprozess kann ohne eine klare Strategie
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie
           schnell zum Zeit- und Kostenfresser werden.
         </p>
         <p>
           In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
-          Strategien informieren, um dein Software-Projekt zum Erfolg zu führen!
+          Strategien informieren, um dein App-Projekt zum Erfolg zu führen!
         </p>
       </>
     ),
@@ -60,26 +59,6 @@ export default function HomePage(props: Props) {
           Wir setzen auf einen transparenten Projektablauf mit persönlichen
           Ansprechpartnern und enger Kommunikation. So stellen wir sicher, dass
           deine Ziele erreicht und alle Ressourcen effizient genutzt werden.
-        </p>
-      </>
-    ),
-    headlineSection2: "Individualsoftware",
-    textSection2: (
-      <>
-        <p style={{ transitionDelay: "0.3s" }} key={1}>
-          Eine maßgeschneiderte Software-Lösungen automatisiert die Prozesse in
-          deinem Unternehmen zukunftssicher und investiert in langfristige
-          Effizienz.
-        </p>
-        <p style={{ transitionDelay: "0.6s" }} key={2}>
-          Mit der richtigen Methode wird die Entwicklung kein Kostenfresser,
-          sondern führt schon nach minimaler Entwicklungszeit zu messbaren
-          Ergebnissen.
-        </p>
-        <p style={{ transitionDelay: "0.9s" }} key={3}>
-          Wir begleiten dich Schritt für Schritt, von einer kosteneffizienten
-          Strategie, bis zum Einstatz im Unternehmen. Realisiere deine
-          Software-Lösung und bringe dein Unternehmen auf die nächste Stufe!
         </p>
       </>
     ),
@@ -141,24 +120,6 @@ export default function HomePage(props: Props) {
           well as great design and usability.
         </p>
       ),
-      headlineSection2: "Individual Software",
-      textSection2: (
-        <>
-          <p style={{ transitionDelay: "0.3s" }} key={1}>
-            With tailor-made software solutions, you automate your processes in
-            a future-proof manner and invest in long-term efficiency.
-          </p>
-          <p style={{ transitionDelay: "0.6s" }} key={2}>
-            With the right method, the development does not become a cost hog,
-            but leads to measurable results after a minimal development time.
-          </p>
-          <p style={{ transitionDelay: "0.9s" }} key={3}>
-            We accompany you step by step, from a cost-efficient strategy to
-            implementation in the company. Realize your software solution and
-            take your business to the next level!
-          </p>
-        </>
-      ),
       headlineSection3: "Augmented Reality",
       textSection3: (
         <>
@@ -192,7 +153,7 @@ export default function HomePage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        priceCalculatorButton={true}
+        priceCalculatorButton={false}
         requestButtonText={texts.requestButtonText}
       />
       <main>
@@ -203,22 +164,11 @@ export default function HomePage(props: Props) {
           key={"home1"}
           headline={texts.headlineSection1}
           text={texts.textSection1}
-          image="/images/app-development/app-development-header.png"
+          image="/images/app-development/header.png"
           imageAlt={texts.headlineSection1}
           typewriterKey={"home1"}
           siteLink={"/App-Agentur"}
           buttonDelay={"0.6s"}
-        />
-        <ServiceSection
-          sectionRef={props.anchorRefs.softwareRef}
-          key={"home2"}
-          headline={texts.headlineSection2}
-          text={texts.textSection2}
-          image="/images/individual-software/individual-software-header.png"
-          imageAlt={texts.headlineSection2}
-          typewriterKey={"home2"}
-          siteLink={"/Individualsoftware"}
-          buttonDelay={"1.2s"}
         />
         <ServiceSection
           sectionRef={props.anchorRefs.vrRef}

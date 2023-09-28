@@ -24,8 +24,6 @@ export default function Navbar(props: Props) {
 
     if (router.asPath.startsWith("/App-Agentur")) {
       setActiveMenuItem("apps");
-    } else if (router.asPath.startsWith("/Individualsoftware")) {
-      setActiveMenuItem("software");
     } else if (router.asPath.startsWith("/Augmented-Reality-Agentur")) {
       setActiveMenuItem("vr");
     } else if (router.asPath.startsWith("/Blog")) {
@@ -61,7 +59,6 @@ export default function Navbar(props: Props) {
 
   let texts = {
     apps: "Apps",
-    software: "Software",
     vr: "Augmented Reality",
     blog: "Blog",
     contact: "Kontakt",
@@ -73,7 +70,6 @@ export default function Navbar(props: Props) {
   if (router.locale == "en") {
     texts = {
       apps: "Apps",
-      software: "Software",
       vr: "Augmented Reality",
       blog: "Blog",
       contact: "Contact",
@@ -109,11 +105,6 @@ export default function Navbar(props: Props) {
             <li className={activeMenuItem === "apps" ? styles.active : ""}>
               <Link href="/App-Agentur">
                 <a>{texts.apps}</a>
-              </Link>
-            </li>
-            <li className={activeMenuItem === "software" ? styles.active : ""}>
-              <Link href="/Individualsoftware">
-                <a>{texts.software}</a>
               </Link>
             </li>
             <li className={activeMenuItem === "vr" ? styles.active : ""}>
@@ -178,17 +169,6 @@ export default function Navbar(props: Props) {
                 className={activeMenuItem === "apps" ? styles.active : ""}
               >
                 {texts.apps}
-              </li>
-            </a>
-          </Link>
-          <Link href="/Individualsoftware">
-            <a>
-              <li
-                onClick={() => setMenuActive(false)}
-                style={{ transitionDelay: "0.1s" }}
-                className={activeMenuItem === "software" ? styles.active : ""}
-              >
-                {texts.software}
               </li>
             </a>
           </Link>

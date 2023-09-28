@@ -25,14 +25,14 @@ export default function AppDevelopmentPage(props: Props) {
   const section4Ref = useRef(null);
 
   let texts = {
-    headline: <>Abenteuer App-Entwicklung<br/>- Deine App-Agentur</>,
+    headline: <>Abenteuer: App-Entwicklung<br/>- Deine App-Agentur</>,
     text: (
       <>
         <p>
           Du hast die Idee für eine App und suchst noch nach Unterstützung für die Umsetzung?
         </p>
         <p>
-          Bei der Entwicklung musst du dich verschiedenen Herausforderungen und Gefahren stellen. Ohne den richtigen Plan verlierst du dabei schnell Zeit und dein Budget.
+          Bei der App-Entwicklung musst du dich verschiedenen Herausforderungen stellen. Ohne den richtigen Plan kommst du dabei leicht vom Weg ab und verlierst Zeit und Budget.
         </p>
         <p>
           Wir begleiten dich durch deine Entwicklungs-Reise und führen deine App gemeinsam mit dir und der richtigen Strategie sicher zum Ziel!

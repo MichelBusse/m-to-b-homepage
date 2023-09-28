@@ -314,10 +314,6 @@ export default function ContactSection(props: Props) {
           </div>
         </div>
       </section>
-      <div
-        id="ProvenExpert_widgetbar_container"
-        className={styles.ProvenExpert_widgetbar_container}
-      ></div>
     </>
   );
 }
