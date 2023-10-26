@@ -26,7 +26,7 @@ const JourneySection = () => {
     }
 
     return () => media.removeEventListener("change", updateJourneySize);
-  }, []);
+  }, [updateJourneySize]);
   
 
   return (
@@ -35,6 +35,7 @@ const JourneySection = () => {
         <Image
             src={`/images/app-development/journey-${journeySize}-${router.locale}.svg`}
             layout="fill"
+            alt="App Development Journey"
         />
       </div>
     </section>

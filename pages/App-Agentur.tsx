@@ -160,7 +160,7 @@ export default function AppDevelopmentPage(props: Props) {
           </p>
           <p>
             When developing an app, you have to face various challenges. Without
-            a good plan, it's easy to get sidetracked and lose time and budget.
+            a good plan, it&apos;s easy to get sidetracked and lose time and budget.
           </p>
           <p>
             We accompany you through your development journey and guide your app
