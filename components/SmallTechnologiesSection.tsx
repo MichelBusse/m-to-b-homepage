@@ -196,12 +196,12 @@ export default function SmallTechnologiesSection(props: Props) {
   const router = useRouter();
 
   let texts = {
-    headline: "Technologien",
+    headline: "Unsere Technologien",
   };
 
   if (router.locale == "en") {
     texts = {
-      headline: "Technologies",
+      headline: "Our Technologies",
     };
   }
 

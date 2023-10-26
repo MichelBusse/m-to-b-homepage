@@ -25,22 +25,31 @@ export default function AppDevelopmentPage(props: Props) {
   const section4Ref = useRef(null);
 
   let texts = {
-    headline: <>Abenteuer: App-Entwicklung<br/>- Deine App-Agentur</>,
+    headline: (
+      <>
+        Abenteuer: App-Entwicklung
+        <br />- Deine App-Agentur
+      </>
+    ),
     text: (
       <>
         <p>
-          Du hast die Idee für eine App und suchst noch nach Unterstützung für die Umsetzung?
+          Du hast die Idee für eine App und suchst noch nach Unterstützung für
+          die Umsetzung?
         </p>
         <p>
-          Bei der App-Entwicklung musst du dich verschiedenen Herausforderungen stellen. Ohne den richtigen Plan kommst du dabei leicht vom Weg ab und verlierst Zeit und Budget.
+          Bei der App-Entwicklung musst du dich verschiedenen Herausforderungen
+          stellen. Ohne einen guten Plan kommst du dabei leicht vom Weg ab und
+          verlierst Zeit und Budget.
         </p>
         <p>
-          Wir begleiten dich durch deine Entwicklungs-Reise und führen deine App gemeinsam mit dir und der richtigen Strategie sicher zum Ziel!
+          Wir begleiten dich durch deine Entwicklungs-Reise und führen deine App
+          gemeinsam mit dir und der richtigen Strategie sicher zum Ziel!
         </p>
       </>
     ),
-    requestButtonText: "Starte deine Reise!",
-    title: "Abenteuer App-Entwicklung - Deine App-Agentur M-to-B",
+    requestButtonText: "Starte die Reise",
+    title: "Abenteuer: App-Entwicklung - Deine App-Agentur M-to-B",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     concept: "Strategie",
@@ -50,22 +59,21 @@ export default function AppDevelopmentPage(props: Props) {
     textSection1: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Viele App-Projekte scheitern durch schlechte Planung und überladene
-          Funktionen. Bei Änderungen in den Anforderungen kann dann von der App
-          Agentur nicht agil reagiert werden und das Budget wird schon vor den
-          ersten messbaren Ergebnissen verschlungen.
+          Viele App-Projekte scheitern durch schlechte Planung und unnötige
+          Funktionen. Bei Änderungen in den Anforderungen kann von der
+          App-Agentur nicht reagiert werden und das Budget wird vor den ersten
+          messbaren Ergebnissen verschlungen.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Mit der Lean-Prototype-Methode minimierst du dieses Risiko. In der
-          ersten Phase der App-Entwicklung erarbeiten wir gemeinsam die
-          Hauptanforderungen und Kernkomponenten deiner App. Diese werden dann
-          direkt mit einem ersten &quot;schmalen&quot; (lean) Prototypen
-          entwickelt.
+          Mit der Lean-Prototype-Methode helfen wir dir, dieses Risiko zu
+          minimieren. In der ersten Phase erarbeiten wir dafür gemeinsam und
+          persönlich die Hauptanforderungen und Kernkomponenten für deine App
+          und definieren klare und messbare Ziele.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
-          Dadurch hälst du bereits nach wenigen Wochen und mit minimalem Budget
-          die erste Version deiner App in den Händen und kannst zeitnah
-          anfangen, die Funktionen zu validieren und im Einsatz zu testen.
+          Anschließend erhältst du einen verständlichen Entwicklungsplan und ein
+          klares Konzept deiner App. Somit bist du von Anfang an eng beteiligt
+          und behältst einen Überblick über den Stand der Entwicklung.
         </p>
       </>
     ),
@@ -73,78 +81,69 @@ export default function AppDevelopmentPage(props: Props) {
     textSection2: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Die App-Entwicklung in unserer Agentur besteht aus folgenden
-          Schritten:
+          Mit den Anforderungen deiner App kann nun das Layout erstellt werden.
+          Dabei liegt unser Fokus auf einer hohen Nutzerfreundlichkeit und den
+          Zielen aus dem Konzept. Während dem Design halten wir dich immer auf
+          dem aktuellen Stand und du kannst zu jedem Schritt deine Rückmeldung
+          geben.
         </p>
-        <ol>
-          <li style={{ transitionDelay: "0.6s" }}>
-            <b>Strategie:</b> Hier wird das Ziel deiner App festgelegt und ein
-            Konzept erstellt, wie deine App ohne Umwege dorthin geführt werden
-            kann.
-          </li>
-          <li style={{ transitionDelay: "0.9s" }}>
-            <b>Design:</b> Das Layout deiner App wird erstellt. Dabei dreht sich
-            alles um Nutzerfreundlichkeit und Wiedererkennungswert.
-          </li>
-          <li style={{ transitionDelay: "1.2s" }}>
-            <b>Implementierung:</b> In diesem Schritt wird deine Idee Realität.
-            Deine App erhält ihre Funktionen und wird zu einem fertigen Produkt.
-          </li>
-          <li style={{ transitionDelay: "1.5s" }}>
-            <b>Rollout:</b> Sobald deine App fertig und auf Fehler getestet ist,
-            wird sie im App-Store, oder auf den Plattformen deiner Wahl
-            veröffentlicht.
-          </li>
-          <li style={{ transitionDelay: "1.8s" }}>
-            <b>Betreuung:</b> Nach der Veröffentlichung ist es wichtig, die App
-            regelmäßig zu aktualisieren und Probleme zu beheben. Mit uns hast du
-            dafür auch nach der Veröffentlichung einen Ansprechpartner.
-          </li>
-        </ol>
+        <p style={{ transitionDelay: "0.6s" }}>
+          Bei der Programmierung werden die Kernkomponenten zunächst in einem
+          ersten App-Prototyp implementiert. Mit diesem hältst du bereits nach
+          wenigen Wochen die erste Version deiner App in den Händen und kannst
+          zeitnah anfangen, die Funktionen zu validieren und einzusetzen.
+        </p>
+        <p style={{ transitionDelay: "0.9s" }}>
+          Der App-Prototyp wird dann mit allen ausstehenden Funktionen erweitert
+          und Schritt für Schritt zur fertigen App ausgebaut. Da jede Funktion
+          zeitnah von dir getestet und genutzt wird, können Fehler in der
+          Kommunikation oder Umsetzung früh erkannt und schließlich vermieden
+          werden.
+        </p>
       </>
     ),
     headlineSection3: "03 Der Release",
     textSection3: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Bei der Entwicklung von Apps ist Flutter das fortschrittlichste
-          Framework unserer Wahl. Es ermöglicht uns, deinen ersten Prototypen
-          schnell und kosteneffektiv zu präsentieren und teure
-          Fehleinschätzungen zu vermeiden.
+          Der Höhepunkt von jeder App-Entwicklung ist der Release. Ob bei
+          internen oder öffentlichen Apps, wir begleiten dich durch die Gefahren
+          der Veröffentlichung auf den entsprechenden Plattformen und beraten
+          dich zu den geeignetsten Werbestrategien.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Flutter ist in der Lage, gleichzeitig für Android, iOS und Web zu
-          entwickeln, was Zeit und Kosten spart. Mit seiner hohen Performance
-          und niedrigen Speicherkosten, bietet Flutter eine nahtlose
-          Benutzererfahrung und beeindruckende Animationen.
+          Schließlich ist der App-Release der Moment, in dem deine Ideen
+          Wirklichkeit werden und du dein fertiges Produkt in deinen
+          (virtuellen) Händen hältst.
         </p>
-        <p style={{ transitionDelay: "0.9s" }}>
-          Durch kontinuierliche Updates von Flutter wird deine App immer auf dem
-          neuesten Stand der Technologie gehalten und hält mit allen
-          Entwicklungen problemlos mit.
+        <p style={{ transitionDelay: "0.6s" }}>
+          Doch deine Reise endet hier noch nicht: Auch bei allen Aufgaben nach
+          der Veröffentlichung bleiben wir dein Ansprechpartner und helfen dir,
+          alle Bugs zu beheben und deine zukünftigen Ideen umzusetzen.
         </p>
       </>
     ),
-    headlineSection4: "Warum unsere App-Agentur?",
+    headlineSection4: "Wer sind wir?",
     textSection4: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Wir setzen auf Kommunikation - In unseren Projekten haben wir
-          festgestellt, dass der Erfolg deiner App-Entwicklung vor allem davon
-          abhängt, dass wir als App Agentur deine Ziele richtig verstehen und
-          nicht nur blind entwickeln. Deshalb wirst du bei uns nicht nur während
-          der Entwicklung, sondern vor allem bei der Planung deiner App von den
-          richtigen Experten unterstützt.
+          M-to-B Software wurde 2020 von Michel Busse neben dem Studium
+          gegründet, mit dem Ziel, gemeinsam neue Ideen zu versuchen und
+          sinnvolle Software zu entwickeln.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Du hast die Möglichkeit für häufige Rücksprache und gemeinsames
-          Brainstorming wobei wir dir helfen, die richtigen Schritte für dein
-          Ziel zu unternehmen.
+          Die Reise begann mit der Entwicklung von Websites für verschiedene
+          kleine und große Unternehmen. Mit zunehmender Erfahrung und auf
+          Nachfrage unserer Kunden setzten wir zunehmend auch personalisierte
+          ERP-Software und sogar innovative AR-Apps um.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
-          In unserem unverbindlichem Erstgespräch kannst du deine Fragen
-          beantworten lassen und bekommst einen Vorgeschmack auf die Arbeit mit
-          unseren Experten.
+          Schließlich haben wir mit der App-Entwicklung unsere Leidenschaft
+          gefunden und freuen uns immer wieder unseren Kunden dabei zu helfen,
+          ihre Apps zu verwirklichen. Unser Geheimtipp für eine erfolgreiche
+          Entwicklung ist ein enges Verhältnis zu unseren Kunden. Wir wollen
+          ihre Ziele verstehen und so bei der Entwicklung mit Herzblut dahinter
+          stehen.
         </p>
       </>
     ),
@@ -156,79 +155,72 @@ export default function AppDevelopmentPage(props: Props) {
       text: (
         <>
           <p>
-            Are you looking for an agency to realize your app?
-            <br />
-            Do you already have an idea, but still need help with the
-            implementation?
+            Do you have an idea for an app and are you still looking for
+            guidance to implement it?
           </p>
           <p>
-            Without a clear strategy, the app development process can quickly
-            become a waste of time and money.
+            When developing an app, you have to face various challenges. Without
+            a good plan, it's easy to get sidetracked and lose time and budget.
           </p>
           <p>
-            Use a free consultation and learn efficient strategies to make your
-            app a success!
+            We accompany you through your development journey and guide your app
+            safely to its goal together with you and the right strategy!
           </p>
         </>
       ),
-      requestButtonText: "Schedule a free consultation!",
-      title: "App Development & Agency - M-to-B",
+      requestButtonText: "Start your journey",
+      title: "App Development - Your App Development Agency M-to-B",
       description:
         "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
       concept: "Strategy",
       development: "Implementation",
       support: "Maintenance",
-      headlineSection1: "The Lean Prototype Method",
+      headlineSection1: "01 Strategy",
       textSection1: (
         <>
-          <p>
-            Many app projects fail due to poor planning and inflated functions.
-            If the requirements change, it is then not possible to react agilely
-            and the budget is gobbled up before the first measurable results.
-          </p>
           <p style={{ transitionDelay: "0.3s" }}>
-            With the lean prototype method you minimize this risk. In the first
-            phase of app development, we work out the main requirements and core
-            components of your app together. These are then immediately
-            implemented in a lean prototype.
+            Many app projects fail due to poor planning and unnecessary
+            functions. If the requirements change, the app agency cannot react
+            quickly and the budget is consumed before the first measurable
+            results are achieved.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
-            As a result, after just a few weeks and with a minimal budget, you
-            will have the first version of your app in your hands and can
-            promptly start validating and testing the functions in use.
+            With the Lean Prototype Method, we help you minimize this risk. In
+            the first phase, we work together and personally to develop the main
+            requirements and core components for your app and define clear and
+            measurable goals.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            You will then receive an understandable development plan and a clear
+            concept of your app. This means you are closely involved right from
+            the start and have an overview of the status of development.
           </p>
         </>
       ),
-      headlineSection2: "App Development Process",
+      headlineSection2: "02 Implementation",
       textSection2: (
         <>
-          <p>The app development typically involves the following steps:</p>
-          <ol>
-            <li style={{ transitionDelay: "0.3s" }}>
-              Strategy: Here the goal of your app is determined and a concept is
-              created as to how your app can be led there most efficiently.
-            </li>
-            <li style={{ transitionDelay: "0.6s" }}>
-              Design: The layout of your app is created. Everything revolves
-              around user-friendliness and recognition value.
-            </li>
-            <li style={{ transitionDelay: "0.9s" }}>
-              Implementation: In this step, your idea becomes reality. Your app
-              gets its functions and becomes a finished product.
-            </li>
-            <li style={{ transitionDelay: "1.2s" }}>
-              Release: Once your app is complete and bug tested, it will be
-              released to the app store or platforms of your choice.
-            </li>
-            <li style={{ transitionDelay: "1.5s" }}>
-              Maintenance: After release, it is important to regularly update
-              the app and fix problems. With us you have a contact person for
-              this even after the publication.
-            </li>
-          </ol>
+          <p style={{ transitionDelay: "0.3s" }}>
+            The layout can now be created based on the requirements of your app.
+            Our focus is on a high level of user-friendliness and the goals of
+            the concept. During the design, we always keep you up to date and
+            you can give your feedback on every step.
+          </p>
+          <p style={{ transitionDelay: "0.6s" }}>
+            During programming, the core components are first implemented in an
+            initial app prototype. With this, you will have the first version of
+            your app in your hands after just a few weeks and can quickly start
+            validating and using the functions.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            The app prototype is then expanded with all outstanding functions
+            and developed step by step into the finished app. Since you test and
+            use each function promptly, errors in communication or
+            implementation can be identified early and ultimately avoided.
+          </p>
         </>
       ),
-      headlineSection3: "App Development with Flutter",
+      headlineSection3: "03 Release",
       textSection3: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -248,24 +240,26 @@ export default function AppDevelopmentPage(props: Props) {
           </p>
         </>
       ),
-      headlineSection4: "Why our App Agency?",
+      headlineSection4: "Who are we?",
       textSection4: (
         <>
-          <p>
-            We focus on communication - In our projects, we have found that the
-            success of your app depends on us understanding your goal correctly
-            instead of blindly executing the development. Therefore, you are
-            supported not only during development, but above all in planning of
-            your app by the right experts.
-          </p>
           <p style={{ transitionDelay: "0.3s" }}>
-            You have the opportunity for frequent consultation and brainstorming
-            together, whereby we help you to take the right steps towards your
-            goal.
+            M-to-B Software was founded in 2020 by Michel Busse while he was
+            studying, with the aim of trying new ideas together and developing
+            useful software.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
-            In our relaxed initial meeting, you can have your questions answered
-            and get a foretaste of working with our experts.
+            The journey started with developing websites for various small and
+            large companies. With increasing experience and upon demand from our
+            customers, we are increasingly implementing personalized ERP
+            software and even innovative AR apps.
+          </p>
+          <p style={{ transitionDelay: "0.9s" }}>
+            After all, we have found our passion in app development and are
+            always happy to help our customers make their apps a reality. Our
+            insider tip for successful development is a close relationship with
+            our customers. We want to understand your goals and put our heart
+            and soul behind their development.
           </p>
         </>
       ),

@@ -28,7 +28,7 @@ export default function ContactSection(props: Props) {
     headline1: "Kontakt",
     contactText:
       "Du bist interessiert oder hast noch Fragen? Nutze unsere kostenlose Beratung und sende uns einfach eine Nachricht!",
-    request: "Individuelles Angebot erhalten",
+    request: "Sende uns eine Nachricht",
     privacyText: "Ich akzeptiere die Datenschutzerklärung",
     send: "Absenden",
     formName: "Name",

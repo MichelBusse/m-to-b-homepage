@@ -233,7 +233,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         priceCalculatorButton={true}
-        highlightImage={"/images/app-development/haeder.png"}
+        highlightImage={"/images/app-development/header.png"}
         highlightImageAlt="App Entwicklung Leipzig"
         requestButtonText={texts.requestButtonText}
       />
