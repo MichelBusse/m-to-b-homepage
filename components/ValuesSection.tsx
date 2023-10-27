@@ -5,12 +5,12 @@ const ValuesSection = () => {
   const router = useRouter();
 
   let texts = {
-    headline1: "Persönlich",
-    text1: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bleibst du immer auf dem aktuellen Entwicklungsstand.",
-    headline2: "Modern",
-    text2: "Wir suchen für jedes Projekt individuell die optimalen Technologien und programmieren agil, effizient und zukunftsorientiert.",
+    headline1: "Innovativ",
+    text1: "Wir suchen für jedes Projekt die besten Technologien und programmieren agil, effizient und erfolgsorientiert.",
+    headline2: "Persönlich",
+    text2: "Mit persönlichem Ansprechpartner und einem transparenten Projektablauf bleibst du immer auf dem aktuellen Entwicklungsstand.",
     headline3: "Leidenschaftlich",
-    text3: "Jede Software-Entwicklung begeistert uns auf's Neue und als App Agentur freut es uns, deine Vorstellungen zu realisieren.",
+    text3: "Jede Entwicklung begeistert uns auf's Neue und als App-Agentur freut es uns, deine Vision Wirklichkeit werden zu lassen.",
   };
   let phrases = ["Software", "Apps", "Zukunft"];
 

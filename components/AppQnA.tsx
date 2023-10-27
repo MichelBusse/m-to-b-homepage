@@ -1,7 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import { Stack } from "@mui/system";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 type Props = {};
@@ -10,106 +9,80 @@ export default function AppQnA(props: Props) {
   const router = useRouter();
 
   let texts = {
-    question1: "Wie viel kostet die Entwicklung einer App?",
+    question1: "Welche Branchen bedient ihr?",
     answer1: (
       <>
-        Ein pauschaler Kostenvoranschlag ohne detaillierte Infos ist in der
-        App-Entwicklung schwierig. Der Großteil der App-Projekte unserer Kunden
-        liegt bei einem Budget zwischen <strong>12.000 € bis 35.000 €</strong>.
-        Um eine Vorstellung für deine App vorab zu bekommen, kannst du unseren{" "}
-        <Link href="/App-Preis-Rechner">
-          <a>App-Preis-Rechner</a>
-        </Link>{" "}
-        nutzen.
+        Wir arbeiten in verschiedenen Branchen, darunter Gesundheitswesen,
+        E-Commerce, Bildung, Unterhaltung und mehr. Unser Ziel ist es, passende
+        Lösungen für jeden Kunden zu entwickeln. Wenn wir die Vision hinter der
+        App verstehen, schließen wir keine Branche aus.
       </>
     ),
     answer1String:
-      "Ein pauschaler Kostenvoranschlag ohne detaillierte Infos ist in der App-Entwicklung schwierig. Der Großteil der App-Projekte unserer Kunden liegt bei einem Budget zwischen <strong>12.000 € bis 35.000 €</strong>. Um eine Vorstellung für deine App vorab zu bekommen, kannst du unseren App-Preis-Rechner nutzen.",
+      "Wir arbeiten in verschiedenen Branchen, darunter Gesundheitswesen, E-Commerce, Bildung, Unterhaltung und mehr. Unser Ziel ist es maßgeschneiderte Lösungen für jeden Kunden zu entwickeln. Wenn wir die Vision hinter der App verstehen, schließen wir keine Branche aus.",
     question2: "Wie lange dauert die Entwicklung einer App?",
     answer2: (
       <>
-        Für die zeitliche Einordnung und einen Überblick über den aktuellen
-        Entwicklungsstand setzen wir auf umfassende Kommunikation. Du erfährst
-        im wöchentlichen Abstand, wie weit die Entwicklung deiner App ist und
-        welche zeitlichen Risiken es noch gibt. So schaffen wir einen
-        transparenten und nachvollziehbaren Entwicklungsablauf.
+        Die Dauer der App-Entwicklung hängt von deinen individuellen
+        Anforderungen ab. Wir möchten sicherstellen, dass deine App perfekt ist
+        und werden so schnell wie möglich arbeiten, um deine Vision Wirklichkeit
+        werden zu lassen. Um dir einen möglichst frühen ROI zu ermöglichen,
+        kannst du bereits nach wenigen Wochen deinen ersten App-Prototyp
+        verwenden und testen. Alle weiteren Funktionen bauen dann auf diesem
+        Prototyp auf und sind so immer zeitnah in deinen Händen.
       </>
     ),
     answer2String:
-      "Für die zeitliche Einordnung und einen Überblick über den aktuellen Entwicklungsstand setzen wir auf umfassende Kommunikation. Du erfährst im wöchentlichen Abstand, wie weit die Entwicklung deiner App ist und welche zeitlichen Risiken es noch gibt. So schaffen wir einen transparenten und nachvollziehbaren Entwicklungsablauf.",
-    question3: "Was passiert nach der Fertigstellung?",
+      "Die Dauer der App-Entwicklung hängt von deinen individuellen Anforderungen ab. Wir möchten sicherstellen, dass deine App perfekt ist und werden so schnell wie möglich arbeiten, um deine Vision Wirklichkeit werden zu lassen. Um dir einen möglichst frühen ROI zu ermöglichen, kannst du bereits nach wenigen Wochen deinen ersten App-Prototyp verwenden und testen. Alle weiteren Funktionen bauen dann auf diesem Prototyp auf und sind so immer zeitnah in deinen Händen.",
+    question3: "Wie steht es mit der Unterstützung nach der Veröffentlichung?",
     answer3: (
       <>
-        Sobald deine App alle Features fertig enthält und du mit dem Ergebnis
-        zufrieden bist kann es ganz unterschiedlich weitergehen. Entweder
-        übergeben wir die App komplett an dich, oder begleiten dich beim
-        weiteren Prozess, wie z.B. dem Upload in den App-Store, der
-        Live-Schaltung oder der anschließenden Betreuung.
+        Keine Sorge, auch nach dem Release lassen wir dich nicht im Stich! Wir
+        bieten nach auch der Veröffentlichung umfassende Wartung und
+        Unterstützung für deine App. Bei Problemen oder Aktualisierungen sind
+        wir immer für dich da.
       </>
     ),
     answer3String:
-      "Sobald deine App alle Features fertig enthält und du mit dem Ergebnis zufrieden bist kann es ganz unterschiedlich weitergehen. Entweder übergeben wir die App komplett an dich, oder begleiten dich beim weiteren Prozess, wie z.B. dem Upload in den App-Store, der Live-Schaltung oder der anschließenden Betreuung.",
-    question4: "Haben wir aktuell freie Projektkapazitäten?",
-    answer4: (
-      <>
-        Ja. Natürlich ist das abhängig vom Umfang des Projekts und der aktuellen
-        Auslastung unseres Teams, aber in der Regel lassen sich neue Projekte
-        bei uns ohne Wartezeit verwirklichen.
-      </>
-    ),
-    answer4String:
-      "Ja. Natürlich ist das abhängig vom Umfang des Projekts und der aktuellen Auslastung unseres Teams, aber in der Regel lassen sich neue Projekte bei uns ohne Wartezeit verwirklichen.",
+      "Keine Sorge, auch nach dem Release lassen wir dich nicht im Stich! Wir bieten nach auch der Veröffentlichung umfassende Wartung und Unterstützung für deine App. Bei Problemen oder Aktualisierungen sind wir immer für dich da.",
   };
 
   if (router.locale == "en") {
     texts = {
-      question1: "How expensive is app development?",
+      question1: "Which industries do you serve?",
       answer1: (
         <>
-          A flat-rate estimate without detailed information is difficult in app
-          development. The majority of our customers&apos; app projects have a budget
-          between <strong>€12,000 and €35,000</strong>. To get an idea for your
-          app in advance, you can use our{" "}
-          <Link href="/App-Preis-Rechner">
-            <a>app budget calculator</a>
-          </Link>
-          .
+          We work across multiple industries including healthcare, e-commerce,
+          education, entertainment and more. Our goal is to develop tailor-made
+          solutions for every customer. When we understand the vision behind the
+          app, we don't exclude any industry.
         </>
       ),
       answer1String:
-        "A flat-rate estimate without detailed information is difficult in app development. The majority of our customers' app projects have a budget between <strong>€12,000 and €35,000</strong>. To get an idea for your app in advance, you can use our app budget calculator.",
+        "We work across multiple industries including healthcare, e-commerce, education, entertainment and more. Our goal is to develop tailor-made solutions for every customer. When we understand the vision behind the app, we don't exclude any industry.",
       question2: "How long does it take to develop an app?",
       answer2: (
         <>
-          To give our costumers information about the state of the app
-          developing process, we rely on extensive individual communication.
-          Thereby, we create a transparent and comprehensive workflow.
+          The duration of app development depends on your individual
+          requirements. We want to make sure your app is perfect and will work
+          as quickly as possible to make your vision a reality. To give you as
+          early an ROI as possible, you can use and test your first app
+          prototype after just a few weeks. All other functions are then based
+          on this prototype and are therefore always in your hands promptly.
         </>
       ),
       answer2String:
-        "To give our costumers information about the state of the app developing process, we rely on extensive individual communication. Thereby, we create a transparent and comprehensive workflow.",
-      question3: "What happens after my app is finished?",
+        "The duration of app development depends on your individual requirements. We want to make sure your app is perfect and will work as quickly as possible to make your vision a reality. To give you as early an ROI as possible, you can use and test your first app prototype after just a few weeks. All other functions are then based on this prototype and are therefore always in your hands promptly.",
+      question3: "What about post-release support?",
       answer3: (
         <>
-          After we included all features and you are happy with the results,
-          there are different ways for your app to go. Either we hand you the
-          finished product and you go on with the journey by yourself or we
-          accompany you further through the placement in the app store or the
-          maintenance of your app.
+          Don't worry, we won't let you down even after the release! We offer
+          comprehensive maintenance and support for your app after its release.
+          If you have any problems or updates, we are always there for you.
         </>
       ),
       answer3String:
-        "After we included all features and you are happy with the results, there are different ways for your app to go. Either we hand you the finished product and you go on with the journey by yourself or we accompany you further through the placement in the app store or the maintenance of your app.",
-      question4: "Do we currently have free project capacities?",
-      answer4: (
-        <>
-          Yes. Of course that depends on the size of your project and our
-          current utilization of the team but normally we can realize your ideas
-          without any delay!
-        </>
-      ),
-      answer4String:
-        "Yes. Of course that depends on the size of your project and our current utilization of the team but normally we can realize your ideas without any delay!",
+        "Don't worry, we won't let you down even after the release! We offer comprehensive maintenance and support for your app after its release. If you have any problems or updates, we are always there for you.",
     };
   }
 
@@ -148,14 +121,6 @@ export default function AppQnA(props: Props) {
                     text: `<p>${texts.answer3String}</p>`,
                   },
                 },
-                {
-                  "@type": "Question",
-                  name: texts.question4,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `<p>${texts.answer4String}</p>`,
-                  },
-                },
               ],
             }),
           }}
@@ -180,12 +145,6 @@ export default function AppQnA(props: Props) {
               {texts.question3}
             </AccordionSummary>
             <AccordionDetails>{texts.answer3}</AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary sx={{ fontSize: "1.2em" }}>
-              {texts.question4}
-            </AccordionSummary>
-            <AccordionDetails>{texts.answer4}</AccordionDetails>
           </Accordion>
         </Stack>
       </div>

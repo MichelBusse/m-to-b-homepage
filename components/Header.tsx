@@ -64,7 +64,7 @@ export default function Header(props: Props) {
                     ((Math.floor(index / 4) % 6) - (index % 4)) * 11 + "em",
                   bottom: (index % 4) * 11 + "em",
                   opacity: 0.3 - 0.015 * index,
-                  transitionDelay: 50 * index + "ms",
+                  transitionDelay: (100 * index + 1000) + "ms",
                 }}
               ></div>
             );
@@ -72,7 +72,7 @@ export default function Header(props: Props) {
         </div>
         <div className={`${styles.cell} ${styles.headerCell}`}>
           <header id={styles.header}>
-            {props.topHeadline && <span className={styles.topHeadline}>{props.topHeadline}</span>}
+            {props.topHeadline && <div className={styles.topHeadline}>{props.topHeadline}</div>}
             <h1 className={headerVisible ? styles.visible : ""}>
               {props.headline}&nbsp;
               <span className={styles.typewriterCursor}>|</span>
