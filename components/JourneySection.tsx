@@ -22,13 +22,12 @@ const JourneySection = () => {
 
     // Check on mount (callback is not called until a change occurs)
     if (media.matches) {
-        updateJourneySize("small");
+      setJourneySize("small");
     }
 
     return () => media.removeEventListener("change", updateJourneySize);
   }, [updateJourneySize]);
   
-
   return (
     <section className={styles.journeySection}>
       <div className={styles.imageWrapper}>

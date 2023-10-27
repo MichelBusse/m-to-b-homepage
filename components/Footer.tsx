@@ -77,11 +77,6 @@ export default function Footer() {
           </li>
         </ul>
       </footer>
-      <Script
-        type="text/javascript"
-        src="//www.provenexpert.com/widget/bar_m-to-b-software.js?style=black&amp;feedback=1"
-        strategy="lazyOnload"
-      />
     </>
   );
 }
