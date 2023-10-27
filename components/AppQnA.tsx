@@ -55,7 +55,7 @@ export default function AppQnA(props: Props) {
           We work across multiple industries including healthcare, e-commerce,
           education, entertainment and more. Our goal is to develop tailor-made
           solutions for every customer. When we understand the vision behind the
-          app, we don't exclude any industry.
+          app, we don&apos;t exclude any industry.
         </>
       ),
       answer1String:
@@ -76,7 +76,7 @@ export default function AppQnA(props: Props) {
       question3: "What about post-release support?",
       answer3: (
         <>
-          Don't worry, we won't let you down even after the release! We offer
+          Don&apos;t worry, we won&apos;t let you down even after the release! We offer
           comprehensive maintenance and support for your app after its release.
           If you have any problems or updates, we are always there for you.
         </>
