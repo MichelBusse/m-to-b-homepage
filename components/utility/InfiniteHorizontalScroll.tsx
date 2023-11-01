@@ -1,4 +1,4 @@
-import styles from "../styles/InfiniteHorizontalScroll.module.scss";
+import styles from "../../styles/InfiniteHorizontalScroll.module.scss";
 import React, { cloneElement, FC, PropsWithChildren, ReactElement } from "react";
 
 type Props = {

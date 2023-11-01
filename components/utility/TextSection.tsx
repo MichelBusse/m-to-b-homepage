@@ -1,4 +1,4 @@
-import serviceSectionStyles from "../styles/ServiceSection.module.scss";
+import serviceSectionStyles from "../../styles/ServiceSection.module.scss";
 import React, { useState, useEffect, MutableRefObject, useRef } from "react";
 import Image from "next/image";
 import TypeWriter from "./TypeWriter";
@@ -18,7 +18,7 @@ type Props = {
   buttonDelay?: string;
 };
 
-const ServiceSection = (props: Props) => {
+const TextSection = (props: Props) => {
   const [active, setActive] = useState(false);
   const typed = useRef<Typed | undefined>();
   const [refresh, setRefresh] = useState(0);
@@ -110,4 +110,4 @@ const ServiceSection = (props: Props) => {
   );
 };
 
-export default ServiceSection;
+export default TextSection;

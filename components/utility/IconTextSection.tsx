@@ -1,4 +1,4 @@
-import styles from "../styles/IconTextSection.module.scss";
+import styles from "../../styles/IconTextSection.module.scss";
 
 type Props = {
   label1: string;

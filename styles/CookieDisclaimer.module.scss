@@ -43,10 +43,13 @@
   align-items: center;
   font-size: 1em;
   color: #222;
+  margin-bottom: 0.2em;
 }
 .cookieDisclaimer .cookieDisclaimerForm input {
   width: 1.5em;
   height: 1.5em;
+  margin-right: 1em;
+  cursor: pointer;
 }
 .cookieDisclaimerButton {
   width: 100%;
@@ -57,14 +60,22 @@
 }
 .cookieDisclaimerButton button {
   width: 100%;
-  font-size: 1.2em;
-  padding: 0.4em;
+  font-size: 1em;
+  padding: 0.75em 1.2em;
   color: #fff;
-  background: #022636;
+  background-color: rgb(1, 80, 107);
   border: none;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cookieDisclaimerButton button:hover{
+  background-color: #022636;
 }
 .cookieDisclaimerButton.save button {
   background: #b4b4b4;
+}
+.cookieDisclaimerButton.save button:hover {
+  background-color: #888888;
 }
 
 @media screen and (max-width: 890px) {

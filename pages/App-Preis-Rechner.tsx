@@ -40,7 +40,7 @@ export default function AppPriceCalculatorPage() {
   let texts = {
     title: "App Entwicklung Preis Rechner - M-to-B",
     description:
-      "Wie viel kostet App Entwicklung? Berechne den Preis deiner App vorab und erhalte einen Kostenüberblick",
+      "Wie viel kostet App Entwicklung? Berechne den Preis deiner App vorab und erhalte einen Überblick über alle Kosten.",
     headline: "App Entwicklung Preis Rechner",
     checkInputs: "Bitte überprüfe deine Eingaben",
     mailSuccess:
@@ -65,7 +65,7 @@ export default function AppPriceCalculatorPage() {
     texts = {
       title: "App Development Budget Calculator - M-to-B",
       description:
-        "How much does app development cost? Calculate your budget beforehand and get an overview",
+        "How much does app development cost? Calculate your budget beforehand and get an overview over all costs.",
       headline: "App Development Budget Calculator",
       checkInputs: "Please check your inputs",
       mailSuccess:

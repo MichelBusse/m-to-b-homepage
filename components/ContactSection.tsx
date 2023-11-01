@@ -12,13 +12,15 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import Particles from "react-tsparticles";
 import { useRouter } from "next/router";
-import AppQnA from "./AppQnA";
+import FAQAppDevelopment from "./FAQAppDevelopment";
 import { AnchorRefs } from "../pages/_app";
 import TagManager from "react-gtm-module";
 
 type Props = {
   anchorRefs: AnchorRefs;
   qnaSection?: JSX.Element;
+  location?: string;
+  locationLink?: string;
 };
 
 export default function ContactSection(props: Props) {
@@ -216,11 +218,11 @@ export default function ContactSection(props: Props) {
               </p>
               <p>
                 <IoLocationSharp className={styles.icon} />
-                <Link href={"/App-Agentur-Leipzig"}>
-                  <a>Leipzig</a>
+                <Link href={props.locationLink ?? "/App-Agentur-Leipzig"}>
+                  <a>{props.location + " (digital)" ?? "Leipzig (digital)"}</a>
                 </Link>
               </p>
-              {props.qnaSection ?? <AppQnA />}
+              {props.qnaSection ?? <FAQAppDevelopment />}
             </div>
           </div>
           <div className={styles.contactFormular} id="formular">

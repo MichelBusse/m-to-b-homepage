@@ -4,7 +4,7 @@ import CustomersSection from "../components/CustomersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { AnchorRefs } from "./_app";
-import MenuPlaceholder from "../components/MenuPlaceholder";
+import MenuPlaceholder from "../components/utility/MenuPlaceholder";
 
 type Props = {
   anchorRefs: AnchorRefs;

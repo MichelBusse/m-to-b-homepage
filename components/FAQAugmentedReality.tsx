@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 type Props = {};
 
-export default function AugmentedRealityQnA(props: Props) {
+export default function FAQAugmentedReality(props: Props) {
   const router = useRouter();
 
   let texts = {

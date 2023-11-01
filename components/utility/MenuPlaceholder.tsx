@@ -1,4 +1,4 @@
-import styles from "../styles/MenuPlaceholder.module.scss";
+import styles from "../../styles/MenuPlaceholder.module.scss";
 
 export default function MenuPlaceholder() {
   return (

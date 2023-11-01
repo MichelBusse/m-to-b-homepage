@@ -1,6 +1,6 @@
 import blogEntryStyles from "../styles/BlogEntry.module.scss";
 import React from "react";
-import MenuPlaceholder from "./MenuPlaceholder";
+import MenuPlaceholder from "./utility/MenuPlaceholder";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";

@@ -2,12 +2,12 @@ import Head from "next/head";
 import { AnchorRefs } from "../_app";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import ServiceSection from "../../components/ServiceSection";
+import ServiceSection from "../../components/utility/TextSection";
 import CustomShapeDivider from "../../components/CustomShapeDivider";
-import QuoteSection from "../../components/QuoteSection";
+import QuoteSection from "../../components/utility/QuoteSection";
 import ContactSection from "../../components/ContactSection";
 import Header from "../../components/Header";
-import IconTextSection from "../../components/IconTextSection";
+import IconTextSection from "../../components/utility/IconTextSection";
 import Image from "next/image";
 import styles from "../../styles/ProjectPage.module.scss";
 

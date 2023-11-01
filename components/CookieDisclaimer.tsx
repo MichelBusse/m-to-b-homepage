@@ -1,13 +1,17 @@
 import styles from "../styles/CookieDisclaimer.module.scss";
 import { ChangeEventHandler, useEffect, useState } from "react";
-import { useCookies } from "react-cookie";import React from 'react';
-import TagManager from 'react-gtm-module';
+import { useCookies } from "react-cookie";
+import React from "react";
+import TagManager from "react-gtm-module";
+import { useRouter } from "next/router";
 
 const tagManagerArgs = {
-    gtmId: 'GTM-MSM3HLM',
-}
+  gtmId: "GTM-MSM3HLM",
+};
 
 export default function CookieDisclaimer() {
+  const router = useRouter();
+
   const [cookies, setCookie] = useCookies([
     "essentialAccepted",
     "statisticsAccepted",
@@ -22,9 +26,9 @@ export default function CookieDisclaimer() {
 
   useEffect(() => {
     setVisible(cookies.essentialAccepted !== "true");
-  }, [cookies.essentialAccepted])
+  }, [cookies.essentialAccepted]);
 
-  const onChange : ChangeEventHandler<HTMLInputElement> = (event) => {
+  const onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     const targetName = event.target.name;
     const targetChecked = event.target.checked;
 
@@ -44,30 +48,46 @@ export default function CookieDisclaimer() {
     setCookie("essentialAccepted", true, { expires: expiryDate });
     if (formState.cookieStatistics || all) {
       setCookie("statisticsAccepted", true, { expires: expiryDate });
-      TagManager.initialize(tagManagerArgs)
+      TagManager.initialize(tagManagerArgs);
     } else {
       setCookie("statisticsAccepted", false, { expires: expiryDate });
     }
 
     setVisible(false);
+  };
+
+  if (cookies.statisticsAccepted === "true") {
+    TagManager.initialize(tagManagerArgs);
   }
 
-  if(cookies.statisticsAccepted === "true"){
-    TagManager.initialize(tagManagerArgs)
+  let texts = {
+    headline: "Cookie Einstellungen",
+    text: "Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während uns andere helfen, diese Website und Ihre Erfahrung zu verbessern.",
+    essential: "Essenziell",
+    statistics: "Statistiken",
+    acceptAll: "Alle akzeptieren",
+    save: "Speichern",
+  };
+
+  if (router.locale == "en") {
+    texts = {
+      headline: "Cookie Settings",
+      text: "We use cookies on our website. Some of them are essential, while others help us to improve this website and your experience.",
+      essential: "Essential",
+      statistics: "Statistics",
+      acceptAll: "Accept All",
+      save: "Save",
+    };
   }
 
   return visible ? (
     <div className={styles.cookieDisclaimer}>
       <div className={styles.cookieDisclaimerWrapper}>
         <div className={styles.cookieDisclaimerHeadline}>
-          <h2>Cookie Einstellungen</h2>
+          <h2>{texts.headline}</h2>
         </div>
         <div className={styles.cookieDisclaimerText}>
-          <p>
-            Wir nutzen Cookies auf unserer Website. Einige von ihnen sind
-            essenziell, während andere uns helfen, diese Website und Ihre
-            Erfahrung zu verbessern.
-          </p>
+          <p>{texts.text}</p>
         </div>
         <div className={styles.cookieDisclaimerForm}>
           <input
@@ -77,7 +97,7 @@ export default function CookieDisclaimer() {
             onChange={onChange}
             disabled
           />
-          <p>Essenziell</p>
+          <p>{texts.essential}</p>
         </div>
         <div className={styles.cookieDisclaimerForm}>
           <input
@@ -86,24 +106,24 @@ export default function CookieDisclaimer() {
             checked={formState.cookieStatistics}
             onChange={onChange}
           />
-          <p>Statistiken</p>
+          <p>{texts.statistics}</p>
         </div>
-        <div className={styles.cookieDisclaimerButton + " " + styles.accept}>
+        <div className={styles.cookieDisclaimerButton}>
           <button
             onClick={() => {
-              cookieDisclaimerClick(true)
+              cookieDisclaimerClick(true);
             }}
           >
-            Alle akzeptieren
+            {texts.acceptAll}
           </button>
         </div>
         <div className={styles.cookieDisclaimerButton + " " + styles.save}>
           <button
             onClick={() => {
-              cookieDisclaimerClick(false)
+              cookieDisclaimerClick(false);
             }}
           >
-            Speichern
+            {texts.save}
           </button>
         </div>
       </div>

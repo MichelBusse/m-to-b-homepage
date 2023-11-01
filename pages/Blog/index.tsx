@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import BlogOverview from "../../components/BlogOverview";
-import MenuPlaceholder from "../../components/MenuPlaceholder";
+import MenuPlaceholder from "../../components/utility/MenuPlaceholder";
 import styles from "../../styles/Blog.module.scss";
 import { getTexts as post1Texts } from "./Backend-As-A-Service";
 import { getTexts as post2Texts } from "./Flutter-App-Entwicklung";

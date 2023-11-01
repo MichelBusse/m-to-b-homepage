@@ -9,7 +9,8 @@ import AgileSection from "../components/AgileSection";
 import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/ValuesSection";
 import TechnologiesSection from "../components/TechnologiesSection";
-import ServiceSection from "../components/ServiceSection";
+import ServiceSection from "../components/utility/TextSection";
+import AboutSection from "../components/AboutSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -19,12 +20,8 @@ export default function HomePage(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Deine App Agentur - M-to-B Software",
-    headline: (
-      <>
-        Deine Agentur für App-Entwicklung
-      </>
-    ),
+    title: "M-to-B Software - Deine App-Agentur",
+    headline: <>Deine Agentur für App-Entwicklung</>,
     text: (
       <>
         <p>
@@ -34,8 +31,8 @@ export default function HomePage(props: Props) {
           Umsetzung?
         </p>
         <p>
-          Der App-Entwicklungsprozess kann ohne eine klare Strategie
-          schnell zum Zeit- und Kostenfresser werden.
+          Der App-Entwicklungsprozess kann ohne eine klare Strategie schnell zum
+          Zeit- und Kostenfresser werden.
         </p>
         <p>
           In einem kostenlosen Beratungsgespräch kannst du dich zu effizienten
@@ -45,7 +42,7 @@ export default function HomePage(props: Props) {
     ),
     requestButtonText: "Kostenloses Beratungungsgespräch",
     description:
-      "Als Software und App Agentur mit neuen Technologien und Erfahrung entwickeln wir Softwarelösungen - von Apps und Individualsoftware, bis zu Augmented Reality",
+      "App-Entwicklung kann auch stressfrei sein - Als dynamische App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.",
     headlineSection1: "App Entwicklung",
     textSection1: (
       <>
@@ -182,7 +179,7 @@ export default function HomePage(props: Props) {
           buttonDelay={"1.2s"}
         />
         <TechnologiesSection />
-        <AgileSection />
+        <AboutSection />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />

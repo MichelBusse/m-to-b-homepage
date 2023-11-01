@@ -4,10 +4,10 @@ import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
 import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import IconTextSection from "../components/IconTextSection";
+import IconTextSection from "../components/utility/IconTextSection";
 import { FaEdit, FaWrench } from "react-icons/fa";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
-import ServiceSection from "../components/ServiceSection";
+import TextSection from "../components/utility/TextSection";
 import { useRef } from "react";
 import ProjectsSection from "../components/ProjectsSection";
 import { HiUsers } from "react-icons/hi";
@@ -16,7 +16,7 @@ import CustomersSection from "../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
 } from "../components/SmallTechnologiesSection";
-import AugmentedRealityQnA from "../components/AugmentedRealityQnA";
+import FAQAugmentedReality from "../components/FAQAugmentedReality";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -348,7 +348,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         />
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
-        <ServiceSection
+        <TextSection
           key={"vr1"}
           sectionRef={section1Ref}
           headline={texts.headlineSection1}
@@ -357,7 +357,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
           imageAlt={texts.headlineSection1}
           typewriterKey={"vr1"}
         />
-        <ServiceSection
+        <TextSection
           key={"vr2"}
           sectionRef={section2Ref}
           headline={texts.headlineSection2}
@@ -374,7 +374,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
           label2={texts.efficient}
           label3={texts.expand}
         />
-        <ServiceSection
+        <TextSection
           key={"vr3"}
           sectionRef={section3Ref}
           headline={texts.headlineSection3}
@@ -386,7 +386,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         <SmallTechnologiesSection
           logos={[logos.unity, logos.mrtk, logos.three, logos.opencv]}
         />
-        <ServiceSection
+        <TextSection
           key={"vr4"}
           sectionRef={agencyRef}
           headline={texts.agencyHeadline}
@@ -398,7 +398,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} qnaSection={<AugmentedRealityQnA/>}/>
+        <ContactSection anchorRefs={props.anchorRefs} qnaSection={<FAQAugmentedReality/>}/>
       </main>
     </>
   );
