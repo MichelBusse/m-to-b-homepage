@@ -94,7 +94,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           </p>
           <p>
             During app development, you have to face various challenges. Without
-            a smart plan, it's easy to get sidetracked and lose time and budget.
+            a smart plan, it&apos;s easy to get sidetracked and lose time and budget.
           </p>
           <p>
             We accompany you through your development journey and guide your app
@@ -117,7 +117,7 @@ export default function AppDevelopmentLeipzigPage(props: Props) {
           </p>
           <p>
             We understand that developing your own app can be overwhelming at
-            the beginning and that's why we offer you a personal contact right
+            the beginning and that&apos;s why we offer you a personal contact right
             from the start.
           </p>
           <p>
