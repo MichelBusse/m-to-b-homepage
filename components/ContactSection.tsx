@@ -219,7 +219,7 @@ export default function ContactSection(props: Props) {
               <p>
                 <IoLocationSharp className={styles.icon} />
                 <Link href={props.locationLink ?? "/App-Agentur-Leipzig"}>
-                  <a>{props.location + " (digital)" ?? "Leipzig (digital)"}</a>
+                  <a>{props.location ? props.location + " (digital)" : "Leipzig (digital)"}</a>
                 </Link>
               </p>
               {props.qnaSection ?? <FAQAppDevelopment />}
