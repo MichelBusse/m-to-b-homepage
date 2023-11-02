@@ -1,27 +1,27 @@
-import Header from "../components/Header";
-import ContactSection from "../components/ContactSection";
+import Header from "../../components/Header";
+import ContactSection from "../../components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../components/CustomShapeDivider";
-import { AnchorRefs } from "./_app";
+import CustomShapeDivider from "../../components/CustomShapeDivider";
+import { AnchorRefs } from "../_app";
 import { useRouter } from "next/router";
-import ProjectsSection from "../components/ProjectsSection";
-import CustomersSection from "../components/CustomersSection";
-import PriceCalculatorSection from "../components/PriceCalculatorSection";
+import ProjectsSection from "../../components/ProjectsSection";
+import CustomersSection from "../../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../components/SmallTechnologiesSection";
-import StagesSections from "../components/StagesSections";
-import AboutSection from "../components/AboutSection";
-import TextSection from "../components/utility/TextSection";
+} from "../../components/SmallTechnologiesSection";
+import StagesSections from "../../components/StagesSections";
+import AboutSection from "../../components/AboutSection";
+import TextSection from "../../components/utility/TextSection";
 import { useRef } from "react";
-import JourneySection from "../components/JourneySection";
-import ValuesSection from "../components/ValuesSection";
+import JourneySection from "../../components/JourneySection";
+import ValuesSection from "../../components/ValuesSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
+  id: string;
 };
 
-export default function AppDevelopmentErfurtPage(props: Props) {
+export default function AppDevelopmentCityPage(props: Props) {
   const router = useRouter();
 
   const textSectionRef = useRef(null);
@@ -31,14 +31,14 @@ export default function AppDevelopmentErfurtPage(props: Props) {
       <>
         Mission: App-Entwicklung
         <br />
-        Ziel: Erfurt
+        Ziel: {props.id}
       </>
     ),
     text: (
       <>
         <p>
           Du hast die Idee für eine App und suchst nach einem Partner für die
-          Umsetzung in Erfurt?
+          Umsetzung in {props.id}?
         </p>
         <p>
           Während der App-Entwicklung musst du dich verschiedenen
@@ -52,14 +52,14 @@ export default function AppDevelopmentErfurtPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: "App-Entwicklung Erfurt - App-Agentur M-to-B",
+    title: `App-Entwicklung ${props.id} - App-Agentur M-to-B`,
     description:
-      "Dein Partner für App-Entwicklung in Erfurt. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.",
-    textSectionHeadline: "Moderne Apps für Erfurt",
+      `Dein Partner für App-Entwicklung in ${props.id}. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.`,
+    textSectionHeadline: `Moderne Apps für ${props.id}`,
     textSectionText: (
       <>
         <p>
-          Als digitale App Agentur unterstützen wir Erfurter Unternehmen bei
+          Als digitale App Agentur unterstützen wir {props.id}er Unternehmen bei
           der Realisierung ihrer App-Ideen. Dabei begleiten wir dich von der
           Ausarbeitung der Idee, durch die Herausforderungen und Gefahren der
           Entwicklung, bis zum Marketing und Release der fertigen App.
@@ -83,14 +83,14 @@ export default function AppDevelopmentErfurtPage(props: Props) {
         <>
           Mission: App development
           <br />
-          Destination: Erfurt
+          Destination: {props.id}
         </>
       ),
       text: (
         <>
           <p>
             Do you have an idea for an app and are looking for a partner to
-            implement it in Erfurt?
+            implement it in {props.id}?
           </p>
           <p>
             During app development, you have to face various challenges. Without
@@ -103,14 +103,14 @@ export default function AppDevelopmentErfurtPage(props: Props) {
         </>
       ),
       requestButtonText: "Start your journey",
-      title: "App Development Erfurt - App Agency M-to-B",
+      title: `App Development ${props.id} - App Agency M-to-B`,
       description:
-        "Your partner for app development in Erfurt. As a digital app agency, we guide your app idea safely to its goal with the right strategy.",
-      textSectionHeadline: "Modern apps for Erfurt",
+        `Your partner for app development in ${props.id}. As a digital app agency, we guide your app idea safely to its goal with the right strategy.`,
+      textSectionHeadline: `Modern apps for ${props.id}`,
       textSectionText: (
         <>
           <p>
-            As a digital app agency, we support Erfurt companies in realizing
+            As a digital app agency, we support {props.id} companies in realizing
             their app ideas. We accompany you from the development of the idea,
             through the challenges and dangers of development, to the marketing
             and release of the finished app.
@@ -135,12 +135,12 @@ export default function AppDevelopmentErfurtPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href="https://m-to-b.com/App-Agentur-Erfurt"
+          href={`https://m-to-b.com/App-Agentur/${props.id}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://m-to-b.com/en/App-Agentur-Erfurt"
+          href={`https://m-to-b.com/en/App-Agentur/${props.id}`}
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -149,7 +149,7 @@ export default function AppDevelopmentErfurtPage(props: Props) {
         headline={texts.headline}
         text={texts.text}
         highlightImage={"/images/app-development/header.png"}
-        highlightImageAlt="App Entwicklung Erfurt"
+        highlightImageAlt={`App Entwicklung ${props.id}`}
         requestButtonText={texts.requestButtonText}
         buttonLink="#start"
       />
@@ -175,8 +175,24 @@ export default function AppDevelopmentErfurtPage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} location="Erfurt" locationLink="/App-Agentur-Erfurt"/>
+        <ContactSection anchorRefs={props.anchorRefs} location={props.id} locationLink={`/App-Agentur/${props.id}`}/>
       </main>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = ["Leipzig", "Dresden", "Erfurt", "Jena", "Zwickau", "Chemnitz", "Berlin"];
+  return {
+    paths: paths.flatMap((path) => [{params: {id: path}, locale: 'de'}, {params: {id: path}, locale: 'en'}]),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params } : {params: any}) {
+  return {
+    props: {
+      id: params.id,
+    },
+  };
 }

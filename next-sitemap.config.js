@@ -11,6 +11,19 @@ module.exports = {
       hreflang: "en",
     },
   ],
+  transform: async (config, path) => {
+    //Filter out duplicated dynamic paths
+    if (path.includes("/en/")) {
+      return null;
+    }
+    return {
+      loc: path,
+      changefreq: config.changefreq,
+      priority: config.priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      alternateRefs: config.alternateRefs ?? [],
+    };
+  },
   robotsTxtOptions: {
     policies: [
       {
