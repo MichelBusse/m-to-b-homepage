@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import styles from "../styles/BlogOverview.module.scss";
 
 type Props = {
+  id: string;
   title: string;
-  headline: string;
-  shortDescription: string;
+  description: string;
   image: string;
   reverse?: boolean;
 };
@@ -33,16 +33,16 @@ export default function BlogOverview(props: Props) {
       <div className={styles.image}>
         <Image
           src={props.image}
-          alt={props.headline}
+          alt={props.title}
           width={200}
           height={100}
           layout={"responsive"}
         />
       </div>
       <div className={styles.text}>
-        <h2>{props.headline}</h2>
-        <p>{props.shortDescription}</p>
-        <Link href={"/Blog/" + props.title}>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        <Link href={"/Blog/" + props.id}>
           <a>
             <button className={"bounce"}>
               <div>{texts.read}</div>

@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 type Props = {
-  headline: string;
-  content: JSX.Element;
+  title: string;
+  content: string;
   image: string;
 };
 
@@ -41,9 +41,8 @@ const BlogEntry = (props: Props) => {
             layout={"responsive"}
           />
           <div className={blogEntryStyles.text}>
-            <h1>{props.headline}</h1>
-            {props.content}
-
+            <h1>{props.title}</h1>
+            <div dangerouslySetInnerHTML={{__html: props.content}}></div>
             <div className={blogEntryStyles.cta}>
               <h2>{texts.questions}</h2>
               <Link href="/">
