@@ -45,6 +45,17 @@ export default function FAQAppDevelopment(props: Props) {
     ),
     answer3String:
       "Keine Sorge, auch nach dem Release lassen wir dich nicht im Stich! Wir bieten nach auch der Veröffentlichung umfassende Wartung und Unterstützung für deine App. Bei Problemen oder Aktualisierungen sind wir immer für dich da.",
+    question4: "Wird jede App von euch betreut?",
+    answer4: (
+      <>
+        Das Ergebnis der Entwicklung ist deine App und du kannst anschließend
+        damit machen was du möchtest. Gerne unterstützen wir dich auch weiterhin
+        nach dem Release, aber das ist natürlich keine Pflicht. Du kannst deine
+        App und den Quellcode auch völlig selbstständig weiter betreuen.
+      </>
+    ),
+    answer4String:
+      "Das Ergebnis der Entwicklung ist deine App und du kannst anschließend damit machen was du möchtest. Gerne unterstützen wir dich auch weiterhin nach dem Release, aber das ist natürlich keine Pflicht. Du kannst deine App und den Quellcode auch völlig selbstständig weiter verwalten.",
   };
 
   if (router.locale == "en") {
@@ -76,13 +87,26 @@ export default function FAQAppDevelopment(props: Props) {
       question3: "What about post-release support?",
       answer3: (
         <>
-          Don&apos;t worry, we won&apos;t let you down even after the release! We offer
-          comprehensive maintenance and support for your app after its release.
-          If you have any problems or updates, we are always there for you.
+          Don&apos;t worry, we won&apos;t let you down even after the release!
+          We offer comprehensive maintenance and support for your app after its
+          release. If you have any problems or updates, we are always there for
+          you.
         </>
       ),
       answer3String:
         "Don't worry, we won't let you down even after the release! We offer comprehensive maintenance and support for your app after its release. If you have any problems or updates, we are always there for you.",
+      question4: "Is every app managed by you?",
+      answer4: (
+        <>
+          The result of the development is your app and you can then do whatever
+          you want with it. We would be happy to continue to support you after
+          the release, but of course this is not mandatory. You can also
+          continue to manage your app and the source code completely
+          independently.
+        </>
+      ),
+      answer4String:
+        "The result of the development is your app and you can then do whatever you want with it. We would be happy to continue to support you after the release, but of course this is not mandatory. You can also continue to manage your app and the source code completely independently.",
     };
   }
 
@@ -145,6 +169,12 @@ export default function FAQAppDevelopment(props: Props) {
               {texts.question3}
             </AccordionSummary>
             <AccordionDetails>{texts.answer3}</AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary sx={{ fontSize: "1.2em" }}>
+              {texts.question4}
+            </AccordionSummary>
+            <AccordionDetails>{texts.answer4}</AccordionDetails>
           </Accordion>
         </Stack>
       </div>

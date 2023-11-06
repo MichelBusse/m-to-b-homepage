@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import styles from "../styles/PriceCalculatorSection.module.scss";
-import { GrMoney } from "react-icons/gr";
 import BudgetIcon from "./icons/BudgetIcon";
-import AndroidIcon from "./icons/AndroidIcon";
 import Link from "next/link";
 
 const PriceCalculatorSection = () => {

@@ -11,6 +11,9 @@ import SmallTechnologiesSection, {
 import JourneySection from "../components/JourneySection";
 import StagesSection from "../components/StagesSections";
 import AboutSection from "../components/AboutSection";
+import CrossPlatformSection from "../components/CrossPlatformSection";
+import PriceCalculatorSection from "../components/PriceCalculatorSection";
+import CostEstimateSection from "../components/CostEstimateSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -116,6 +119,8 @@ export default function AppDevelopmentPage(props: Props) {
           logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
         />
         <AboutSection />
+        <CrossPlatformSection />
+        <CostEstimateSection />
         <CustomShapeDivider flip={false} />
         <CustomersSection />
         <ContactSection anchorRefs={props.anchorRefs} />

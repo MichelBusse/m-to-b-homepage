@@ -15,6 +15,8 @@ import TextSection from "../../components/utility/TextSection";
 import { useRef } from "react";
 import JourneySection from "../../components/JourneySection";
 import ValuesSection from "../../components/ValuesSection";
+import CrossPlatformSection from "../../components/CrossPlatformSection";
+import CostEstimateSection from "../../components/CostEstimateSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -172,6 +174,8 @@ export default function AppDevelopmentCityPage(props: Props) {
           logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
         />
         <AboutSection />
+        <CrossPlatformSection />
+        <CostEstimateSection />
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />

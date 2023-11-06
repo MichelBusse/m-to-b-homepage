@@ -15,6 +15,7 @@ type Props = {
   sectionRef?: MutableRefObject<null>;
   typewriterKey: string;
   siteLink?: string;
+  siteLinkText?: string
   buttonDelay?: string;
 };
 
@@ -25,12 +26,12 @@ const TextSection = (props: Props) => {
   const router = useRouter();
 
   let texts = {
-    viewMore: "Mehr erfahren",
+    viewMore: props.siteLinkText ?? "Mehr erfahren",
   };
 
   if (router.locale == "en") {
     texts = {
-      viewMore: "Discover more",
+      viewMore: props.siteLinkText ?? "Discover more",
     };
   }
 
