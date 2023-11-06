@@ -51,6 +51,7 @@ export default function BlogEntryPage(props : Props) {
             title={data.title}
             description={data.description}
             image={data.image}
+            key={data.id}
           />)};
         </div>
       </main>
