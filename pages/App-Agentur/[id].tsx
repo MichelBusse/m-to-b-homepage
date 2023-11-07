@@ -55,8 +55,7 @@ export default function AppDevelopmentCityPage(props: Props) {
     ),
     requestButtonText: "Starte die Reise",
     title: `App-Entwicklung ${props.id} - App-Agentur M-to-B`,
-    description:
-      `Dein Partner für App-Entwicklung in ${props.id}. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.`,
+    description: `Dein Partner für App-Entwicklung in ${props.id}. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.`,
     textSectionHeadline: `Moderne Apps für ${props.id}`,
     textSectionText: (
       <>
@@ -96,7 +95,8 @@ export default function AppDevelopmentCityPage(props: Props) {
           </p>
           <p>
             During app development, you have to face various challenges. Without
-            a smart plan, it&apos;s easy to get sidetracked and lose time and budget.
+            a smart plan, it&apos;s easy to get sidetracked and lose time and
+            budget.
           </p>
           <p>
             We accompany you through your development journey and guide your app
@@ -106,21 +106,20 @@ export default function AppDevelopmentCityPage(props: Props) {
       ),
       requestButtonText: "Start your journey",
       title: `App Development ${props.id} - App Agency M-to-B`,
-      description:
-        `Your partner for app development in ${props.id}. As a digital app agency, we guide your app idea safely to its goal with the right strategy.`,
+      description: `Your partner for app development in ${props.id}. As a digital app agency, we guide your app idea safely to its goal with the right strategy.`,
       textSectionHeadline: `Modern apps for ${props.id}`,
       textSectionText: (
         <>
           <p>
-            As a digital app agency, we support {props.id} companies in realizing
-            their app ideas. We accompany you from the development of the idea,
-            through the challenges and dangers of development, to the marketing
-            and release of the finished app.
+            As a digital app agency, we support {props.id} companies in
+            realizing their app ideas. We accompany you from the development of
+            the idea, through the challenges and dangers of development, to the
+            marketing and release of the finished app.
           </p>
           <p>
             We understand that developing your own app can be overwhelming at
-            the beginning and that&apos;s why we offer you a personal contact right
-            from the start.
+            the beginning and that&apos;s why we offer you a personal contact
+            right from the start.
           </p>
           <p>
             Our mission is to make innovative apps a reality and maybe your idea
@@ -179,21 +178,48 @@ export default function AppDevelopmentCityPage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} location={props.id} locationLink={`/App-Agentur/${props.id}`}/>
+        <ContactSection
+          anchorRefs={props.anchorRefs}
+          location={props.id}
+          locationLink={`/App-Agentur/${props.id}`}
+        />
       </main>
     </>
   );
 }
 
 export async function getStaticPaths() {
-  const paths = ["Leipzig", "Dresden", "Erfurt", "Jena", "Zwickau", "Chemnitz", "Berlin"];
+  const paths = [
+    "Leipzig",
+    "Dresden",
+    "Erfurt",
+    "Jena",
+    "Zwickau",
+    "Chemnitz",
+    "Berlin",
+    "Cottbus",
+    "Schwerin",
+    "Hamburg",
+    "München",
+    "Rostock",
+    "Flensburg",
+    "Stuttgart",
+    "Nürnberg",
+    "Hannover",
+    "Frankfurt",
+    "Köln",
+    "Düsseldorf",
+  ];
   return {
-    paths: paths.flatMap((path) => [{params: {id: path}, locale: 'de'}, {params: {id: path}, locale: 'en'}]),
+    paths: paths.flatMap((path) => [
+      { params: { id: path }, locale: "de" },
+      { params: { id: path }, locale: "en" },
+    ]),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params } : {params: any}) {
+export async function getStaticProps({ params }: { params: any }) {
   return {
     props: {
       id: params.id,
