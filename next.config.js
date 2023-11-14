@@ -3,6 +3,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/kinkz/app-store',
+        destination: 'https://apps.apple.com/de/app/kinkz-partyspiel/id1617511912',
+        permanent: true,
+      },
+      {
+        source: '/kinkz/google-play',
+        destination: 'https://play.google.com/store/apps/details?id=com.m_to_b.kinkz',
+        permanent: true,
+      },
+      {
         source: '/Virtual-Reality-Entwicklung',
         destination: '/Augmented-Reality-Agentur',
         permanent: true,
