@@ -10,6 +10,7 @@ import { Router, useRouter } from "next/router";
 import { useSmoothScroll } from "../hooks/SmoothScroll";
 import CookieDisclaimer from "../components/CookieDisclaimer";
 import Navbar from "../components/Navbar";
+import FloatingActionContact from "../components/FloatingActionContact";
 
 export type AnchorRefs = {
   appsRef: MutableRefObject<null>,

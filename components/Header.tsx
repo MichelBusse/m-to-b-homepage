@@ -46,6 +46,7 @@ export default function Header(props: Props) {
     }
   });
 
+
   return (
     <>
       <section className={styles.home}>

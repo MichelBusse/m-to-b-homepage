@@ -1,6 +1,5 @@
 import styles from "../styles/Footer.module.scss";
 import Link from "next/link";
-import Script from "next/script";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { SiGooglemybusiness } from "react-icons/si";
 import { useRouter } from "next/router";

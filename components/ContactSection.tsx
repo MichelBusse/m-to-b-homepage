@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   MouseEventHandler,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import styles from "../styles/ContactSection.module.scss";
@@ -15,6 +16,7 @@ import { useRouter } from "next/router";
 import FAQAppDevelopment from "./FAQAppDevelopment";
 import { AnchorRefs } from "../pages/_app";
 import TagManager from "react-gtm-module";
+import FloatingActionContact from "./FloatingActionContact";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -25,6 +27,7 @@ type Props = {
 
 export default function ContactSection(props: Props) {
   const router = useRouter();
+  const contactRef = useRef(null);
 
   let texts = {
     headline1: "Kontakt",
@@ -150,7 +153,7 @@ export default function ContactSection(props: Props) {
       <div className="scrollAnchor" id="contact"></div>
       <section
         className={styles.contactSection}
-        ref={props.anchorRefs ? props.anchorRefs.contactRef : null}
+        ref={props.anchorRefs ? props.anchorRefs.contactRef : contactRef}
       >
         <div className={styles.contactTransitionWrapper}></div>
         <div className={styles.contactTransition}></div>
@@ -316,6 +319,7 @@ export default function ContactSection(props: Props) {
           </div>
         </div>
       </section>
+      <FloatingActionContact anchorRef={props.anchorRefs ? props.anchorRefs.contactRef : contactRef} />
     </>
   );
 }
