@@ -54,7 +54,7 @@ export default function AppDevelopmentCityPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: `App-Entwicklung ${props.id} - App-Agentur M-to-B`,
+    title: `App-Entwicklung ${props.id} | App-Agentur M-to-B`,
     description: `Dein Partner für App-Entwicklung in ${props.id}. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.`,
     textSectionHeadline: `Moderne Apps für ${props.id}`,
     textSectionText: (
@@ -182,6 +182,7 @@ export default function AppDevelopmentCityPage(props: Props) {
           anchorRefs={props.anchorRefs}
           location={props.id}
           locationLink={`/App-Agentur/${props.id}`}
+          pageReference={texts.title}
         />
       </main>
     </>
@@ -253,6 +254,7 @@ export async function getStaticPaths() {
     "Neuss",
     "Ingolstadt",
     "Offenbach",
+    // Ab hier weiter
     "Fürth",
     "Ulm",
     "Heilbronn",

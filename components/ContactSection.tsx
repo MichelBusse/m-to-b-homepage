@@ -23,6 +23,7 @@ type Props = {
   qnaSection?: JSX.Element;
   location?: string;
   locationLink?: string;
+  pageReference?: string;
 };
 
 export default function ContactSection(props: Props) {
@@ -69,7 +70,14 @@ export default function ContactSection(props: Props) {
     tel: "",
     text: "",
     privacy: false,
+    pageReference: props.pageReference ?? "",
   });
+
+  useEffect(() => {
+    setFormState((formState) => {
+      return { ...formState, pageReference: props.pageReference ?? "" };
+    });
+  }, [props.pageReference]);
 
   useEffect(() => {
     if (router.query.name != null) {
@@ -132,6 +140,7 @@ export default function ContactSection(props: Props) {
           tel: "",
           text: "",
           privacy: false,
+          pageReference: props.pageReference ?? "",
         });
         const dataLayerArgs = {
           dataLayer: {
@@ -222,7 +231,11 @@ export default function ContactSection(props: Props) {
               <p>
                 <IoLocationSharp className={styles.icon} />
                 <Link href={props.locationLink ?? "/App-Agentur/Leipzig"}>
-                  <a>{props.location ? props.location + " (digital)" : "Leipzig (digital)"}</a>
+                  <a>
+                    {props.location
+                      ? props.location + " (digital)"
+                      : "Leipzig (digital)"}
+                  </a>
                 </Link>
               </p>
               {props.qnaSection ?? <FAQAppDevelopment />}
@@ -319,7 +332,9 @@ export default function ContactSection(props: Props) {
           </div>
         </div>
       </section>
-      <FloatingActionContact anchorRef={props.anchorRefs ? props.anchorRefs.contactRef : contactRef} />
+      <FloatingActionContact
+        anchorRef={props.anchorRefs ? props.anchorRefs.contactRef : contactRef}
+      />
     </>
   );
 }

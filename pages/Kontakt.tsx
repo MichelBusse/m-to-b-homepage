@@ -41,7 +41,10 @@ export default function HomePage(props: Props) {
       </Head>
       <main>
         <MenuPlaceholder />
-        <ContactSection anchorRefs={props.anchorRefs} />
+        <ContactSection
+          anchorRefs={props.anchorRefs}
+          pageReference={texts.title}
+        />
       </main>
     </>
   );

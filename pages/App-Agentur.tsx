@@ -123,7 +123,10 @@ export default function AppDevelopmentPage(props: Props) {
         <CostEstimateSection />
         <CustomShapeDivider flip={false} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} />
+        <ContactSection
+          anchorRefs={props.anchorRefs}
+          pageReference={texts.title}
+        />
       </main>
     </>
   );

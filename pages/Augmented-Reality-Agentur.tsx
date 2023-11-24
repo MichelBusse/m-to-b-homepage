@@ -102,8 +102,8 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
           , aber auch für etablierte Plattformen.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Als mobile App für Android und iOS oder auch vollständig im Web
-          ist Augmented Reality effektiv einsetzbar und bietet damit eine hohe
+          Als mobile App für Android und iOS oder auch vollständig im Web ist
+          Augmented Reality effektiv einsetzbar und bietet damit eine hohe
           Zugänglichkeit für alle Zielgruppen.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
@@ -333,7 +333,9 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
       <Header
         headline={texts.headline}
         text={texts.text}
-        highlightImage={"/images/augmented-reality/augmented-reality-header.png"}
+        highlightImage={
+          "/images/augmented-reality/augmented-reality-header.png"
+        }
         highlightImageAlt="Augmented Reality Agentur & Entwicklung"
         requestButtonText={texts.requestButtonText}
       />
@@ -398,7 +400,11 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} qnaSection={<FAQAugmentedReality/>}/>
+        <ContactSection
+          anchorRefs={props.anchorRefs}
+          qnaSection={<FAQAugmentedReality />}
+          pageReference={texts.title}
+        />
       </main>
     </>
   );

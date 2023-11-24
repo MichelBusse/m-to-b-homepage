@@ -183,7 +183,10 @@ export default function HomePage(props: Props) {
         <CustomShapeDivider flip={false} />
         <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
-        <ContactSection anchorRefs={props.anchorRefs} />
+        <ContactSection
+          anchorRefs={props.anchorRefs}
+          pageReference={texts.title}
+        />
       </main>
     </>
   );
