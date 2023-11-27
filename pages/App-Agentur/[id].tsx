@@ -191,85 +191,81 @@ export default function AppDevelopmentCityPage(props: Props) {
 
 export async function getStaticPaths() {
   const paths = [
-    "Leipzig",
-    "Dresden",
-    "Erfurt",
-    "Jena",
-    "Zwickau",
-    "Chemnitz",
-    "Berlin",
-    "Cottbus",
-    "Schwerin",
-    "Hamburg",
-    "München",
-    "Rostock",
-    "Flensburg",
-    "Stuttgart",
-    "Nürnberg",
-    "Hannover",
-    "Frankfurt",
-    "Köln",
-    "Düsseldorf",
-    "Dortmund",
-    "Essen",
-    "Bremen",
-    "Duisburg",
-    "Bochum",
-    "Wuppertal",
-    "Bielefeld",
-    "Bonn",
-    "Münster",
-    "Mannheim",
-    "Karlsruhe",
-    "Augsburg",
-    "Wiesbaden",
-    "Mönchengladbach",
-    "Gelsenkirchen",
-    "Aachen",
-    "Braunschweig",
-    "Kiel",
-    "Halle",
-    "Magdeburg",
-    "Freiburg",
-    "Krefeld",
-    "Mainz",
-    "Lübeck",
-    "Oberhausen",
-    "Kassel",
-    "Hagen",
-    "Potsdam",
-    "Saarbrücken",
-    "Hamm",
-    "Ludwigshafen",
-    "Oldenburg",
-    "Mülheim",
-    "Osnabrück",
-    "Leverkusen",
-    "Heidelberg",
-    "Darmstadt",
-    "Solingen",
-    "Regensburg",
-    "Herne",
-    "Paderborn",
-    "Neuss",
-    "Ingolstadt",
-    "Offenbach",
+    "Berlin", // 31
+    "Hamburg", // 25
+    "München", // 28
+    "Köln", // 26
+    "Frankfurt", // überprüfen
+    "Stuttgart", // 25
+    "Düsseldorf", // 10
+    "Leipzig", // 4
+    "Dortmund", // 11
+    "Essen", // 7
+    "Bremen", // 13
+    "Dresden", // 6
+    "Hannover", // 15
+    "Nürnberg", // 11
+    "Duisburg", // 6
+    "Bochum", // 8
+    "Wuppertal", // 7
+    "Bielefeld", // 6
+    "Bonn", // 10
+    "Münster", // 9
+    "Mannheim", // 9
+    "Karlsruhe", // 14
+    "Augsburg", // 10
+    "Wiesbaden", // 6
+    "Mönchengladbach", // 4
+    "Gelsenkirchen", // 2
+    "Aachen", // 7
+    "Braunschweig", // 5
+    "Chemnitz", // 8
+    "Kiel", // 5
+    "Halle", // 5
+    "Magdeburg", // 5
+    "Freiburg", // 7
+    "Krefeld", // 5
+    "Mainz", // 6
+    "Lübeck", // 8
+    "Erfurt", // 8
+    "Oberhausen", // 2
+    "Rostock", // 4
+    "Kassel", // 3
+    "Hagen", // 2
+    "Potsdam", // 3
+    "Saarbrücken", // 8
+    "Hamm", // 3
+    "Ludwigshafen", // 3
+    "Oldenburg", // 6
+    "Mülheim", // 2
+    "Osnabrück", // 4
+    "Leverkusen", // 2
+    "Heidelberg", // 7
+    "Darmstadt", // 7
+    "Solingen", // 2
+    "Regensburg", // 6
+    "Herne", // 1
+    "Paderborn", // 8
+    "Neuss", // 2
+    "Ingolstadt", // 5
+    "Offenbach", // 2
+    "Fürth", // 2
+    "Ulm", // 7
+    "Heilbronn", // 7
+    "Pforzheim", // 6
+    "Würzburg", // 10
+    "Wolfsburg", // überprüfen
+    "Göttingen", // 6
+    "Bottrop", // 1
+    "Reutlingen", // 6
+    "Erlangen", // 3
+    "Bremerhaven", // 1
+    "Koblenz", // 7
     // Ab hier weiter
-    "Fürth",
-    "Ulm",
-    "Heilbronn",
-    "Pforzheim",
-    "Würzburg",
-    "Wolfsburg",
-    "Göttingen",
-    "Bottrop",
-    "Reutlingen",
-    "Erlangen",
-    "Bremerhaven",
-    "Koblenz",
     "Remscheid",
     "Trier",
     "Recklinghausen",
+    "Jena", // 5
     "Moers",
     "Salzgitter",
     "Siegen",
@@ -277,6 +273,20 @@ export async function getStaticPaths() {
     "Hildesheim",
     "Hanau",
     "Kaiserslautern",
+    "Cottbus", // 2
+    "Schwerin", // 2
+    "Witten",
+    "Esslingen",
+    "Ludwigsburg",
+    "Gießen",
+    "Gera",
+    "Düren",
+    "Tübingen",
+    "Flensburg", // 6
+    "Iserlohn",
+    "Ratingen",
+    "Villingen-Schwenningen",
+    "Zwickau", // 2
   ];
   return {
     paths: paths.flatMap((path) => [
