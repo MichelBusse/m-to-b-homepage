@@ -28,12 +28,14 @@ export default function AppDevelopmentCityPage(props: Props) {
 
   const textSectionRef = useRef(null);
 
+  const currentYear = new Date().getFullYear();
+
   let texts = {
     headline: (
       <>
         Mission: App-Entwicklung
         <br />
-        Ziel: {props.id}
+        Ziel: {props.id} {currentYear}
       </>
     ),
     text: (
@@ -54,7 +56,7 @@ export default function AppDevelopmentCityPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: `App-Entwicklung ${props.id} | App-Agentur M-to-B`,
+    title: `App-Entwicklung ${props.id} - App-Agentur M-to-B - ${currentYear}`,
     description: `Dein Partner für App-Entwicklung in ${props.id}. Als digitale App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.`,
     textSectionHeadline: `Moderne Apps für ${props.id}`,
     textSectionText: (
@@ -84,7 +86,7 @@ export default function AppDevelopmentCityPage(props: Props) {
         <>
           Mission: App development
           <br />
-          Destination: {props.id}
+          Destination: {props.id} {currentYear}
         </>
       ),
       text: (
@@ -105,7 +107,7 @@ export default function AppDevelopmentCityPage(props: Props) {
         </>
       ),
       requestButtonText: "Start your journey",
-      title: `App Development ${props.id} - App Agency M-to-B`,
+      title: `App Development ${props.id} - App Agency M-to-B - ${currentYear}`,
       description: `Your partner for app development in ${props.id}. As a digital app agency, we guide your app idea safely to its goal with the right strategy.`,
       textSectionHeadline: `Modern apps for ${props.id}`,
       textSectionText: (
@@ -261,7 +263,6 @@ export async function getStaticPaths() {
     "Erlangen", // 3
     "Bremerhaven", // 1
     "Koblenz", // 7
-    // Ab hier weiter
     "Remscheid",
     "Trier",
     "Recklinghausen",
@@ -277,6 +278,7 @@ export async function getStaticPaths() {
     "Schwerin", // 2
     "Witten",
     "Esslingen",
+    // Ab hier weiter
     "Ludwigsburg",
     "Gießen",
     "Gera",

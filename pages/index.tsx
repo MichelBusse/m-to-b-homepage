@@ -5,7 +5,6 @@ import CustomersSection from "../components/CustomersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import CustomShapeDivider from "../components/CustomShapeDivider";
-import AgileSection from "../components/AgileSection";
 import { AnchorRefs } from "./_app";
 import ValuesSection from "../components/ValuesSection";
 import TechnologiesSection from "../components/TechnologiesSection";
@@ -19,9 +18,11 @@ type Props = {
 export default function HomePage(props: Props) {
   const router = useRouter();
 
+  const currentYear = new Date().getFullYear();
+
   let texts = {
-    title: "M-to-B Software - Deine App-Agentur",
-    headline: <>Deine Agentur für App-Entwicklung</>,
+    title: `M-to-B Software - Deine App-Agentur - ${currentYear}`,
+    headline: <>Deine Agentur für App-Entwicklung {currentYear}</>,
     text: (
       <>
         <p>
@@ -83,11 +84,10 @@ export default function HomePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: "Your App Agency - M-to-B Software",
+      title: `Your App Agency - M-to-B Software - ${currentYear}`,
       headline: (
         <>
-          Your Agency for App <br />
-          and Software Development
+          Your Agency for App Development {currentYear}
         </>
       ),
       text: (

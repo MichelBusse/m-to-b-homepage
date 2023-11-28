@@ -10,14 +10,14 @@ export default function Imprint() {
   const router = useRouter()
 
   let texts = {
-    title: "Impressum - M-to-B",
+    title: "Impressum - M-to-B Software",
     description:
     "Das Impressum unserer Homepage von M-to-B Software",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Imprint - M-to-B",
+      title: "Imprint - M-to-B Software",
       description:
       "Imprint of our homepage M-to-B Software",
     };

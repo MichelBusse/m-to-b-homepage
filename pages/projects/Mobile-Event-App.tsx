@@ -21,7 +21,7 @@ export default function ERPSoftwarePage(props: Props) {
   const section2Ref = useRef(null);
 
   let texts = {
-    title: "Mobile Event App - M-to-B",
+    title: "Mobile Event App - M-to-B Software",
     description:
       "App-Entwicklung kann kompliziert sein - muss sie aber nicht! Realisiere deine App mit kosteneffizienten Strategien und erfolgreicher App-Entwicklung.",
     requestButtonText: "Kostenloses Beratungsgespräch",
@@ -77,7 +77,7 @@ export default function ERPSoftwarePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: "Mobile Event App - M-to-B",
+      title: "Mobile Event App - M-to-B Software",
       description:
         "App development can be complicated - but it doesn't have to be! Realize your app with cost-efficient strategies and successful app development.",
       requestButtonText: "Schedule a free consultation",

@@ -12,7 +12,6 @@ import JourneySection from "../components/JourneySection";
 import StagesSection from "../components/StagesSections";
 import AboutSection from "../components/AboutSection";
 import CrossPlatformSection from "../components/CrossPlatformSection";
-import PriceCalculatorSection from "../components/PriceCalculatorSection";
 import CostEstimateSection from "../components/CostEstimateSection";
 
 type Props = {
@@ -22,11 +21,13 @@ type Props = {
 export default function AppDevelopmentPage(props: Props) {
   const router = useRouter();
 
+  const currentYear = new Date().getFullYear();
+
   let texts = {
     headline: (
       <>
         Mission: App-Entwicklung
-        <br />- Deine App-Agentur
+        <br />- Deine App-Agentur {currentYear}
       </>
     ),
     text: (
@@ -47,7 +48,7 @@ export default function AppDevelopmentPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: "Mission: App-Entwicklung - Deine App-Agentur M-to-B",
+    title: `Mission: App-Entwicklung - App-Agentur M-to-B - ${currentYear}`,
     description:
       "App-Entwicklung kann auch stressfrei sein - Als dynamische App-Agentur führen wir deine App-Idee mit der richtigen Strategie sicher zum Ziel.",
   };
@@ -57,7 +58,7 @@ export default function AppDevelopmentPage(props: Props) {
       headline: (
         <>
           Mission: App Development
-          <br />- Your App Agency
+          <br />- Your App Agency {currentYear}
         </>
       ),
       text: (
@@ -78,7 +79,7 @@ export default function AppDevelopmentPage(props: Props) {
         </>
       ),
       requestButtonText: "Start your journey",
-      title: "Mission: App Development - App Agency M-to-B",
+      title: `Mission: App Development - App Agency M-to-B - ${currentYear}`,
       description:
         "App development can also be stress-free - As a dynamic app agency, we accompany your app idea safely to its goal with the right strategy.",
     };

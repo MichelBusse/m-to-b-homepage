@@ -14,14 +14,14 @@ export default function HomePage(props: Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Kontakt - M-to-B",
+    title: "Kontakt - M-to-B Software",
     description:
       "Nutze unser kostenloses Beratungsgespräch und lass dich von einem Experten zu deinem Software-Projekt beraten.",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Contact - M-to-B",
+      title: "Contact - M-to-B Software",
       description:
         "Use our free consultation and let an expert advise you on your software project.",
     };

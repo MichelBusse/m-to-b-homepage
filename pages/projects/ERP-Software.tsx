@@ -21,7 +21,7 @@ export default function ERPSoftwarePage(props: Props) {
   const section2Ref = useRef(null);
 
   let texts = {
-    title: "ERP-Software - M-to-B",
+    title: "ERP-Software - M-to-B Software",
     description:
       "Wir entwickeln ERP-Software für alle individuellen Anforderungen Ihres Unternehmens. Erleichtere und automatisiere deine Prozesse.",
     requestButtonText: "Kostenloses Beratungsgespräch",
@@ -78,7 +78,7 @@ export default function ERPSoftwarePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: "ERP-Software - M-to-B",
+      title: "ERP-Software - M-to-B Software",
       description:
         "We develop ERP software for all individual requirements of your company. Facilitate and automate your processes.",
       requestButtonText: "Schedule a free consultation",

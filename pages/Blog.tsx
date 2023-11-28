@@ -14,14 +14,14 @@ export default function BlogEntryPage(props : Props) {
   const router = useRouter();
 
   let texts = {
-    title: "Blog - M-to-B",
+    title: "Blog - M-to-B Software",
     desctiption:
       "Hier findest du Posts über neue Technologie-Trends rund um App-Entwicklung und Augmented Reality",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Blog - M-to-B",
+      title: "Blog - M-to-B Software",
       desctiption:
         "Here you will find posts about new technology trends related to app development and augmented reality",
     };

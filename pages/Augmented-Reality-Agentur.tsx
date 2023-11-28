@@ -30,8 +30,10 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
   const section3Ref = useRef(null);
   const agencyRef = useRef(null);
 
+  const currentYear = new Date().getFullYear();
+
   let texts = {
-    headline: <>Augmented Reality Agentur & Entwicklung</>,
+    headline: <>Augmented Reality Agentur & Entwicklung {currentYear}</>,
     text: (
       <>
         <p>Du suchst eine Agentur für Augmented Reality Entwicklung?</p>
@@ -46,7 +48,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
       </>
     ),
     requestButtonText: "Kostenloses Beratungsgespräch",
-    title: "Augmented Reality Agentur & Entwicklung - M-to-B",
+    title: `Augmented Reality Entwicklung - App-Agentur M-to-B - ${currentYear}`,
     description:
       "Erlebe die Zukunft mit unserer Augmented Reality Agentur. Entdecke Einsatzmöglichkeiten und individuelle Lösungen für Marketing, Bildung und Industrie.",
     concept: "Strategie",
@@ -174,7 +176,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      headline: <>Augmented Reality Agency & Development</>,
+      headline: <>Augmented Reality Agency & Development {currentYear}</>,
       text: (
         <>
           <p>
@@ -191,7 +193,7 @@ export default function AugmentedRealityDevelopmentPage(props: Props) {
         </>
       ),
       requestButtonText: "Schedule a free consultation",
-      title: "Augmented Reality Agency & Development - M-to-B",
+      title: `Augmented Reality Development - App Agency M-to-B - ${currentYear}`,
       description:
         "Experience the future with our augmented reality agency. Discover possible uses and individual solutions for marketing, education and industry.",
       concept: "Strategy",

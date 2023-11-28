@@ -21,7 +21,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
   const section2Ref = useRef(null);
 
   let texts = {
-    title: "AR Entwicklung für den OP - M-to-B",
+    title: "AR Entwicklung für den OP - M-to-B Software",
     description:
       "Wir entwickeln Augmente Reality Anwengunen für komplexe Anforderungen und schaffen neue Technologien.",
     requestButtonText: "Kostenloses Beratungsgespräch",
@@ -77,7 +77,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: "AR Development for surgery - M-to-B",
+      title: "AR Development for surgery - M-to-B Software",
       description:
         "We develop augmented reality applications for complex requirements and create new technologies.",
       headline: <>AR Development for surgery</>,

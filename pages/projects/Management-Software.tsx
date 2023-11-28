@@ -21,7 +21,7 @@ export default function ManagementSoftwarePage(props: Props) {
   const section2Ref = useRef(null);
 
   let texts = {
-    title: "Management Software - M-to-B",
+    title: "Management Software - M-to-B Software",
     description:
       "Wir entwickeln Management Software für das Mitarbeitermanagement und die Einsatzplanung. Erleichtere und automatisiere deine Prozesse.",
     requestButtonText: "Kostenloses Beratungsgespräch",
@@ -82,7 +82,7 @@ export default function ManagementSoftwarePage(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      title: "Management Software - M-to-B",
+      title: "Management Software - M-to-B Software",
       description:
         "We develop management software for employee management and resource planning. Facilitate and automate your processes.",
       requestButtonText: "Schedule a free consultation",

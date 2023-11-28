@@ -10,14 +10,14 @@ export default function PrivacyPolicy() {
   const router = useRouter();
 
   let texts = {
-    title: "Datenschutz - M-to-B",
+    title: "Datenschutz - M-to-B Software",
     description:
     "Die Datenschutzerklärung unserer Homepage von M-to-B Software",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "Privacy Policy - M-to-B",
+      title: "Privacy Policy - M-to-B Software",
       description:
       "Privacy Policy of our homepage M-to-B Software",
     };

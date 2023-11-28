@@ -38,7 +38,7 @@ export default function AppPriceCalculatorPage() {
   const [price, setPrice] = useState<PriceResult | null>(null);
 
   let texts = {
-    title: "App Entwicklung Preis Rechner - M-to-B",
+    title: "App Entwicklung Preis Rechner - M-to-B Software",
     description:
       "Wie viel kostet App Entwicklung? Berechne den Preis deiner App vorab und erhalte einen Überblick über alle Kosten.",
     headline: "App Entwicklung Preis Rechner",
@@ -63,7 +63,7 @@ export default function AppPriceCalculatorPage() {
 
   if (router.locale == "en") {
     texts = {
-      title: "App Development Budget Calculator - M-to-B",
+      title: "App Development Budget Calculator - M-to-B Software",
       description:
         "How much does app development cost? Calculate your budget beforehand and get an overview over all costs.",
       headline: "App Development Budget Calculator",

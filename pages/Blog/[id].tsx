@@ -5,6 +5,8 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export default function BlogEntryPage({ postData } : { postData : any }) {
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <Head>
@@ -18,7 +20,7 @@ export default function BlogEntryPage({ postData } : { postData : any }) {
           hrefLang="en"
           href={"https://m-to-b.com/en/Blog/" + postData.id}
         />
-        <title key="title">{postData.title + " - M-to-B"}</title>
+        <title key="title">{postData.title + ` - M-to-B - ${currentYear}`}</title>
         <meta name="description" content={postData.contentHtml} />
       </Head>
       <main>
