@@ -13,6 +13,7 @@ export default async function handler(
 ) {
   if(!req.body.userMail){
     res.status(500).end();
+    return;
   }
 
   const mailData = {

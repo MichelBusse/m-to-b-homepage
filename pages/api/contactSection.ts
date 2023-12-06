@@ -11,8 +11,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if(!req.body.email || req.body.text){
+  if(!req.body.email || !req.body.text){
     res.status(500).end();
+    return;
   }
 
   const mailData = {
