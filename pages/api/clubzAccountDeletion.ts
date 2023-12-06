@@ -17,7 +17,7 @@ export default async function handler(
   }
 
   const mailData = {
-    from: req.body.userMail,
+    from: "system@m-to-b.com",
     to: "kontakt@m-to-b.com",
     subject: `Clubz-Account-Löschung`,
     text:
