@@ -197,7 +197,7 @@ export async function getStaticPaths() {
     "Hamburg", // 25
     "München", // 28
     "Köln", // 26
-    "Frankfurt", // überprüfen
+    "Frankfurt", // 23
     "Stuttgart", // 25
     "Düsseldorf", // 10
     "Leipzig", // 4
@@ -256,38 +256,37 @@ export async function getStaticPaths() {
     "Heilbronn", // 7
     "Pforzheim", // 6
     "Würzburg", // 10
-    "Wolfsburg", // überprüfen
+    "Wolfsburg", // 2
     "Göttingen", // 6
     "Bottrop", // 1
     "Reutlingen", // 6
     "Erlangen", // 3
     "Bremerhaven", // 1
     "Koblenz", // 7
-    "Remscheid",
-    "Trier",
-    "Recklinghausen",
+    "Remscheid", // 1
+    "Trier", // 6
+    "Recklinghausen", // 2
     "Jena", // 5
-    "Moers",
-    "Salzgitter",
-    "Siegen",
-    "Gütersloh",
+    "Moers", // 2
+    "Salzgitter", // 2
+    "Siegen", // 4
+    "Gütersloh", // 2
     "Hildesheim",
-    "Hanau",
-    "Kaiserslautern",
+    "Hanau", // 1
+    "Kaiserslautern", // 3
     "Cottbus", // 2
     "Schwerin", // 2
-    "Witten",
-    "Esslingen",
-    // Ab hier weiter
-    "Ludwigsburg",
-    "Gießen",
-    "Gera",
-    "Düren",
+    "Witten", // 3
+    "Esslingen", // 3
+    "Ludwigsburg", // 3
+    "Gießen", // 2
+    "Gera", // 2
+    "Düren", // 1
     "Tübingen",
     "Flensburg", // 6
-    "Iserlohn",
-    "Ratingen",
-    "Villingen-Schwenningen",
+    "Iserlohn", // 1
+    "Ratingen", // 1
+    "Villingen-Schwenningen", // 3
     "Zwickau", // 2
   ];
   return {
