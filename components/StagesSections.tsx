@@ -11,6 +11,7 @@ export default function StagesSection() {
 
   let texts = {
     textSection1Headline: "01 Die Strategie",
+    textSection1ImageAlt: "App Entwicklung Strategie",
     textSection1Text: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -33,6 +34,7 @@ export default function StagesSection() {
       </>
     ),
     textSection2Headline: "02 Die Umsetzung",
+    textSection2ImageAlt: "App Entwicklung Umsetzung",
     textSection2Text: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -57,6 +59,7 @@ export default function StagesSection() {
       </>
     ),
     textSection3Headline: "03 Der Release",
+    textSection3ImageAlt: "App Entwicklung Release",
     textSection3Text: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -82,6 +85,7 @@ export default function StagesSection() {
   if (router.locale == "en") {
     texts = {
       textSection1Headline: "01 Strategy",
+      textSection1ImageAlt: "App Development Strategy",
       textSection1Text: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -104,6 +108,7 @@ export default function StagesSection() {
         </>
       ),
       textSection2Headline: "02 Implementation",
+      textSection2ImageAlt: "App Development Implementation",
       textSection2Text: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -127,6 +132,7 @@ export default function StagesSection() {
         </>
       ),
       textSection3Headline: "03 Release",
+      textSection3ImageAlt: "App Development Release",
       textSection3Text: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -156,7 +162,7 @@ export default function StagesSection() {
       headline={texts.textSection1Headline}
       text={texts.textSection1Text}
       image="/images/app-development/section1.png"
-      imageAlt={texts.textSection1Headline}
+      imageAlt={texts.textSection1ImageAlt}
       typewriterKey={"stages1"}
     />
     <TextSection
@@ -165,7 +171,7 @@ export default function StagesSection() {
       headline={texts.textSection2Headline}
       text={texts.textSection2Text}
       image="/images/app-development/section2.png"
-      imageAlt={texts.textSection2Headline}
+      imageAlt={texts.textSection2ImageAlt}
       typewriterKey={"stages2"}
     />
     <TextSection
@@ -174,7 +180,7 @@ export default function StagesSection() {
       headline={texts.textSection3Headline}
       text={texts.textSection3Text}
       image="/images/app-development/section3.png"
-      imageAlt={texts.textSection3Headline}
+      imageAlt={texts.textSection3ImageAlt}
       typewriterKey={"stages3"}
     /></>);
 

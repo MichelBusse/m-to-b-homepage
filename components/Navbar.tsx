@@ -7,6 +7,7 @@ import Image from "next/image";
 
 type Props = {
   anchorRefs: AnchorRefs;
+  locationId: String | undefined;
 };
 
 export default function Navbar(props: Props) {
@@ -103,12 +104,12 @@ export default function Navbar(props: Props) {
         <div className={styles.ulWrapper}>
           <ul>
             <li className={activeMenuItem === "apps" ? styles.active : ""}>
-              <Link href="/App-Agentur">
+              <Link href={"/App-Agentur" + (props.locationId != null ? "/" + props.locationId : "")}>
                 <a>{texts.apps}</a>
               </Link>
             </li>
             <li className={activeMenuItem === "vr" ? styles.active : ""}>
-              <Link href="/Augmented-Reality-Agentur">
+              <Link href={"/Augmented-Reality-Agentur" + (props.locationId != null ? "/" + props.locationId : "")}>
                 <a>{texts.vr}</a>
               </Link>
             </li>

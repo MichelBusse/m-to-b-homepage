@@ -1,32 +1,33 @@
-import Header from "../components/Header";
-import ContactSection from "../components/ContactSection";
+import Header from "../../components/Header";
+import ContactSection from "../../components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../components/CustomShapeDivider";
-import { AnchorRefs } from "./_app";
+import CustomShapeDivider from "../../components/CustomShapeDivider";
+import { AnchorRefs } from "../_app";
 import { useRouter } from "next/router";
-import ProjectsSection from "../components/ProjectsSection";
-import CustomersSection from "../components/CustomersSection";
+import ProjectsSection from "../../components/ProjectsSection";
+import CustomersSection from "../../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../components/SmallTechnologiesSection";
-import AboutSection from "../components/AboutSection";
-import TextSection from "../components/utility/TextSection";
+} from "../../components/SmallTechnologiesSection";
+import AboutSection from "../../components/AboutSection";
+import TextSection from "../../components/utility/TextSection";
 import { useRef } from "react";
-import ValuesSection from "../components/ValuesSection";
-import CostEstimateSection from "../components/CostEstimateSection";
-import IconTextSection from "../components/utility/IconTextSection";
+import ValuesSection from "../../components/ValuesSection";
+import CostEstimateSection from "../../components/CostEstimateSection";
+import IconTextSection from "../../components/utility/IconTextSection";
 import { HiUsers } from "react-icons/hi";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { FaEdit, FaWrench } from "react-icons/fa";
-import ARServicesSections from "../components/ARServicesSections";
-import FAQAugmentedReality from "../components/FAQAugmentedReality";
+import ARServicesSections from "../../components/ARServicesSections";
+import FAQAugmentedReality from "../../components/FAQAugmentedReality";
 
 type Props = {
   anchorRefs: AnchorRefs;
+  id: string;
 };
 
-export default function AugmentedRealityPage(props: Props) {
+export default function AugmentedRealityCityPage(props: Props) {
   const router = useRouter();
 
   const textSectionRef = useRef(null);
@@ -36,14 +37,15 @@ export default function AugmentedRealityPage(props: Props) {
   let texts = {
     headline: (
       <>
-        Augmented Reality Entwicklung
+        Augmented Reality {props.id}
         <br />- AR-Agentur {currentYear}
       </>
     ),
     text: (
       <>
         <p>
-          Du suchst eine Agentur für Augmented Reality Entwicklung?
+          Du suchst eine Agentur für Augmented Reality Entwicklung in {props.id}
+          ?
         </p>
         <p>
           Mit den modernsten Technologien unterstützen wir unsere Kunden bei der
@@ -58,10 +60,10 @@ export default function AugmentedRealityPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: `Augmented Reality Entwicklung - AR-Agentur M-to-B - ${currentYear}`,
-    description: `Dein Partner für Augmented-Reality-Entwicklung. Als digitale AR-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
-    textSectionHeadline: `AR-Consulting`,
-    textSectionImageAlt: `Augmented Reality Consulting`,
+    title: `Augmented Reality ${props.id} - AR-Agentur M-to-B - ${currentYear}`,
+    description: `Dein Partner für Augmented-Reality-Entwicklung in ${props.id}. Als digitale AR-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
+    textSectionHeadline: `AR-Consulting für ${props.id}`,
+    textSectionImageAlt: `Augmented Reality Consulting ${props.id}`,
     textSectionText: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
@@ -75,7 +77,7 @@ export default function AugmentedRealityPage(props: Props) {
           einer AR-Anwendung abhängen kann.
         </p>
         <p style={{ transitionDelay: "0.9s" }}>
-          Wir helfen unseren Kunden, sich in der erweiterten Realität
+          Wir helfen {props.id}er Unternehmen, sich in der erweiterten Realität
           zurechtzufinden und beraten sie unverbindlich zur Umsetzung ihrer
           Projekte. Sprich mit unseren Experten für AR-Entwicklung und gestalte
           so die beste Strategie für dein Vorhaben.
@@ -94,14 +96,15 @@ export default function AugmentedRealityPage(props: Props) {
     texts = {
       headline: (
         <>
-          Augmented Reality Development
+          Augmented Reality {props.id}
           <br />- AR Agency {currentYear}
         </>
       ),
       text: (
         <>
           <p>
-            Are you looking for an agency for augmented reality development?
+            Are you looking for an agency for augmented reality development in{" "}
+            {props.id}?
           </p>
           <p>
             We support our customers with the most modern technologies for
@@ -116,10 +119,10 @@ export default function AugmentedRealityPage(props: Props) {
         </>
       ),
       requestButtonText: "Start your journey",
-      title: `Augmented Reality Development - AR Agency M-to-B - ${currentYear}`,
-      description: `Your partner for modern augmented reality development. As a digital AR agency, we lead your project with the right strategy safely to its goal.`,
-      textSectionHeadline: `AR Consulting`,
-      textSectionImageAlt: `Augmented Reality Consulting`,
+      title: `Augmented Reality ${props.id} - AR Agency M-to-B - ${currentYear}`,
+      description: `Your partner for augmented reality development in ${props.id}. As a digital AR agency, we lead your project with the right strategy safely to its goal.`,
+      textSectionHeadline: `AR Consulting for ${props.id}`,
+      textSectionImageAlt: `Augmented Reality Consulting ${props.id}`,
       textSectionText: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
@@ -133,10 +136,10 @@ export default function AugmentedRealityPage(props: Props) {
             application can depend.
           </p>
           <p style={{ transitionDelay: "0.9s" }}>
-            We help our customers finding their way in augmented reality and
-            provide them with non-binding advice on the implementation of their
-            projects. Talk to our AR development experts and design the best
-            strategy for your project.
+            We help {props.id} companies finding their way in augmented reality
+            and provide them with non-binding advice on the implementation of
+            their projects. Talk to our AR development experts and design the
+            best strategy for your project.
           </p>
         </>
       ),
@@ -155,12 +158,12 @@ export default function AugmentedRealityPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href={`https://m-to-b.com/App-Agentur`}
+          href={`https://m-to-b.com/App-Agentur/${props.id}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`https://m-to-b.com/en/App-Agentur`}
+          href={`https://m-to-b.com/en/App-Agentur/${props.id}`}
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -176,13 +179,13 @@ export default function AugmentedRealityPage(props: Props) {
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <TextSection
-          key={"ar1"}
+          key={"arCity1"}
           sectionRef={textSectionRef}
           headline={texts.textSectionHeadline}
           text={texts.textSectionText}
           image="/images/augmented-reality/augmented-reality.jpg"
           imageAlt={texts.textSectionImageAlt}
-          typewriterKey={"ar1"}
+          typewriterKey={"arCity1"}
         />
         <IconTextSection
           icon1={<FaEdit />}
@@ -211,10 +214,127 @@ export default function AugmentedRealityPage(props: Props) {
         <CustomersSection />
         <ContactSection
           anchorRefs={props.anchorRefs}
+          location={props.id}
+          locationLink={`/Augmented-Reality-Agentur/${props.id}`}
           qnaSection={<FAQAugmentedReality />}
           pageReference={texts.title}
         />
       </main>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = [
+    "Berlin", // 31
+    "Hamburg", // 25
+    "München", // 28
+    "Köln", // 26
+    "Frankfurt", // 23
+    "Stuttgart", // 25
+    "Düsseldorf", // 10
+    "Leipzig", // 4
+    "Dortmund", // 11
+    "Essen", // 7
+    "Bremen", // 13
+    "Dresden", // 6
+    "Hannover", // 15
+    "Nürnberg", // 11
+    "Duisburg", // 6
+    "Bochum", // 8
+    "Wuppertal", // 7
+    "Bielefeld", // 6
+    "Bonn", // 10
+    "Münster", // 9
+    "Mannheim", // 9
+    "Karlsruhe", // 14
+    "Augsburg", // 10
+    "Wiesbaden", // 6
+    "Mönchengladbach", // 4
+    "Gelsenkirchen", // 2
+    "Aachen", // 7
+    "Braunschweig", // 5
+    "Chemnitz", // 8
+    "Kiel", // 5
+    "Halle", // 5
+    "Magdeburg", // 5
+    "Freiburg", // 7
+    "Krefeld", // 5
+    "Mainz", // 6
+    "Lübeck", // 8
+    "Erfurt", // 8
+    "Oberhausen", // 2
+    "Rostock", // 4
+    "Kassel", // 3
+    "Hagen", // 2
+    "Potsdam", // 3
+    "Saarbrücken", // 8
+    "Hamm", // 3
+    "Ludwigshafen", // 3
+    "Oldenburg", // 6
+    "Mülheim", // 2
+    "Osnabrück", // 4
+    "Leverkusen", // 2
+    "Heidelberg", // 7
+    "Darmstadt", // 7
+    "Solingen", // 2
+    "Regensburg", // 6
+    "Herne", // 1
+    "Paderborn", // 8
+    "Neuss", // 2
+    "Ingolstadt", // 5
+    "Offenbach", // 2
+    "Fürth", // 2
+    "Ulm", // 7
+    "Heilbronn", // 7
+    "Pforzheim", // 6
+    "Würzburg", // 10
+    "Wolfsburg", // 2
+    "Göttingen", // 6
+    "Bottrop", // 1
+    "Reutlingen", // 6
+    "Erlangen", // 3
+    "Bremerhaven", // 1
+    "Koblenz", // 7
+    "Remscheid", // 1
+    "Trier", // 6
+    "Recklinghausen", // 2
+    "Jena", // 5
+    "Moers", // 2
+    "Salzgitter", // 2
+    "Siegen", // 4
+    "Gütersloh", // 2
+    "Hildesheim",
+    "Hanau", // 1
+    "Kaiserslautern", // 3
+    "Cottbus", // 2
+    "Schwerin", // 2
+    "Witten", // 3
+    "Esslingen", // 3
+    "Ludwigsburg", // 3
+    "Gießen", // 2
+    "Gera", // 2
+    "Düren", // 1
+    "Tübingen",
+    "Flensburg", // 6
+    "Iserlohn", // 1
+    "Ratingen", // 1
+    "Villingen-Schwenningen", // 3
+    "Zwickau", // 2
+  ];
+  return {
+    paths: paths.flatMap((path) => [
+      { params: { id: path }, locale: "de" },
+      { params: { id: path }, locale: "en" },
+    ]),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }: { params: any }) {
+  return {
+    props: {
+      id: params.id,
+    },
+  };
 }
