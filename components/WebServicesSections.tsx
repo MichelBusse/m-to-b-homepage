@@ -134,7 +134,7 @@ export default function WebServicesSections() {
         sectionRef={textSection1Ref}
         headline={texts.textSection1Headline}
         text={texts.textSection1Text}
-        image="/images/augmented-reality/car.jpg"
+        image="/images/pwa-web-agency/section1.png"
         imageAlt={texts.textSection1ImageAlt}
         typewriterKey={"webServices1"}
       />
@@ -143,7 +143,7 @@ export default function WebServicesSections() {
         sectionRef={textSection2Ref}
         headline={texts.textSection2Headline}
         text={texts.textSection2Text}
-        image="/images/augmented-reality/model.jpg"
+        image="/images/pwa-web-agency/section2.png"
         imageAlt={texts.textSection2ImageAlt}
         typewriterKey={"webServices2"}
       />

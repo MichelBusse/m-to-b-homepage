@@ -1,30 +1,28 @@
-import Header from "../../components/Header";
-import ContactSection from "../../components/ContactSection";
+import Header from "../components/Header";
+import ContactSection from "../components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../../components/CustomShapeDivider";
-import { AnchorRefs } from "../_app";
+import CustomShapeDivider from "../components/CustomShapeDivider";
+import { AnchorRefs } from "./_app";
 import { useRouter } from "next/router";
-import ProjectsSection from "../../components/ProjectsSection";
-import CustomersSection from "../../components/CustomersSection";
+import ProjectsSection from "../components/ProjectsSection";
+import CustomersSection from "../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../../components/SmallTechnologiesSection";
-import AboutSection from "../../components/AboutSection";
-import TextSection from "../../components/utility/TextSection";
+} from "../components/SmallTechnologiesSection";
+import AboutSection from "../components/AboutSection";
+import TextSection from "../components/utility/TextSection";
 import { useRef } from "react";
-import ValuesSection from "../../components/ValuesSection";
-import CostEstimateSection from "../../components/CostEstimateSection";
-import IconTextSection from "../../components/utility/IconTextSection";
+import ValuesSection from "../components/ValuesSection";
+import CostEstimateSection from "../components/CostEstimateSection";
+import IconTextSection from "../components/utility/IconTextSection";
 import { HiUsers } from "react-icons/hi";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { FaEdit, FaWrench } from "react-icons/fa";
-import FAQAugmentedReality from "../../components/FAQAugmentedReality";
-import WebServicesSections from "../../components/WebServicesSections";
+import WebServicesSections from "../components/WebServicesSections";
 
 type Props = {
   anchorRefs: AnchorRefs;
-  id: string;
 };
 
 export default function AugmentedRealityCityPage(props: Props) {
@@ -37,15 +35,13 @@ export default function AugmentedRealityCityPage(props: Props) {
   let texts = {
     headline: (
       <>
-        Web-Entwicklung {props.id}
+        Web-Entwicklung & PWAs
         <br />| Web-Agentur {currentYear}
       </>
     ),
     text: (
       <>
-        <p>
-          Du suchst eine Agentur für Web-Entwicklung in {props.id}?
-        </p>
+        <p>Du suchst eine Agentur für Web-Entwicklung?</p>
         <p>
           Die Entwicklung von Web-Anwendungen kann schnell kompliziert werden
           und viel Zeit und Budget verschlingen. Die Wahl der richtigen
@@ -59,16 +55,16 @@ export default function AugmentedRealityCityPage(props: Props) {
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: `Web-Entwicklung ${props.id} - Web-Agentur M-to-B - ${currentYear}`,
-    description: `Dein Partner für Web-Entwicklung und PWAs in ${props.id}. Als digitale Web-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
-    textSectionHeadline: `Web-Consulting für ${props.id}`,
-    textSectionImageAlt: `Web-Entwicklung Consulting ${props.id}`,
+    title: `Web-Entwicklung & PWAs - Web-Agentur M-to-B - ${currentYear}`,
+    description: `Dein Partner für Web-Entwicklung und PWAs. Als digitale Web-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
+    textSectionHeadline: `Web-Consulting`,
+    textSectionImageAlt: `Web-Entwicklung Consulting`,
     textSectionText: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Umfangreiche Web-Projekte erfordern ausreichend Planung. Wir helfen{" "}
-          {props.id}er Unternehmen durch den Dschungel der Web-Entwicklung und
-          beraten sie bei der Wahl der richtigen Strategie.
+          Umfangreiche Web-Projekte erfordern ausreichend Planung. Wir führen
+          unsere Kunden durch den Dschungel der Web-Entwicklung und beraten sie
+          bei der Wahl der richtigen Strategie.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
           Mit dem rasanten Fortschritt in der Web-Technologie kann es oft auch
@@ -96,16 +92,13 @@ export default function AugmentedRealityCityPage(props: Props) {
     texts = {
       headline: (
         <>
-          Web Development {props.id}
+          Web Development & PWAs
           <br />| Web Agency {currentYear}
         </>
       ),
       text: (
         <>
-          <p>
-            Are you looking for an agency for web development in{" "}
-            {props.id}?
-          </p>
+          <p>Are you looking for an agency for web development?</p>
           <p>
             Developing web applications can quickly become complicated and
             consume a lot of time and budget. Choosing the right technology, a
@@ -119,15 +112,15 @@ export default function AugmentedRealityCityPage(props: Props) {
         </>
       ),
       requestButtonText: "Start your journey",
-      title: `Web Development ${props.id} - Web Agency M-to-B - ${currentYear}`,
-      description: `Your partner for web development and PWAs in ${props.id}. As a digital web agency, we guide your project safely to its goal with the right strategy.`,
-      textSectionHeadline: `Web Consulting for ${props.id}`,
-      textSectionImageAlt: `Web Development Consulting ${props.id}`,
+      title: `Web Development & PWAs - Web Agency M-to-B - ${currentYear}`,
+      description: `Your partner for web development and PWAs. As a digital web agency, we guide your project safely to its goal with the right strategy.`,
+      textSectionHeadline: `Web Consulting`,
+      textSectionImageAlt: `Web Development Consulting`,
       textSectionText: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
-            Large web projects require sufficient planning. We help {props.id}
-            companies through the jungle of web development and advise them on
+            Large web projects require sufficient planning. We lead our
+            customers through the jungle of web development and advise them on
             choosing the right strategy.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
@@ -158,12 +151,12 @@ export default function AugmentedRealityCityPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href={`https://m-to-b.com/PWA-Web-Agentur/${props.id}`}
+          href={`https://m-to-b.com/PWA-Web-Agentur`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`https://m-to-b.com/en/PWA-Web-Agentur/${props.id}`}
+          href={`https://m-to-b.com/en/PWA-Web-Agentur`}
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -181,13 +174,13 @@ export default function AugmentedRealityCityPage(props: Props) {
         <ValuesSection />
         <CustomShapeDivider flip={true} />
         <TextSection
-          key={"webCity1"}
+          key={"web1"}
           sectionRef={textSectionRef}
           headline={texts.textSectionHeadline}
           text={texts.textSectionText}
           image="/images/pwa-web-agency/consulting.png"
           imageAlt={texts.textSectionImageAlt}
-          typewriterKey={"webCity1"}
+          typewriterKey={"web1"}
         />
         <IconTextSection
           icon1={<FaEdit />}
@@ -216,126 +209,9 @@ export default function AugmentedRealityCityPage(props: Props) {
         <CustomersSection />
         <ContactSection
           anchorRefs={props.anchorRefs}
-          location={props.id}
-          locationLink={`/PWA-Web-Agentur/${props.id}`}
           pageReference={texts.title}
         />
       </main>
     </>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = [
-    "Berlin", // 31
-    "Hamburg", // 25
-    "München", // 28
-    "Köln", // 26
-    "Frankfurt", // 23
-    "Stuttgart", // 25
-    "Düsseldorf", // 10
-    "Leipzig", // 4
-    "Dortmund", // 11
-    "Essen", // 7
-    "Bremen", // 13
-    "Dresden", // 6
-    "Hannover", // 15
-    "Nürnberg", // 11
-    "Duisburg", // 6
-    "Bochum", // 8
-    "Wuppertal", // 7
-    "Bielefeld", // 6
-    "Bonn", // 10
-    "Münster", // 9
-    "Mannheim", // 9
-    "Karlsruhe", // 14
-    "Augsburg", // 10
-    "Wiesbaden", // 6
-    "Mönchengladbach", // 4
-    "Gelsenkirchen", // 2
-    "Aachen", // 7
-    "Braunschweig", // 5
-    "Chemnitz", // 8
-    "Kiel", // 5
-    "Halle", // 5
-    "Magdeburg", // 5
-    "Freiburg", // 7
-    "Krefeld", // 5
-    "Mainz", // 6
-    "Lübeck", // 8
-    "Erfurt", // 8
-    "Oberhausen", // 2
-    "Rostock", // 4
-    "Kassel", // 3
-    "Hagen", // 2
-    "Potsdam", // 3
-    "Saarbrücken", // 8
-    "Hamm", // 3
-    "Ludwigshafen", // 3
-    "Oldenburg", // 6
-    "Mülheim", // 2
-    "Osnabrück", // 4
-    "Leverkusen", // 2
-    "Heidelberg", // 7
-    "Darmstadt", // 7
-    "Solingen", // 2
-    "Regensburg", // 6
-    "Herne", // 1
-    "Paderborn", // 8
-    "Neuss", // 2
-    "Ingolstadt", // 5
-    "Offenbach", // 2
-    "Fürth", // 2
-    "Ulm", // 7
-    "Heilbronn", // 7
-    "Pforzheim", // 6
-    "Würzburg", // 10
-    "Wolfsburg", // 2
-    "Göttingen", // 6
-    "Bottrop", // 1
-    "Reutlingen", // 6
-    "Erlangen", // 3
-    "Bremerhaven", // 1
-    "Koblenz", // 7
-    "Remscheid", // 1
-    "Trier", // 6
-    "Recklinghausen", // 2
-    "Jena", // 5
-    "Moers", // 2
-    "Salzgitter", // 2
-    "Siegen", // 4
-    "Gütersloh", // 2
-    "Hildesheim",
-    "Hanau", // 1
-    "Kaiserslautern", // 3
-    "Cottbus", // 2
-    "Schwerin", // 2
-    "Witten", // 3
-    "Esslingen", // 3
-    "Ludwigsburg", // 3
-    "Gießen", // 2
-    "Gera", // 2
-    "Düren", // 1
-    "Tübingen",
-    "Flensburg", // 6
-    "Iserlohn", // 1
-    "Ratingen", // 1
-    "Villingen-Schwenningen", // 3
-    "Zwickau", // 2
-  ];
-  return {
-    paths: paths.flatMap((path) => [
-      { params: { id: path }, locale: "de" },
-      { params: { id: path }, locale: "en" },
-    ]),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }: { params: any }) {
-  return {
-    props: {
-      id: params.id,
-    },
-  };
 }

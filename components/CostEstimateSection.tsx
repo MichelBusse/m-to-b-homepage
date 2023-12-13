@@ -54,6 +54,7 @@ export default function CostEstimateSection() {
         image="/images/cost-estimate.png"
         imageAlt={texts.textSectionHeadline}
         typewriterKey={"cost-estimate"}
+        buttonDelay="0.9s"
         siteLink="#formular"
         siteLinkText={texts.buttonText}
       />
