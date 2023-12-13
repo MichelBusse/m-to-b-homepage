@@ -36,9 +36,8 @@ export default function NotFoundPage() {
             <Image
               src="/images/notfound.png"
               alt={texts.title}
-              layout="responsive"
-              width={100}
-              height={100}
+              width={500}
+              height={500}
             />
           </div>
           <h2>{texts.title}</h2>

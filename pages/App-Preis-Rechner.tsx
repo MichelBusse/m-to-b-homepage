@@ -34,7 +34,6 @@ export default function AppPriceCalculatorPage() {
   const [currentFormIndex, setCurrentFormIndex] = useState(0);
   const [transitionClass, setTransitionClass] = useState("");
   const [optionDivs, setOptionDivs] = useState<JSX.Element[]>([]);
-  const [name, setName] = useState("");
   const [price, setPrice] = useState<PriceResult | null>(null);
 
   let texts = {
@@ -48,14 +47,13 @@ export default function AppPriceCalculatorPage() {
     mailError: "Senden fehlgeschlagen",
     introText:
       "Nach Beantwortung der folgenden Fragen erhälst du direkt eine Einschätzung für das Budget, mit dem du für deine App rechnen kannst.",
-    namePlaceholder: "Name *",
     send: "Preis jetzt erhalten",
     resultsNewTry: "Neuer Versuch",
-    resultsHeadline: "Hallo {0},",
+    resultsHeadline: "Hey,",
     resultsText1:
       "Wir freuen uns, dir bei der Planung deiner App helfen zu können.",
     resultsText2:
-      "Basierend auf deinen Angaben im Preisrechner, schätzen wir das Budget für die Entwicklung deiner App auf:",
+      "Basierend auf deinen Angaben im Preisrechner, schätzen wir das Budget für die Entwicklung und den Upload deiner App auf:",
     resultsText3:
       "Beachte, dass unser Preisrechner dir nur eine grobe Einschätzung geben kann. Für eine genauere Planung und alle offenen Fragen, kannst du ein kostenloses Beratungsgespräch mit einem Experten aus unserem Team vereinbaren:",
     resultsButton: "Kostenloses Beratungsgespräch",
@@ -73,10 +71,9 @@ export default function AppPriceCalculatorPage() {
       mailError: "Error: Could not send mail",
       introText:
         "After answering the following questions you'll receive an overview of your apps potential budget.",
-      namePlaceholder: "Name *",
       send: "Receive costs now!",
       resultsNewTry: "New Try",
-      resultsHeadline: "Hey {0},",
+      resultsHeadline: "Hey,",
       resultsText1: "We look forward to helping you plan your app.",
       resultsText2:
         "Based on your information, we estimate the necessary budget for your app:",
@@ -173,12 +170,6 @@ export default function AppPriceCalculatorPage() {
           ],
           selectMultiple: true,
         },
-        {
-          question: <>Almost done...</>,
-          options: [],
-          icons: [],
-          selectMultiple: false,
-        },
       ];
     }
 
@@ -272,12 +263,6 @@ export default function AppPriceCalculatorPage() {
           <BsChatDotsFill key={2} />,
         ],
         selectMultiple: true,
-      },
-      {
-        question: <>Fast geschafft...</>,
-        options: [],
-        icons: [],
-        selectMultiple: false,
       },
     ];
   }, [router.locale]);
@@ -387,20 +372,20 @@ export default function AppPriceCalculatorPage() {
 
     // Private App
     if (currentFormState[1].includes(0)) {
-      minPrice += 7670;
-      maxPrice += 7670;
+      minPrice += 5670;
+      maxPrice += 5670;
     }
 
     // Public App
     if (currentFormState[1].includes(1)) {
-      minPrice += 10620;
-      maxPrice += 10620;
+      minPrice += 7670;
+      maxPrice += 7670;
     }
 
     // Public or Private App
     if (currentFormState[1].includes(2)) {
-      minPrice += 7670;
-      maxPrice += 10620;
+      minPrice += 5670;
+      maxPrice += 7670;
     }
 
     // Simple design
@@ -435,14 +420,14 @@ export default function AppPriceCalculatorPage() {
 
     // Login system 10h - 20h
     if (currentFormState[4].includes(0)) {
-      minPrice += 2832;
-      maxPrice += 2832;
+      minPrice += 1832;
+      maxPrice += 1832;
     }
 
     // Login system not sure
     if (currentFormState[4].includes(2)) {
       minPrice += 0;
-      maxPrice += 2832;
+      maxPrice += 1832;
     }
 
     // Own profile
@@ -459,30 +444,30 @@ export default function AppPriceCalculatorPage() {
 
     // Push notifications
     if (currentFormState[6].includes(0)) {
-      minPrice += 2832;
-      maxPrice += 2832;
+      minPrice += 2000;
+      maxPrice += 2000;
     }
 
     // Push notifications not sure
     if (currentFormState[6].includes(2)) {
       minPrice += 0;
-      maxPrice += 2832;
+      maxPrice += 2000;
     }
 
     // Dates
-    if (currentFormState[8].includes(0)) {
-      minPrice += 3776;
-      maxPrice += 3776;
+    if (currentFormState[7].includes(0)) {
+      minPrice += 2000;
+      maxPrice += 2000;
     }
 
     // Location
-    if (currentFormState[8].includes(1)) {
-      minPrice += 3776;
-      maxPrice += 3776;
+    if (currentFormState[7].includes(1)) {
+      minPrice += 2500;
+      maxPrice += 2500;
     }
 
     // Chat
-    if (currentFormState[8].includes(2)) {
+    if (currentFormState[7].includes(2)) {
       minPrice += 4720;
       maxPrice += 4720;
     }
@@ -497,7 +482,6 @@ export default function AppPriceCalculatorPage() {
 
   const submit = () => {
     if (
-      name.trim() == "" ||
       currentFormState[1].length == 0 ||
       currentFormState[2].length == 0 ||
       currentFormState[3].length == 0 ||
@@ -577,19 +561,6 @@ export default function AppPriceCalculatorPage() {
               )}
               <h2>{questions[currentFormIndex].question}</h2>
               {currentFormIndex == 0 && <p>{texts.introText}</p>}
-              {currentFormIndex == questions.length - 1 && (
-                <div className={styles.inputWrapper}>
-                  <input
-                    name="name"
-                    type="textfield"
-                    required
-                    value={name}
-                    placeholder={texts.namePlaceholder}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                  <button onClick={() => submit()}>{texts.send}</button>
-                </div>
-              )}
               {currentFormIndex > 0 && currentFormIndex < questions.length && (
                 <div className={styles.optionsWrapper}>{optionDivs}</div>
               )}
@@ -610,10 +581,10 @@ export default function AppPriceCalculatorPage() {
               ) : (
                 <div></div>
               )}
-              {currentFormIndex < questions.length - 1 && (
+              {currentFormIndex < questions.length && (
                 <div
                   className={styles.rightButtonWrapper}
-                  onClick={() => nextQuestion()}
+                  onClick={currentFormIndex < questions.length - 1 ? () => nextQuestion() : () => submit()}
                 >
                   <MdArrowForwardIos />
                 </div>
@@ -630,7 +601,7 @@ export default function AppPriceCalculatorPage() {
                 <BiArrowBack />
                 {texts.resultsNewTry}
               </div>
-              <h2>{texts.resultsHeadline.replace("{0}", name)}</h2>
+              <h2>{texts.resultsHeadline}</h2>
               <p>{texts.resultsText1}</p>
               <p>{texts.resultsText2}</p>
               <p>
@@ -646,7 +617,6 @@ export default function AppPriceCalculatorPage() {
                 onClick={() =>
                   router.push({
                     pathname: "/Kontakt",
-                    query: { name: name },
                   })
                 }
               >
