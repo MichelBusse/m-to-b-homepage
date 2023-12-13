@@ -37,7 +37,7 @@ export default function AugmentedRealityPage(props: Props) {
     headline: (
       <>
         Augmented Reality Entwicklung
-        <br />- AR-Agentur {currentYear}
+        <br />| AR-Agentur {currentYear}
       </>
     ),
     text: (
@@ -95,7 +95,7 @@ export default function AugmentedRealityPage(props: Props) {
       headline: (
         <>
           Augmented Reality Development
-          <br />- AR Agency {currentYear}
+          <br />| AR Agency {currentYear}
         </>
       ),
       text: (
@@ -194,7 +194,7 @@ export default function AugmentedRealityPage(props: Props) {
         />
         <ARServicesSections />
         <SmallTechnologiesSection
-          logos={[logos.unity, logos.mrtk, logos.three, logos.opencv]}
+          logos={[logos.unity, logos.mrtk, logos.three, logos.realitykit]}
         />
         <AboutSection />
         <IconTextSection
