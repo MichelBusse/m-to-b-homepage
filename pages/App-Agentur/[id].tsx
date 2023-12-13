@@ -9,7 +9,7 @@ import CustomersSection from "../../components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
 } from "../../components/SmallTechnologiesSection";
-import StagesSections from "../../components/StagesSections";
+import AppServicesSections from "../../components/AppServicesSections";
 import AboutSection from "../../components/AboutSection";
 import TextSection from "../../components/utility/TextSection";
 import { useRef } from "react";
@@ -28,7 +28,7 @@ export default function AppDevelopmentCityPage(props: Props) {
 
   const textSectionRef = useRef(null);
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = Math.max(new Date().getFullYear(), 2024);
 
   let texts = {
     headline: (
@@ -170,7 +170,7 @@ export default function AppDevelopmentCityPage(props: Props) {
           typewriterKey={"app1"}
         />
         <JourneySection />
-        <StagesSections />
+        <AppServicesSections />
         <SmallTechnologiesSection
           logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
         />

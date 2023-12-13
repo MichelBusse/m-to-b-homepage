@@ -18,7 +18,7 @@ type Props = {
 export default function HomePage(props: Props) {
   const router = useRouter();
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = Math.max(new Date().getFullYear(), 2024);
 
   let texts = {
     title: `M-to-B Software - Deine App-Agentur - ${currentYear}`,

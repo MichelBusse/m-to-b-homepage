@@ -59,7 +59,7 @@ export default function Navbar(props: Props) {
   }, [menuActive, props.anchorRefs, router.asPath]);
 
   let texts = {
-    apps: "Apps",
+    apps: "App-Entwicklung",
     vr: "Augmented Reality",
     blog: "Blog",
     contact: "Kontakt",
@@ -70,7 +70,7 @@ export default function Navbar(props: Props) {
 
   if (router.locale == "en") {
     texts = {
-      apps: "Apps",
+      apps: "App Development",
       vr: "Augmented Reality",
       blog: "Blog",
       contact: "Contact",
@@ -162,7 +162,7 @@ export default function Navbar(props: Props) {
         }`}
       >
         <ul>
-          <Link href="/App-Agentur">
+          <Link href={"/App-Agentur" + (props.locationId != null ? "/" + props.locationId : "")}>
             <a>
               <li
                 onClick={() => setMenuActive(false)}
@@ -173,7 +173,7 @@ export default function Navbar(props: Props) {
               </li>
             </a>
           </Link>
-          <Link href="/Augmented-Reality-Agentur">
+          <Link href={"/Augmented-Reality-Agentur" + (props.locationId != null ? "/" + props.locationId : "")}>
             <a>
               <li
                 onClick={() => setMenuActive(false)}

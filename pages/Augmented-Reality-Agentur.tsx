@@ -31,7 +31,7 @@ export default function AugmentedRealityPage(props: Props) {
 
   const textSectionRef = useRef(null);
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = Math.max(new Date().getFullYear(), 2024);
 
   let texts = {
     headline: (
@@ -155,12 +155,12 @@ export default function AugmentedRealityPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href={`https://m-to-b.com/App-Agentur`}
+          href={`https://m-to-b.com/Augmented-Reality-Agentur`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`https://m-to-b.com/en/App-Agentur`}
+          href={`https://m-to-b.com/en/Augmented-Reality-Agentur`}
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />

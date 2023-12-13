@@ -19,8 +19,8 @@ import { HiUsers } from "react-icons/hi";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { FaEdit, FaWrench } from "react-icons/fa";
-import ARServicesSections from "../../components/ARServicesSections";
 import FAQAugmentedReality from "../../components/FAQAugmentedReality";
+import WebServicesSections from "../../components/WebServicesSections";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -37,50 +37,50 @@ export default function AugmentedRealityCityPage(props: Props) {
   let texts = {
     headline: (
       <>
-        Augmented Reality {props.id}
-        <br />- AR-Agentur {currentYear}
+        Web-Entwicklung {props.id}
+        <br />- Web-Agentur {currentYear}
       </>
     ),
     text: (
       <>
         <p>
-          Du suchst eine Agentur für Augmented Reality Entwicklung in {props.id}
-          ?
+          Du suchst eine Agentur für PWAs und Web-Entwicklung in {props.id}?
         </p>
         <p>
-          Mit den modernsten Technologien unterstützen wir unsere Kunden bei der
-          Realisierung von beeindruckenden AR-Erlebnissen. Vom Marketing bis zur
-          Medizin konnten wir bereits in diversen Branchen innovative
-          Anwendungen realisieren.
+          Die Entwicklung von Web-Anwendungen kann schnell kompliziert werden
+          und viel Zeit und Budget verschlingen. Die Wahl der richtigen
+          Technologie, ein passender Entwicklungsplan und ein zielorientiertes
+          Design sind wichtige Bestandteile einer erfolgreichen Web-App.
         </p>
         <p>
-          Wir begleiten dein Projekt vom Design bis zum Rollout und mit der
-          richtigen Strategie zum Ziel.
+          Wir begleiten dein Projekt persönlich vom Design bis zum Upload und
+          mit der richtigen Strategie sicher zum Ziel.
         </p>
       </>
     ),
     requestButtonText: "Starte die Reise",
-    title: `Augmented Reality ${props.id} - AR-Agentur M-to-B - ${currentYear}`,
-    description: `Dein Partner für Augmented-Reality-Entwicklung in ${props.id}. Als digitale AR-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
-    textSectionHeadline: `AR-Consulting für ${props.id}`,
-    textSectionImageAlt: `Augmented Reality Consulting ${props.id}`,
+    title: `Web-Entwicklung ${props.id} - Web-Agentur M-to-B - ${currentYear}`,
+    description: `Dein Partner für Web-Entwicklung und PWAs in ${props.id}. Als digitale Web-Agentur führen wir dein Projekt mit der richtigen Strategie sicher zum Ziel.`,
+    textSectionHeadline: `Web-Consulting für ${props.id}`,
+    textSectionImageAlt: `Web-Entwicklung Consulting ${props.id}`,
     textSectionText: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Augmented Reality ist relevanter als jemals zuvor. Viele verschiedene
-          Technologien und Plattformen bieten ungeahnte Möglichkeiten, aber
-          können auch schnell überfordernd wirken.
+          Umfangreiche Web-Projekte erfordern ausreichend Planung. Wir helfen{" "}
+          {props.id}er Unternehmen durch den Dschungel der Web-Entwicklung und
+          beraten sie bei der Wahl der richtigen Strategie.
         </p>
         <p style={{ transitionDelay: "0.6s" }}>
-          Die Wahl der richtigen Plattform, die passende Technologie und das
-          eigentliche Design sind wichtige Entscheidungen, von denen der Erfolg
-          einer AR-Anwendung abhängen kann.
+          Mit dem rasanten Fortschritt in der Web-Technologie kann es oft auch
+          schwer sein, den Überblick zu behalten. Unsere Experten helfen dir
+          dabei, den richtigen Weg für dein Projekt zu finden und stehen dir in
+          einem unverbindlichen Gespräch für alle Fragen ausführlich zur
+          Verfügung.
         </p>
-        <p style={{ transitionDelay: "0.9s" }}>
-          Wir helfen {props.id}er Unternehmen, sich in der erweiterten Realität
-          zurechtzufinden und beraten sie unverbindlich zur Umsetzung ihrer
-          Projekte. Sprich mit unseren Experten für AR-Entwicklung und gestalte
-          so die beste Strategie für dein Vorhaben.
+        <p style={{ transitionDelay: "0.6s" }}>
+          So stellen wir sicher, dass du zu allen Möglichkeiten für dein
+          Vorhaben informiert bist und dein Projekt möglichst effizient zum
+          Erfolg geführt wird.
         </p>
       </>
     ),
@@ -96,50 +96,50 @@ export default function AugmentedRealityCityPage(props: Props) {
     texts = {
       headline: (
         <>
-          Augmented Reality {props.id}
-          <br />- AR Agency {currentYear}
+          Web Development {props.id}
+          <br />- Web Agency {currentYear}
         </>
       ),
       text: (
         <>
           <p>
-            Are you looking for an agency for augmented reality development in{" "}
+            Are you looking for an agency for PWAs and web development in{" "}
             {props.id}?
           </p>
           <p>
-            We support our customers with the most modern technologies for
-            immersive AR experiences. From marketing to medicine, we have
-            already been able to implement innovative applications in various
-            sectors.
+            Developing web applications can quickly become complicated and
+            consume a lot of time and budget. Choosing the right technology, a
+            suitable development plan and a goal-oriented design are important
+            components of a successful web app.
           </p>
           <p>
-            We accompany your project from design to rollout and with the right
-            strategy to reach your goal.
+            We accompany your project personally from design to upload and with
+            the right strategy to reach your goal.
           </p>
         </>
       ),
       requestButtonText: "Start your journey",
-      title: `Augmented Reality ${props.id} - AR Agency M-to-B - ${currentYear}`,
-      description: `Your partner for augmented reality development in ${props.id}. As a digital AR agency, we lead your project with the right strategy safely to its goal.`,
-      textSectionHeadline: `AR Consulting for ${props.id}`,
-      textSectionImageAlt: `Augmented Reality Consulting ${props.id}`,
+      title: `Web Development ${props.id} - Web Agency M-to-B - ${currentYear}`,
+      description: `Your partner for web development and PWAs in ${props.id}. As a digital web agency, we guide your project safely to its goal with the right strategy.`,
+      textSectionHeadline: `Web Consulting for ${props.id}`,
+      textSectionImageAlt: `Web Development Consulting ${props.id}`,
       textSectionText: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
-            Augmented reality is more relevant than ever before. Many different
-            technologies and platforms offer unimagined possibilities, but can
-            also quickly seem overwhelming.
+            Large web projects require sufficient planning. We help {props.id}
+            companies through the jungle of web development and advise them on
+            choosing the right strategy.
           </p>
           <p style={{ transitionDelay: "0.6s" }}>
-            Choosing the right platform, the right technology and the actual
-            design are important decisions on which the success of the AR
-            application can depend.
+            With the rapid progress in web technology, it can often be difficult
+            to keep track of things. Our experts will help you find the right
+            path for your project and will be available to answer any questions
+            you may have in detail in a non-binding conversation.
           </p>
-          <p style={{ transitionDelay: "0.9s" }}>
-            We help {props.id} companies finding their way in augmented reality
-            and provide them with non-binding advice on the implementation of
-            their projects. Talk to our AR development experts and design the
-            best strategy for your project.
+          <p style={{ transitionDelay: "0.6s" }}>
+            This is how we ensure that you are informed about all the options
+            for your project and that your project is led to success as
+            efficiently as possible.
           </p>
         </>
       ),
@@ -158,12 +158,12 @@ export default function AugmentedRealityCityPage(props: Props) {
         <link
           rel="alternate"
           hrefLang="de"
-          href={`https://m-to-b.com/Augmented-Reality-Agentur/${props.id}`}
+          href={`https://m-to-b.com/PWA-Web-Agentur/${props.id}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`https://m-to-b.com/en/Augmented-Reality-Agentur/${props.id}`}
+          href={`https://m-to-b.com/en/PWA-Web-Agentur/${props.id}`}
         />
         <title key="title">{texts.title}</title>
         <meta name="description" content={texts.description} />
@@ -195,9 +195,9 @@ export default function AugmentedRealityCityPage(props: Props) {
           label2={texts.development}
           label3={texts.support}
         />
-        <ARServicesSections />
+        <WebServicesSections />
         <SmallTechnologiesSection
-          logos={[logos.unity, logos.mrtk, logos.three, logos.realitykit]}
+          logos={[logos.react, logos.nest, logos.postgre, logos.next]}
         />
         <AboutSection />
         <IconTextSection
@@ -215,8 +215,7 @@ export default function AugmentedRealityCityPage(props: Props) {
         <ContactSection
           anchorRefs={props.anchorRefs}
           location={props.id}
-          locationLink={`/Augmented-Reality-Agentur/${props.id}`}
-          qnaSection={<FAQAugmentedReality />}
+          locationLink={`/PWA-Web-Agentur/${props.id}`}
           pageReference={texts.title}
         />
       </main>
@@ -226,14 +225,14 @@ export default function AugmentedRealityCityPage(props: Props) {
 
 export async function getStaticPaths() {
   const paths = [
-    "Berlin", // 8
-    "Hamburg", // 7
-    "München", // 9
-    "Köln", // 4
-    "Frankfurt", // 2
-    "Stuttgart", // 6
-    "Düsseldorf", // 5
-    "Leipzig", // 3
+    "Berlin", // 31
+    "Hamburg", // 25
+    "München", // 28
+    "Köln", // 26
+    "Frankfurt", // 23
+    "Stuttgart", // 25
+    "Düsseldorf", // 10
+    "Leipzig", // 4
     "Dortmund", // 11
     "Essen", // 7
     "Bremen", // 13
@@ -245,7 +244,6 @@ export async function getStaticPaths() {
     "Wuppertal", // 7
     "Bielefeld", // 6
     "Bonn", // 10
-    // Ab hier weiter
     "Münster", // 9
     "Mannheim", // 9
     "Karlsruhe", // 14

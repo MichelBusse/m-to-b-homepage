@@ -17,6 +17,19 @@ export const logos = {
       />
     </div>
   ),
+  realitykit: (
+    <div className={styles.logo} key={1}>
+      <div className={styles.logoCaption}>
+        <span>RealityKit</span>
+      </div>
+      <Image
+        src="/images/technologies/realitykit.png"
+        width={100}
+        height={100}
+        alt="RealityKit Logo"
+      />
+    </div>
+  ),
   firebase: (
     <div className={styles.logo} key={2}>
       <div className={styles.logoCaption}>

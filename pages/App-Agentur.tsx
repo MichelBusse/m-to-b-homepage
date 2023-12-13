@@ -9,7 +9,7 @@ import SmallTechnologiesSection, {
   logos,
 } from "../components/SmallTechnologiesSection";
 import JourneySection from "../components/JourneySection";
-import StagesSection from "../components/StagesSections";
+import AppServicesSections from "../components/AppServicesSections";
 import AboutSection from "../components/AboutSection";
 import CrossPlatformSection from "../components/CrossPlatformSection";
 import CostEstimateSection from "../components/CostEstimateSection";
@@ -21,7 +21,7 @@ type Props = {
 export default function AppDevelopmentPage(props: Props) {
   const router = useRouter();
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = Math.max(new Date().getFullYear(), 2024);
 
   let texts = {
     headline: (
@@ -115,7 +115,7 @@ export default function AppDevelopmentPage(props: Props) {
         <JourneySection />
         <CustomShapeDivider flip={true} />
         <div className="scrollAnchor" id="main"></div>
-        <StagesSection />
+        <AppServicesSections />
         <SmallTechnologiesSection
           logos={[logos.flutter, logos.dart, logos.supabase, logos.firebase]}
         />

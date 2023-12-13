@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import TextSection from "./utility/TextSection";
 
-export default function StagesSection() {
+export default function AppServicesSections() {
   const router = useRouter();
 
   const textSection1Ref = useRef(null);
@@ -157,31 +157,31 @@ export default function StagesSection() {
 
   return (<>
     <TextSection
-      key={"app1"}
+      key={"appServices1"}
       sectionRef={textSection1Ref}
       headline={texts.textSection1Headline}
       text={texts.textSection1Text}
       image="/images/app-development/section1.png"
       imageAlt={texts.textSection1ImageAlt}
-      typewriterKey={"stages1"}
+      typewriterKey={"appServices1"}
     />
     <TextSection
-      key={"app2"}
+      key={"appServices2"}
       sectionRef={textSection2Ref}
       headline={texts.textSection2Headline}
       text={texts.textSection2Text}
       image="/images/app-development/section2.png"
       imageAlt={texts.textSection2ImageAlt}
-      typewriterKey={"stages2"}
+      typewriterKey={"appServices2"}
     />
     <TextSection
-      key={"app3"}
+      key={"appServices3"}
       sectionRef={textSection3Ref}
       headline={texts.textSection3Headline}
       text={texts.textSection3Text}
       image="/images/app-development/section3.png"
       imageAlt={texts.textSection3ImageAlt}
-      typewriterKey={"stages3"}
+      typewriterKey={"appServices3"}
     /></>);
 
 }

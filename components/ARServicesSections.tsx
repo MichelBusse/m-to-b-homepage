@@ -9,13 +9,13 @@ export default function ARServicesSections() {
   const textSection2Ref = useRef(null);
 
   let texts = {
-    textSection1Headline: "Leistungen",
+    textSection1Headline: "Full-Service-AR-Agentur",
     textSection1ImageAlt: "Augmented Reality Leistungen",
     textSection1Text: (
       <>
         <p style={{ transitionDelay: "0.3s" }}>
-          Als Full-Service-AR-Agentur begleiten wir dich durch den gesamten
-          Prozess deines Projekts.
+          Full-Service heißt bei uns, wir begleiten dein Projekt durch den gesamten
+          Prozess:
         </p>
         <ol>
           <li style={{ transitionDelay: "0.6s" }}>
@@ -66,13 +66,13 @@ export default function ARServicesSections() {
 
   if (router.locale == "en") {
     texts = {
-      textSection1Headline: "Services",
-      textSection1ImageAlt: "Augmented Reality Services",
+      textSection1Headline: "Full Service AR Agency",
+      textSection1ImageAlt: "Full Service Augmented Reality Agency",
       textSection1Text: (
         <>
           <p style={{ transitionDelay: "0.3s" }}>
-            As a full-service AR agency, we accompany you through the entire
-            process of your project.
+            Full-service means, we accompany your project through the entire
+            process:
           </p>
           <ol>
             <li style={{ transitionDelay: "0.6s" }}>
@@ -126,18 +126,18 @@ export default function ARServicesSections() {
         sectionRef={textSection1Ref}
         headline={texts.textSection1Headline}
         text={texts.textSection1Text}
-        image="/images/augmented-reality/car.jpg"
+        image="/images/augmented-reality/section1.png"
         imageAlt={texts.textSection1ImageAlt}
-        typewriterKey={"stages1"}
+        typewriterKey={"arServices1"}
       />
       <TextSection
         key={"arServices2"}
         sectionRef={textSection2Ref}
         headline={texts.textSection2Headline}
         text={texts.textSection2Text}
-        image="/images/augmented-reality/model.jpg"
+        image="/images/augmented-reality/section2.png"
         imageAlt={texts.textSection2ImageAlt}
-        typewriterKey={"stages2"}
+        typewriterKey={"arServices2"}
       />
     </>
   );

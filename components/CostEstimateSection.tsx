@@ -51,7 +51,7 @@ export default function CostEstimateSection() {
         sectionRef={sectionRef}
         headline={texts.textSectionHeadline}
         text={texts.textSectionText}
-        image="/images/app-development/cost-estimate.png"
+        image="/images/cost-estimate.png"
         imageAlt={texts.textSectionHeadline}
         typewriterKey={"cost-estimate"}
         siteLink="#formular"
