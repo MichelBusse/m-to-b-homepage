@@ -34,10 +34,12 @@ export default function NotFoundPage() {
         <section>
           <div className={styles.imageWrapper}>
             <Image
+              unoptimized={true}
               src="/images/notfound.png"
               alt={texts.title}
-              layout="fill"
-              objectFit="contain"
+              layout="responsive"
+              width={500}
+              height={500}
             />
           </div>
           <h2>{texts.title}</h2>
