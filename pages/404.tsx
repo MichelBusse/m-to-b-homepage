@@ -36,8 +36,8 @@ export default function NotFoundPage() {
             <Image
               src="/images/notfound.png"
               alt={texts.title}
-              width={500}
-              height={500}
+              layout="fill"
+              objectFit="contain"
             />
           </div>
           <h2>{texts.title}</h2>

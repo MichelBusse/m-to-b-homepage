@@ -19,6 +19,9 @@
 }
 
 .imageWrapper{
+    position: relative;
     width: 100%;
     max-width: 25em;
+    height: 25em;
+    max-height: 100vw;
 }
