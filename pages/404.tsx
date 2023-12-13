@@ -13,14 +13,14 @@ export default function NotFoundPage() {
   const router = useRouter();
 
   let texts = {
-    title: "404: Seite konnte nicht gefunden werden",
-    description: "Seite konnte nicht gefunden werden",
+    title: "404: Das ist nicht die Seite, die ihr sucht...",
+    description: "Das ist nicht die Seite, die ihr sucht...",
   };
 
   if (router.locale == "en") {
     texts = {
-      title: "404: This page could not be found",
-      description: "This page could not be found",
+      title: "404: This is not the site you're looking for...",
+      description: "This is not the site you're looking for...",
     };
   }
   return (
@@ -32,16 +32,6 @@ export default function NotFoundPage() {
       <MenuPlaceholder />
       <div className={styles.wrapper}>
         <section>
-          <div className={styles.imageWrapper}>
-            <Image
-              unoptimized={true}
-              src="/images/notfound.png"
-              alt={texts.title}
-              layout="responsive"
-              width={500}
-              height={500}
-            />
-          </div>
           <h2>{texts.title}</h2>
         </section>
       </div>
