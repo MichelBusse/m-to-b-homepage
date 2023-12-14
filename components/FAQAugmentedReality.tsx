@@ -17,11 +17,11 @@ export default function FAQAugmentedReality(props: Props) {
         kann auch als App oder vollständig im Web realisiert werden. Je nach
         Projekt und Ziel kann es aber Sinn machen, eine Anwendung auf einer
         AR-Brille bereitzustellen. Wir beraten dich zu deinen Anforderungen
-        individuell, welche Plattform für dich die sinnvollste ist.
+        individuell, welche Plattform für dich die Sinnvollste ist.
       </>
     ),
     answer1String:
-      "Nein. Augmented Reality beschränkt sich nicht auf AR-Brillen, sondern kann auch als App oder vollständig im Web realisiert werden. Je nach Projekt und Ziel kann es aber Sinn machen, eine Anwendung auf einer AR-Brille bereitzustellen. Wir beraten dich zu deinen Anforderungen individuell, welche Plattform für dich die sinnvollste ist.",
+      "Nein. Augmented Reality beschränkt sich nicht auf AR-Brillen, sondern kann auch als App oder vollständig im Web realisiert werden. Je nach Projekt und Ziel kann es aber Sinn machen, eine Anwendung auf einer AR-Brille bereitzustellen. Wir beraten dich zu deinen Anforderungen individuell, welche Plattform für dich die Sinnvollste ist.",
     question2: "Für welche Unternehmen lohnt sich AR?",
     answer2: (
       <>

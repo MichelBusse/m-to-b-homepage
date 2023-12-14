@@ -13,6 +13,7 @@ import AppServicesSections from "../components/AppServicesSections";
 import AboutSection from "../components/AboutSection";
 import CrossPlatformSection from "../components/CrossPlatformSection";
 import CostEstimateSection from "../components/CostEstimateSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 type Props = {
   anchorRefs: AnchorRefs;
@@ -123,6 +124,7 @@ export default function AppDevelopmentPage(props: Props) {
         <CrossPlatformSection />
         <CostEstimateSection />
         <CustomShapeDivider flip={false} />
+        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
         <CustomersSection />
         <ContactSection
           anchorRefs={props.anchorRefs}

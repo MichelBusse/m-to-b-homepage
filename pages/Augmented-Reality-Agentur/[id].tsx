@@ -234,18 +234,17 @@ export async function getStaticPaths() {
     "Stuttgart", // 6
     "Düsseldorf", // 5
     "Leipzig", // 3
-    "Dortmund", // 11
-    "Essen", // 7
-    "Bremen", // 13
-    "Dresden", // 6
-    "Hannover", // 15
-    "Nürnberg", // 11
-    "Duisburg", // 6
-    "Bochum", // 8
-    "Wuppertal", // 7
-    "Bielefeld", // 6
-    "Bonn", // 10
-    // Ab hier weiter
+    "Dortmund", // 2
+    "Essen", // 1
+    "Bremen", // 2
+    "Dresden", // 3
+    "Hannover", // 1
+    "Nürnberg", // 1
+    "Duisburg", // 1
+    "Bochum", // 1
+    "Wuppertal", // 1
+    "Bielefeld", // 1
+    "Bonn", // 1
     "Münster", // 9
     "Mannheim", // 9
     "Karlsruhe", // 14
@@ -257,6 +256,7 @@ export async function getStaticPaths() {
     "Braunschweig", // 5
     "Chemnitz", // 8
     "Kiel", // 5
+    // Ab hier weiter
     "Halle", // 5
     "Magdeburg", // 5
     "Freiburg", // 7
