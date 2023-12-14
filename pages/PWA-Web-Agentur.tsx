@@ -36,7 +36,7 @@ export default function AugmentedRealityCityPage(props: Props) {
     headline: (
       <>
         Web-Entwicklung & PWAs
-        <br />| Web-Agentur {currentYear}
+        <br />- Deine Web-Agentur {currentYear}
       </>
     ),
     text: (

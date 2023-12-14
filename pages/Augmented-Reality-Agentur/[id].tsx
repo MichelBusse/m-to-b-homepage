@@ -38,7 +38,7 @@ export default function AugmentedRealityCityPage(props: Props) {
     headline: (
       <>
         Augmented Reality {props.id}
-        <br />| AR-Agentur {currentYear}
+        <br />- Deine AR-Agentur {currentYear}
       </>
     ),
     text: (

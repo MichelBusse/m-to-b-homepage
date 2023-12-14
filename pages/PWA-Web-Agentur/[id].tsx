@@ -37,8 +37,8 @@ export default function AugmentedRealityCityPage(props: Props) {
   let texts = {
     headline: (
       <>
-        Web-Entwicklung {props.id}
-        <br />| Web-Agentur {currentYear}
+        Mission: Web-Entwicklung
+        <br />Ziel: {props.id} {currentYear}
       </>
     ),
     text: (
