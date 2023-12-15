@@ -152,6 +152,8 @@ export default function HomePage(props: Props) {
         text={texts.text}
         priceCalculatorButton={false}
         requestButtonText={texts.requestButtonText}
+        highlightImage="/images/header.png"
+        highlightImageAlt={texts.title}
       />
       <main>
         <ValuesSection />
