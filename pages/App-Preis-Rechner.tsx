@@ -20,7 +20,7 @@ import {
 } from "react-icons/bs";
 import { toast } from "react-toastify";
 import TagManager from "react-gtm-module";
-import BudgetIcon from "../components/icons/BudgetIcon";
+import BudgetIcon from "@/components/Icons/BudgetIcon";
 import { BiArrowBack } from "react-icons/bi";
 
 type PriceResult = {

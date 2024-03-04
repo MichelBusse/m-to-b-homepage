@@ -1,16 +1,11 @@
-import ProjectsSection from "../components/ProjectsSection";
-import ContactSection from "../components/ContactSection";
-import CustomersSection from "../components/CustomersSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import CustomersSection from "@/components/CustomersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { AnchorRefs } from "./_app";
-import MenuPlaceholder from "../components/utility/MenuPlaceholder";
+import MenuPlaceholder from "@/components/MenuPlaceholder";
 
-type Props = {
-  anchorRefs: AnchorRefs;
-};
-
-export default function HomePage(props: Props) {
+export default function HomePage() {
   const router = useRouter();
 
   let texts = {
@@ -45,10 +40,9 @@ export default function HomePage(props: Props) {
       </Head>
       <main>
         <MenuPlaceholder />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <ProjectsSection />
         <CustomersSection />
         <ContactSection
-          anchorRefs={props.anchorRefs}
           pageReference={texts.title}
         />
       </main>

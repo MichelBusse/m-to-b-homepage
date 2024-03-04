@@ -1,25 +1,23 @@
-import Header from "../../components/Header";
-import ContactSection from "../../components/ContactSection";
+import Header from "@/components/Header";
+import ContactSection from "@/components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../../components/CustomShapeDivider";
-import { AnchorRefs } from "../_app";
+import CustomShapeDivider from "@/components/CustomShapeDivider";
 import { useRouter } from "next/router";
-import ProjectsSection from "../../components/ProjectsSection";
-import CustomersSection from "../../components/CustomersSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import CustomersSection from "@/components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../../components/SmallTechnologiesSection";
-import AppServicesSections from "../../components/AppServicesSections";
-import AboutSection from "../../components/AboutSection";
-import TextSection from "../../components/utility/TextSection";
+} from "@/components/SmallTechnologiesSection";
+import AppServicesSections from "@/components/AppServicesSections";
+import AboutSection from "@/components/AboutSection";
+import TextSection from "@/components/Utility/TextSection";
 import { useRef } from "react";
-import JourneySection from "../../components/JourneySection";
-import ValuesSection from "../../components/ValuesSection";
-import CrossPlatformSection from "../../components/CrossPlatformSection";
-import CostEstimateSection from "../../components/CostEstimateSection";
+import JourneySection from "@/components/JourneySection";
+import ValuesSection from "@/components/ValuesSection";
+import CrossPlatformSection from "@/components/CrossPlatformSection";
+import CostEstimateSection from "@/components/CostEstimateSection";
 
 type Props = {
-  anchorRefs: AnchorRefs;
   id: string;
 };
 
@@ -178,10 +176,9 @@ export default function AppDevelopmentCityPage(props: Props) {
         <CrossPlatformSection />
         <CostEstimateSection />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <ProjectsSection />
         <CustomersSection />
         <ContactSection
-          anchorRefs={props.anchorRefs}
           location={props.id}
           locationLink={`/App-Agentur/${props.id}`}
           pageReference={texts.title}

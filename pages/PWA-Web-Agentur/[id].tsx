@@ -1,29 +1,26 @@
-import Header from "../../components/Header";
-import ContactSection from "../../components/ContactSection";
+import Header from "@/components/Header";
+import ContactSection from "@/components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../../components/CustomShapeDivider";
-import { AnchorRefs } from "../_app";
+import CustomShapeDivider from "@/components/CustomShapeDivider";
 import { useRouter } from "next/router";
-import ProjectsSection from "../../components/ProjectsSection";
-import CustomersSection from "../../components/CustomersSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import CustomersSection from "@/components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../../components/SmallTechnologiesSection";
-import AboutSection from "../../components/AboutSection";
-import TextSection from "../../components/utility/TextSection";
+} from "@/components/SmallTechnologiesSection";
+import AboutSection from "@/components/AboutSection";
+import TextSection from "@/components/Utility/TextSection";
 import { useRef } from "react";
-import ValuesSection from "../../components/ValuesSection";
-import CostEstimateSection from "../../components/CostEstimateSection";
-import IconTextSection from "../../components/utility/IconTextSection";
+import ValuesSection from "@/components/ValuesSection";
+import CostEstimateSection from "@/components/CostEstimateSection";
+import IconTextSection from "@/components/Utility/IconTextSection";
 import { HiUsers } from "react-icons/hi";
 import { BsCodeSlash, BsGraphUp } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { FaEdit, FaWrench } from "react-icons/fa";
-import FAQAugmentedReality from "../../components/FAQAugmentedReality";
-import WebServicesSections from "../../components/WebServicesSections";
+import WebServicesSections from "@/components/WebServicesSections";
 
 type Props = {
-  anchorRefs: AnchorRefs;
   id: string;
 };
 
@@ -212,10 +209,9 @@ export default function AugmentedRealityCityPage(props: Props) {
         />
         <CostEstimateSection />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <ProjectsSection />
         <CustomersSection />
         <ContactSection
-          anchorRefs={props.anchorRefs}
           location={props.id}
           locationLink={`/PWA-Web-Agentur/${props.id}`}
           pageReference={texts.title}

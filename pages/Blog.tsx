@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import BlogOverview from "../components/BlogOverview";
-import MenuPlaceholder from "../components/utility/MenuPlaceholder";
+import BlogOverview from "@/components/BlogOverview";
 import styles from "../styles/Blog.module.scss";
 import { useEffect } from "react";
 import { getSortedPostsData } from "../lib/posts";
+import MenuPlaceholder from "@/components/MenuPlaceholder";
 
 type Props = {
   allPostsData : any

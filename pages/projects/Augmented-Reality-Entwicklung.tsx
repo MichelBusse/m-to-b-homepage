@@ -1,21 +1,17 @@
 import Head from "next/head";
-import { AnchorRefs } from "../_app";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import ServiceSection from "../../components/utility/TextSection";
-import CustomShapeDivider from "../../components/CustomShapeDivider";
-import QuoteSection from "../../components/utility/QuoteSection";
-import ContactSection from "../../components/ContactSection";
-import Header from "../../components/Header";
-import IconTextSection from "../../components/utility/IconTextSection";
+import ServiceSection from "@/components/Utility/TextSection";
+import CustomShapeDivider from "@/components/CustomShapeDivider";
+import QuoteSection from "@/components/Utility/QuoteSection";
+import ContactSection from "@/components/ContactSection";
+import Header from "@/components/Header";
+import IconTextSection from "@/components/Utility/IconTextSection";
 import Image from "next/image";
 import styles from "../../styles/ProjectPage.module.scss";
+import FAQAugmentedReality from "@/components/FAQAugmentedReality";
 
-type Props = {
-  anchorRefs: AnchorRefs;
-};
-
-export default function AugmentedRealityEntwicklungPage(props: Props) {
+export default function AugmentedRealityEntwicklungPage() {
   const router = useRouter();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
@@ -213,7 +209,7 @@ export default function AugmentedRealityEntwicklungPage(props: Props) {
         />
         <CustomShapeDivider flip={false} />
         <QuoteSection quote={texts.quote} />
-        <ContactSection anchorRefs={props.anchorRefs} />
+        <ContactSection qnaSection={<FAQAugmentedReality />} />
       </main>
     </>
   );

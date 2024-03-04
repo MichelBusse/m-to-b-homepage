@@ -1,25 +1,21 @@
-import Header from "../components/Header";
-import ContactSection from "../components/ContactSection";
+import Header from "@/components/Header";
+import ContactSection from "@/components/ContactSection";
 import Head from "next/head";
-import CustomShapeDivider from "../components/CustomShapeDivider";
-import { AnchorRefs } from "./_app";
+import CustomShapeDivider from "@/components/CustomShapeDivider";
 import { useRouter } from "next/router";
-import CustomersSection from "../components/CustomersSection";
+import CustomersSection from "@/components/CustomersSection";
 import SmallTechnologiesSection, {
   logos,
-} from "../components/SmallTechnologiesSection";
-import JourneySection from "../components/JourneySection";
-import AppServicesSections from "../components/AppServicesSections";
-import AboutSection from "../components/AboutSection";
-import CrossPlatformSection from "../components/CrossPlatformSection";
-import CostEstimateSection from "../components/CostEstimateSection";
-import ProjectsSection from "../components/ProjectsSection";
+} from "@/components/SmallTechnologiesSection";
+import JourneySection from "@/components/JourneySection";
+import AppServicesSections from "@/components/AppServicesSections";
+import AboutSection from "@/components/AboutSection";
+import CrossPlatformSection from "@/components/CrossPlatformSection";
+import CostEstimateSection from "@/components/CostEstimateSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
-type Props = {
-  anchorRefs: AnchorRefs;
-};
 
-export default function AppDevelopmentPage(props: Props) {
+export default function AppDevelopmentPage() {
   const router = useRouter();
 
   const currentYear = Math.max(new Date().getFullYear(), 2024);
@@ -124,10 +120,9 @@ export default function AppDevelopmentPage(props: Props) {
         <CrossPlatformSection />
         <CostEstimateSection />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <ProjectsSection />
         <CustomersSection />
         <ContactSection
-          anchorRefs={props.anchorRefs}
           pageReference={texts.title}
         />
       </main>

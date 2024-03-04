@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BlogEntry from "../../components/BlogEntry";
+import BlogEntry from "@/components/BlogEntry";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 

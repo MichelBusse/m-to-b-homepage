@@ -1,0 +1,49 @@
+.blogOverview {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  margin: 0 auto;
+  border: solid 4px rgb(1, 80, 107);;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3em;
+  overflow: hidden;
+}
+
+.blogOverview .image img {
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blogOverview .text {
+  flex: 1 1 auto;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.blogOverview h2 {
+  font-size: 1.8em;
+  margin: 0;
+  color: rgb(1, 80, 107);
+}
+
+.blogOverview p {
+  margin: 1.8em 0 2em 0;
+}
+.blogOverview a {
+  margin-top: auto;
+}
+.blogOverview button {
+  transform: none;
+}
+.blogOverview button div {
+  transform: none;
+}

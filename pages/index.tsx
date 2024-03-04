@@ -1,21 +1,20 @@
-import Header from "../components/Header";
-import ProjectsSection from "../components/ProjectsSection";
-import ContactSection from "../components/ContactSection";
-import CustomersSection from "../components/CustomersSection";
+import Header from "@/components/Header";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import CustomersSection from "@/components/CustomersSection";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import CustomShapeDivider from "../components/CustomShapeDivider";
-import { AnchorRefs } from "./_app";
-import ValuesSection from "../components/ValuesSection";
-import TechnologiesSection from "../components/TechnologiesSection";
-import ServiceSection from "../components/utility/TextSection";
-import AboutSection from "../components/AboutSection";
+import CustomShapeDivider from "@/components/CustomShapeDivider";
+import ValuesSection from "@/components/ValuesSection";
+import TechnologiesSection from "@/components/TechnologiesSection";
+import AboutSection from "@/components/AboutSection";
+import TextSection from "@/components/Utility/TextSection";
+import { useRef } from "react";
 
-type Props = {
-  anchorRefs: AnchorRefs;
-};
+export default function HomePage() {
+  const appRef = useRef(null);
+  const vrRef = useRef(null);
 
-export default function HomePage(props: Props) {
   const router = useRouter();
 
   const currentYear = Math.max(new Date().getFullYear(), 2024);
@@ -158,8 +157,8 @@ export default function HomePage(props: Props) {
       <main>
         <ValuesSection />
         <CustomShapeDivider flip={true} />
-        <ServiceSection
-          sectionRef={props.anchorRefs.appsRef}
+        <TextSection
+          sectionRef={appRef}
           key={"home1"}
           headline={texts.headlineSection1}
           text={texts.textSection1}
@@ -169,8 +168,8 @@ export default function HomePage(props: Props) {
           siteLink={"/App-Agentur"}
           buttonDelay={"0.6s"}
         />
-        <ServiceSection
-          sectionRef={props.anchorRefs.vrRef}
+        <TextSection
+          sectionRef={vrRef}
           key={"home3"}
           headline={texts.headlineSection3}
           text={texts.textSection3}
@@ -183,10 +182,9 @@ export default function HomePage(props: Props) {
         <TechnologiesSection />
         <AboutSection />
         <CustomShapeDivider flip={false} />
-        <ProjectsSection projectsRef={props.anchorRefs.projectsRef} />
+        <ProjectsSection />
         <CustomersSection />
         <ContactSection
-          anchorRefs={props.anchorRefs}
           pageReference={texts.title}
         />
       </main>

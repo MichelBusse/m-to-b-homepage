@@ -3,21 +3,14 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 import { CookiesProvider } from "react-cookie";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Router, useRouter } from "next/router";
 import { useSmoothScroll } from "../hooks/SmoothScroll";
-import CookieDisclaimer from "../components/CookieDisclaimer";
-import Navbar from "../components/Navbar";
+import CookieDisclaimer from "@/components/CookieDisclaimer";
+import Navbar from "@/components/Navbar";
 
-export type AnchorRefs = {
-  appsRef: MutableRefObject<null>,
-  softwareRef: MutableRefObject<null>,
-  vrRef: MutableRefObject<null>,
-  projectsRef: MutableRefObject<null>,
-  contactRef: MutableRefObject<null>,
-}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -33,14 +26,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   useSmoothScroll();
-
-  const anchorRefs : AnchorRefs = {
-    appsRef: useRef(null),
-    softwareRef: useRef(null),
-    vrRef: useRef(null),
-    projectsRef: useRef(null),
-    contactRef: useRef(null),
-  };
 
   useEffect(() => {
     Router.events.on("routeChangeComplete", () => {
@@ -96,11 +81,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <CookieDisclaimer />
         <Navbar
-          anchorRefs={anchorRefs}
           locationId={pageProps.id}
         />
         <ToastContainer />
-        <Component anchorRefs={anchorRefs} {...pageProps} />
+        <Component {...pageProps} />
         <Footer />
       </CookiesProvider>
     </>

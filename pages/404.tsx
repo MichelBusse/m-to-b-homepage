@@ -1,9 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/NotFoundPage.module.scss";
-import Image from "next/image";
-import MenuPlaceholder from "../components/utility/MenuPlaceholder";
-import Link from "next/link";
+import MenuPlaceholder from "@/components/MenuPlaceholder";
 
 export const config = {
   unstable_runtimeJS: false,
