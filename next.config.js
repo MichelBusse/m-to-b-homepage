@@ -3,6 +3,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        destination: 'https://michelbusse.dev',
+        permanent: false,
+      },
+      {
         source: '/kinkz/app-store',
         destination: 'https://apps.apple.com/de/app/kinkz-partyspiel/id1617511912',
         permanent: true,
