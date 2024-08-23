@@ -61,7 +61,7 @@ export default function CookieDisclaimer() {
 
   let texts = {
     headline: "Cookie Einstellungen",
-    text: "Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während uns andere helfen, diese Website und Ihre Erfahrung zu verbessern.",
+    text: "Wir nutzen Cookies auf unserer Website. Einige sind essenziell, während uns andere helfen, diese Website und Ihre Erfahrung zu verbessern.",
     essential: "Essenziell",
     statistics: "Statistiken",
     acceptAll: "Alle akzeptieren",
