@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "../styles/AppPriceCalculator.module.scss";
 import { BsGridFill } from "react-icons/bs";
 import { RiUserStarFill } from "react-icons/ri";
@@ -20,7 +20,6 @@ import {
 } from "react-icons/bs";
 import { toast } from "react-toastify";
 import TagManager from "react-gtm-module";
-import BudgetIcon from "@/components/Icons/BudgetIcon";
 import { BiArrowBack } from "react-icons/bi";
 
 type PriceResult = {
@@ -556,7 +555,6 @@ export default function AppPriceCalculatorPage() {
             >
               {currentFormIndex == 0 && (
                 <div className={styles.iconWrapper}>
-                  <BudgetIcon className={styles.icon} />
                 </div>
               )}
               <h2>{questions[currentFormIndex].question}</h2>

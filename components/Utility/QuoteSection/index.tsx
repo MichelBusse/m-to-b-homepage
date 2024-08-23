@@ -1,4 +1,4 @@
-import styles from "../../styles/QuoteSection.module.scss";
+import styles from "./styles.module.scss";
 
 type Props = {
   quote?: string;

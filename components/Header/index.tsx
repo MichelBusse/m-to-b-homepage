@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Software3D from "../Three/Software3D";
-import { objectPosition } from "three/examples/jsm/nodes/Nodes.js";
 
 type Props = {
   headline: JSX.Element;
