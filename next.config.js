@@ -8,6 +8,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/test',
+        destination: 'https://michelbusse.dev',
+        permanent: true,
+      },
+      {
         source: '/kinkz/app-store',
         destination: 'https://apps.apple.com/de/app/kinkz-partyspiel/id1617511912',
         permanent: true,
