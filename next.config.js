@@ -5,7 +5,7 @@ const nextConfig = {
       {
         source: '/:path*',
         destination: 'https://michelbusse.dev',
-        permanent: false,
+        permanent: true,
       },
       {
         source: '/kinkz/app-store',
